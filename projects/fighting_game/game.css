@@ -52,6 +52,7 @@ body {
   font-size: xx-large;
   font-weight: bold;
   border-radius: 10px;
+  color: white;
 }
 
 div > img {
@@ -70,12 +71,13 @@ div > img {
   background-image: linear-gradient(rgb(164, 126, 246), rgb(135, 135, 239));
   border: none;
   font-weight: bold;
+  color: white;
 }
 
 #player-a-info .pointer {
   display: inline-block;
   border-top: 10px solid transparent;
-  border-right: 20px solid black;
+  border-right: 20px solid rgb(234, 231, 231);
   border-bottom: 10px solid transparent;
 }
 
@@ -91,20 +93,12 @@ div > img {
 #player-b-info .pointer {
   display: inline-block;
   border-top: 10px solid transparent;
-  border-left: 20px solid black;
+  border-left: 20px solid rgb(234, 231, 231);
   border-bottom: 10px solid transparent;
 }
 
 #player-b-info .pointer.select {
   border-left: 20px solid rgb(184, 127, 249);
-}
-
-#player-a-info .pointer.deselect {
-  border-right: 20px solid black;
-}
-
-#player-b-info .pointer.deselect {
-  border-left: 20px solid black;
 }
 
 #player-b-info .player-name {
@@ -124,13 +118,11 @@ div > img {
 }
 
 .lifeline-container {
-  border: 1px solid black;
   height: 30px;
   margin-top: -27px;
 }
 
 .lifeline-flex {
-  border: 1px solid black;
   width: 41%;
   border-radius: 10px;
   background-color: black;
@@ -151,12 +143,9 @@ div > img {
 .select-action {
   height: 50px;
   width: 50px;
-  background-image: linear-gradient(rgb(143, 145, 145), rgb(230, 224, 228));
+  background-color: rgb(230, 224, 228);
   border-radius: 10px;
-}
-
-.gap {
-  gap: 90px;
+  border: 2px solid #888;
 }
 
 .center {
