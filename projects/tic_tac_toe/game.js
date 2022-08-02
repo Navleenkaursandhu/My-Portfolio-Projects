@@ -1,6 +1,7 @@
 
 
-const restart_div = document.querySelector("#restart-button");
+const restartDiv = document.querySelector("#restart-button");
+const playerNameDiv = document.querySelector("#player-name");
 
 const vals = [
   ['', '', ''],
@@ -16,12 +17,16 @@ const updateUI = () => {
       document.querySelector(`#box${i}${j}`).innerText = vals[i][j];
     }
   }
+
+  playerNameDiv.innerText = currentPlayer;
 }
 
 const handleBoxClick = (row, column) => {
 
   if (!vals[row][column]) {
     vals[row][column] = currentPlayer;
+
+    
 
     if (currentPlayer === "X") {
       currentPlayer = "O";
