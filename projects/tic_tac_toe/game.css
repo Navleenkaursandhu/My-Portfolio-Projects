@@ -1,10 +1,9 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
 }
 
-.flex-box-column-container{
-  border: 1px solid black;
+.flex-box-column-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,12 +11,11 @@ body{
   gap: 20px;
 }
 
-.flex-box-row-container{
- display: flex;
- border: 1px solid black;
+.flex-box-row-container {
+  display: flex;
 }
 
-.grid-container{
+.grid-container {
   display: grid;
   background-color: black;
   grid-template-columns: auto auto auto;
@@ -33,10 +31,10 @@ body{
   width: 20px;
 }
 
-.grid-container > div:hover{
+.grid-container > div:hover {
   cursor: pointer;
 }
 
-#restart-button{
+#restart-button {
   font-size: x-large;
 }
