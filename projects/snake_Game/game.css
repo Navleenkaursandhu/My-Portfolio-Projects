@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: 'Square Peg', cursive;
+}
+
+.flex-row {
+  display: flex;
+  background-color: black;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+#snake-image {
+  height: 350px;
+}
+
+#speed > button,
+#reset-button > button {
+  color: gray;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#speed > button:hover,
+#reset-button > button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px grey;
+}
+
+.game-container {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.game-container #ground {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(rgb(150, 240, 117), rgb(229, 229, 120));
+}
+
+.snake {
+  background-color: rgb(81, 198, 81);
+  border-radius: 10px;
+}
+
+.head {
+  background-color: rgb(232, 73, 73);
+  border-radius: 50px;
+  transform: scale(1.09);
+}
+
+.food {
+  background-color: rgb(97, 97, 239);
+  border-radius: 10px;
+}

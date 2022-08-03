@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./game.css">
+  <title>Snake Game</title>
+</head>
+
+<body>
+  <div class="flex-row">
+    <div class="game-container">
+
+      <div id="ground"></div>
+    </div>
+
+    <div class="flex-column">
+      <div id="title" style="border: 1px solid white;">SNAKE GAME</div>
+      <div id="speed" style="border: 1px solid white;">SPEED:
+        <button id="slow-btn">SLOW</button>
+        <button id="medium-btn">MEDIUM</button>
+        <button id="fast-btn">FAST</button>
+      </div>
+      <div class="game-score" id="score" style="border: 1px solid white;">SCORE:
+        <span id="enter-score">0</span>
+      </div>
+      <div id="reset-button" style="border: 1px solid white;">
+        <button id="reset">RESET</button>
+      </div>
+      <img style="border:1px solid white" id="snake-image" src="snakeImg.png"></img>
+    </div>
+  </div>
+
+  <script src="./game.js"></script>
+</body>
+
+</html>
