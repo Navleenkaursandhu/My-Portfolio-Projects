@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>q45</title>
+
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    #display-output {
+      font-family: monospace;
+    }
+  </style>
+
+  <script>
+    const vowels = ['a', 'ai', 'au', 'e', 'ea', 'ee', 'i', 'ia', 'io', 'o', 'oa', 'oi', 'oo', 'ou', 'u'];
+    const consonants = ['b', 'c', 'ch', 'cl', 'd', 'f', 'ff', 'g', 'gh', 'gl', 'j', 'k', 'l', 'll', 'm', 'mn', 'n', 'p', 'ph', 'ps', 'r', 'rh', 's', 'sc', 'sh', 'sk', 'st', 't', 'th', 'v', 'w', 'x', 'y', 'z'];
+
+    function generateString() {
+      const length = Number(document.querySelector("#char-length").value);
+      const count = Number(document.querySelector("#count-no").value);
+
+      let output = '';
+      for (let i = 0; i < count; i++) {
+        output = output + generatePronouncableLine(length) + "<br>";
+      }
+
+      document.querySelector("#display-output").innerHTML = output;
+    }
+
+    function generatePronouncableLine(length) {
+      let finalString = '';
+      let pick = !!Math.round(Math.random());
+
+      while (finalString.length < length) {
+        if (pick === true) {
+          const randomVowel = vowels[Math.floor((Math.random()) * vowels.length)];
+          if ((finalString.length + randomVowel.length) <= length) {
+            finalString = finalString + randomVowel;
+            pick = !pick;
+          }
+        } else {
+          const randomConsonant = consonants[Math.floor((Math.random()) * consonants.length)];
+          if ((finalString.length + randomConsonant.length) <= length) {
+            finalString = finalString + randomConsonant;
+            pick = !pick;
+          }
+        }
+      }
+      return finalString;
+    }
+  </script>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th> Character Length</th>
+      <td>
+        <input id="char-length" type="number"></input>
+      </td>
+    </tr>
+    <tr>
+      <th>Count</th>
+      <td>
+        <input id="count-no" type="number"></input>
+      </td>
+    </tr>
+  </table>
+  <button onclick="generateString()">Generate random</button>
+  <div id="display-output"></div>
+</body>
+
+</html>
