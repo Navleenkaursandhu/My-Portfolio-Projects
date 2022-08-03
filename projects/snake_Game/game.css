@@ -42,11 +42,9 @@
 }
 
 .game-container {
-  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
 }
 
 .game-container #ground {

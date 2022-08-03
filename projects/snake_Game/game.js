@@ -59,7 +59,7 @@ function gameEngine() {
     endGameSound.play();
     backgroundSound.pause();
     direction = { x: 0, y: 0 };
-    alert("Game Over, Press any key to play again!");
+    alert("Oops!, GameOver, Hit OK to play again!");
     snakeArr = [{ x: 13, y: 15 }];
     backgroundSound.play();
     score = 0;
@@ -111,10 +111,13 @@ function gameEngine() {
     foodElement.classList.add("food");
     groundDiv.appendChild(foodElement);
   })
-
 }
 
 window.requestAnimationFrame(main);
+
+resetDiv.onclick = () => {
+  scoreDiv.innerText = 0;
+}
 
 window.addEventListener("keydown", (event) => {
   backgroundSound.play();
