@@ -40,3 +40,13 @@
 #list{
   gap: 40px;
 }
+
+#list > li > button {
+  margin-left: 10px; 
+  border: none; 
+  border-radius: 10px;
+}
+
+#list > li{
+  margin-bottom: 10px;
+}

@@ -11,15 +11,9 @@ addTaskDiv.onclick = () => {
 
 const addList = (text) => {
   let listElement = document.createElement("li");
-  listElement.style.cssText = "margin-bottom: 10px";
   listElement.innerText = text;
 
   let doneButton = document.createElement("button");
-  doneButton.style.cssText = `
-    margin-left: 10px; 
-    border: none; 
-    border-radius: 10px;
-   `;
   doneButton.innerText = "DONE";
 
   unorderedList.appendChild(listElement);
