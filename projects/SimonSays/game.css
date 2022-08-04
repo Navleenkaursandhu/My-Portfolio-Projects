@@ -10,7 +10,7 @@
   gap: 10px;
 }
 
-.boxes > div{
+.box {
   width: 90px;
   height: 90px;
   background-color: antiquewhite;
@@ -26,4 +26,8 @@
 
 #play-button:hover{
   cursor: pointer;
+}
+
+.color{
+  background-color: blue;
 }
