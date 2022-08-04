@@ -2,6 +2,7 @@
   font-size: xx-large;
   font-family: 'Courier New', Courier, monospace;
 }
+
 .flex-column-container{
   display: flex;
   flex-direction: column;
