@@ -6,22 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./list.css">
   <title>TODO List</title>
-
 </head>
 
-  <body>
-    <div class="flex-row">
-    <input id="input-task" placeholder="enter your task here">
-    <button id="add-task">Add Task</button>
-    </div>
-    <div class="flex-column" >
-      <h4>Tasks</h4>
-      <ul id="list"></ul>
-    </div>
+<body>
+  <div>
+    <h1>TODO LIST</h1>
+  </div>
 
+  <div id="description">Store your daily tasks in the form of list. You can remove the completed task
+    by hitting DONE button:)
+  </div>
 
-    <script src="./list.js"></script>
-  </body>
-
+  <div class="flex-row">
+    <input id="input-task" placeholder="Enter your task">
+    <button id="add-task"> ADD TASK</button>
+  </div>
   
-  </html>
+  <div class="flex-column">
+    <h4>TASKS:</h4>
+    <ul id="list"></ul>
+  </div>
+
+  <script src="./list.js"></script>
+</body>
+
+</html>
