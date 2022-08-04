@@ -1,0 +1,28 @@
+*{
+  font-size: xx-large;
+  font-family: 'Courier New', Courier, monospace;
+}
+.flex-column-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.boxes > div{
+  width: 90px;
+  height: 90px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#play-button{
+  border-radius: 10px;
+  box-shadow: 3px 3px gray;
+  border: none;
+}
+
+#play-button:hover{
+  cursor: pointer;
+}
