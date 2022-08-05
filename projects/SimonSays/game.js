@@ -4,12 +4,14 @@ let isBlinking = true;
 
 const playButtonDiv = document.querySelector("#play-button");
 
+//getting random boxArray on hitting play button
 const array = [1,2,3,4,5];
 
    const boxArray = array.sort((a,b) => {
      return 0.5 - Math.random();
    }) // [3,4,5,2,1]
 
+   console.log(boxArray);
 
 
 const sleep = (ms) => {
@@ -19,8 +21,6 @@ const sleep = (ms) => {
 }
 
 //asynchronous function
-
- 
   playButtonDiv.onclick = async () => {
     
     for(let box = 0; box < boxArray.length; box++){
@@ -35,24 +35,41 @@ const sleep = (ms) => {
  
 }
   
-
+//storing user input in an array
 const userInputArray= [];
+let x = 0;
 
-console.log(userInputArray);
-
-
-
-for(let i = 1; i < 6; i++){
+for(let i = 1; i <= 5; i++){
   document.querySelector(`#box${i}`).onclick = () => {
-    document.querySelector(`#box${i}`).classList.add("color-green");
-    userInputArray.push(i);
-    console.log(userInputArray);
+   
+      if(boxArray[x] === i ){
+        document.querySelector(`#box${i}`).classList.add("color-green");
+        x++;
+      }
+      else{
+        document.querySelector(`#box${i}`).classList.add("color-red");
+      }
+    
+    
     }
+    
+  }
+
+
   
 
-}
+
 
   
+  
+  
+
+
+
+
+
+ 
+
 
 
 
