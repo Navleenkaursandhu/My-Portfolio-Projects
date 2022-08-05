@@ -58,11 +58,16 @@ const cards = [
 
 
 const cardContainerDiv = document.querySelector("#card-container");
+const restartBtnDiv = document.querySelector("#restart-button");
+
+
+
 
 for (let i = 0; i < 52; i++) {
   let cardDiv = document.createElement("div");
   console.log(document.createElement("div"));
   cardDiv.classList.add("card"); // <div class="card">   </div>
+  cardDiv.setAttribute("id", `id${i}`);
 
   let cardShapeDiv = document.createElement("div");
   let numberDiv = document.createElement("div");
@@ -76,4 +81,48 @@ for (let i = 0; i < 52; i++) {
   cardContainerDiv.appendChild(cardDiv);
   cardDiv.appendChild(numberDiv);
   cardDiv.appendChild(cardShapeDiv);
+
+
+  cardShapeDiv.classList.add("hide-card");
+  numberDiv.classList.add("hide-card");
+  cardDiv.classList.add("color-blue");
+  
 }
+
+
+restartBtnDiv.onclick = () => {
+  let randomCardsArray = [...cards].sort((a,b) => {
+    return 0.5 -  Math.random();
+  })
+  console.log(randomCardsArray);
+
+  cardContainerDiv.innerHTML = "";
+
+  for (let i = 0; i < 52; i++) {
+  let cardDiv = document.createElement("div");
+  console.log(document.createElement("div"));
+  cardDiv.classList.add("card"); // <div class="card">   </div>
+
+  cardDiv.setAttribute("id", `id${i}`);
+
+  let cardShapeDiv = document.createElement("div");
+  let numberDiv = document.createElement("div");
+
+  cardShapeDiv.innerText = randomCardsArray[i]["type"];
+  cardShapeDiv.style.color = randomCardsArray[i]["color"];
+
+  numberDiv.innerText = randomCardsArray[i]["num"];
+  numberDiv.style.color = randomCardsArray[i]["color"];
+
+  cardContainerDiv.appendChild(cardDiv);
+  cardDiv.appendChild(numberDiv);
+  cardDiv.appendChild(cardShapeDiv);
+
+  cardShapeDiv.classList.add("hide-card");
+  numberDiv.classList.add("hide-card");
+  cardDiv.classList.add("color-blue");
+
+  }
+}
+
+
