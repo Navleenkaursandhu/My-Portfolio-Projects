@@ -60,57 +60,11 @@ const cards = [
 const cardContainerDiv = document.querySelector("#card-container");
 const restartBtnDiv = document.querySelector("#restart-button");
 
-
-
+let randomCardsArray = [...cards].sort((a, b) => {
+  return 0.5 - Math.random();
+})
 
 for (let i = 0; i < 52; i++) {
-  let cardDiv = document.createElement("div");
-  console.log(document.createElement("div"));
-  cardDiv.classList.add("card"); // <div class="card">   </div>
-  
-  //id for each cardDiv
-  cardDiv.setAttribute("id", `id${i}`);
-
-  let cardShapeDiv = document.createElement("div");
-  let numberDiv = document.createElement("div");
-
-  cardShapeDiv.innerText = cards[i]["type"];
-  cardShapeDiv.style.color = cards[i]["color"];
-
-  numberDiv.innerText = cards[i]["num"];
-  numberDiv.style.color = cards[i]["color"];
-
-  cardContainerDiv.appendChild(cardDiv);
-  cardDiv.appendChild(numberDiv);
-  cardDiv.appendChild(cardShapeDiv);
-
-
-  cardShapeDiv.classList.add("hide-card");
-  numberDiv.classList.add("hide-card");
-  cardDiv.classList.add("color-blue");
-  
-}
-
-for(let i = 0; i < 52; i++){
-
-  document.querySelector(`#id${i}`).onclick = () => {
-  document.querySelector(`#id${i}`).classList.remove("color-blue");
-  document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card");
-  document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card")
-}
-
-}
-
-
-restartBtnDiv.onclick = () => {
-  let randomCardsArray = [...cards].sort((a,b) => {
-    return 0.5 -  Math.random();
-  })
-  console.log(randomCardsArray);
-
-  cardContainerDiv.innerHTML = "";
-
-  for (let i = 0; i < 52; i++) {
   let cardDiv = document.createElement("div");
   console.log(document.createElement("div"));
   cardDiv.classList.add("card"); // <div class="card">   </div>
@@ -131,20 +85,58 @@ restartBtnDiv.onclick = () => {
   cardDiv.appendChild(numberDiv);
   cardDiv.appendChild(cardShapeDiv);
 
+
   cardShapeDiv.classList.add("hide-card");
   numberDiv.classList.add("hide-card");
   cardDiv.classList.add("color-blue");
-  }
-  
-  for(let i = 0; i < 52; i++){
 
-    document.querySelector(`#id${i}`).onclick = () => {
+}
+
+for (let i = 0; i < 52; i++) {
+
+  document.querySelector(`#id${i}`).onclick = () => {
     document.querySelector(`#id${i}`).classList.remove("color-blue");
     document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card");
     document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card")
   }
-  
-  }
-  
+
 }
 
+
+restartBtnDiv.onclick = () => {
+  cardContainerDiv.innerHTML = "";
+
+  for (let i = 0; i < 52; i++) {
+    let cardDiv = document.createElement("div");
+    console.log(document.createElement("div"));
+    cardDiv.classList.add("card");
+
+    //id for each cardDiv
+    cardDiv.setAttribute("id", `id${i}`);
+
+    let cardShapeDiv = document.createElement("div");
+    let numberDiv = document.createElement("div");
+
+    cardShapeDiv.innerText = randomCardsArray[i]["type"];
+    cardShapeDiv.style.color = randomCardsArray[i]["color"];
+
+    numberDiv.innerText = randomCardsArray[i]["num"];
+    numberDiv.style.color = randomCardsArray[i]["color"];
+
+    cardContainerDiv.appendChild(cardDiv);
+    cardDiv.appendChild(numberDiv);
+    cardDiv.appendChild(cardShapeDiv);
+
+    cardShapeDiv.classList.add("hide-card");
+    numberDiv.classList.add("hide-card");
+    cardDiv.classList.add("color-blue");
+  }
+
+  for (let i = 0; i < 52; i++) {
+    document.querySelector(`#id${i}`).onclick = () => {
+      document.querySelector(`#id${i}`).classList.remove("color-blue");
+      document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card");
+      document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card")
+    }
+  }
+}
