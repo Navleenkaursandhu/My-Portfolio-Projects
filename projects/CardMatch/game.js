@@ -104,6 +104,9 @@ for (let i = 0; i < 52; i++) {
 
 
 restartBtnDiv.onclick = () => {
+  let randomCardsArray = [...cards].sort((a, b) => {
+    return 0.5 - Math.random();
+  })
   cardContainerDiv.innerHTML = "";
 
   for (let i = 0; i < 52; i++) {
