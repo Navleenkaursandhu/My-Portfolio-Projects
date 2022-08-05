@@ -1,6 +1,7 @@
 //on clicking PLAY random color box appear
 
 let isBlinking = true;
+let isPlaying = false;
 
 const playButtonDiv = document.querySelector("#play-button");
 
@@ -20,6 +21,7 @@ const sleep = (ms) => {
   })
 }
 
+
 //asynchronous function
   playButtonDiv.onclick = async () => {
     
@@ -32,12 +34,17 @@ const sleep = (ms) => {
     currentBox.classList.remove("color");
     await sleep(500);
   } 
+
+  document.querySelector("#title").innerText = "Now Your Turn!";
  
 }
-  
+
+
+
 //storing user input in an array
 const userInputArray= [];
 let x = 0;
+
 
 for(let i = 1; i <= 5; i++){
   document.querySelector(`#box${i}`).onclick = () => {
@@ -45,15 +52,21 @@ for(let i = 1; i <= 5; i++){
       if(boxArray[x] === i ){
         document.querySelector(`#box${i}`).classList.add("color-green");
         x++;
+        document.querySelector("#title").innerText = "You Win:D";
       }
       else{
+        
         document.querySelector(`#box${i}`).classList.add("color-red");
+        document.querySelector("#title").innerText = "Oops!,You Lost:/";
       }
-    
-    
+
+      
     }
-    
+
+  
   }
+
+
 
 
   
