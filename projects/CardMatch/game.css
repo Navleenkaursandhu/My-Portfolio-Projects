@@ -1,18 +1,18 @@
-*{
+* {
   font-size: 23px;
 }
-.flex-column-container{
+
+.flex-column-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
   gap: 20px;
-  
   font-weight: bold;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.flex-row-container{
+.flex-row-container {
   display: flex;
   width: 600px;
   gap: 8px;
@@ -20,7 +20,7 @@
   justify-content: center;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,15 +31,18 @@
   border: 1px solid black;
 }
 
-.hidden-card{
-  background-color: dodgerblue;
+.hidden-card {
+  background-color: rgb(76, 135, 245);
 }
 
-.hidden-card > div{
+.hidden-card > div {
   visibility: hidden;
 }
 
-.background-color{
-  background-color: rgb(176, 238, 246);
+.background-color {
+  background-color: rgb(189, 241, 248);
 }
 
+#restart-button{
+  border-radius: 5px;
+}

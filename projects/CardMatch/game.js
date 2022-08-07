@@ -56,9 +56,9 @@ const cards = [
   { type: '♦', typeName: 'diamond', color: 'red', num: 'A' },
 ];
 
-
 const cardContainerDiv = document.querySelector("#card-container");
 const restartBtnDiv = document.querySelector("#restart-button");
+let count = 0;
 
 const setupNewGame = () => {
   let randomCardsArray = [...cards].sort((a, b) => {
@@ -71,7 +71,6 @@ const setupNewGame = () => {
     console.log(document.createElement("div"));
     cardDiv.classList.add("card");
 
-    //id for each cardDiv
     cardDiv.setAttribute("id", `id${i}`);
 
     let cardShapeDiv = document.createElement("div");
@@ -80,22 +79,17 @@ const setupNewGame = () => {
     cardDiv.style.color = randomCardsArray[i]["color"];
 
     cardShapeDiv.innerText = randomCardsArray[i]["type"];
-
     numberDiv.innerText = randomCardsArray[i]["num"];
-
 
     cardContainerDiv.appendChild(cardDiv);
     cardDiv.appendChild(numberDiv);
     cardDiv.appendChild(cardShapeDiv);
-
-
     cardDiv.classList.add("hidden-card");
   }
 
   let visibleCardDivArray = [];
   for (let i = 0; i < 52; i++) {
     let cardDivElement = document.querySelector(`#id${i}`)
-
 
     cardDivElement.onclick = () => {
       if (cardDivElement.classList.contains("hidden-card")) {
@@ -111,16 +105,13 @@ const setupNewGame = () => {
         if (visibleCardDivArray.length === 2) {
           let element0Color = visibleCardDivArray[0].style.color;
           let element1Color = visibleCardDivArray[1].style.color;
-          
           let element0Char = visibleCardDivArray[0].querySelector(":nth-child(1)").innerText;
-         
           let element1Char = visibleCardDivArray[1].querySelector(":nth-child(1)").innerText;
 
-          let count = 0;
           if (element0Color === element1Color && element0Char === element1Char) {
             visibleCardDivArray[0].classList.add("background-color");
             visibleCardDivArray[1].classList.add("background-color");
-            count = count +2;;
+            count = count + 2;
             document.querySelector("#no-of-cards-matched").innerText = count;
             visibleCardDivArray = [];
           }
