@@ -60,50 +60,7 @@ const cards = [
 const cardContainerDiv = document.querySelector("#card-container");
 const restartBtnDiv = document.querySelector("#restart-button");
 
-let randomCardsArray = [...cards].sort((a, b) => {
-  return 0.5 - Math.random();
-})
-
-for (let i = 0; i < 52; i++) {
-  let cardDiv = document.createElement("div");
-  console.log(document.createElement("div"));
-  cardDiv.classList.add("card"); // <div class="card">   </div>
-
-  //id for each cardDiv
-  cardDiv.setAttribute("id", `id${i}`);
-
-  let cardShapeDiv = document.createElement("div");
-  let numberDiv = document.createElement("div");
-
-  cardShapeDiv.innerText = randomCardsArray[i]["type"];
-  cardShapeDiv.style.color = randomCardsArray[i]["color"];
-
-  numberDiv.innerText = randomCardsArray[i]["num"];
-  numberDiv.style.color = randomCardsArray[i]["color"];
-
-  cardContainerDiv.appendChild(cardDiv);
-  cardDiv.appendChild(numberDiv);
-  cardDiv.appendChild(cardShapeDiv);
-
-
-  cardShapeDiv.classList.add("hide-card");
-  numberDiv.classList.add("hide-card");
-  cardDiv.classList.add("color-blue");
-
-}
-
-for (let i = 0; i < 52; i++) {
-
-  document.querySelector(`#id${i}`).onclick = () => {
-    document.querySelector(`#id${i}`).classList.remove("color-blue");
-    document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card");
-    document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card")
-  }
-
-}
-
-
-restartBtnDiv.onclick = () => {
+const setupNewGame = () => {
   let randomCardsArray = [...cards].sort((a, b) => {
     return 0.5 - Math.random();
   })
@@ -120,26 +77,58 @@ restartBtnDiv.onclick = () => {
     let cardShapeDiv = document.createElement("div");
     let numberDiv = document.createElement("div");
 
+    cardDiv.style.color = randomCardsArray[i]["color"];
+
     cardShapeDiv.innerText = randomCardsArray[i]["type"];
-    cardShapeDiv.style.color = randomCardsArray[i]["color"];
 
     numberDiv.innerText = randomCardsArray[i]["num"];
-    numberDiv.style.color = randomCardsArray[i]["color"];
+
 
     cardContainerDiv.appendChild(cardDiv);
     cardDiv.appendChild(numberDiv);
     cardDiv.appendChild(cardShapeDiv);
 
-    cardShapeDiv.classList.add("hide-card");
-    numberDiv.classList.add("hide-card");
-    cardDiv.classList.add("color-blue");
+
+    cardDiv.classList.add("hidden-card");
   }
 
+  let visibleCardDivArray = [];
   for (let i = 0; i < 52; i++) {
-    document.querySelector(`#id${i}`).onclick = () => {
-      document.querySelector(`#id${i}`).classList.remove("color-blue");
-      document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card");
-      document.querySelector(`#id${i}  .hide-card`).classList.remove("hide-card")
+    let cardDivElement = document.querySelector(`#id${i}`)
+
+
+    cardDivElement.onclick = () => {
+      if (cardDivElement.classList.contains("hidden-card")) {
+        visibleCardDivArray.push(cardDivElement);
+
+        cardDivElement.classList.remove("hidden-card");
+
+        if (visibleCardDivArray.length > 2) {
+          let elementRemoved = visibleCardDivArray.shift();
+          elementRemoved.classList.add("hidden-card");
+        }
+
+        if (visibleCardDivArray.length === 2) {
+          let element0Color = visibleCardDivArray[0].style.color;
+          let element1Color = visibleCardDivArray[1].style.color;
+          
+          let element0Char = visibleCardDivArray[0].querySelector(":nth-child(1)").innerText;
+         
+          let element1Char = visibleCardDivArray[1].querySelector(":nth-child(1)").innerText;
+
+          let count = 0;
+          if (element0Color === element1Color && element0Char === element1Char) {
+            visibleCardDivArray[0].classList.add("background-color");
+            visibleCardDivArray[1].classList.add("background-color");
+            count = count +2;;
+            document.querySelector("#no-of-cards-matched").innerText = count;
+            visibleCardDivArray = [];
+          }
+        }
+      }
     }
   }
 }
+
+restartBtnDiv.onclick = setupNewGame;
+setupNewGame();

@@ -14,12 +14,11 @@
 
 .flex-row-container{
   display: flex;
-  width: 40%;
+  width: 600px;
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 
 .card{
   display: flex;
@@ -32,10 +31,15 @@
   border: 1px solid black;
 }
 
-.hide-card{
+.hidden-card{
+  background-color: dodgerblue;
+}
+
+.hidden-card > div{
   visibility: hidden;
 }
 
-.color-blue{
-  background-color: dodgerblue;
+.background-color{
+  background-color: rgb(176, 238, 246);
 }
+
