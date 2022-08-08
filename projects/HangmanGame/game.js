@@ -68,7 +68,6 @@ playDiv.onclick = async () => {
             }
             circleCount++;
           }
-
         }
       }
     }
