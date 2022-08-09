@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Mouse+Memoirs&display=swap');
 *{
-  font-size: larger;
+  font-size: 38px;
   font-family: 'Mouse Memoirs', sans-serif;
 }
 
@@ -18,10 +18,15 @@
 }
 
 .circle{
-  height:40px;
-  width: 40px;
+  display:flex;
+  height:55px;
+  width: 55px;
   border-radius: 50px;
   background-color: rgb(182, 182, 180);
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: white;
 }
 
 #play{
@@ -37,10 +42,6 @@
  height: 40px;
  width: 40px;
  border-bottom: 1px solid black;
-}
-
-.text-center{
-  text-align: center;
 }
 
 .background-red{

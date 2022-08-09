@@ -60,7 +60,7 @@ playDiv.onclick = async () => {
         if (i === 0) {
           if (!charArray.includes(capitalChar) && circleCount <= 16) {
             document.querySelector(`#circle${circleCount}`).innerText = capitalChar;
-            document.querySelector(`#circle${circleCount}`).classList.add("text-center", "background-red");
+            document.querySelector(`#circle${circleCount}`).classList.add("background-red");
 
             if (!charArray.includes(capitalChar) && circleCount === 16) {
               resultDiv.innerText = "You Lost:(";
