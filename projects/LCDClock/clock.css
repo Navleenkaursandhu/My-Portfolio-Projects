@@ -15,7 +15,10 @@
 .flex-row-container {
   display: flex;
   gap: 25px;
-  padding: 10px;
+  padding: 60px;
+  border : 16px solid rgb(142, 140, 140);
+  border-style: ridge;
+  border-radius: 10px;
 }
 
 .flex-column-digit {
@@ -66,13 +69,6 @@
 .bottom-colon-segment {
   padding: 10px;
   background-color: black;
-}
-
-.top-colon-segment {
-  animation: blink 1.5s linear infinite;
-}
-
-.bottom-colon-segment {
   animation: blink 1.5s linear infinite;
 }
 
