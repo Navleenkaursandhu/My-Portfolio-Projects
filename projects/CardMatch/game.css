@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 * {
   font-size: 23px;
+  font-family: 'Concert One', cursive;
 }
 
 .flex-column-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -27,11 +30,11 @@
   width: 60px;
   height: 70px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 4px solid rgb(68, 223, 247);
 }
 
 .hidden-card {
-  background-color: rgb(76, 135, 245);
+  background-color: rgb(68, 223, 247);
 }
 
 .hidden-card > div {
@@ -39,9 +42,12 @@
 }
 
 .background-color {
-  background-color: rgb(189, 241, 248);
+  background-color: rgb(150, 246, 241);
+  border: 4px solid rgb(78, 247, 230);
 }
 
 #restart-button{
   border-radius: 5px;
+  background-color: black;
+  color: white;
 }
