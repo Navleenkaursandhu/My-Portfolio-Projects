@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./clock.css">
+  <title>ANALOG CLOCK</title>
+</head>
+
+<body>
+  <div class="center">
+    <svg class="clock" viewbox="0 0 100 100">
+      <circle class="circle" cx="50" cy="50" r="40"></circle>
+      <line id="second-line" x1="50" y1="50" x2="90" y2="50"></line>
+      <line id="minute-line" x1="50" y1="50" x2="50" y2="15"></line>
+      <line id="hour-line" x1="50" y1="50" x2="25" y2="50"></line>
+    </svg>
+  </div>
+
+  <div class="center" id="current-time"></div>
+
+  <script src="./clock.js"></script>
+</body>
+
+</html>
