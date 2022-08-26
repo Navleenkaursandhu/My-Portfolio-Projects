@@ -38,3 +38,9 @@
 .rps .user-score{
  margin-bottom:40px;
 }
+
+.rps .reset{
+  display: flex;
+  justify-content: center;
+  
+}
