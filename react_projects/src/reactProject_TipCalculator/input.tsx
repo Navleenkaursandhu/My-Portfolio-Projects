@@ -18,8 +18,8 @@ export const Input = () => {
     }
   }
 
-  if(Number(splitNum) > 0){
-  amount = (((Number(totalCost) * Number(tip)) / 100) + Number(totalCost)) / Number(splitNum)
+  if (Number(splitNum) > 0) {
+    amount = (((Number(totalCost) * Number(tip)) / 100) + Number(totalCost)) / Number(splitNum)
   }
 
   return (
@@ -43,8 +43,7 @@ export const Input = () => {
               placeholder='Enter tip percentage' onChange={(e) => setTip(e.target.value)}></input>
           </div>
 
-          <div className='split'>
-            Split:
+          <div className='split'>Split:
             <div className='add' onClick={() => add()}>+</div>
             <div>{splitNum}</div>
             <div className='subtract' onClick={() => sub()}>-</div>

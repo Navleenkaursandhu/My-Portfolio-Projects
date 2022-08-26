@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import {Main} from './reactProject_TipCalculator/main'
 
-
 const Links = () => {
   return(
     <>
