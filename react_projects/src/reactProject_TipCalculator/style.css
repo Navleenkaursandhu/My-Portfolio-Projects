@@ -21,21 +21,21 @@
 }
 
 .tip-calculator .title {
-  font-size: 30px;
+  font-size: 38px;
   text-align: center;
-  padding: 40px;
+  padding: 38px;
   box-sizing: border-box;
 }
 
 .tip-calculator .total-cost {
   margin-left: 90px;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .tip-calculator .tip-amount {
   margin-left: 90px;
-  margin-top: 50px;
-  font-size: 25px;
+  margin-top: 40px;
+  font-size: 30px;
 }
 
 .tip-calculator .total-cost > input,
@@ -52,8 +52,8 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  font-size: 25px;
+  padding: 45px;
+  font-size: 30px;
 }
 
 .tip-calculator .add,
