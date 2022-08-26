@@ -10,17 +10,8 @@ export const Input = () => {
   const [result, setResult] = React.useState('Lets Play!')
   const [round, setRound] = React.useState(1)
 
-
-
-
   const onUserChoice = (choice) => {
-    // if (round === 4) {
-    //   setUserChoice('')
-    //   setBotChoice('')
-    //   setUserScore(0)
-    //   setBotScore(0)
-    //   setResult('Lets Play Again!')
-    // }
+
     if (round <= maxRounds) {
       setRound(prev => prev + 1)
 
@@ -47,17 +38,19 @@ export const Input = () => {
     }
   }
 
-
-  // console.log(botScore, userScore)
-  // if(botScore > userScore){
-  //   setResult('you lost')
-  // }
-  // else if(botScore < userScore){
-  //   setResult('you won')
-  // }
-  // else{
-  //   setResult('draw')
-  // }
+  React.useEffect(() => {
+    if (round > maxRounds) {
+      if (botScore > userScore) {
+        setResult('you lost')
+      }
+      else if (botScore < userScore) {
+        setResult('you won')
+      }
+      else {
+        setResult('draw')
+      }
+    }
+  }, [round])
 
   const resetGame = () => {
     setUserChoice('')
