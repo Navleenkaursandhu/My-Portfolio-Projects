@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Concert+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&display=swap');
+.rps {
+ font-size: 30px;
+ font-family: 'Architects Daughter', cursive;
+}
+
+.rps .title{
+  text-align: center;
+  padding: 50px;
+}
+
+.rps .buttons{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.rps .rock, .rps .paper, .rps .scissors{
+  height: 150px;
+  width: 150px;
+  background-image:radial-gradient(rgb(149, 234, 231), rgb(136, 130, 251));
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+}
+
+.rps .choice{
+  padding: 50px;
+  text-align: center;
+}
+
+.rps .result, .rps .round{
+  text-align: center;
+}
+
+.rps .user-score{
+ margin-bottom:40px;
+}
