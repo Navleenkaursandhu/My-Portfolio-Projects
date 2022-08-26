@@ -1,4 +1,94 @@
-.tip-calculator .background{
-  height: 720px;
+.tip-calculator {
+  display: flex;
+  justify-content: center;
+}
+
+.tip-calculator .background {
+  height: 715px;
   width: 500px;
+}
+
+.tip-calculator .container {
+  position: relative;
+}
+
+.tip-calculator .ui-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.tip-calculator .title {
+  font-size: 30px;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.tip-calculator .total-cost {
+  margin-left: 90px;
+  font-size: 25px;
+}
+
+.tip-calculator .tip-amount {
+  margin-left: 90px;
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.tip-calculator .total-cost > input,
+.tip-calculator .tip-amount > input {
+  border-radius: 5px;
+  font-size: large;
+  padding: 5px;
+  border: ridge;
+  font-family: cursive;
+}
+
+.tip-calculator .split {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-size: 25px;
+}
+
+.tip-calculator .add,
+.tip-calculator .subtract {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  background-color: rgb(207, 241, 229);
+}
+
+.tip-calculator .add:hover,
+.tip-calculator .subtract:hover {
+  cursor: pointer;
+  font-size: 50px;
+  background-image: radial-gradient(rgb(199, 243, 227), rgb(110, 164, 153));
+}
+
+.tip-calculator .total-per-person {
+  text-align: center;
+  font-size: 35px;
+}
+
+.tip-calculator .split-amount {
+  width: 210px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 140px;
+  padding: 5px;
+  text-align: center;
+  background-image: linear-gradient(rgb(252, 199, 135), rgb(244, 244, 203));
+  font-size: 35px;
+  border: none;
+  border-radius: 5px;
 }

@@ -1,10 +1,10 @@
-import {Input} from './input'
+import { Input } from './input'
 import './style.css'
 
 export const Main = () => {
-  return(
+  return (
     <div className='tip-calculator'>
-    <Input/>
+      <Input />
     </div>
   )
 }
