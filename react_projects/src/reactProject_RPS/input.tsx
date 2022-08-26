@@ -1,5 +1,6 @@
 import './style.css'
 import React from 'react'
+import image from './assets/background.png'
 
 const maxRounds = 5
 export const Input = () => {
@@ -26,14 +27,13 @@ export const Input = () => {
         (choice === '✋' && botSelect === '✌️') ||
         (choice === '✌️' && botSelect === '✊')) {
         setBotScore(prevScore => prevScore + 1)
-        //setResult(prev => prev = 'You Lost:(')
       }
       else if (choice === botSelect) {
-        //setResult(prev => prev ='Draw!')
+        setBotScore(botScore)
+        setUserScore(userScore)
       }
       else {
         setUserScore(prevScore => prevScore + 1)
-        //setResult('You Won:)')
       }
     }
   }
@@ -41,13 +41,13 @@ export const Input = () => {
   React.useEffect(() => {
     if (round > maxRounds) {
       if (botScore > userScore) {
-        setResult('you lost')
+        setResult('You Lost:(')
       }
       else if (botScore < userScore) {
-        setResult('you won')
+        setResult('You Won:)')
       }
       else {
-        setResult('draw')
+        setResult('Draw!')
       }
     }
   }, [round])
@@ -63,7 +63,11 @@ export const Input = () => {
 
   return (
     <>
-      <div className='title'>Rock Paper Scissors</div>
+      <div className='title'>
+        <img className='image' src={image} />
+        <div className='game'>Rock Paper Scissors</div>
+      </div>
+
       <div className='buttons'>
         <div className='rock' onClick={() => onUserChoice('✊')}>✊</div>
         <div className='paper' onClick={() => onUserChoice('✋')}>✋</div>
@@ -78,11 +82,13 @@ export const Input = () => {
       </div>
 
       <div className='reset'>
-        <button onClick={() => resetGame()}>RESET</button>
+        <button className='reset-btn' onClick={() => resetGame()}>RESET</button>
       </div>
 
       <div className='result'>{result}</div>
       <div className='round'>Round <span>{round > maxRounds ? maxRounds : round}</span> of {maxRounds}</div>
+
+
     </>
   )
 }

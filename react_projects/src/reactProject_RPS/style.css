@@ -1,46 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Concert+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&display=swap');
+
 .rps {
- font-size: 30px;
- font-family: 'Architects Daughter', cursive;
+  font-family: 'Architects Daughter', cursive;
 }
 
-.rps .title{
+.rps .title {
   text-align: center;
-  padding: 50px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding:10px;
 }
 
-.rps .buttons{
+.rps .buttons {
   display: flex;
   justify-content: center;
   gap: 100px;
+  padding: 10px;
 }
 
-.rps .rock, .rps .paper, .rps .scissors{
+.rps .rock,
+.rps .paper,
+.rps .scissors {
   height: 150px;
   width: 150px;
-  background-image:radial-gradient(rgb(149, 234, 231), rgb(136, 130, 251));
-  border-radius: 20px;
+  background-image: radial-gradient(white, rgb(161, 161, 161));
+  border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 70px;
+  font-size: 65px;
+  border: 3px solid black;
+  border: groove;
 }
 
-.rps .choice{
-  padding: 50px;
+.rps .rock:hover,
+.rps .paper:hover,
+.rps .scissors:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px rgb(197, 196, 196);
+  font-size: 78px;
+}
+
+.rps .choice {
+  padding: 25px;
   text-align: center;
+  font-size: 30px;
 }
 
-.rps .result, .rps .round{
+.rps .result,
+.rps .round {
   text-align: center;
+  font-size: 35px;
+  margin-top: 15px;
 }
 
-.rps .user-score{
- margin-bottom:40px;
+.rps .user-score {
+  margin-bottom: 40px;
 }
 
-.rps .reset{
+.rps .reset {
   display: flex;
   justify-content: center;
-  
+}
+
+.rps .reset-btn {
+  border-radius: 10px;
+  font-size: 25px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.rps .image{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: ridge;
 }
