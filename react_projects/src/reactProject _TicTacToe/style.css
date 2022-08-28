@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Anton&family=Concert+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&display=swap');
+
+.tic-tac-toe * {
+  font-family: 'Fredoka One', cursive;
+}
+
+.tic-tac-toe .container {
+  display: flex;
+  justify-content: center;
+}
+
+.tic-tac-toe .center {
+  display: flex;
+  justify-content: center;
+}
+
+.tic-tac-toe .title {
+  width: 50%;
+  border: 2px solid black;
+  color: white;
+  background-color: black;
+  font-size: 55px;
+  margin-top: 30px;
+}
+
+.tic-tac-toe .player {
+  font-size: 40px;
+  padding: 20px;
+}
+
+.tic-tac-toe td {
+  border: groove;
+  width: 120px;
+  height: 120px;
+  font-size: 80px;
+  text-align: center;
+}
+
+.tic-tac-toe table {
+  border-collapse: collapse;
+}
+
+.tic-tac-toe .result {
+  font-size: 38px;
+  padding: 4px;
+}
+
+.tic-tac-toe .restart {
+  font-size: 28px;
+  padding: 5px;
+  border-radius: 10px;
+  border: groove;
+  margin: 5px;
+}
