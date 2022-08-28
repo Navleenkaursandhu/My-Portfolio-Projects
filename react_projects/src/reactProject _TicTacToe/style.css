@@ -16,9 +16,9 @@
 
 .tic-tac-toe .title {
   width: 50%;
-  border: 2px solid black;
-  color: white;
-  background-color: black;
+  
+  color: black;
+  background-image: radial-gradient(rgb(128, 123, 123), rgb(209, 205, 205));
   font-size: 55px;
   margin-top: 30px;
 }
