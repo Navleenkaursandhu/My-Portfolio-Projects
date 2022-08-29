@@ -31,20 +31,24 @@ export const Input = () => {
     setCellValues(newCellVals);
 
 
-    if (newCellVals[row][0] === newCellVals[row][1] && newCellVals[row][1] === newCellVals[row][2] && newCellVals[row][0] !== "") {
-      setResult(`${newCellVals[row][0]} Wins!`)
+    if (newCellVals[row][0] === newCellVals[row][1] && newCellVals[row][1] === newCellVals[row][2]) {
+      setResult(`${player} Wins!`)
     }
 
     else if (newCellVals[0][column] === newCellVals[1][column] && newCellVals[1][column] === newCellVals[2][column]) {
-      setResult(`${newCellVals[0][column]} Wins!`)
+      setResult(`${player} Wins!`)
     }
 
-    else if (newCellVals[0][0] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][2]) {
-      setResult(`${newCellVals[0][0]} Wins!`)
+    else if (newCellVals[1][1] === player && newCellVals[0][0] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][2]) {
+      setResult(`${player} Wins!`)
     }
 
-    else if (newCellVals[0][2] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][0]) {
-      setResult(`${newCellVals[0][2]} Wins!`)
+    else if (newCellVals[1][1] === player && newCellVals[0][2] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][0]) {
+      setResult(`${player} Wins!`)
+    }
+
+    else if (newCellVals.map(rowArray => rowArray.every(e => e !== "")).every(e => e === true)) {
+      setResult("It's a Draw!")
     }
   }
 
@@ -94,7 +98,7 @@ export const Input = () => {
 
       </div>
 
-      <div className="center result">Result: {result}</div>
+      <div className="center result">{result}</div>
 
       <div className="center">
         <button className="restart" onClick={() => resetGame()}>RESTART</button>
