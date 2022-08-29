@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Secular+One&display=swap');
+
+* {
+  overflow: hidden;
+  font-family: 'Secular One', sans-serif;
+  font-size: 58px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.clock {
+  width: 650px;
+}
+
+.circle {
+  fill: white;
+  filter: drop-shadow(0px 3px 3px rgba(16, 15, 15, 0.4));
+}
+
+#second-line {
+  stroke: black;
+  stroke-width: 1;
+}
+
+#minute-line {
+  stroke: black;
+  stroke-width: 4;
+}
+
+#hour-line {
+  stroke: black;
+  stroke-width: 4;
+}
+
+#line1,
+#line2 {
+  stroke: black;
+  stroke-width: 0.5;
+}
+
+.clock-nums {
+  stroke: black;
+  stroke-width: 1;
+}
