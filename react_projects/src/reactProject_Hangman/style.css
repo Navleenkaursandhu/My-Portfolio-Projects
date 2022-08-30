@@ -1,10 +1,6 @@
-.hangman .word-container{
-  display: flex;
-  padding: 50px;
-  gap: 20px;
-  border: 1px solid black;
-  justify-content: center;
-  font-size: 60px;
+.hangman .title{
+  text-align: center;
+  font-size: 50px;
 }
 
 .hangman .play-btn-container{
@@ -13,22 +9,51 @@
 }
 
 .hangman .play{
-  font-size: 40px;
+  font-size: 35px;
   border-radius: 10px;
   padding: 5px;
-  width: 180px;
+  width: 150px;
 }
+
+.hangman .chances-container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.hangman .chance{
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.hangman .word-container{
+  display: flex;
+  padding: 50px;
+  gap: 20px;
+  justify-content: center;
+  font-size: 60px;
+}
+
 
 .hangman .character{
-  border: 2px solid black;
+  height: 50px;
+  width: 50px;
   padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid black;
 }
 
-.hangman .char{
-  border: 1px solid black;
-  margin-top: -22px;
-  width: 55px
+.hangman .result{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
 }
+
