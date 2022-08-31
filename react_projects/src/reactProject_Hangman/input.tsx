@@ -24,12 +24,10 @@ export const Input = () => {
   useEffect(() => {
     const listener = e => {
       const userAttempt = e.key.toUpperCase();
-      console.log(userAttempt)
 
       if (wordArray.includes(userAttempt)) {
         setArrayStrings(wordArray.map((char, index) => {
           if (userAttempt === char) {
-            console.log(index)
             return char
           }
           else {
