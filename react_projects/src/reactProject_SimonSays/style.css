@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Anton&family=Bubblegum+Sans&family=Concert+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&family=Sansita:wght@700&display=swap');
+
+.simon-says * {
+  font-family: 'Bubblegum Sans', cursive;
+  background-color: rgb(215, 228, 248);
+}
+
+.simon-says .title {
+  font-size: 45px;
+  text-align: center;
+}
+
+.simon-says .box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+}
+
+.simon-says .box {
+  height: 90px;
+  width: 90px;
+  background-color: rgb(68, 234, 178);
+  border-radius: 10px;
+}
+
+.simon-says .play-container {
+  text-align: center;
+}
+
+.simon-says .play {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  border: ridge;
+  width: 120px;
+  background-color: rgb(174, 207, 250);
+}
+
+.simon-says .play:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px grey;
+}
+
+.simon-says .message {
+  font-size: 30px;
+  text-align: center;
+  padding: 23px;
+}
