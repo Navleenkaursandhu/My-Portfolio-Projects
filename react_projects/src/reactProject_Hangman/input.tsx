@@ -4,23 +4,20 @@ export const Input = () => {
 
   const [word, setWord] = useState("")
   const [arrayStrings, setArrayStrings] = useState([])
-  const[noMatchArray, setNoMatchArray] = useState([])
+  const [noMatchArray, setNoMatchArray] = useState([])
 
   const displayNewWord = async () => {
     const response = await fetch(" https://puzzle.mead.io/puzzle?wordCount=1")
     const data = await response.json()
     const newWord = data.puzzle.toUpperCase()
     setWord(newWord)
-
     setArrayStrings(Array(newWord.length).fill(""))
-
     setNoMatchArray([])
   }
 
   useEffect(() => {
     displayNewWord()
   }, [])
-  console.log(word)
 
   const wordArray = word.split("")
 
@@ -29,25 +26,22 @@ export const Input = () => {
       const userAttempt = e.key.toUpperCase();
       console.log(userAttempt)
 
-    if(wordArray.includes(userAttempt)) {
-      setArrayStrings(wordArray.map((char, index) => {
-        if (userAttempt === char) {
-          console.log(index)
-          return char
-        }
-        else {
-          return arrayStrings[index];
-        }
-      }))
-    }
-    else{
-      setNoMatchArray(noMatchArray.concat(userAttempt))
-    }
+      if (wordArray.includes(userAttempt)) {
+        setArrayStrings(wordArray.map((char, index) => {
+          if (userAttempt === char) {
+            console.log(index)
+            return char
+          }
+          else {
+            return arrayStrings[index];
+          }
+        }))
+      }
+      else {
+        setNoMatchArray(noMatchArray.concat(userAttempt))
+      }
 
-console.log(noMatchArray)
     }
-
-    console.log(arrayStrings)
 
     document.addEventListener("keydown", listener);
 
@@ -67,7 +61,6 @@ console.log(noMatchArray)
         {Array(16).fill('').map((char, i) => {
           return <div className="chance" key={i}>
             {noMatchArray[i] || ''}
-            
           </div>
         })}
       </div>
@@ -81,9 +74,8 @@ console.log(noMatchArray)
       </div>
 
       <div className="result">
-      {noMatchArray[15] && <div>You Lost! It's {word}</div>}
-      {arrayStrings[arrayStrings.length-1]  && <div>You Won:D</div>}
+        {noMatchArray[15] && <div>You Lost! It's {word}</div>}
+        {!!arrayStrings.length && arrayStrings.every(char => char !== "") && <div>You Won:D</div>}
       </div>
     </>)
-
 }
