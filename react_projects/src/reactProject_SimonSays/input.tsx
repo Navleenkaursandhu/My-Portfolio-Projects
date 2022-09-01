@@ -8,8 +8,8 @@ export const Input = () => {
   const [boxToColor, setBoxToColor] = useState(-1)
   const [message, setMessage] = useState("")
   const [userInput, setUserInput] = useState([])
-  const [gameState, setGameState] = useState("idle") //idle, blinking, gettingUserInput, win, lose
-
+  const [gameState, setGameState] = useState("idle")
+  
   const startGame = async () => {
     console.log('Game state:', gameState)
     if (gameState !== "blinking") {
@@ -74,7 +74,7 @@ export const Input = () => {
           if(userInput.includes(i)){
             return <div onClick={() => inputUser(i)} className="box show-green" key={i}></div>
           }
-          
+
           return <div onClick={() => inputUser(i)} className="box no-color" key={i}></div>
         })}
       </div>
