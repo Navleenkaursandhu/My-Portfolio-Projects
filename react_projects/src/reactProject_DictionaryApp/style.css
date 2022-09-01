@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Anton&family=Bubblegum+Sans&family=Concert+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&family=Sansita:wght@700&display=swap');
+
+.dictionary div {
+  box-sizing: border-box;
+  font-family: 'Concert One', cursive;
+}
+
+.dictionary .main-container{
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  height: 100vh;
+  border: 1px solid black;
+}
+
+.dictionary .word-container{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.dictionary .description-container{
+  width: 60%;
+  border: 1px solid black;
+}
+
+.dictionary .heading{
+ font-size: 50px;
+ text-align: center;
+ color:rgb(49, 46, 92);
+ flex: 1;
+ display: flex;
+ align-items: center;
+ background-color:rgb(246, 233, 218);
+}
+
+.dictionary .input-word-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  background-color: rgb(246, 233, 218);
+  color: rgb(71, 75, 116);
+}
+
+.dictionary .input-word-container > input{
+  font-size: 25px;
+  border: ridge;
+  border-color: rgb(71, 75, 116);
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  font-family: 'Concert One', cursive;
+  color: rgb(71, 75, 116);
+}
+
+.dictionary .search-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -48px;
+  font-size: 40px;
+}
+
+.dictionary .image-container{
+  text-align: center;
+}
+
+.dictionary .dictionary-image{
+  max-width: 100%;
+  border-bottom: 9px solid rgb(49, 46, 92);
+}
