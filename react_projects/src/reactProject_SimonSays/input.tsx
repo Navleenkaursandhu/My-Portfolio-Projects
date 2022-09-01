@@ -9,9 +9,9 @@ export const Input = () => {
   const [message, setMessage] = useState("")
   const [userInput, setUserInput] = useState([])
   const [gameState, setGameState] = useState("idle")
-  
+
   const startGame = async () => {
-    console.log('Game state:', gameState)
+    
     if (gameState !== "blinking") {
       setGameState("blinking")
       setUserInput([])
