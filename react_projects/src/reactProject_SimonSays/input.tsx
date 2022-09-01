@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const sleep = async (timeToSleep) => new Promise(resolve => setTimeout(resolve, timeToSleep))
 
@@ -6,21 +6,53 @@ export const Input = () => {
 
   const [order, setOrder] = useState([0, 1, 2, 3, 4])
   const [boxToColor, setBoxToColor] = useState(-1)
+  const [message, setMessage] = useState("")
+  const [userInput, setUserInput] = useState([])
+  const [gameState, setGameState] = useState("idle") //idle, blinking, gettingUserInput, win, lose
 
-  const randomBlink = async () => {
+  const startGame = async () => {
+    console.log('Game state:', gameState)
+    if (gameState !== "blinking") {
+      setGameState("blinking")
+      setUserInput([])
+      setMessage("WATCH")
 
-    let shuffledArray = [...order].sort((a,b) => {
-      return 0.5 - Math.random();
-    })
-    
-    setOrder(shuffledArray)
+      let shuffledArray = [...order].sort((a, b) => {
+        return 0.5 - Math.random();
+      })
 
-    for (let i = 0; i < order.length; i++) {
-      setBoxToColor(order[i])
-      await sleep(1000)
+      setOrder(shuffledArray)
+      console.log(shuffledArray)
+
+      for (let i = 0; i < shuffledArray.length; i++) {
+        setBoxToColor(shuffledArray[i])
+        await sleep(1000)
+      }
+
+      setBoxToColor(-1)
+      setMessage("It's Your Turn!")
+      setGameState("gettingUserInput")
     }
+  }
 
-    setBoxToColor(-1)
+  const inputUser = (i) => {
+
+    if (gameState === "gettingUserInput" && !userInput.includes(i)) {
+      const newUserInput = userInput.concat(i);
+      setUserInput(newUserInput)
+
+      for (let index = 0; index < newUserInput.length; index++) {
+
+        if (newUserInput[index] !== order[index]) {
+          setGameState("lose")
+          setMessage("You Lost!")
+        }
+        else if (newUserInput.length === 5) {
+          setGameState("win")
+          setMessage("You Won!")
+        }
+      }
+    }
   }
 
   return (
@@ -31,17 +63,23 @@ export const Input = () => {
 
       <div className="box-container">
         {Array(5).fill(0).map((value, i) => {
-          return <div className={`box ${boxToColor === i ? "green" : "grey"}`} key={i}>
+          if (gameState === "lose" && i === userInput[userInput.length - 1]) {
+            return <div onClick={() => inputUser(i)} className="box not-ok" key={i}></div>
+          }
 
-          </div>
+          if (boxToColor === i || userInput.includes(i)) {
+            return <div onClick={() => inputUser(i)} className="box show-blue" key={i}></div>
+          }
+
+          return <div onClick={() => inputUser(i)} className="box no-color" key={i}></div>
         })}
       </div>
 
       <div className="play-container">
-        <button className="play" onClick={() => randomBlink()}>PLAY</button>
+        <button className="play" onClick={() => startGame()}>PLAY</button>
       </div>
 
-      <div className="message">WATCh</div>
+      <div className="message">{message}</div>
     </>
   )
 }
