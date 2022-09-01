@@ -22,7 +22,7 @@
   height: 90px;
   width: 90px;
   border-radius: 10px;
-  border: 4px solid rgb(121, 121, 222);
+  border: ridge;
 }
 
 .simon-says .play-container {
@@ -49,11 +49,11 @@
 }
 
 .simon-says .box.show-blue {
-  background-color: rgb(128, 128, 236);
+  background-image: radial-gradient(rgb(126, 233, 245), rgb(109, 177, 245));
 }
 
 .simon-says .box.show-green {
-  background-color: rgb(117, 238, 162);
+  background-image: radial-gradient(rgb(105, 242, 203), rgb(123, 247, 187));
 }
 
 .simon-says .box.no-color {
@@ -61,5 +61,5 @@
 }
 
 .simon-says .box.not-ok {
-  background-color: red;
+  background-image: radial-gradient(rgb(250, 113, 113),rgb(251, 132, 152));
 }

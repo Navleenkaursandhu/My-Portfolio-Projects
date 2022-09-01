@@ -67,10 +67,14 @@ export const Input = () => {
             return <div onClick={() => inputUser(i)} className="box not-ok" key={i}></div>
           }
 
-          if (boxToColor === i || userInput.includes(i)) {
+          if (boxToColor === i) {
             return <div onClick={() => inputUser(i)} className="box show-blue" key={i}></div>
           }
 
+          if(userInput.includes(i)){
+            return <div onClick={() => inputUser(i)} className="box show-green" key={i}></div>
+          }
+          
           return <div onClick={() => inputUser(i)} className="box no-color" key={i}></div>
         })}
       </div>
