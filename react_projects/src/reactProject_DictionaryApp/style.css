@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aclonica&family=Anton&family=Bubblegum+Sans&family=Concert+One&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&family=Sansita:wght@700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Aboreto&family=Aclonica&family=Anton&family=Bubblegum+Sans&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,700&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=M+PLUS+Rounded+1c:wght@300;400&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&family=Sansita:wght@700&display=swap');
 .dictionary div {
   box-sizing: border-box;
-  font-family: 'Concert One', cursive;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .dictionary .main-container{
@@ -58,7 +58,7 @@
   border-radius: 10px;
   padding: 10px;
   width: 80%;
-  font-family: 'Concert One', cursive;
+  font-family: 'Cormorant Garamond', serif;
   color: rgb(71, 75, 116);
 }
 
@@ -68,6 +68,10 @@
   justify-content: center;
   margin-left: -48px;
   font-size: 40px;
+}
+
+.dictionary .search-icon:hover{
+  cursor: pointer;
 }
 
 .dictionary .image-container{
@@ -82,16 +86,18 @@
   background-color: rgb(249, 225, 179);
   width: 70%;
   margin: 40px auto;
+  box-shadow: 3px 3px 2px 2px rgb(246, 214, 160);
+  border: 4px solid rgb(250, 211, 144);
   border-radius: 10px;
 }
 
 .dictionary .phonetics-container{
   width: 50%;
-  margin: -20px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
+  margin-bottom: 24px;
 }
 
 .dictionary .textAudio-container{
@@ -102,16 +108,23 @@
   align-items: center;
   background-color: rgb(247, 230, 194);
   border-radius: 10px;
+  border: 3px solid rgb(249, 223, 178);
 }
 
 .dictionary .audio{
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50px;
   background-color: rgb(250, 186, 164);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dictionary .audio.material-symbols-outlined:hover{
+  cursor: pointer;
+  font-size: 65px;
+  box-shadow: 0px 0px 5px 5px rgb(246, 157, 127);
 }
 
 .dictionary .audio.material-symbols-outlined{
@@ -120,6 +133,43 @@
 }
 
 .dictionary .text{
+  font-size: 28px;
+  color:  rgb(62, 59, 104);
+}
+
+.dictionary .meanings-container{
+  padding: 10px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 75%;
+  margin: 0 auto; 
+}
+
+.dictionary .partOfSpeech{
+  background-color: rgb(196, 201, 222);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px rgb(148, 149, 200);
+}
+
+.dictionary .description{
+ display: flex;
+ align-items: center;
+ font-size: 28px;
+ color: rgb(62, 59, 104);
+}
+
+.dictionary .description.material-symbols-outlined{
+  color: rgb(183, 113, 90);
   font-size: 30px;
-  color: rgb(49, 46, 92);
+}
+
+.dictionary .definition{
+  font-size: 20px;
+}
+
+.dictionary li::marker{
+  content: '✎';
 }

@@ -5,9 +5,11 @@ export const Description = (props) => {
   return(
     <>
     <div className="description-container">
-      <div className='user-input-word'>{props.wordData.word}</div>
+
+      {props.wordData.word && <div className='user-input-word'>{props.wordData.word}</div>}
       <Phonetics list={props.wordData.phonetics}/>
-      <Meanings list={props.onChange}/>
+      <Meanings list={props.wordData.meanings}/>
+      
     </div>
     </>
   )

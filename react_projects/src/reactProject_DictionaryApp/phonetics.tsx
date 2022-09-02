@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 
 export const Phonetics = (props) => {
 
-  let a = props.list
+  
   console.log(props.list)
 
 
-  const arrayWithPhoneticText = (a || []).filter((object) => object.text && object.audio)
+  const arrayWithPhoneticText = (props.list || []).filter((object) => object.text && object.audio)
 
 
   const runAudio = (audio) => {
@@ -29,7 +29,7 @@ export const Phonetics = (props) => {
 
       </div>
 
-
+      
     </>
   )
 }
