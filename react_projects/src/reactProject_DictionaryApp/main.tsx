@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 export const Main = () => {
 
   const [wordEntered, setWordEntered] = useState("")
-  const [wordObject, setWordObject] = useState(null)
+  const [wordObject, setWordObject] = useState({})
 
   const fetchData = async () => {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordEntered}`)
@@ -33,7 +33,7 @@ export const Main = () => {
     <div className='dictionary'>
       <div className='main-container'>
         <Word onChange={dataFunction} />
-        <Description />
+        <Description wordData={wordObject} />
       </div>
 
     </div>
