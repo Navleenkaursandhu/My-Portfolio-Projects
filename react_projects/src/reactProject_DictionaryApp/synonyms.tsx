@@ -1,9 +1,11 @@
 export const Synonyms = (props) => {
 
-  return(
+  return (
     <>
-    {props.similar.length !== 0 &&  <div>Synonyms</div>}
-    {(props.similar || []).map((string,i) => <div key={i}>{string}</div>)}
+      {props.similar.length !== 0 && <div className="similar-font">Synonyms:</div>}
+      <div className="similar">
+        {(props.similar || []).map((string, i) => <div key={i}><div className="string-color">{string}</div></div>)}
+      </div>
     </>
   )
 }

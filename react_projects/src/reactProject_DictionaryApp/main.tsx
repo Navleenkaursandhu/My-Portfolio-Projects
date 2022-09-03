@@ -6,24 +6,24 @@ export const Main = () => {
 
   const [wordEntered, setWordEntered] = useState("")
   const [wordObject, setWordObject] = useState({})
+  const [apiError, setApiError] = useState()
 
   const fetchData = async () => {
-    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordEntered}`)
-    const data = await response.json()
-    const wordObject = data[0]
-    console.log(wordObject)
-    setWordObject(data[0])
-    console.log(wordObject)
+    try {
+      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordEntered}`)
+      const data = await response.json()
+      setWordObject(data[0])
+    }
+    catch (error) {
+      console.log("word not found")
+    }
   }
-
 
   useEffect(() => {
     if (wordEntered !== "") {
       fetchData()
-
     }
   }, [wordEntered])
-
 
   const dataFunction = (word) => {
     setWordEntered(word)
@@ -35,7 +35,6 @@ export const Main = () => {
         <Word onChange={dataFunction} />
         <Description wordData={wordObject} />
       </div>
-
     </div>
   )
 }

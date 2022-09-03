@@ -1,10 +1,11 @@
 export const Antonyms = (props) => {
 
-  console.log(props.opposite)
   return (
     <>
-      {props.opposite.length !== 0 &&  <div>Antonyms</div>}
-      {(props.opposite || []).map((string, i) =><div key={i}>{string}</div>)}
+      {props.opposite.length !== 0 && <div className="opposite-font">Antonyms:</div>}
+      <div className="opposite">
+        {(props.opposite || []).map((string, i) => <div key={i}><div className="string-color">{string}</div></div>)}
+      </div>
     </>
   )
 }
