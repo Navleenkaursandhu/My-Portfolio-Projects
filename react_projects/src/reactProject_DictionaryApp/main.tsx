@@ -6,16 +6,19 @@ export const Main = () => {
 
   const [wordEntered, setWordEntered] = useState("")
   const [wordObject, setWordObject] = useState({})
-  const [apiError, setApiError] = useState()
+  const [apiError, setApiError] = useState('');
 
   const fetchData = async () => {
-    try {
-      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordEntered}`)
+    setWordObject({});
+    setApiError('');
+    
+    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordEntered}`);
+    if (response.ok) {
       const data = await response.json()
-      setWordObject(data[0])
-    }
-    catch (error) {
-      console.log("word not found")
+      console.log(response, data)
+      setWordObject(data[0] || {})
+    } else {
+      setApiError(`Could not find "${wordEntered}"`);
     }
   }
 
@@ -33,7 +36,7 @@ export const Main = () => {
     <div className='dictionary'>
       <div className='main-container'>
         <Word onChange={dataFunction} />
-        <Description wordData={wordObject} />
+        <Description wordData={wordObject} error={apiError} />
       </div>
     </div>
   )
