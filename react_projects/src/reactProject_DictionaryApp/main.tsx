@@ -37,7 +37,6 @@ export const Main = () => {
       <div className='main-container'>
         <Word onChange={dataFunction} />
         <Description wordData={wordObject} error={apiError} />
-        
       </div>
     </div>
   )

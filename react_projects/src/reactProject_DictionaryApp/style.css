@@ -12,13 +12,22 @@
   height: 100vh;
 }
 
-.dictionary .no-word-found{
-  height: 100vh;
+.dictionary .what-page-does {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: rgb(44, 47, 98);
+}
+
+.dictionary .no-word-found {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 45px;
-  color:rgb(44, 47, 98);
+  color: rgb(44, 47, 98);
 }
 
 .dictionary .word-container {

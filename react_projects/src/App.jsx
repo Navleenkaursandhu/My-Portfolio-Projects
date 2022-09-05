@@ -3,13 +3,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import {Main} from './reactProject_DictionaryApp/main'
+import { Main } from './reactProject_DictionaryApp/main'
 
 const Links = () => {
-  return(
+  return (
     <>
-    <h1>My React Projects</h1>
-    <a href="Dictionary">React Project: Dictionary</a>
+      <h1>My React Projects</h1>
+      <a href="Dictionary">React Project: Dictionary</a>
     </>
   )
 }
@@ -17,16 +17,16 @@ const Links = () => {
 function App() {
 
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route index element={<Links />} />
-            <Route path="Dictionary" element={<Main/>}/>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    );
-  
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Links />} />
+          <Route path="Dictionary" element={<Main />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+
 }
 
 export default App
