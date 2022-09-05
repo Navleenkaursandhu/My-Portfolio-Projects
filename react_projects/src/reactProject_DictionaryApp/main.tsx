@@ -11,7 +11,7 @@ export const Main = () => {
   const fetchData = async () => {
     setWordObject({});
     setApiError('');
-    
+
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordEntered}`);
     if (response.ok) {
       const data = await response.json()
