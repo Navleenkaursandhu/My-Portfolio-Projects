@@ -4,7 +4,7 @@ export const Description = (props) => {
   return (
     <>
       <div className="description-container">
-        {props.error && <div>{props.error}</div>}
+        {props.error && <div className='no-word-found'>{props.error}</div>}
         {!props.error && <>
           {props.wordData.word && <div className='user-input-word'>
             <span className="book material-symbols-outlined">auto_stories</span>

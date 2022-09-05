@@ -18,7 +18,7 @@ export const Main = () => {
       console.log(response, data)
       setWordObject(data[0] || {})
     } else {
-      setApiError(`Could not find "${wordEntered}"`);
+      setApiError(`Oops! Could not find "${wordEntered}"`);
     }
   }
 
@@ -37,6 +37,7 @@ export const Main = () => {
       <div className='main-container'>
         <Word onChange={dataFunction} />
         <Description wordData={wordObject} error={apiError} />
+        
       </div>
     </div>
   )
