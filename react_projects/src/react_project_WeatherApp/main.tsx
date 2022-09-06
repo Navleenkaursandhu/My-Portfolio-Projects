@@ -1,3 +1,4 @@
+import { parseISO } from "date-fns";
 import { useEffect, useState } from "react";
 import {Background} from './background'
 import './style.css'
@@ -50,7 +51,7 @@ export const Main = () => {
 
       currentWeather: {
         time: {
-          value: new Date(data.current_weather.time),
+          value: parseISO(data.current_weather.time),
           unit: data.hourly_units.time
         },
 
@@ -72,7 +73,7 @@ export const Main = () => {
 
       hourlyWeather: data.hourly.time.map((timeStr, i) => ({
         time: {
-          value: new Date(timeStr),
+          value: parseISO(timeStr),
           unit: data.hourly_units.time
         },
 
@@ -110,7 +111,7 @@ export const Main = () => {
       dailyWeather: data.daily.time.map((timeStr, i) => ({
 
         time: {
-          value: new Date(timeStr),
+          value: parseISO(timeStr),
           unit: data.daily_units.time
         },
 
