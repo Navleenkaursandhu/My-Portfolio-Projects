@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Aboreto&family=Aclonica&family=Anton&family=Bubblegum+Sans&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,700&family=Fredoka:wght@500&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=M+PLUS+Rounded+1c:wght@300;400&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&family=Sansita:wght@700&display=swap');
+
+.weather-app div {
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.weather-app .background-container {
+  height: 100vh;
+  margin: -8px;
+  display: flex;
+  background-image: url("./assets/summer.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.weather-app .weather {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 40px 40px 40px 0px;
+}
+
+.weather-app .current-weather {
+  border: 1px solid black;
+  margin: 20px 10px 0px 10px;
+  text-align: center;
+  
+  /* background-color: #5f62636b; */
+}
+
+.weather-app .current-zone {
+  font-size: 40px;
+  ;
+}
+
+.weather-app .current-temperature {
+  font-size: 60px;
+}
+
+.weather-app .current-windspeed,
+.weather-app .current-weather-code {
+  font-size: 30px;
+}
+
+  

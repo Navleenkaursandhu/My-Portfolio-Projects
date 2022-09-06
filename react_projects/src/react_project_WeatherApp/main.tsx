@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import {Header} from './header'
+import {Background} from './background'
+import './style.css'
+
 
 const API_KEY = "8569575b243a97e9bbe5aee8bc42af6b"
 
@@ -12,12 +14,10 @@ const getCurrentLocation = async () => {
 
 export const Main = () => {
 
-  const [weatherData, setWeatherData] = useState(null)
+  const [weatherData, setWeatherData] = useState({})
 
   const getWeatherData = async () => {
     const currLocation = await getCurrentLocation()
-    console.log(currLocation)
-
     const lat = currLocation.coords.latitude
     const lon = currLocation.coords.longitude
     const zone = Intl.DateTimeFormat().resolvedOptions().timeZone
@@ -48,7 +48,7 @@ export const Main = () => {
     const finalData = {
       raw: data,
 
-      currentData: {
+      currentWeather: {
         time: {
           value: new Date(data.current_weather.time),
           unit: data.hourly_units.time
@@ -70,7 +70,7 @@ export const Main = () => {
         }
       },
 
-      hourlyData: data.hourly.time.map((timeStr, i) => ({
+      hourlyWeather: data.hourly.time.map((timeStr, i) => ({
         time: {
           value: new Date(timeStr),
           unit: data.hourly_units.time
@@ -107,7 +107,7 @@ export const Main = () => {
         }
       })),
 
-      dailyData: data.daily.time.map((timeStr, i) => ({
+      dailyWeather: data.daily.time.map((timeStr, i) => ({
 
         time: {
           value: new Date(timeStr),
@@ -153,9 +153,11 @@ export const Main = () => {
           value: data.daily.apparent_temperature_min[i],
           unit: data.daily_units.apparent_temperature_min
         }
-      }))
+      })),
+
+     
     }
-    console.log(finalData)
+    setWeatherData(finalData)
   }
 
   useEffect(() => {
@@ -168,7 +170,7 @@ export const Main = () => {
   return (
     <>
       <div className="weather-app">
-      <Header/>
+      <Background data={weatherData}/>
       </div>
     </>
   )
