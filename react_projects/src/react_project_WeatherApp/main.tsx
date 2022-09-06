@@ -82,8 +82,6 @@ export const Main = () => {
           value: data.hourly.apparent_temperature[i],
           unit: data.hourly_units.apparent_temperature
         }
-
-
       }))
 
 
