@@ -24,7 +24,8 @@ export const Main = () => {
     const hourlyFields = [
       "temperature_2m",
       "windspeed_10m",
-      "rain,snowfall",
+      "rain",
+      "snowfall",
       "weathercode",
       "apparent_temperature"
     ]
@@ -36,7 +37,6 @@ export const Main = () => {
       "weathercode",
       "rain_sum",
       "snowfall_sum",
-      "showers_sum",
       "apparent_temperature_max",
       "apparent_temperature_min"
     ]
@@ -47,6 +47,30 @@ export const Main = () => {
 
     const finalData = {
       raw: data,
+
+      currentData: {
+        time:{
+          value: new Date(data.current_weather.time),
+          unit: data.hourly_units.time
+        },
+
+        temperature: {
+          value: data.current_weather.temperature,
+          unit: data.hourly_units.temperature_2m,
+        },
+
+        windspeed: {
+          value: data.current_weather.windspeed,
+          unit: data.hourly_units.windspeed_10m
+        },
+
+        weathercode: {
+          value: data.current_weather.weathercode,
+          unit: data.hourly_units.weathercode
+        }
+
+      },
+
       hourlyData: data.hourly.time.map((timeStr, i) => ({
         time: {
           value: new Date(timeStr),
@@ -57,7 +81,7 @@ export const Main = () => {
           value: data.hourly.temperature_2m[i],
           unit: data.hourly_units.temperature_2m,
         },
- 
+
         hourlyWindspeed: {
           value: data.hourly.windspeed_10m[i],
           unit: data.hourly_units.windspeed_10m
@@ -89,6 +113,7 @@ export const Main = () => {
     console.log(finalData)
 
   }
+
 
 
   useEffect(() => {
