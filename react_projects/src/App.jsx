@@ -3,12 +3,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import './App.css'
+import {Main} from './react_project_WeatherApp/main'
 
 const Links = () => {
   return(
     <>
-    <h1>My React Projects</h1>
+    <h1>My React Project</h1>
+    <a href="WeatherApp">React Project: Weather Forecast Application</a>
     </>
   )
 }
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Links />} />
+            <Route path="WeatherApp" element={<Main/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
