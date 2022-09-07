@@ -13,7 +13,7 @@ export const CurrentWeather = (props) => {
       </div>
       }
 
-     {props.ata && props.currentData.weathercode.value !== undefined && 
+     {props.rawData && props.currentData.weathercode.value !== undefined && 
       <div className='current-weather-code'>
         {codes[props.currentData.weathercode.value]}
       </div>}
