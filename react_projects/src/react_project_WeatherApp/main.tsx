@@ -1,8 +1,7 @@
 import { parseISO } from "date-fns";
 import { useEffect, useState } from "react";
-import {Background} from './background'
+import { Background } from './background'
 import './style.css'
-
 
 const API_KEY = "8569575b243a97e9bbe5aee8bc42af6b"
 
@@ -155,8 +154,6 @@ export const Main = () => {
           unit: data.daily_units.apparent_temperature_min
         }
       })),
-
-     
     }
     setWeatherData(finalData)
   }
@@ -165,13 +162,10 @@ export const Main = () => {
     getWeatherData()
   }, [])
 
-
-
-
   return (
     <>
       <div className="weather-app">
-      <Background data={weatherData}/>
+        <Background data={weatherData} />
       </div>
     </>
   )

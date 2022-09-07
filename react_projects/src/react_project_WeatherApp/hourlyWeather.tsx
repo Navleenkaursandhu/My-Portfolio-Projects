@@ -1,11 +1,10 @@
 export const HourlyWeather = (props) => {
 
-  console.log(props.hourlyData)
-  return(
+  return (
     <>
-    <div>
-      
-    </div>
+      <div className="hourly-weather">
+        hello
+      </div>
     </>
   )
 }
