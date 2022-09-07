@@ -30,7 +30,7 @@
   margin: 20px 10px 0px 10px;
   text-align: center;
   
-  /* background-color: #5f62636b; */
+  
 }
 
 .weather-app .current-zone {
@@ -45,6 +45,29 @@
 .weather-app .current-windspeed,
 .weather-app .current-weather-code {
   font-size: 30px;
+}
+
+.weather-app .daily-weather{
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color: #e57e776e;
+}
+
+.weather-app .select-date{
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather-app .day-before, .weather-app .day-after{
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: #fad47f59;
 }
 
   
