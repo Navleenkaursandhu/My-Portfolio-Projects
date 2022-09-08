@@ -52,13 +52,13 @@ export const DailyWeather = (props) => {
               </span>7-DAY FORECAST</div>
             <div className="select-date">
               <div className="day-before">
-                <span onClick={() => dayBefore()} className="material-symbols-rounded">
+                <span onClick={() => dayBefore()} className="day-before material-symbols-rounded">
                   arrow_back_ios
                 </span>
               </div>
               <div className="day-date-today">{date}</div>
               <div className="day-after">
-                <span onClick={() => dayAfter()} className="material-symbols-rounded">
+                <span onClick={() => dayAfter()} className="day-after material-symbols-rounded">
                   arrow_forward_ios
                 </span>
               </div>

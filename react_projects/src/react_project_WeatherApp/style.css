@@ -31,19 +31,39 @@
 .weather-app .current-weather {
   margin: 20px 10px 10px 10px;
   text-align: center;
-}
-
-.weather-app .current-zone {
-  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .weather-app .current-temperature {
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .weather-app .current-windspeed,
+.weather-app .update-hour {
+  font-size: 20px;
+}
+
+.weather-app .current-zone {
+  font-size: 25px;
+}
+
 .weather-app .current-weather-code {
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.weather-app .current-weather-code.material-symbols-rounded {
+  font-size: 55px;
+}
+
+.weather-app .heading {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .weather-app .daily-forecast-title,
@@ -71,12 +91,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .weather-app .day-before,
 .weather-app .day-after,
 .weather-app .day-date-today {
   font-size: 27px;
+}
+
+.weather-app .day-before.material-symbols-rounded:hover,
+.weather-app .day-after.material-symbols-rounded:hover {
+cursor: pointer;
 }
 
 .weather-app .display-daily-data,
