@@ -1,7 +1,8 @@
 import { format } from "date-fns"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { HourlyWeather } from "./hourlyWeather"
 import { codes } from "./weathercodes"
+import { isSameDay } from "date-fns"
 
 export const DailyWeather = (props) => {
   const [index, setIndex] = useState(0)
@@ -9,14 +10,12 @@ export const DailyWeather = (props) => {
   if (props.dailyData !== undefined) {
 
     const dayBefore = () => {
-      console.log(index)
       if (index > 0) {
         setIndex(prev => prev - 1)
       }
     }
 
     const dayAfter = () => {
-      console.log(index)
       if (index < 6) {
         setIndex(prev => prev + 1)
       }
@@ -39,12 +38,24 @@ export const DailyWeather = (props) => {
     const snowFall = props.dailyData[index].snowfall.value
     const snowFall_unit = props.dailyData[index].snowfall.unit
 
+
+    console.log(props.hourlyData)
+
+    const hourlyArray = props.hourlyData.filter((object, i) => {
+      return isSameDay(props.dailyData[index].time.value, object.time.value)
+    })
+
+    console.log(hourlyArray)
+
     return (
       <>
 
         {props.dailyData &&
           <div className="daily-weather">
-            <div className="daily-forecast-title">7-DAY FORECAST</div>
+            <div className="daily-forecast-title">
+              <span className="daily material-symbols-rounded">
+                calendar_month
+              </span>7-DAY FORECAST</div>
             <div className="select-date">
               <div className="day-before">
                 <span onClick={() => dayBefore()} className="material-symbols-rounded">
@@ -63,7 +74,7 @@ export const DailyWeather = (props) => {
 
               <div className="show-temp-data">
                 <div>
-                  <span className=" show-icon material-symbols-rounded">
+                  <span className="show-icon material-symbols-rounded">
                     {codes[weatherCode].icon}
                   </span>
                 </div>
@@ -90,9 +101,20 @@ export const DailyWeather = (props) => {
               </div>
             </div>
 
-            <HourlyWeather />
-
+            <div className="hourly-weather">
+              <div className="hourly-forecast-title">
+                <span className="hourly material-symbols-rounded">
+                  schedule
+                </span>HOURLY FORECAST</div>
+              {hourlyArray.map((obj, i) => {
+                return <div className="display-hourly-data" key={i}>
+                  <HourlyWeather hour={obj} />
+                </div>
+              })}
+            </div>
           </div>
+
+
         }
       </>)
   }
