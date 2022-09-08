@@ -73,12 +73,16 @@ export const DailyWeather = (props) => {
             <div className="display-daily-data">
 
               <div className="show-temp-data">
+
                 <div>
                   <span className="show-icon material-symbols-rounded">
                     {codes[weatherCode].icon}
                   </span>
                 </div>
+
                 <div className="show-data">
+                  <div className="show-weathercode">{codes[weatherCode].value}</div>
+
                   <div className="min-temp">
                     <div>Min Temperature: {temp_min}{temp_min_unit}</div>
                     <div>Feels like {apparent_temp_min}{apparent_temp_min_unit}</div>
@@ -88,18 +92,17 @@ export const DailyWeather = (props) => {
                     <div>Max Temperature: {temp_max}{temp_max_unit}</div>
                     <div>Feels like {apparent_temp_max}{apparent_temp_max_unit}</div>
                   </div>
+
+                  <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
+
+
+                  <div>Rain: {rain}{rain_unit}</div>
+                  <div>Snowfall: {snowFall}{snowFall_unit}</div>
+
                 </div>
               </div>
-
-              <div className="show-weathercode">{codes[weatherCode].value}</div>
-
-              <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
-
-              <div className="show-extra-data">
-                <div>Rain: {rain}{rain_unit}</div>
-                <div>Snowfall: {snowFall}{snowFall_unit}</div>
-              </div>
             </div>
+
 
             <div className="hourly-weather">
               <div className="hourly-forecast-title">

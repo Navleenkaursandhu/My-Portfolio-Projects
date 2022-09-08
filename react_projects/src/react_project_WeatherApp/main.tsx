@@ -160,11 +160,11 @@ export const Main = () => {
         },
 
         sunrise: {
-         value: format(parseISO(data.daily.sunrise[i]), "HH:mm")
+         value: parseISO(data.daily.sunrise[i])
         },
 
         sunset: {
-          value: format(parseISO(data.daily.sunset[i]), "HH:mm")
+          value: parseISO(data.daily.sunset[i])
         }
       })),
     }

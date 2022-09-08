@@ -17,39 +17,40 @@ export const HourlyWeather = (props) => {
   const snowfall = props.hour.snowfall.value
   const snowfall_unit = props.hour.snowfall.unit
 
+  const isNight = (hour < props.daily_sunrise || hour > props.daily_sunset)
+  const weatherCodeData = codes[weathercode];
+  console.log('weather code', hour, props, isNight, weatherCodeData)
+
   console.log(weathercode)
   return (
     <>
-
       <div className="show-temp-data">
-        <div className="hour">{format(hour, "HH:mm")}</div>
+      <div className="hour">{format(hour, "HH:mm")}</div>
         <div>
-          {(format(hour, "HH:mm") > props.daily_sunrise && 
-          format(hour, "HH:mm") < props.daily_sunset) ?
           <span className="show-icon material-symbols-rounded">
-          {codes[weathercode].icon}
-        </span> : <span className="show-icon material-symbols-rounded">
-          clear_night
-        </span> }
-          
+            {isNight
+              ? weatherCodeData.nightIcon || weatherCodeData.icon
+              : weatherCodeData.icon
+            }
+          </span>
         </div>
+
         <div className="show-data">
+
+          <div className="show-weathercode">{weatherCodeData.value}</div>
           <div className="hourly-temp">
             <div>Temperature: {temp}{temp_unit}</div>
             <div>Feels like {apparent_temp}{apparent_temp_unit}</div>
           </div>
+
+          <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
+
+
+          <div>Rain: {rain}{rain_unit}</div>
+          <div>Snowfall: {snowfall}{snowfall_unit}</div>
+
         </div>
       </div>
-
-      <div className="show-weathercode">{codes[weathercode].value}</div>
-
-      <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
-
-      <div className="show-extra-data">
-        <div>Rain: {rain}{rain_unit}</div>
-        <div>Snowfall: {snowfall}{snowfall_unit}</div>
-      </div>
-
       <hr className="hr"></hr>
     </>
   )

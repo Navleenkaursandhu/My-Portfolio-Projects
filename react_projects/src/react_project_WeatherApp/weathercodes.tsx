@@ -1,15 +1,19 @@
+
 export const codes = {
   0: {
-    value: "Clear Sky",
-    icon: "clear_day"
+    value: "Sunny",
+    icon: "clear_day",
+    nightIcon: "clear_night",
   },
   1: {
     value: "Clear Sky",
-    icon: "clear_day"
+    icon: "clear_day",
+    nightIcon: 'clear_night'
   },
   2: {
     value: "Partly Cloudy",
-    icon: "partly_cloudy_day"
+    icon: "partly_cloudy_day",
+    nightIcon: 'partly_cloudy_night'
   },
   3: {
     value: "Cloudy",
@@ -24,55 +28,55 @@ export const codes = {
     icon: "foggy"
   },
   51: {
-    value: "Drizzle: Light",
+    value: "Light Drizzle ",
     icon: "snowing"
   },
   53: {
-    value: "Drizzle: Moderate",
+    value: "Moderate Drizzle",
     icon: "snowing"
   },
   55: {
-    value: "Drizzle: Dense Intensity",
+    value: "Heavy Drizzle",
     icon: "snowing"
   },
   56: {
-    value: "Freezing Drizzle: Light",
+    value: "Light Freezing Drizzle",
     icon: "snowing"
   },
   57: {
-    value: "Freezing Drizzle: Dense Intensity",
+    value: "Heavy Freezing Drizzle",
     icon: "snowing"
   },
   61: {
-    value: "Rain: Slight",
+    value: "Slight Rain",
     icon: "rainy"
   },
   63: {
-    value: "Rain: Moderate ",
+    value: "Moderate Rain",
     icon: "rainy"
   },
   65: {
-    value: "Rain: Heavy Intensity",
+    value: "Heavy Rain",
     icon: "rainy"
   },
   66: {
-    value: "Freezing Rain: Light",
+    value: "Light Freezing Rain",
     icon: "rainy"
   },
   67: {
-    value: "Freezing Rain: Heavy Intensity",
+    value: "Heavy Freezing Rain",
     icon: "rainy"
   },
   71: {
-    value: "Snow Fall: Slight",
+    value: "Slight Snow Fall",
     icon: "weather_snowy"
   },
   73: {
-    value: "Snow Fall: Moderate",
+    value: "Moderate Snow Fall",
     icon: "weather_snowy"
   },
   75: {
-    value: "Snow Fall: Heavy Intensity",
+    value: "Heavy Snow Fall",
     icon: "weather_snowy"
   },
   77: {
@@ -80,27 +84,27 @@ export const codes = {
     icon: "grain"
   },
   80: {
-    value: "Rain Showers: Slight",
+    value: "Slight Rain Showers",
     icon: "rainy"
   },
   81: {
-    value: "Rain Showers: Moderate",
+    value: "Moderate Rain Showers",
     icon: "rainy"
   },
   82: {
-    value: "Rain Showers: Violent",
+    value: "Heavy Rain Showers",
     icon: "rainy"
   },
   85: {
-    value: "Snow Showers: Slight",
+    value: "Slight Snow Showers",
     icon: "weather_snowy"
   },
   86: {
-    value: "Snow Showers: Heavy",
+    value: "Heavy Snow Showers",
     icon: "weather_snowy"
   },
   95: {
-    value: "Thunderstorm: Slight or Moderate",
+    value: "Moderate Thunderstorm",
     icon: "thunderstorm"
   },
   96: {
