@@ -1,6 +1,7 @@
 import { parseISO } from "date-fns";
 import { useEffect, useState } from "react";
 import { Background } from './background'
+import { format } from "date-fns";
 import './style.css'
 
 const API_KEY = "8569575b243a97e9bbe5aee8bc42af6b"
@@ -39,12 +40,16 @@ export const Main = () => {
       "rain_sum",
       "snowfall_sum",
       "apparent_temperature_max",
-      "apparent_temperature_min"
+      "apparent_temperature_min",
+      "sunrise",
+      "sunset"
     ]
 
     const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=${true}&hourly=${hourlyFields.join(",")}&timezone=${zone}&daily=${dailyFields.join(",")}`)
     const data = await response.json()
 
+
+    console.log(data)
     const finalData = {
       raw: data,
 
@@ -152,9 +157,18 @@ export const Main = () => {
         apparent_temperature_min: {
           value: data.daily.apparent_temperature_min[i],
           unit: data.daily_units.apparent_temperature_min
+        },
+
+        sunrise: {
+         value: format(parseISO(data.daily.sunrise[i]), "HH:mm")
+        },
+
+        sunset: {
+          value: format(parseISO(data.daily.sunset[i]), "HH:mm")
         }
       })),
     }
+    console.log(finalData)
     setWeatherData(finalData)
   }
 

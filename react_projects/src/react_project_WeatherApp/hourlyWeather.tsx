@@ -2,6 +2,7 @@ import { format } from "date-fns"
 import { codes } from "./weathercodes"
 export const HourlyWeather = (props) => {
 
+  console.log(props)
   console.log(props.hour.temperature_2m)
   const hour = props.hour.time.value
   const temp = props.hour.temperature_2m.value
@@ -16,15 +17,21 @@ export const HourlyWeather = (props) => {
   const snowfall = props.hour.snowfall.value
   const snowfall_unit = props.hour.snowfall.unit
 
+  console.log(weathercode)
   return (
     <>
 
       <div className="show-temp-data">
         <div className="hour">{format(hour, "HH:mm")}</div>
         <div>
+          {(format(hour, "HH:mm") > props.daily_sunrise && 
+          format(hour, "HH:mm") < props.daily_sunset) ?
           <span className="show-icon material-symbols-rounded">
-            {codes[weathercode].icon}
-          </span>
+          {codes[weathercode].icon}
+        </span> : <span className="show-icon material-symbols-rounded">
+          clear_night
+        </span> }
+          
         </div>
         <div className="show-data">
           <div className="hourly-temp">

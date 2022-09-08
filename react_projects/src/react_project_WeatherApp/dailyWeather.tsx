@@ -108,7 +108,7 @@ export const DailyWeather = (props) => {
                 </span>HOURLY FORECAST</div>
               {hourlyArray.map((obj, i) => {
                 return <div className="display-hourly-data" key={i}>
-                  <HourlyWeather hour={obj} />
+                  <HourlyWeather hour={obj} daily_sunrise={props.dailyData[index].sunrise.value} daily_sunset={props.dailyData[index].sunset.value} />
                 </div>
               })}
             </div>
