@@ -38,18 +38,12 @@ export const DailyWeather = (props) => {
     const snowFall = props.dailyData[index].snowfall.value
     const snowFall_unit = props.dailyData[index].snowfall.unit
 
-
-    console.log(props.hourlyData)
-
     const hourlyArray = props.hourlyData.filter((object, i) => {
       return isSameDay(props.dailyData[index].time.value, object.time.value)
     })
 
-    console.log(hourlyArray)
-
     return (
       <>
-
         {props.dailyData &&
           <div className="daily-weather">
             <div className="daily-forecast-title">
@@ -116,8 +110,6 @@ export const DailyWeather = (props) => {
               })}
             </div>
           </div>
-
-
         }
       </>)
   }

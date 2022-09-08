@@ -16,16 +16,13 @@ export const HourlyWeather = (props) => {
   const rain_unit = props.hour.rain.unit
   const snowfall = props.hour.snowfall.value
   const snowfall_unit = props.hour.snowfall.unit
-
   const isNight = (hour < props.daily_sunrise || hour > props.daily_sunset)
   const weatherCodeData = codes[weathercode];
-  console.log('weather code', hour, props, isNight, weatherCodeData)
 
-  console.log(weathercode)
   return (
     <>
       <div className="show-temp-data">
-      <div className="hour">{format(hour, "HH:mm")}</div>
+        <div className="hour">{format(hour, "HH:mm")}</div>
         <div>
           <span className="show-icon material-symbols-rounded">
             {isNight
@@ -44,7 +41,6 @@ export const HourlyWeather = (props) => {
           </div>
 
           <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
-
 
           <div>Rain: {rain}{rain_unit}</div>
           <div>Snowfall: {snowfall}{snowfall_unit}</div>
