@@ -6,7 +6,7 @@
 
 .currency-container .convertor{
   border: 1px solid black;
-  width: 29%;
+  width: 35%;
   margin: 130px auto 0px auto;
   display: flex;
   flex-direction: column;
@@ -45,7 +45,6 @@
 .currency-container .select-currency-container{
   display: flex;
   align-items: center;
-  
   padding:10px 0px 10px 0px;
   justify-content: space-between;
   margin: 0px 50px 0px 50px;
@@ -99,3 +98,20 @@
   font-size: 28px; 
 }
 
+.currency-container .option{
+  display: flex;
+  flex-direction: column;
+  gap:5px
+}
+
+.currency-container .currency-description{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 50px 0px 50px;
+  font-size: 17px;
+  height:44px;
+}
+
+.currency-container .from-description, .currency-container .to-description{
+  width: 44%;
+}
