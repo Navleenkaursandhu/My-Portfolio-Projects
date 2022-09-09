@@ -98,11 +98,13 @@
 .weather-app .day-after,
 .weather-app .day-date-today {
   font-size: 27px;
+  padding: 3px 0px 3px 5px;
 }
 
 .weather-app .day-before.material-symbols-rounded:hover,
 .weather-app .day-after.material-symbols-rounded:hover {
-cursor: pointer;
+  cursor: pointer;
+  background-color: #ffffff70;
 }
 
 .weather-app .display-daily-data,

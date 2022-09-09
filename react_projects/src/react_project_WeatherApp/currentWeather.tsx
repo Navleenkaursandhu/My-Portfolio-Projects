@@ -2,12 +2,10 @@ import { format } from 'date-fns'
 import { codes } from './weathercodes'
 export const CurrentWeather = (props) => {
 
-  const updateHour = format(props.currentData.time.value, "HH:mm")
-
   return (
     <div className="current-weather">
 
-      <div className='heading'>WEATHER FORECAST</div>
+      {props.currentData && <div className='heading'>WEATHER FORECAST</div>}
 
       {props.currentData && <div className="current-temperature">{props.currentData.temperature.value}
         <span>{props.currentData && props.currentData.temperature.unit}</span>
@@ -27,7 +25,8 @@ export const CurrentWeather = (props) => {
       </div>
       }
 
-      <div className="update-hour">"Last Updated at {updateHour}"</div>
+      {props.currentData && <div className="update-hour">"Last Updated at {format(props.currentData.time.value, "HH:mm")}"</div>}
+
     </div>
   )
 }
