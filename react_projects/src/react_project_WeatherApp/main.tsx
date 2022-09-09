@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { Background } from './background'
 import './style.css'
 
-const API_KEY = "8569575b243a97e9bbe5aee8bc42af6b"
-
 const getCurrentLocation = async () => {
   return new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(
     data => resolve(data),
