@@ -5,6 +5,7 @@ export const Main = () => {
   const [symbols, setSymbols] = useState({})
   const [selectedFromOption, setSelectedFromOption] = useState("")
   const [selectedToOption, setSelectedToOption] = useState("")
+  const [conversionData, setConversionData] = useState({})
 
   const fetchData = async () => {
     const response = await fetch("https://api.exchangerate.host/symbols")
@@ -12,17 +13,29 @@ export const Main = () => {
     setSymbols(data.symbols)
   }
 
+  const fetchConversionData = async () => {
+    const response = await fetch(`https://api.exchangerate.host/convert?from=${selectedToOption}&to=${selectedFromOption}`)
+    const conversionResponse = await response.json()
+    setConversionData(conversionResponse)
+  }
+
+  console.log(conversionData["query"].amount)
+  console.log(conversionData["query"].from)
+  console.log(conversionData["result"])
+  console.log(conversionData["query"].to)
+
   console.log(symbols)
   console.log(Object.keys(symbols))
-  //console.log(selectedOption)
 
   const keyArray = Object.keys(symbols)
-
 
   useEffect(() => {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    fetchConversionData()
+  }, [selectedFromOption, selectedToOption])
 
   const displayDescriptionFrom = (e) => {
     setSelectedToOption(e.target.value)
@@ -34,11 +47,6 @@ export const Main = () => {
 
   console.log(selectedToOption)
   console.log(selectedFromOption)
-
-  // console.log(symbols[selectedFromOption].description)
-  // console.log(symbols[selectedToOption].description)
-
-
 
   return (
     <div className="currency-container">
@@ -90,9 +98,9 @@ export const Main = () => {
 
 
         <div className='unit-value-container'>
-          <div className='unit-before'>1 RUPEE</div>
+          <div className='unit-before'>{conversionData["query"].amount} {conversionData["query"].from}</div>
           <div>=</div>
-          <div className='unit-amount-after'>60 DOLLARS </div>
+          <div className='unit-amount-after'>{conversionData["result"]} {conversionData["query"].to}</div>
         </div>
 
         <div className='convert-button-container'>
