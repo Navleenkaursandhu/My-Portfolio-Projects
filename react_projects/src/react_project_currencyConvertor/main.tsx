@@ -6,7 +6,8 @@ export const Main = () => {
   const [selectedFromOption, setSelectedFromOption] = useState("")
   const [selectedToOption, setSelectedToOption] = useState("")
   const [conversionData, setConversionData] = useState({})
-  const [userInputVal, setUserInputVal] = useState(null)
+  const [userInputVal, setUserInputVal] = useState('1')
+
 
   const fetchData = async () => {
     const response = await fetch("https://api.exchangerate.host/symbols")
@@ -44,12 +45,10 @@ export const Main = () => {
   }
 
   const userInput = (e) => {
-   setUserInputVal(e.target.value)
+    setUserInputVal(e.target.value)
   }
 
-  const displayConversion = () => {
-    
-  }
+
 
   console.log(selectedToOption)
   console.log(selectedFromOption)
@@ -61,7 +60,7 @@ export const Main = () => {
 
         <div className='amount-container'>
           <div>Amount</div>
-          <input onChange = {(e) => userInput(e)} className="input" placeholder='Enter amount to be converted here'></input>
+          <input onChange={(e) => userInput(e)} className="input" placeholder='Enter amount to be converted here'></input>
         </div>
 
         <div className='from-to-container'>
@@ -104,21 +103,10 @@ export const Main = () => {
 
 
         <div className='unit-value-container'>
-          {selectedFromOption  &&  selectedToOption && <div className='unit-before'>{conversionData["query"].amount} {conversionData["query"].from}</div>}
+          {selectedFromOption && selectedToOption && <div className='unit-before'>{conversionData["query"].amount * Number(userInputVal)} {conversionData["query"].from}</div>}
           {selectedFromOption && <div>=</div>}
-          {selectedToOption && selectedFromOption && <div className='unit-amount-after'>{conversionData["result"]} {conversionData["query"].to}</div>}
+          {selectedToOption && selectedFromOption && <div className='unit-amount-after'>{conversionData["result"] * Number(userInputVal)} {conversionData["query"].to}</div>}
         </div>
-
-        <div className='convert-button-container'>
-          <div onClick= {() => displayConversion()} className='convert-button'>CONVERT</div>
-        </div>
-
-        <div className='display-amount-container'>
-       <div className='from-amount'>4</div>
-          <div className='equals'>=</div>
-         <div className='to-amount'>120</div>
-        </div>
-
       </div>
     </div>
   )
