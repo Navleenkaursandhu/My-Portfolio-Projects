@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css'
+import {Main as ProjectHangman} from './reactProject_Hangman/main'
 import {Main as ProjectAnalogSVGClock} from './reactProject_AnalogSVGClock/main'
 import {Main as ProjectLCD} from './reactProject_LCDClock/main'
 import {Main as ProjectTicTacToe} from './reactProject _TicTacToe/main'
@@ -35,6 +36,7 @@ const Links = () => {
     <a href='./TicTacToe'>React Project: Tic Tac Toe</a>
     <a href="./LCDClock">React Project: LCD Clock</a>
     <a href="./AnalogSVGClock">React Project: Analog SVG Clock</a>
+    <a href="./HangmanGame">React Project: Hangman Game</a>
     </div>
   )
 }
@@ -59,6 +61,7 @@ function App() {
             <Route path='TicTacToe' element={<ProjectTicTacToe/>}/>
             <Route path="LCDClock" element={<ProjectLCD/>}/>
             <Route path="AnalogSVGClock" element={<ProjectAnalogSVGClock/>}/>
+            <Route path='HangmanGame' element={<ProjectHangman/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
