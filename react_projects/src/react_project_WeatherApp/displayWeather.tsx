@@ -1,5 +1,5 @@
-import { CurrentWeather } from "./currentWeather"
-import { DailyWeather } from "./dailyWeather"
+import { CurrentWeather } from './currentWeather'
+import { DailyWeather } from './dailyWeather'
 export const DisplayWeather = (props) => {
   console.log(props.data)
   return (

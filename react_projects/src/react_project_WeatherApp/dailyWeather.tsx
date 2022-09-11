@@ -1,14 +1,12 @@
-import { format } from "date-fns"
-import { useState } from "react"
-import { HourlyWeather } from "./hourlyWeather"
-import { codes } from "./weathercodes"
-import { isSameDay } from "date-fns"
+import { format, isSameDay } from 'date-fns'
+import { useState } from 'react'
+import { HourlyWeather } from './hourlyWeather'
+import { codes } from './weathercodes'
 
 export const DailyWeather = (props) => {
   const [index, setIndex] = useState(0)
 
   if (props.dailyData !== undefined) {
-
     const dayBefore = () => {
       if (index > 0) {
         setIndex(prev => prev - 1)
@@ -21,7 +19,7 @@ export const DailyWeather = (props) => {
       }
     }
 
-    const date = format(props.dailyData[index].time.value, "ccc, do MMM yyyy");
+    const date = format(props.dailyData[index].time.value, 'ccc, do MMM yyyy')
     const temp_min = props.dailyData[index].temperature_2m_min.value
     const temp_min_unit = props.dailyData[index].temperature_2m_min.unit
     const temp_max = props.dailyData[index].temperature_2m_max.value
@@ -89,14 +87,12 @@ export const DailyWeather = (props) => {
 
                   <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
 
-
                   <div>Rain: {rain}{rain_unit}</div>
                   <div>Snowfall: {snowFall}{snowFall_unit}</div>
 
                 </div>
               </div>
             </div>
-
 
             <div className="hourly-weather">
               <div className="hourly-forecast-title">

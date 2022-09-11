@@ -1,18 +1,17 @@
 import React from 'react'
 export const Input = () => {
-
-  const [min, setMin] = React.useState('');
-  const [max, setMax] = React.useState('');
-  const [count, setCount] = React.useState('');
+  const [min, setMin] = React.useState('')
+  const [max, setMax] = React.useState('')
+  const [count, setCount] = React.useState('')
 
   const [arrayRandomNums, setArrayRandomNums] = React.useState('')
 
   const generateRandomNum = (count) => {
-    let array = []
+    const array = []
     for (let i = 0; i < count; i++) {
       array[i] = Math.floor(Math.random() * (Number(max) - Number(min) + 1) + Number(min))
     }
-    setArrayRandomNums(array.join(", "))
+    setArrayRandomNums(array.join(', '))
   }
 
   return (

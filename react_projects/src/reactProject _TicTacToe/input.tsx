@@ -1,66 +1,55 @@
 import React from 'react'
 export const Input = () => {
-
-  const [player, setPlayer] = React.useState("x")
+  const [player, setPlayer] = React.useState('x')
   const [cellValues, setCellValues] = React.useState(
-    [["", "", ""],
-    ["", "", ""],
-    ["", "", ""]
+    [['', '', ''],
+      ['', '', ''],
+      ['', '', '']
     ])
 
-  const [result, setResult] = React.useState("")
+  const [result, setResult] = React.useState('')
 
   const displayPlayer = (row, column) => {
     setPlayer(prevPlayer => {
-      if (prevPlayer === "x") {
-        return "o"
-      }
-      else {
-        return "x"
+      if (prevPlayer === 'x') {
+        return 'o'
+      } else {
+        return 'x'
       }
     })
 
     const newCellVals = [
       [...cellValues[0]],
       [...cellValues[1]],
-      [...cellValues[2]],
-    ];
-    if (newCellVals[row][column] === "") {
-      newCellVals[row][column] = player;
+      [...cellValues[2]]
+    ]
+    if (newCellVals[row][column] === '') {
+      newCellVals[row][column] = player
     }
-    setCellValues(newCellVals);
-
+    setCellValues(newCellVals)
 
     if (newCellVals[row][0] === newCellVals[row][1] && newCellVals[row][1] === newCellVals[row][2]) {
       setResult(`${player} Wins!`)
-    }
-
-    else if (newCellVals[0][column] === newCellVals[1][column] && newCellVals[1][column] === newCellVals[2][column]) {
+    } else if (newCellVals[0][column] === newCellVals[1][column] && newCellVals[1][column] === newCellVals[2][column]) {
       setResult(`${player} Wins!`)
-    }
-
-    else if (newCellVals[1][1] === player && newCellVals[0][0] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][2]) {
+    } else if (newCellVals[1][1] === player && newCellVals[0][0] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][2]) {
       setResult(`${player} Wins!`)
-    }
-
-    else if (newCellVals[1][1] === player && newCellVals[0][2] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][0]) {
+    } else if (newCellVals[1][1] === player && newCellVals[0][2] === newCellVals[1][1] && newCellVals[1][1] === newCellVals[2][0]) {
       setResult(`${player} Wins!`)
-    }
-
-    else if (newCellVals.map(rowArray => rowArray.every(e => e !== "")).every(e => e === true)) {
+    } else if (newCellVals.map(rowArray => rowArray.every(e => e !== '')).every(e => e)) {
       setResult("It's a Draw!")
     }
   }
 
   const resetGame = () => {
-    setCellValues([["", "", ""],
-    ["", "", ""],
-    ["", "", ""]
+    setCellValues([['', '', ''],
+      ['', '', ''],
+      ['', '', '']
     ])
 
-    setPlayer("x")
+    setPlayer('x')
 
-    setResult("")
+    setResult('')
   }
 
   return (

@@ -1,12 +1,12 @@
 import React from 'react'
 
 export const Input = () => {
-  const [textInput, setTextInput] = React.useState("")
+  const [textInput, setTextInput] = React.useState('')
   const [list, setList] = React.useState([])
 
   const displayTask = () => {
     setList(list.concat(textInput))
-    setTextInput("")
+    setTextInput('')
   }
   const doneTask = (id: Number) => {
     setList(list.filter((e, i) => {

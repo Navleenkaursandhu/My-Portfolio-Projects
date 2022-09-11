@@ -8,10 +8,21 @@ module.exports = {
     'standard-with-typescript'
   ],
   overrides: [
+    {
+      files: ["*"],
+      rules: {
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+      }
+    }
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: ['./tsconfig.json']
   },
   plugins: [
     'react'

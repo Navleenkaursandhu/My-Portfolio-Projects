@@ -1,18 +1,17 @@
 import React from 'react'
 export const Input = () => {
-
   const [min, setMin] = React.useState()
 
   const [max, setMax] = React.useState()
 
-  const[randomNo, setRandomNo] = React.useState()
+  const [randomNo, setRandomNo] = React.useState()
 
   const generateRandom = () => {
     const randomNo = (Math.floor(Math.random() * (Number(max) - Number(min) + 1) + Number(min)))
     setRandomNo(randomNo)
   }
 
-  return(
+  return (
     <>
     <div>
       <span>Min Limit &nbsp;</span>

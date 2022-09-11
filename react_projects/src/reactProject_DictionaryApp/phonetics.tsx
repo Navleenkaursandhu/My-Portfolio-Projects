@@ -1,5 +1,4 @@
 export const Phonetics = (props) => {
-
   const arrayWithPhoneticText = (props.list || []).filter((object) => object.text && object.audio)
 
   const runAudio = (audio) => {

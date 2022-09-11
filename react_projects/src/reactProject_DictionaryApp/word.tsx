@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import image from './assets/dictionary.png'
 export const Word = (props) => {
-
-  const [enteredWord, setEnteredWord] = useState("")
+  const [enteredWord, setEnteredWord] = useState('')
 
   return (
     <>

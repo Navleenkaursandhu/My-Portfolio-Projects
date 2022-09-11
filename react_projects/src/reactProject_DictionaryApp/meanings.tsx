@@ -1,9 +1,8 @@
-import { Definition } from "./definition"
-import { Synonyms } from "./synonyms"
-import { Antonyms } from "./antonyms"
+import { Definition } from './definition'
+import { Synonyms } from './synonyms'
+import { Antonyms } from './antonyms'
 
 export const Meanings = (props) => {
-
   return (
     <>
       <div className="meanings-container">

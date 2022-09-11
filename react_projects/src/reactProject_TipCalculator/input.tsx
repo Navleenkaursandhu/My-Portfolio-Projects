@@ -1,12 +1,11 @@
 import image from './assets/image.jpg'
 import React from 'react'
 
-let amount = 0;
+let amount = 0
 export const Input = () => {
-
-  const [totalCost, setTotalCost] = React.useState("")
-  const [tip, setTip] = React.useState("")
-  const [splitNum, setSplitNum] = React.useState("1")
+  const [totalCost, setTotalCost] = React.useState('')
+  const [tip, setTip] = React.useState('')
+  const [splitNum, setSplitNum] = React.useState('1')
 
   const add = () => {
     setSplitNum(prevNum => (Number(prevNum) + 1).toString())

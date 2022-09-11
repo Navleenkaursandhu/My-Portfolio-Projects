@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 export const Input = () => {
-
-  const x1 = 50;
-  const y1 = 50;
+  const x1 = 50
+  const y1 = 50
   const [date, setDate] = useState(new Date())
 
   const setSecsMinsHoursClocknumAttributes = (alpha, length) => {
-    let xPoint = Math.sin(alpha) * length + x1;
-    let yPoint = -(Math.cos(alpha) * length) + y1;
+    const xPoint = Math.sin(alpha) * length + x1
+    const yPoint = -(Math.cos(alpha) * length) + y1
     return {
       x: xPoint,
-      y: yPoint,
+      y: yPoint
     }
   }
 
@@ -20,22 +19,22 @@ export const Input = () => {
   }
 
   useEffect(() => {
-    let time = setInterval(displayTime, 1000)
+    const time = setInterval(displayTime, 1000)
 
     return () => {
       clearInterval(time)
     }
   }, [])
 
-  const currentHour = date.getHours();
-  const currentMinutes = date.getMinutes();
-  const currentSecs = date.getSeconds();
+  const currentHour = date.getHours()
+  const currentMinutes = date.getMinutes()
+  const currentSecs = date.getSeconds()
 
-  const sec = setSecsMinsHoursClocknumAttributes(((2 * Math.PI * currentSecs) / 60), 40);
+  const sec = setSecsMinsHoursClocknumAttributes(((2 * Math.PI * currentSecs) / 60), 40)
 
-  const min = setSecsMinsHoursClocknumAttributes((2 * Math.PI * (currentMinutes + currentSecs / 60)) / 60, 35);
+  const min = setSecsMinsHoursClocknumAttributes((2 * Math.PI * (currentMinutes + currentSecs / 60)) / 60, 35)
 
-  const hour = setSecsMinsHoursClocknumAttributes((2 * Math.PI * (currentHour + currentMinutes / 60)) / 12, 25);
+  const hour = setSecsMinsHoursClocknumAttributes((2 * Math.PI * (currentHour + currentMinutes / 60)) / 12, 25)
 
   const currentDateandTime = date.toLocaleString()
 
@@ -51,13 +50,12 @@ export const Input = () => {
 
           {Array(12).fill(0).map((e, i) => {
             if (i % 3 === 0) {
-              let clockNumOuter1 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 40)
-              let clockNumInner2 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 30)
+              const clockNumOuter1 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 40)
+              const clockNumInner2 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 30)
               return <line className="clock-nums" x1={clockNumOuter1.x} y1={clockNumOuter1.y} x2={clockNumInner2.x} y2={clockNumInner2.y}></line>
-            }
-            else {
-              let clockNumOuter1 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 40)
-              let clockNumInner2 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 34)
+            } else {
+              const clockNumOuter1 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 40)
+              const clockNumInner2 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 34)
               return <line className="clock-nums" x1={clockNumOuter1.x} y1={clockNumOuter1.y} x2={clockNumInner2.x} y2={clockNumInner2.y}></line>
             }
           })}

@@ -1,8 +1,8 @@
 import {
   BrowserRouter,
   Routes,
-  Route,
-} from "react-router-dom";
+  Route
+} from 'react-router-dom'
 import './App.css'
 import { Main as ProjectWeatherApp } from './react_project_WeatherApp/main'
 import { Main as ProjectDictionaryApp } from './reactProject_DictionaryApp/main'
@@ -47,10 +47,9 @@ const Links = () => {
   )
 }
 
-function App() {
-
+function App () {
   return (
-  
+
     <BrowserRouter>
       <Routes>
         <Route path="/">
@@ -75,8 +74,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
-
+  )
 }
 
 export default App

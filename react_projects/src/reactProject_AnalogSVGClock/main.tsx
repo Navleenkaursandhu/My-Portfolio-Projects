@@ -1,7 +1,7 @@
 import './style.css'
-import {Input} from './input'
+import { Input } from './input'
 export const Main = () => {
-  return(
+  return (
     <div className='analog-clock'>
     <Input/>
     </div>

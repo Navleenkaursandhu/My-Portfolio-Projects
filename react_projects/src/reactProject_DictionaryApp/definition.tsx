@@ -1,5 +1,4 @@
 export const Definition = (props) => {
-
   return (
     <>
       <div className="definition-column">
