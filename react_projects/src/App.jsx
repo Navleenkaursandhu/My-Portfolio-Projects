@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css'
+import { Main as ProjectWeatherApp } from './react_project_WeatherApp/main'
 import { Main as ProjectDictionaryApp } from './reactProject_DictionaryApp/main'
 import { Main as ProjectSimonSays } from './reactProject_SimonSays/main'
 import { Main as ProjectHangman } from './reactProject_Hangman/main'
@@ -41,6 +42,7 @@ const Links = () => {
       <a href="./HangmanGame">React Project: Hangman Game</a>
       <a href="./SimonSaysGame">React Project: Simon Says </a>
       <a href="./Dictionary">React Project: Dictionary</a>
+      <a href="WeatherApp">React Project: Weather Forecast Application</a>
     </div>
   )
 }
@@ -48,6 +50,7 @@ const Links = () => {
 function App() {
 
   return (
+  
     <BrowserRouter>
       <Routes>
         <Route path="/">
@@ -68,6 +71,7 @@ function App() {
           <Route path='HangmanGame' element={<ProjectHangman />} />
           <Route path="SimonSaysGame" element={<ProjectSimonSays />} />
           <Route path="Dictionary" element={<ProjectDictionaryApp />} />
+          <Route path="WeatherApp" element={<ProjectWeatherApp/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

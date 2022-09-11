@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Aboreto&family=Aclonica&family=Anton&family=Barlow:wght@300;500&family=Bubblegum+Sans&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,700&family=Fredoka:wght@500&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=M+PLUS+Rounded+1c:wght@300;400&family=News+Cycle&family=Open+Sans&family=Pacifico&family=Patrick+Hand&family=Sansita:wght@700&display=swap');
+
+.weather-app div {
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+.weather-app .background-container {
+  height: 100vh;
+  margin: -8px;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.weather-app .weather {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 35px 20px 35px 0px;
+  background-color: #ffffff30;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid #ffffff40;
+  overflow: auto;
+}
+
+.weather-app .current-weather {
+  margin: 20px 10px 10px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.weather-app .current-temperature {
+  font-size: 45px;
+}
+
+.weather-app .current-windspeed,
+.weather-app .update-hour {
+  font-size: 20px;
+}
+
+.weather-app .current-zone {
+  font-size: 25px;
+}
+
+.weather-app .current-weather-code {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.weather-app .current-weather-code.material-symbols-rounded {
+  font-size: 55px;
+}
+
+.weather-app .heading {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.weather-app .daily-forecast-title,
+.weather-app .hourly-forecast-title {
+  border-bottom: 1px solid black;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-app .daily.material-symbols-rounded,
+.weather-app .hourly.material-symbols-rounded {
+  font-size: 32px;
+}
+
+.weather-app .daily-weather {
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.weather-app .select-date {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.weather-app .day-before,
+.weather-app .day-after,
+.weather-app .day-date-today {
+  font-size: 27px;
+  padding: 3px 0px 3px 5px;
+}
+
+.weather-app .day-before.material-symbols-rounded:hover,
+.weather-app .day-after.material-symbols-rounded:hover {
+  cursor: pointer;
+  background-color: #ffffff70;
+}
+
+.weather-app .display-daily-data,
+.weather-app .display-hourly-data {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.weather-app .show-icon {
+  font-size: 60px;
+}
+
+.weather-app .show-temp-data {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.weather-app .show-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.weather-app .min-temp,
+.weather-app .max-temp {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.weather-app .hourly-weather {
+  border-bottom: 1px solid black;
+}
+
+.weather-app .hourly-temp {
+  display: flex;
+  gap: 20px;
+}
+
+.weather-app .hr {
+  width: 75%;
+}
+
+.weather-app .hour {
+  font-size: 29px;
+  margin-top: 20px;
+}
