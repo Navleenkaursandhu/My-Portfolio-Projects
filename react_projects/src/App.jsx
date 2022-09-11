@@ -3,8 +3,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
 import './App.css'
+import {Main as ProjectTipCalculator} from './reactProject_TipCalculator/main'
 import {Main as ProjectRPS} from './reactProject_RPS/main'
 import {Main as ProjectTodoList} from './reactProject_TODOList/main'
 import {Main as Project47} from './project_q47/main'
@@ -14,6 +14,8 @@ import {Main as Project43} from './project_q43/main'
 import {Main as Project42} from './project_q42/main'
 import {Random as Project41} from './project_q41/random'
 import {MainComponent as Project40} from './project_q40/mainComponent'
+
+
 
 const Links = () => {
   return(
@@ -28,6 +30,7 @@ const Links = () => {
     <a href='./project_q47'>Project 47: Counter</a>
     <a href="./reactProject_TODOList">Project: TODO List</a>
     <a href="./RockPaperScissors" >React Project: Rock Paper Scissors</a>
+    <a href="./TipCalculator">React Project: Tip Calculator</a>
     </div>
   )
 }
@@ -48,6 +51,7 @@ function App() {
             <Route path='project_q47' element={<Project47/>}/>
             <Route path='reactProject_TODOList' element={<ProjectTodoList/>}/>
             <Route path="RockPaperScissors" element={<ProjectRPS/>}/>
+            <Route path='TipCalculator' element={<ProjectTipCalculator/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
