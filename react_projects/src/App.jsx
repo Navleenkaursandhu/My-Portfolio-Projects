@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css'
+import {Main as Project46} from './project_q46/main'
 import {Main as Project44} from './project_q44/main'
 import {Main as Project43} from './project_q43/main'
 import {Main as Project42} from './project_q42/main'
@@ -19,6 +20,7 @@ const Links = () => {
     <a href="./project_q42">Project 42: Generate random number between range</a>
     <a href='./project_q43'>Project 43: Generate count of random numbers within range</a>
     <a href="./project_q44">Project 44: Generate many strings with random characters</a>
+    <a href='./project_q46'>Project 46: Calculator</a>
     </div>
   )
 }
@@ -35,6 +37,7 @@ function App() {
             <Route path="project_q42" element={<Project42/>}/>
             <Route path='project_q43' element={<Project43/>}/>
             <Route path='project_q44' element={<Project44/>}/>
+            <Route path='project_q46' element={<Project46/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
