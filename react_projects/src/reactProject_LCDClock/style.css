@@ -1,0 +1,161 @@
+.lcd .flex-column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.lcd .flex-row-container {
+  display: flex;
+  gap: 25px;
+  padding: 60px;
+  border : 16px solid rgb(142, 140, 140);
+  border-style: ridge;
+  border-radius: 10px;
+}
+
+.lcd .flex-column-digit {
+  display: flex;
+  flex-direction: column;
+}
+
+.lcd .flex-colon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 90px;
+}
+
+.lcd .top-segment {
+  padding: 50px;
+  border-top: 18px solid black;
+  border-bottom: 9px solid black;
+  border-left: 18px solid black;
+  border-right: 18px solid black;
+}
+
+.lcd .bottom-segment {
+  padding: 50px;
+  border-top: 9px solid black;
+  border-bottom: 18px solid black;
+  border-left: 18px solid black;
+  border-right: 18px solid black;
+}
+
+.lcd .top-small-segment {
+  padding: 20px;
+  border-top: 18px solid black;
+  border-bottom: 9px solid black;
+  border-left: 18px solid black;
+  border-right: 18px solid black;
+}
+
+.lcd .bottom-small-segment {
+  padding: 20px;
+  border-top: 9px solid black;
+  border-bottom: 18px solid black;
+  border-left: 18px solid black;
+  border-right: 18px solid black;
+}
+
+.lcd .top-colon-segment,
+.lcd .bottom-colon-segment {
+  padding: 10px;
+  background-color: black;
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.lcd .num0.top-segment {
+  border-color: black black #eee black;
+}
+
+.lcd .num0.bottom-segment {
+  border-color: #eee black black black;
+}
+
+.lcd .num1.top-segment {
+  border-color: #eee black #eee #eee;
+}
+
+.lcd .num1.bottom-segment {
+  border-color: #eee black #eee #eee;
+}
+
+.lcd .num2.top-segment {
+  border-color: black black black #eee;
+}
+
+.lcd .num2.bottom-segment {
+  border-color: black #eee black black;
+}
+
+.lcd .num3.top-segment {
+  border-color: black black black #eee;
+}
+
+.lcd .num3.bottom-segment {
+  border-color: black black black #eee;
+}
+
+.lcd .num4.top-segment {
+  border-color: #eee black black black;
+}
+
+.lcd .num4.bottom-segment {
+  border-color: black black #eee #eee;
+}
+
+.lcd .num5.top-segment {
+  border-color: black #eee black black;
+}
+
+.lcd .num5.bottom-segment {
+  border-color: black black black #eee;
+}
+
+.lcd .num6.top-segment {
+  border-color: black #eee black black;
+}
+
+.lcd .num6.bottom-segment {
+  border-color: black;
+}
+
+.lcd .num7.top-segment {
+  border-color: black black #eee #eee;
+}
+
+.lcd .num7.bottom-segment {
+  border-color: #eee black #eee #eee;
+}
+
+.lcd .num8.top-segment {
+  border-color: black;
+}
+
+.lcd .num8.bottom-segment {
+  border-color: black;
+}
+
+.lcd .num9.top-segment {
+  border-color: black;
+}
+
+.lcd .num9.bottom-segment {
+  border-color: black black black #eee;
+}
