@@ -1,0 +1,47 @@
+* {
+  font-size: x-large;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(246, 169, 169), rgb(244, 217, 168), rgb(246, 246, 138), rgb(202, 247, 202), rgb(195, 195, 248), rgb(218, 180, 247), rgb(246, 187, 246));
+}
+
+.flex-column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.box {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(248, 223, 190);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(123, 81, 81);
+}
+
+#play-button {
+  border-radius: 10px;
+  box-shadow: 3px 3px gray;
+  border: none;
+}
+
+#play-button:hover {
+  cursor: pointer;
+}
+
+.color-blue {
+  background: linear-gradient(rgb(88, 88, 246), rgb(103, 224, 243));
+}
+
+.color-green {
+  background: linear-gradient(rgb(21, 129, 59), rgb(105, 236, 105));
+}
+
+.color-red {
+  background: linear-gradient(rgb(242, 88, 88), rgb(243, 194, 104));
+}
