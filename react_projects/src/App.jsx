@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css'
+import {Main as ProjectAnalogSVGClock} from './reactProject_AnalogSVGClock/main'
 import {Main as ProjectLCD} from './reactProject_LCDClock/main'
 import {Main as ProjectTicTacToe} from './reactProject _TicTacToe/main'
 import {Main as ProjectTipCalculator} from './reactProject_TipCalculator/main'
@@ -33,6 +34,7 @@ const Links = () => {
     <a href="./TipCalculator">React Project: Tip Calculator</a>
     <a href='./TicTacToe'>React Project: Tic Tac Toe</a>
     <a href="./LCDClock">React Project: LCD Clock</a>
+    <a href="./AnalogSVGClock">React Project: Analog SVG Clock</a>
     </div>
   )
 }
@@ -56,6 +58,7 @@ function App() {
             <Route path='TipCalculator' element={<ProjectTipCalculator/>}/>
             <Route path='TicTacToe' element={<ProjectTicTacToe/>}/>
             <Route path="LCDClock" element={<ProjectLCD/>}/>
+            <Route path="AnalogSVGClock" element={<ProjectAnalogSVGClock/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
