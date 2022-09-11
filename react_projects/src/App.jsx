@@ -3,7 +3,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+
 import './App.css'
+import {Main as ProjectRPS} from './reactProject_RPS/main'
 import {Main as ProjectTodoList} from './reactProject_TODOList/main'
 import {Main as Project47} from './project_q47/main'
 import {Main as Project46} from './project_q46/main'
@@ -25,6 +27,7 @@ const Links = () => {
     <a href='./project_q46'>Project 46: Calculator</a>
     <a href='./project_q47'>Project 47: Counter</a>
     <a href="./reactProject_TODOList">Project: TODO List</a>
+    <a href="./RockPaperScissors" >React Project: Rock Paper Scissors</a>
     </div>
   )
 }
@@ -44,6 +47,7 @@ function App() {
             <Route path='project_q46' element={<Project46/>}/>
             <Route path='project_q47' element={<Project47/>}/>
             <Route path='reactProject_TODOList' element={<ProjectTodoList/>}/>
+            <Route path="RockPaperScissors" element={<ProjectRPS/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
