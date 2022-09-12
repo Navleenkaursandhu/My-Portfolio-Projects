@@ -4,5 +4,13 @@ import {checker} from 'vite-plugin-checker'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), checker({ typescript: true })]
+  plugins: [
+    react(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: "eslint  --config .eslintrc.cjs --max-warnings=0 \"src/**/*.{js,jsx,ts,tsx}\""
+      }
+    })
+  ]
 })
