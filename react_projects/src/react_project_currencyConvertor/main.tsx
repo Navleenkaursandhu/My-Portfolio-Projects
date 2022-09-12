@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react'
 import './style.css'
 export const Main = () => {
-
-  const [symbols, setSymbols] = useState({})
-  const [selectedFromOption, setSelectedFromOption] = useState("")
-  const [selectedToOption, setSelectedToOption] = useState("")
-  const [conversionData, setConversionData] = useState({})
+  const [symbols, setSymbols] = useState<any>({})
+  const [selectedFromOption, setSelectedFromOption] = useState('')
+  const [selectedToOption, setSelectedToOption] = useState('')
+  const [conversionData, setConversionData] = useState<any>({})
   const [userInputVal, setUserInputVal] = useState('1')
 
   const fetchData = async () => {
-    const response = await fetch("https://api.exchangerate.host/symbols")
+    const response = await fetch('https://api.exchangerate.host/symbols')
     const data = await response.json()
     setSymbols(data.symbols)
   }
@@ -23,11 +22,11 @@ export const Main = () => {
   const keyArray = Object.keys(symbols)
 
   useEffect(() => {
-    fetchData()
+    void fetchData()
   }, [])
 
   useEffect(() => {
-    fetchConversionData()
+    void fetchConversionData()
   }, [selectedFromOption, selectedToOption])
 
   const displayDescriptionFrom = (e) => {
@@ -91,11 +90,11 @@ export const Main = () => {
         </div>
 
         <div className='unit-value-container'>
-          {selectedFromOption && selectedToOption && <div className='unit-before'>{conversionData["query"].amount * Number(userInputVal)} {conversionData["query"].from}</div>}
+          {selectedFromOption && selectedToOption && <div className='unit-before'>{conversionData.query.amount * Number(userInputVal)} {conversionData.query.from}</div>}
           {selectedFromOption && <div>=</div>}
-          {selectedToOption && selectedFromOption && <div className='unit-amount-after'>{(conversionData["result"] * Number(userInputVal)).toFixed(2)} {conversionData["query"].to}</div>}
+          {selectedToOption && selectedFromOption && <div className='unit-amount-after'>{(conversionData.result * Number(userInputVal)).toFixed(2)} {conversionData.query.to}</div>}
         </div>
       </div>
     </div>
   )
-} 
+}

@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css'
-import {Main as ProjectCurrencyConvertor} from './react_project_currencyConvertor/main'
+import { Main as ProjectCurrencyConvertor } from './react_project_currencyConvertor/main'
 import { Main as ProjectWeatherApp } from './react_project_WeatherApp/main'
 import { Main as ProjectDictionaryApp } from './reactProject_DictionaryApp/main'
 import { Main as ProjectSimonSays } from './reactProject_SimonSays/main'
