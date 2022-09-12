@@ -1,22 +1,20 @@
 import React from 'react'
 export const Input = () => {
+  const charList = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*-_'
 
-  const charList = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*-_';
-
-  const [length, setLength] = React.useState("")
-  const [count, setCount] = React.useState("")
+  const [length, setLength] = React.useState('')
+  const [count, setCount] = React.useState('')
   const [array, setArray] = React.useState([])
 
   const generateRandomString = (length) => {
-
     const arrayRandomChars = []
 
     for (let i = 0; i < length; i++) {
-      let randomIndex = Math.floor(Math.random() * charList.length)
-      let randomChar = charList[randomIndex]
+      const randomIndex = Math.floor(Math.random() * charList.length)
+      const randomChar = charList[randomIndex]
       arrayRandomChars.push(randomChar)
     }
-    return arrayRandomChars.join("")
+    return arrayRandomChars.join('')
   }
 
   const numberOfCount = () => {

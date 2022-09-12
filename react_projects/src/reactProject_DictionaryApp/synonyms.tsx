@@ -1,5 +1,4 @@
 export const Synonyms = (props) => {
-
   return (
     <>
       {props.similar.length !== 0 && <div className="similar-font">Synonyms:</div>}

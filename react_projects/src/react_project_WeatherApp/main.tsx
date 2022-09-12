@@ -1,17 +1,16 @@
-import { parseISO } from "date-fns";
-import { useEffect, useState } from "react";
+import { parseISO } from 'date-fns'
+import { useEffect, useState } from 'react'
 import { Background } from './background'
 import './style.css'
 
 const getCurrentLocation = async () => {
-  return new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(
+  return await new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(
     data => resolve(data),
     err => reject(err)
-  ));
+  ))
 }
 
 export const Main = () => {
-
   const [weatherData, setWeatherData] = useState({})
 
   const getWeatherData = async () => {
@@ -21,28 +20,28 @@ export const Main = () => {
     const zone = Intl.DateTimeFormat().resolvedOptions().timeZone
 
     const hourlyFields = [
-      "temperature_2m",
-      "windspeed_10m",
-      "rain",
-      "snowfall",
-      "weathercode",
-      "apparent_temperature"
+      'temperature_2m',
+      'windspeed_10m',
+      'rain',
+      'snowfall',
+      'weathercode',
+      'apparent_temperature'
     ]
 
     const dailyFields = [
-      "temperature_2m_max",
-      "temperature_2m_min",
-      "windspeed_10m_max",
-      "weathercode",
-      "rain_sum",
-      "snowfall_sum",
-      "apparent_temperature_max",
-      "apparent_temperature_min",
-      "sunrise",
-      "sunset"
+      'temperature_2m_max',
+      'temperature_2m_min',
+      'windspeed_10m_max',
+      'weathercode',
+      'rain_sum',
+      'snowfall_sum',
+      'apparent_temperature_max',
+      'apparent_temperature_min',
+      'sunrise',
+      'sunset'
     ]
 
-    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=${true}&hourly=${hourlyFields.join(",")}&timezone=${zone}&daily=${dailyFields.join(",")}`)
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=${hourlyFields.join(',')}&timezone=${zone}&daily=${dailyFields.join(',')}`)
     const data = await response.json()
 
     const finalData = {
@@ -56,7 +55,7 @@ export const Main = () => {
 
         temperature: {
           value: data.current_weather.temperature,
-          unit: data.hourly_units.temperature_2m,
+          unit: data.hourly_units.temperature_2m
         },
 
         windspeed: {
@@ -78,7 +77,7 @@ export const Main = () => {
 
         temperature_2m: {
           value: data.hourly.temperature_2m[i],
-          unit: data.hourly_units.temperature_2m,
+          unit: data.hourly_units.temperature_2m
         },
 
         windspeed_10m: {
@@ -161,13 +160,13 @@ export const Main = () => {
         sunset: {
           value: parseISO(data.daily.sunset[i])
         }
-      })),
+      }))
     }
     setWeatherData(finalData)
   }
 
   useEffect(() => {
-    getWeatherData()
+    void getWeatherData()
   }, [])
 
   return (

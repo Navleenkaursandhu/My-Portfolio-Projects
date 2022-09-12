@@ -1,5 +1,4 @@
 export const Antonyms = (props) => {
-
   return (
     <>
       {props.opposite.length !== 0 && <div className="opposite-font">Antonyms:</div>}

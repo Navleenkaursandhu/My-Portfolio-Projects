@@ -12,7 +12,6 @@ export const Input = () => {
   const [round, setRound] = React.useState(1)
 
   const onUserChoice = (choice) => {
-
     if (round <= maxRounds) {
       setRound(prev => prev + 1)
 
@@ -27,12 +26,10 @@ export const Input = () => {
         (choice === '✋' && botSelect === '✌️') ||
         (choice === '✌️' && botSelect === '✊')) {
         setBotScore(prevScore => prevScore + 1)
-      }
-      else if (choice === botSelect) {
+      } else if (choice === botSelect) {
         setBotScore(botScore)
         setUserScore(userScore)
-      }
-      else {
+      } else {
         setUserScore(prevScore => prevScore + 1)
       }
     }
@@ -42,11 +39,9 @@ export const Input = () => {
     if (round > maxRounds) {
       if (botScore > userScore) {
         setResult('You Lost:(')
-      }
-      else if (botScore < userScore) {
+      } else if (botScore < userScore) {
         setResult('You Won:)')
-      }
-      else {
+      } else {
         setResult('Draw!')
       }
     }
@@ -87,7 +82,6 @@ export const Input = () => {
 
       <div className='result'>{result}</div>
       <div className='round'>Round <span>{round > maxRounds ? maxRounds : round}</span> of {maxRounds}</div>
-
 
     </>
   )

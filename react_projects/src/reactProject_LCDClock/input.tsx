@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
 export const Input = () => {
-
   const [date, setDate] = useState(new Date())
 
   const displayTime = () => {
@@ -15,9 +14,9 @@ export const Input = () => {
     }
   }, [])
 
-  const currentHour = date.getHours().toString().padStart(2, "0")
-  const currentMinute = date.getMinutes().toString().padStart(2, "0")
-  const currentSec = date.getSeconds().toString().padStart(2, "0")
+  const currentHour = date.getHours().toString().padStart(2, '0')
+  const currentMinute = date.getMinutes().toString().padStart(2, '0')
+  const currentSec = date.getSeconds().toString().padStart(2, '0')
 
   return (
     <>

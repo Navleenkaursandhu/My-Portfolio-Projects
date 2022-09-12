@@ -1,8 +1,8 @@
 import {
   BrowserRouter,
   Routes,
-  Route,
-} from "react-router-dom";
+  Route
+} from 'react-router-dom'
 import './App.css'
 import { Main as ProjectWeatherApp } from './react_project_WeatherApp/main'
 import { Main as ProjectDictionaryApp } from './reactProject_DictionaryApp/main'
@@ -26,7 +26,7 @@ const Links = () => {
   return (
     <div className="link-container">
       <h1>My React Projects</h1>
-      <a href="./project_q40">Project: Hello "First Name"</a>
+      <a href="./project_q40">Project: Hello &quot;First Name&quot;</a>
       <a href='./project_q41'>Project 41: Generate Random Numbers</a>
       <a href="./project_q42">Project 42: Generate random number between range</a>
       <a href='./project_q43'>Project 43: Generate count of random numbers within range</a>
@@ -47,10 +47,9 @@ const Links = () => {
   )
 }
 
-function App() {
-
+function App () {
   return (
-  
+
     <BrowserRouter>
       <Routes>
         <Route path="/">
@@ -75,8 +74,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
-
+  )
 }
 
 export default App
