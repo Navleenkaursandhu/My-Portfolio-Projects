@@ -4,7 +4,7 @@ import { codes } from './weathercodes'
 export const Background = (props) => {
   const style = {
     backgroundImage: props.data.currentWeather
-      ? `url("${codes[props.data.currentWeather.weathercode.value].image}")`
+      ? `url("${String(codes[props.data.currentWeather.weathercode.value].image)}")`
       : undefined
   }
   return (

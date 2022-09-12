@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export const Input = () => {
   const [word, setWord] = useState('')
-  const [arrayStrings, setArrayStrings] = useState([])
+  const [arrayStrings, setArrayStrings] = useState<string[]>([])
   const [noMatchArray, setNoMatchArray] = useState([])
 
   const displayNewWord = async () => {
@@ -15,7 +15,7 @@ export const Input = () => {
   }
 
   useEffect(() => {
-    displayNewWord()
+    void displayNewWord()
   }, [])
 
   const wordArray = word.split('')
@@ -48,7 +48,7 @@ export const Input = () => {
     <>
       <h1 className="title">HANGMAN</h1>
       <div className="play-btn-container">
-        <button className="play" onClick={async () => await displayNewWord()}>PLAY</button>
+        <button className="play" onClick={() => { void displayNewWord() }}>PLAY</button>
       </div>
 
       <div className="chances-container">
@@ -68,7 +68,7 @@ export const Input = () => {
       </div>
 
       <div className="result">
-        {noMatchArray[15] && <div>You Lost! It's {word}</div>}
+        {noMatchArray[15] && <div>You Lost! It&apos;s {word}</div>}
         {!(arrayStrings.length === 0) && arrayStrings.every(char => char !== '') && <div>You Won:D</div>}
       </div>
     </>)

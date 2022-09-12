@@ -3,7 +3,7 @@ export const Phonetics = (props) => {
 
   const runAudio = (audio) => {
     const playAudio = new Audio(audio)
-    playAudio.play()
+    void playAudio.play()
   }
 
   return (

@@ -6,7 +6,7 @@ export const Input = () => {
   const [order, setOrder] = useState([0, 1, 2, 3, 4])
   const [boxToColor, setBoxToColor] = useState(-1)
   const [message, setMessage] = useState('')
-  const [userInput, setUserInput] = useState([])
+  const [userInput, setUserInput] = useState<number[]>([])
   const [gameState, setGameState] = useState('idle')
 
   const startGame = async () => {
@@ -75,7 +75,7 @@ export const Input = () => {
       </div>
 
       <div className="play-container">
-        <button className="play" onClick={async () => await startGame()}>PLAY</button>
+        <button className="play" onClick={() => { void startGame() }}>PLAY</button>
       </div>
 
       <div className="message">{message}</div>

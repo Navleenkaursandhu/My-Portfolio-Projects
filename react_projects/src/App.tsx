@@ -26,7 +26,7 @@ const Links = () => {
   return (
     <div className="link-container">
       <h1>My React Projects</h1>
-      <a href="./project_q40">Project: Hello "First Name"</a>
+      <a href="./project_q40">Project: Hello &quot;First Name&quot;</a>
       <a href='./project_q41'>Project 41: Generate Random Numbers</a>
       <a href="./project_q42">Project 42: Generate random number between range</a>
       <a href='./project_q43'>Project 43: Generate count of random numbers within range</a>

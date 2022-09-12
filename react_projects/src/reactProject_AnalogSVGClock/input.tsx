@@ -52,11 +52,11 @@ export const Input = () => {
             if (i % 3 === 0) {
               const clockNumOuter1 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 40)
               const clockNumInner2 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 30)
-              return <line className="clock-nums" x1={clockNumOuter1.x} y1={clockNumOuter1.y} x2={clockNumInner2.x} y2={clockNumInner2.y}></line>
+              return <line key={i} className="clock-nums" x1={clockNumOuter1.x} y1={clockNumOuter1.y} x2={clockNumInner2.x} y2={clockNumInner2.y}></line>
             } else {
               const clockNumOuter1 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 40)
               const clockNumInner2 = setSecsMinsHoursClocknumAttributes((Math.PI / 6 * i), 34)
-              return <line className="clock-nums" x1={clockNumOuter1.x} y1={clockNumOuter1.y} x2={clockNumInner2.x} y2={clockNumInner2.y}></line>
+              return <line key={i} className="clock-nums" x1={clockNumOuter1.x} y1={clockNumOuter1.y} x2={clockNumInner2.x} y2={clockNumInner2.y}></line>
             }
           })}
         </svg>

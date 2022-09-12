@@ -5,16 +5,16 @@ export const HourlyWeather = (props) => {
   console.log(props.hour.temperature_2m)
   const hour = props.hour.time.value
   const temp = props.hour.temperature_2m.value
-  const temp_unit = props.hour.temperature_2m.unit
-  const apparent_temp = props.hour.apparentTemperature.value
-  const apparent_temp_unit = props.hour.apparentTemperature.unit
+  const tempUnit = props.hour.temperature_2m.unit
+  const apparentTemp = props.hour.apparentTemperature.value
+  const apparentTempUnit = props.hour.apparentTemperature.unit
   const weathercode = props.hour.weathercode.value
   const windSpeed = props.hour.windspeed_10m.value
-  const windSpeed_unit = props.hour.windspeed_10m.unit
+  const windSpeedUnit = props.hour.windspeed_10m.unit
   const rain = props.hour.rain.value
-  const rain_unit = props.hour.rain.unit
+  const rainUnit = props.hour.rain.unit
   const snowfall = props.hour.snowfall.value
-  const snowfall_unit = props.hour.snowfall.unit
+  const snowfallUnit = props.hour.snowfall.unit
   const isNight = (hour < props.daily_sunrise || hour > props.daily_sunset)
   const weatherCodeData = codes[weathercode]
 
@@ -35,14 +35,14 @@ export const HourlyWeather = (props) => {
 
           <div className="show-weathercode">{weatherCodeData.value}</div>
           <div className="hourly-temp">
-            <div>Temperature: {temp}{temp_unit}</div>
-            <div>Feels like {apparent_temp}{apparent_temp_unit}</div>
+            <div>Temperature: {temp}{tempUnit}</div>
+            <div>Feels like {apparentTemp}{apparentTempUnit}</div>
           </div>
 
-          <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
+          <div className="show-windspeed">Windspeed: {windSpeed}{windSpeedUnit}</div>
 
-          <div>Rain: {rain}{rain_unit}</div>
-          <div>Snowfall: {snowfall}{snowfall_unit}</div>
+          <div>Rain: {rain}{rainUnit}</div>
+          <div>Snowfall: {snowfall}{snowfallUnit}</div>
 
         </div>
       </div>

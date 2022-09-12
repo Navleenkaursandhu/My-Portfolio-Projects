@@ -20,21 +20,21 @@ export const DailyWeather = (props) => {
     }
 
     const date = format(props.dailyData[index].time.value, 'ccc, do MMM yyyy')
-    const temp_min = props.dailyData[index].temperature_2m_min.value
-    const temp_min_unit = props.dailyData[index].temperature_2m_min.unit
-    const temp_max = props.dailyData[index].temperature_2m_max.value
-    const temp_max_unit = props.dailyData[index].temperature_2m_max.unit
-    const apparent_temp_min = props.dailyData[index].apparent_temperature_min.value
-    const apparent_temp_min_unit = props.dailyData[index].apparent_temperature_min.unit
-    const apparent_temp_max = props.dailyData[index].apparent_temperature_max.value
-    const apparent_temp_max_unit = props.dailyData[index].apparent_temperature_max.unit
+    const tempMin = props.dailyData[index].temperature_2m_min.value
+    const tempMinUnit = props.dailyData[index].temperature_2m_min.unit
+    const tempMax = props.dailyData[index].temperature_2m_max.value
+    const tempMaxUnit = props.dailyData[index].temperature_2m_max.unit
+    const apparentTempMin = props.dailyData[index].apparent_temperature_min.value
+    const apparentTempMinUnit = props.dailyData[index].apparent_temperature_min.unit
+    const apparentTempMax = props.dailyData[index].apparent_temperature_max.value
+    const apparentTempMaxUnit = props.dailyData[index].apparent_temperature_max.unit
     const weatherCode = props.dailyData[index].weathercode.value
     const windSpeed = props.dailyData[index].windspeed_10m_max.value
-    const windSpeed_unit = props.dailyData[index].windspeed_10m_max.unit
+    const windSpeedUnit = props.dailyData[index].windspeed_10m_max.unit
     const rain = props.dailyData[index].rain.value
-    const rain_unit = props.dailyData[index].rain.unit
+    const rainUnit = props.dailyData[index].rain.unit
     const snowFall = props.dailyData[index].snowfall.value
-    const snowFall_unit = props.dailyData[index].snowfall.unit
+    const snowFallUnit = props.dailyData[index].snowfall.unit
 
     const hourlyArray = props.hourlyData.filter((object, i) => {
       return isSameDay(props.dailyData[index].time.value, object.time.value)
@@ -76,19 +76,19 @@ export const DailyWeather = (props) => {
                   <div className="show-weathercode">{codes[weatherCode].value}</div>
 
                   <div className="min-temp">
-                    <div>Min Temperature: {temp_min}{temp_min_unit}</div>
-                    <div>Feels like {apparent_temp_min}{apparent_temp_min_unit}</div>
+                    <div>Min Temperature: {tempMin}{tempMinUnit}</div>
+                    <div>Feels like {apparentTempMin}{apparentTempMinUnit}</div>
                   </div>
 
                   <div className="max-temp">
-                    <div>Max Temperature: {temp_max}{temp_max_unit}</div>
-                    <div>Feels like {apparent_temp_max}{apparent_temp_max_unit}</div>
+                    <div>Max Temperature: {tempMax}{tempMaxUnit}</div>
+                    <div>Feels like {apparentTempMax}{apparentTempMaxUnit}</div>
                   </div>
 
-                  <div className="show-windspeed">Windspeed: {windSpeed}{windSpeed_unit}</div>
+                  <div className="show-windspeed">Windspeed: {windSpeed}{windSpeedUnit}</div>
 
-                  <div>Rain: {rain}{rain_unit}</div>
-                  <div>Snowfall: {snowFall}{snowFall_unit}</div>
+                  <div>Rain: {rain}{rainUnit}</div>
+                  <div>Snowfall: {snowFall}{snowFallUnit}</div>
 
                 </div>
               </div>

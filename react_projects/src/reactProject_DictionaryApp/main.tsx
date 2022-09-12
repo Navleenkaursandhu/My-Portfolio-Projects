@@ -23,7 +23,7 @@ export const Main = () => {
 
   useEffect(() => {
     if (wordEntered !== '') {
-      fetchData()
+      void fetchData()
     }
   }, [wordEntered])
 
