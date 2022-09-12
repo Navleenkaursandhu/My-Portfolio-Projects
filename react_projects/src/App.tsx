@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css'
+import { Main as ProjectCurrencyConvertor } from './react_project_currencyConvertor/main'
 import { Main as ProjectWeatherApp } from './react_project_WeatherApp/main'
 import { Main as ProjectDictionaryApp } from './reactProject_DictionaryApp/main'
 import { Main as ProjectSimonSays } from './reactProject_SimonSays/main'
@@ -42,7 +43,8 @@ const Links = () => {
       <a href="./HangmanGame">React Project: Hangman Game</a>
       <a href="./SimonSaysGame">React Project: Simon Says </a>
       <a href="./Dictionary">React Project: Dictionary</a>
-      <a href="WeatherApp">React Project: Weather Forecast Application</a>
+      <a href="./WeatherApp">React Project: Weather Forecast Application</a>
+      <a href="./CurrencyConvertor">React Project: Currency Convertor</a>
     </div>
   )
 }
@@ -71,6 +73,7 @@ function App () {
           <Route path="SimonSaysGame" element={<ProjectSimonSays />} />
           <Route path="Dictionary" element={<ProjectDictionaryApp />} />
           <Route path="WeatherApp" element={<ProjectWeatherApp/>}/>
+          <Route path="CurrencyConvertor" element={<ProjectCurrencyConvertor/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
