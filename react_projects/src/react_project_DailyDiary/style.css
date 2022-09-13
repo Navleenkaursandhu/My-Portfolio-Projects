@@ -12,7 +12,7 @@
 .daily-diary .cover-page {
   height: 660px;
   width: 550px;
-  box-shadow: -25px 0px 25px 0px rgb(81, 81, 122);
+  box-shadow: -25px 0px 25px 0px rgb(81 81 122 / 31%);
   display: flex;
   flex-direction: column;
   border-radius: 20px 0px 0px 20px;
@@ -22,21 +22,26 @@
 .daily-diary .diary-page {
   height: 660px;
   width: 550px;
-  box-shadow: 25px 0px 25px 0px rgb(81, 81, 122);
+  box-shadow: 25px 0px 25px 0px rgb(81 81 122 / 31%);
   border-radius: 0px 20px 20px 0px;
-  background-color: aliceblue
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
 }
 
 .daily-diary .image-cover-page {
   height: 150px;
   width: 555px;
   border-top-left-radius: 20px;
+  border-bottom: 1px solid #0000001a;
 }
 
 .daily-diary .image-diary-page {
   height: 150px;
   width: 550px;
   border-top-right-radius: 20px;
+  border-bottom: 1px solid #0000001a;
+  transform: scaleX(-1);
 }
 
 .daily-diary .cover-title-container {
@@ -64,22 +69,31 @@
   margin-top: 30px;
 }
 
-.daily-diary .diary-page-container {
-  border: 1px solid black;
-  margin: 20px 20px 0px 20px;
-  padding: 10px;
-  width: 490px;
-  height: 430px;
-  overflow: auto;
-  font-size: 28px;
-  font-family: 'Oregano', cursive;
-}
-
 .daily-diary .user-input {
   width: 98.5%;
   height: 100px;
 }
 
-textarea {
-  background-color: aliceblue;
+.daily-diary .textarea-container > textarea {
+  padding: 6px 15px 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-family: 'Oregano', cursive;
+  font-size: 25px;
+  border:0;
+  line-height: 31px;
+  background-image: -webkit-linear-gradient(left, aliceblue 0, transparent 0), -webkit-linear-gradient(right, aliceblue 0, transparent 0), -webkit-linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
+  background-size: 100% 100%, 100% 100%, 100% 31px;
+  background-attachment: local;
+  box-sizing: border-box;
+}
+
+.daily-diary .textarea-container > textarea:focus{
+  outline:0;
+}
+
+.daily-diary .textarea-container{
+  padding:25px;
+  flex:1;
 }

@@ -14,9 +14,9 @@ export const Main = () => {
         </div>
       </div>
       <div className="diary-page">
-        <img className="image-diary-page" src={image} />
-        <div>
-          <textarea className='diary-page-container' rows={5} cols={5} />
+        <img className="image-diary-page" src={image}/>
+        <div className='textarea-container'>
+          <textarea/>
         </div>
       </div>
       <div></div>
