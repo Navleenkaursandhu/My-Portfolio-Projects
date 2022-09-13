@@ -80,7 +80,7 @@
   overflow: auto;
   font-family: 'Oregano', cursive;
   font-size: 25px;
-  border:0;
+  border: 0;
   line-height: 31px;
   background-image: -webkit-linear-gradient(left, aliceblue 0, transparent 0), -webkit-linear-gradient(right, aliceblue 0, transparent 0), -webkit-linear-gradient(white 30px, #ccc 30px, #ccc 31px, white 31px);
   background-size: 100% 100%, 100% 100%, 100% 31px;
@@ -88,16 +88,16 @@
   box-sizing: border-box;
 }
 
-.daily-diary .textarea-container > textarea:focus{
-  outline:0;
+.daily-diary .textarea-container > textarea:focus {
+  outline: 0;
 }
 
-.daily-diary .textarea-container{
-  padding:25px;
-  flex:1;
+.daily-diary .textarea-container {
+  padding: 25px;
+  flex: 1;
 }
 
-.daily-diary .date-container{
+.daily-diary .date-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,30 +105,30 @@
   margin-top: 20px;
 }
 
-.daily-diary .arrow-left{
-  width: 0; 
-  height: 0; 
+.daily-diary .arrow-left {
+  width: 0;
+  height: 0;
   border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent; 
-  border-right:20px solid rgb(73 102 77); 
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgb(73 102 77);
 }
 
-.daily-diary .arrow-right{
-  width: 0; 
-  height: 0; 
+.daily-diary .arrow-right {
+  width: 0;
+  height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-left: 20px solid rgb(73 102 77);
 }
 
-.daily-diary .arrow-left:hover{
+.daily-diary .arrow-left:hover {
   border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent; 
-  border-right:25px solid rgb(73 102 77); 
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid rgb(73 102 77);
 
 }
 
-.daily-diary .arrow-right:hover{
+.daily-diary .arrow-right:hover {
   border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   border-left: 25px solid rgb(73 102 77);
