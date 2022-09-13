@@ -1,5 +1,6 @@
 import './style.css'
 import image from './assets/image.png'
+import { format } from 'date-fns'
 export const Main = () => {
   return (
     <div className="daily-diary">
@@ -8,15 +9,15 @@ export const Main = () => {
         <div className='cover-title-container'>
           <div className='title'>
             DAILY DIARY
-            <span className="pen material-symbols-rounded">
-              edit
-            </span>
           </div>
+          <div className='current-date'>{format(new Date(), 'dd-MM-yyyy, eeee')}</div>
         </div>
       </div>
-      <div className='binder'></div>
       <div className="diary-page">
         <img className="image-diary-page" src={image} />
+        <div>
+          <textarea className='diary-page-container' rows={5} cols={5} />
+        </div>
       </div>
       <div></div>
     </div>

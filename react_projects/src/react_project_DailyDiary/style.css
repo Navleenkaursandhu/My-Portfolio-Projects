@@ -1,55 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Aboreto&family=Aclonica&family=Anton&family=Barlow:wght@300;500;700;800&family=Bubblegum+Sans&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,700&family=Dancing+Script:wght@700&family=Fredoka:wght@500&family=Homemade+Apple&family=Libre+Baskerville:wght@400;700&family=Lora:wght@500&family=M+PLUS+Rounded+1c:wght@300;400&family=News+Cycle&family=Open+Sans&family=Oregano&family=PT+Sans&family=Pacifico&family=Patrick+Hand&family=Sansita:wght@700&display=swap');
-.daily-diary{
+
+.daily-diary {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 35px;
-  padding:10px;
+  padding: 10px;
   font-family: 'Oregano', cursive;
 }
 
-.daily-diary .cover-page{
+.daily-diary .cover-page {
   height: 660px;
   width: 550px;
-  transform: perspective(400px) rotateY(2.5deg);
-  box-shadow: 0px 0px 50px 0px rgb(60, 60, 107);
+  box-shadow: -25px 0px 25px 0px rgb(81, 81, 122);
   display: flex;
   flex-direction: column;
   border-radius: 20px 0px 0px 20px;
-  background-color:aliceblue
+  background-color: aliceblue;
 }
 
-.daily-diary .binder{
-  height:642px;
-  width: 15px;
-  border-radius: 5px 5px 5px 5px;
-  margin: 0px -8px 0px -8px;
-  background-color: rgb(11, 11, 67);;
-}
-
-.daily-diary .diary-page{
+.daily-diary .diary-page {
   height: 660px;
   width: 550px;
-  transform: perspective(400px) rotateY(-2.5deg);
-  box-shadow: 0px 0px 50px 0px rgb(60, 60, 107);
+  box-shadow: 25px 0px 25px 0px rgb(81, 81, 122);
   border-radius: 0px 20px 20px 0px;
   background-color: aliceblue
 }
 
-.daily-diary .image-cover-page{
-  height:150px;
-  width: 548px;
+.daily-diary .image-cover-page {
+  height: 150px;
+  width: 555px;
   border-top-left-radius: 20px;
 }
 
-.daily-diary .image-diary-page{
-  height:150px;
-  width: 549px;
-  margin-left:1.5px;
+.daily-diary .image-diary-page {
+  height: 150px;
+  width: 550px;
   border-top-right-radius: 20px;
 }
 
-.daily-diary .cover-title-container{
+.daily-diary .cover-title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,13 +47,39 @@
   margin-top: 150px;
 }
 
-.daily-diary .title{
+.daily-diary .title {
   display: flex;
   align-items: center;
-  font-size: 70px;
-  color:rgb(120, 26, 26)
+  font-size: 75px;
+  color: rgb(73 102 77)
 }
 
-.daily-diary .pen.material-symbols-rounded{
+.daily-diary .pen.material-symbols-rounded {
   font-size: 70px;
+}
+
+.daily-diary .current-date {
+  font-size: 40px;
+  color: rgb(73 102 77);
+  margin-top: 30px;
+}
+
+.daily-diary .diary-page-container {
+  border: 1px solid black;
+  margin: 20px 20px 0px 20px;
+  padding: 10px;
+  width: 490px;
+  height: 430px;
+  overflow: auto;
+  font-size: 28px;
+  font-family: 'Oregano', cursive;
+}
+
+.daily-diary .user-input {
+  width: 98.5%;
+  height: 100px;
+}
+
+textarea {
+  background-color: aliceblue;
 }
