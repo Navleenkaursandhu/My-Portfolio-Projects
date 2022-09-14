@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 .timesheet-container{
-  border: 1px solid black;
   height: 725px;
   background-image: url('./assets/image.png');
   background-repeat: no-repeat;
@@ -22,8 +21,18 @@
 .timesheet-container .sign-in-out{
   font-size: 28px; 
   font-family: 'Dosis', sans-serif;
-  color:white
+  color:white;
+  background-color: #febe07;
+  border: none;
+  padding:3px 8px 3px 8px;
 }
+
+.timesheet-container .sign-in-out:hover,
+.timesheet-container .add-task-button:hover{
+  box-shadow: -4px -4px 3px 2px #806e3e;
+  cursor: pointer;
+}
+
 .timesheet-container .add-task-button{
   font-size: 30px; 
   font-family: 'Dosis', sans-serif;
@@ -42,10 +51,9 @@
 }
 
 .timesheet-container .sheet-container{
-  border: 1px solid black;
   margin: 2% 0.7% 0 20%;
   overflow: auto;
-  height: 80%;
+  height: 82%;
   font-family: 'Dosis', sans-serif;
   text-align: center;
   display: flex; 
@@ -53,8 +61,9 @@
 }
 
 .timesheet-container .sheet-table-container{
-  border: 1px solid black;
+  border: 2px solid rgb(197, 196, 196);
   width:100%;
+  
 }
 
 .timesheet-container table{
@@ -62,12 +71,13 @@
 }
 
 .timesheet-container th {
-  border: 1px solid black;
-  font-size: 28px;;
+  border: 1px solid rgb(197, 196, 196);
+  font-size: 28px;
+  padding:10px
 }
 
 .timesheet-container td{
-  border: 1px solid black;
+  border: 1px solid rgb(197, 196, 196);
   font-size: 23px;
   text-align: center;
 }
