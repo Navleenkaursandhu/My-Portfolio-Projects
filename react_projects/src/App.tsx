@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css'
+import { Main as ProjectDailyDiary } from './react_project_DailyDiary/Main'
 import { Main as ProjectCurrencyConvertor } from './react_project_currencyConvertor/main'
 import { Main as ProjectWeatherApp } from './react_project_WeatherApp/main'
 import { Main as ProjectDictionaryApp } from './reactProject_DictionaryApp/main'
@@ -45,6 +46,7 @@ const Links = () => {
       <a href="./Dictionary">React Project: Dictionary</a>
       <a href="./WeatherApp">React Project: Weather Forecast Application</a>
       <a href="./CurrencyConvertor">React Project: Currency Convertor</a>
+      <a href="./DailyDiary">React Project: Daily Diary</a>
     </div>
   )
 }
@@ -74,6 +76,7 @@ function App () {
           <Route path="Dictionary" element={<ProjectDictionaryApp />} />
           <Route path="WeatherApp" element={<ProjectWeatherApp/>}/>
           <Route path="CurrencyConvertor" element={<ProjectCurrencyConvertor/>}/>
+          <Route path="DailyDiary" element={<ProjectDailyDiary/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
