@@ -6,7 +6,7 @@ export const Main = () => {
   return (
     <div className="timesheet-container">
     <Header/>
-    <Sheet/>
+   
     </div>
   )
 }
