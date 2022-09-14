@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+.timesheet-container{
+  border: 1px solid black;
+  height: 725px;
+  background-image: url('./assets/image.png');
+  background-repeat: no-repeat;
+  background-size: 17% 80%;
+  background-position: left bottom;
+}
+
+.timesheet-container .header-container{
+  border: 1px solid black;
+  display: flex;
+  padding:10px;
+  margin:10px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2f3a40;
+  /* background-color: #febe07; */
+}
+
+.timesheet-container .sign-in-out{
+  font-size: 28px; 
+  font-family: 'Dosis', sans-serif;
+  color:white
+}
+.timesheet-container .add-task-button{
+  font-size: 30px; 
+  font-family: 'Dosis', sans-serif;
+  background-color:#febe07;
+  color:white;
+  border:none;
+}
+
+
+.timesheet-container .input-task{
+  width: 40%;
+  font-size: 23px;
+  padding: 10px;
+  font-family: 'Dosis', sans-serif;
+  outline: 0;
+}
+
+.timesheet-container .sheet-container{
+  border: 1px solid black;
+  margin: 2% 0.7% 0 20%;
+  overflow: auto;
+  height: 80%;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  display: flex; 
+  justify-content: center;
+}
+
+.timesheet-container .sheet-table-container{
+  border: 1px solid black;
+  width:100%;
+}
+
+.timesheet-container table{
+  width: 100%;
+}
+
+.timesheet-container th {
+  border: 1px solid black;
+  font-size: 28px;;
+}
+
+.timesheet-container td{
+  border: 1px solid black;
+  font-size: 23px;
+  text-align: center;
+}
