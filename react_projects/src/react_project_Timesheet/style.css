@@ -5,17 +5,19 @@
   background-repeat: no-repeat;
   background-size: 17% 80%;
   background-position: left bottom;
+  font-family: 'Dosis', sans-serif;
 }
 
 .timesheet-container .header-container{
   border: 1px solid black;
   display: flex;
-  padding:10px;
+  padding:10px 30px 10px 30px;
   margin:10px;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   background-color: #2f3a40;
-  /* background-color: #febe07; */
+  height:8%;
+  gap: 82px;
 }
 
 .timesheet-container .sign-in-out{
@@ -25,6 +27,14 @@
   background-color: #febe07;
   border: none;
   padding:3px 8px 3px 8px;
+  width: 10%;
+  height: 70%
+}
+
+.timesheet-container .heading{
+  font-size: 50px;
+  color:#febe07;
+  margin-left:28%
 }
 
 .timesheet-container .sign-in-out:hover,
@@ -39,6 +49,8 @@
   background-color:#febe07;
   color:white;
   border:none;
+  width: 10%;
+  height:70%;
 }
 
 
@@ -80,4 +92,16 @@
   border: 1px solid rgb(197, 196, 196);
   font-size: 23px;
   text-align: center;
+}
+
+.timesheet-container .current-date{
+  border: 1px solid black;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  background-color: #febe07;
+  color: white;
+  padding:2px 8px 2px 8px;
+  border: none;
+  width:25%;
+  height: 70%;
 }
