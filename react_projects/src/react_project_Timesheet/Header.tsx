@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Sheet } from './Sheet'
 
 export const Header = () => {
-  const [signInOutButton, setSignInOutButton] = useState(false)
+  const [userIsSignedIn, setUserIsSignedIn] = useState(false)
   const [userEnteredTask, setUserEnteredTask] = useState('')
   const [timesheetEvents, setTimesheetEvents] = useState(
     () => {
@@ -15,7 +15,7 @@ export const Header = () => {
   const [date, setDate] = useState(new Date())
   const dateKey = formatISO(date, { representation: 'date' })
 
-  const userEventType = signInOutButton ? 'SIGN OUT' : 'SIGN IN'
+  const userEventType = userIsSignedIn ? 'SIGN OUT' : 'SIGN IN'
 
   const addEvent = (event) => {
     setTimesheetEvents((prev) => {
@@ -27,22 +27,28 @@ export const Header = () => {
   }
 
   const toggleButton = () => {
-    setSignInOutButton(prev => !prev)
-    addEvent({
-      date: new Date(),
-      description: signInOutButton ? userEnteredTask : '',
-      eventType: userEventType
-    })
+    if (userEnteredTask !== '' || !userIsSignedIn) {
+      setUserEnteredTask('')
+      setUserIsSignedIn(prev => !prev)
+      addEvent({
+        date: new Date(),
+        description: userIsSignedIn ? userEnteredTask : '',
+        eventType: userEventType
+      })
+    }
   }
 
   const addTaskInSheet = () => {
-    addEvent(
-      {
-        date: new Date(),
-        description: signInOutButton ? userEnteredTask : '',
-        eventType: ''
-      }
-    )
+    if (userEnteredTask !== '') {
+      setUserEnteredTask('')
+      addEvent(
+        {
+          date: new Date(),
+          description: userIsSignedIn ? userEnteredTask : '',
+          eventType: ''
+        }
+      )
+    }
   }
 
   const dayBefore = () => {
@@ -65,9 +71,9 @@ export const Header = () => {
     <>
       <div className='header-container'>
         <button onClick={() => toggleButton()} className='sign-in-out'>{userEventType}</button>
-        {!signInOutButton && <div className='heading'>TIMESHEET</div>}
-        {signInOutButton && <input onChange={(e) => setUserEnteredTask(e.target.value)} className="input-task" placeholder="Enter your task here"></input>}
-        {signInOutButton && <button onClick={() => addTaskInSheet()} className="add-task-button">ADD TASK</button>}
+        {!userIsSignedIn && <div className='heading'>TIMESHEET</div>}
+        {userIsSignedIn && <input value={userEnteredTask} onChange={(e) => setUserEnteredTask(e.target.value)} className="input-task" placeholder="Enter your task here"></input>}
+        {userIsSignedIn && <button onClick={() => addTaskInSheet()} className="add-task-button">ADD TASK</button>}
         <div className='date-container'>
           <div onClick={() => dayBefore()} className='arrow-left'></div>
           <div className="current-date">Date: {format(date, 'do MMMM yyyy')}</div>
@@ -75,7 +81,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <Sheet timesheetArray={timesheetEvents} button={signInOutButton} date={date}
+      <Sheet timesheetArray={timesheetEvents} button={userIsSignedIn} date={date}
       />
     </>
   )
