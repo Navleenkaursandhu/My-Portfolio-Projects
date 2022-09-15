@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
-.timesheet-container{
+
+.timesheet-container {
   height: 725px;
   background-image: url('./assets/image.png');
   background-repeat: no-repeat;
@@ -8,53 +9,52 @@
   font-family: 'Dosis', sans-serif;
 }
 
-.timesheet-container .header-container{
+.timesheet-container .header-container {
   border: 1px solid black;
   display: flex;
-  padding:10px 30px 10px 30px;
-  margin:10px;
-  justify-content: flex-start;
+  padding: 10px 30px 10px 30px;
+  margin: 10px;
+  justify-content: space-between;
   align-items: center;
   background-color: #2f3a40;
-  height:8%;
-  gap: 82px;
+  height: 8%;
+  gap:49px;
 }
 
-.timesheet-container .sign-in-out{
-  font-size: 28px; 
+.timesheet-container .sign-in-out {
+  font-size: 28px;
   font-family: 'Dosis', sans-serif;
-  color:white;
+  color: white;
   background-color: #febe07;
   border: none;
-  padding:3px 8px 3px 8px;
+  padding: 3px 8px 3px 8px;
   width: 10%;
-  height: 70%
+  height: 70%;
 }
 
-.timesheet-container .heading{
+.timesheet-container .heading {
   font-size: 50px;
-  color:#febe07;
-  margin-left:28%
+  color: #febe07;
 }
 
 .timesheet-container .sign-in-out:hover,
-.timesheet-container .add-task-button:hover{
+.timesheet-container .add-task-button:hover {
   box-shadow: -4px -4px 3px 2px #806e3e;
   cursor: pointer;
 }
 
-.timesheet-container .add-task-button{
-  font-size: 30px; 
+.timesheet-container .add-task-button {
+  font-size: 30px;
   font-family: 'Dosis', sans-serif;
-  background-color:#febe07;
-  color:white;
-  border:none;
+  background-color: #febe07;
+  color: white;
+  border: none;
   width: 10%;
-  height:70%;
+  height: 70%;
 }
 
 
-.timesheet-container .input-task{
+.timesheet-container .input-task {
   width: 40%;
   font-size: 23px;
   padding: 10px;
@@ -62,46 +62,74 @@
   outline: 0;
 }
 
-.timesheet-container .sheet-container{
+.timesheet-container .date-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 28.5%;
+}
+
+.timesheet-container .current-date {
+  border: 1px solid black;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  background-color: #febe07;
+  color: white;
+  border: none;
+  padding: 2px 10px 2px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.timesheet-container .arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 18px solid  #febe07;
+}
+
+.timesheet-container .arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid  #febe07;
+}
+
+.timesheet-container .sheet-container {
   margin: 2% 0.7% 0 20%;
   overflow: auto;
   height: 82%;
   font-family: 'Dosis', sans-serif;
   text-align: center;
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
 
-.timesheet-container .sheet-table-container{
+.timesheet-container .sheet-table-container {
   border: 2px solid rgb(197, 196, 196);
-  width:100%;
-  
+  width: 100%;
+
 }
 
-.timesheet-container table{
+.timesheet-container table {
   width: 100%;
 }
 
 .timesheet-container th {
   border: 1px solid rgb(197, 196, 196);
   font-size: 28px;
-  padding:10px
+  padding: 10px
 }
 
-.timesheet-container td{
+.timesheet-container td {
   border: 1px solid rgb(197, 196, 196);
   font-size: 23px;
   text-align: center;
 }
 
-.timesheet-container .current-date{
-  border: 1px solid black;
-  font-family: 'Dosis', sans-serif;
-  font-size: 30px;
-  background-color: #febe07;
-  color: white;
-  padding:2px 8px 2px 8px;
-  border: none;
-  width:25%;
-  height: 70%;
+.timesheet-container .task-description {
+  text-align: start;
+  padding-left: 10px;
 }

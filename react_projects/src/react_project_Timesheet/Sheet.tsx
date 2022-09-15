@@ -7,20 +7,26 @@ export const Sheet = (props) => {
   return (
     <>
       <div className="sheet-container">
+     
         <div className="sheet-table-container">
+        {/* {!props.button && <div>hello</div>} */}
           <table >
             <tbody>
-              <tr>
+
+
+
+              {<tr>
                 <th>EVENT</th>
                 <th>TIME</th>
                 <th>DESCRIPTION</th>
-              </tr>
+              </tr>}
+              
 
               {props.timesheetArray.map((object, i) => {
                 return <tr key={i}>
                   <td>{object.eventType}</td>
-                  <td>{format(object.date, "h:m aa")}</td>
-                  <td>{object.description}</td>
+                  <td>{format(object.date, "h:m:ss aa")}</td>
+                  <td className="task-description">{object.description}</td>
                 </tr>
               }
               )}
