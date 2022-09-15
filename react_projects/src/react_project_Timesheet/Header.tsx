@@ -1,41 +1,48 @@
-import { addDays, format, isTomorrow, subDays } from 'date-fns'
-import { useState } from 'react'
+import { addDays, format, formatISO, isTomorrow, subDays } from 'date-fns'
+import { useEffect, useState } from 'react'
 import { Sheet } from './Sheet'
 
 export const Header = () => {
   const [signInOutButton, setSignInOutButton] = useState(false)
   const [userEnteredTask, setUserEnteredTask] = useState('')
-  const [timesheetEvents, setTimesheetEvents] = useState([])
+  const [timesheetEvents, setTimesheetEvents] = useState(
+    () => {
+      const saved = localStorage.getItem('eventEntered')
+      return JSON.parse(saved) || {}
+    }
+  )
+
   const [date, setDate] = useState(new Date())
+  const dateKey = formatISO(date, { representation: 'date' })
 
   const userEventType = signInOutButton ? 'SIGN OUT' : 'SIGN IN'
 
-  const toggleButton = () => {
-    // if () {
-    setSignInOutButton(prev => !prev)
+  const addEvent = (event) => {
     setTimesheetEvents((prev) => {
-      return prev.concat(
-        {
-          date: new Date(),
-          description: signInOutButton ? userEnteredTask : '',
-          eventType: userEventType
-        }
-      )
+      return {
+        ...prev,
+        [dateKey]: (prev[dateKey] || []).concat(event)
+      }
     })
-    // }
+  }
+
+  const toggleButton = () => {
+    setSignInOutButton(prev => !prev)
+    addEvent({
+      date: new Date(),
+      description: signInOutButton ? userEnteredTask : '',
+      eventType: userEventType
+    })
   }
 
   const addTaskInSheet = () => {
-    console.log(userEnteredTask)
-    setTimesheetEvents((prev) => {
-      return prev.concat(
-        {
-          date: new Date(),
-          description: userEnteredTask,
-          eventType: ''
-        }
-      )
-    })
+    addEvent(
+      {
+        date: new Date(),
+        description: signInOutButton ? userEnteredTask : '',
+        eventType: ''
+      }
+    )
   }
 
   const dayBefore = () => {
@@ -49,6 +56,11 @@ export const Header = () => {
     }
     )
   }
+
+  useEffect(() => {
+    localStorage.setItem('eventEntered', JSON.stringify(timesheetEvents))
+  }, [timesheetEvents])
+
   return (
     <>
       <div className='header-container'>
@@ -63,7 +75,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <Sheet timesheetArray={timesheetEvents} button={signInOutButton}
+      <Sheet timesheetArray={timesheetEvents} button={signInOutButton} date={date}
       />
     </>
   )
