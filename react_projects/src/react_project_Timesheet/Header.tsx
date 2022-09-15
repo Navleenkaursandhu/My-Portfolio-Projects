@@ -1,15 +1,17 @@
 import { addDays, format, isTomorrow, subDays } from 'date-fns'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Sheet } from './Sheet'
 
 export const Header = () => {
   const [signInOutButton, setSignInOutButton] = useState(false)
-  const [userEventType, setEventType] = useState('SIGN IN')
   const [userEnteredTask, setUserEnteredTask] = useState('')
   const [timesheetEvents, setTimesheetEvents] = useState([])
   const [date, setDate] = useState(new Date())
 
+  const userEventType = signInOutButton ? 'SIGN OUT' : 'SIGN IN'
+
   const toggleButton = () => {
+    // if () {
     setSignInOutButton(prev => !prev)
     setTimesheetEvents((prev) => {
       return prev.concat(
@@ -20,11 +22,8 @@ export const Header = () => {
         }
       )
     })
+    // }
   }
-
-  useEffect(() => {
-    setEventType(() => signInOutButton ? 'SIGN OUT' : 'SIGN IN')
-  }, [signInOutButton])
 
   const addTaskInSheet = () => {
     console.log(userEnteredTask)
@@ -64,7 +63,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <Sheet timesheetArray={timesheetEvents} button ={signInOutButton}
+      <Sheet timesheetArray={timesheetEvents} button={signInOutButton}
       />
     </>
   )
