@@ -2,7 +2,7 @@ import { format, formatISO } from "date-fns"
 
 export const Sheet = (props) => {
   const object = props.timesheetArray
-  const dateCurrent =  formatISO(props.date, {representation: 'date'})
+  const dateCurrent = formatISO(props.date, { representation: 'date' })
   const arrayToDisplay = object[dateCurrent]
   return (
     <>
@@ -15,7 +15,7 @@ export const Sheet = (props) => {
                 <th>TIME</th>
                 <th>DESCRIPTION</th>
               </tr>}
-              
+
               {arrayToDisplay && arrayToDisplay.map((object, i) => {
                 return <tr key={i}>
                   <td>{object.eventType}</td>
