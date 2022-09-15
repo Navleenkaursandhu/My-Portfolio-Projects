@@ -1,4 +1,4 @@
-import { format, formatISO } from "date-fns"
+import { format, formatISO } from 'date-fns'
 
 export const Sheet = (props) => {
   const object = props.timesheetArray
@@ -19,7 +19,7 @@ export const Sheet = (props) => {
               {arrayToDisplay && arrayToDisplay.map((object, i) => {
                 return <tr key={i}>
                   <td>{object.eventType}</td>
-                  <td>{format(new Date(object.date), "h:m:ss aa")}</td>
+                  <td>{format(new Date(object.date), 'h:m:ss aa')}</td>
                   <td className="task-description">{object.description}</td>
                 </tr>
               }
