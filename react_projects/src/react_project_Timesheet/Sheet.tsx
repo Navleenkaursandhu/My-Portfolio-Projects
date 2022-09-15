@@ -16,7 +16,7 @@ export const Sheet = (props) => {
                 <th>DESCRIPTION</th>
               </tr>}
 
-              {arrayToDisplay && arrayToDisplay.map((object, i) => {
+              {arrayToDisplay?.map((object, i) => {
                 return <tr key={i}>
                   <td>{object.eventType}</td>
                   <td>{format(new Date(object.date), 'h:m:ss aa')}</td>
