@@ -7,19 +7,19 @@
 
 .weddingcard-container .information-container{
   border: 1px solid black;
-  width:45%;
+  width:47%;
   margin:5px;
   background-image: url('./assets/details-background.png');
   background-repeat: no-repeat;
   background-position:bottom;
-  background-size: contain;
   font-family: 'Courgette', cursive;
+  background-size: 75%;
 }
 
 .weddingcard-container .information{
   overflow: auto;
   border: 2px solid green;
-  height: 79%;
+  height: 85%;
 }
 
 .weddingcard-container .details{
@@ -28,24 +28,47 @@
 }
 
 .weddingcard-container .family-information{
-border: 2px solid red;
 display: flex;
 gap: 20px;
 }
 
-.weddingcard-container .family-info,
-.weddingcard-container .weddingday-info{
+.weddingcard-container .familydetails-heading,
+.weddingcard-container .weddingdaydetails-heading,
+.weddingcard-container .prewedding-eventdetails-heading,
+.weddingcard-container .postwedding-eventdetails-heading{
   text-align: center;
-  padding-top: 20px;
+  padding: 15px 0px 10px;
   font-size: 18px;
 }
 
 .weddingcard-container .bride-side,
 .weddingcard-container .groom-side,
-.weddingcard-container .bride-groom-side-weddingday-info{
+.weddingcard-container .weddingday-information,
+.weddingcard-container .preweddingevents-information,
+.weddingcard-container .postweddingevents-information
+{
   display: flex;
   flex-direction: column;
   gap:20px;
+}
+
+.weddingcard-container .divider-container{
+  text-align: center;
+  padding-top: 20px;
+}
+.weddingcard-container .divider{
+  text-align: center;
+  width: 50%;
+}
+
+.weddingcard-container .wedding-date-day,
+.weddingcard-container .wedding-time-venue,
+.weddingcard-container .preweddingevent-date-day,
+.weddingcard-container .preweddingevent-time-venue,
+.weddingcard-container .postweddingevent-date-day,
+.weddingcard-container .postweddingevent-time-venue{
+  display: flex;
+  gap: 130px;
 }
 
 .weddingcard-container .bride-name,
@@ -62,17 +85,29 @@ gap: 20px;
 .weddingcard-container .groom-grandmother-name,
 .weddingcard-container .groom-address,
 .weddingcard-container .groom-rsvp,
-.weddingcard-container .date,
-.weddingcard-container .day,
-.weddingcard-container .time,
-.weddingcard-container .venue{
+.weddingcard-container .wedding-date,
+.weddingcard-container .wedding-day,
+.weddingcard-container .wedding-time,
+.weddingcard-container .wedding-venue,
+.weddingcard-container .preweddingevent-date,
+.weddingcard-container .preweddingevent-day,
+.weddingcard-container .preweddingevent-time,
+.weddingcard-container .preweddingevent-venue,
+.weddingcard-container .postweddingevent-date,
+.weddingcard-container .postweddingevent-day,
+.weddingcard-container .postweddingevent-time,
+.weddingcard-container .postweddingevent-venue
+{
   display: flex;
   align-items: center;
   gap:10px;
 }
 
 
-
+.weddingcard-container .prewedding-eventtype,
+.weddingcard-container .postwedding-eventtype{
+  text-align: center;
+}
 
 
 
@@ -83,6 +118,6 @@ gap: 20px;
 
 .weddingcard-container .card-container{
   border: 1px solid black;
-  width: 55%;
+  width: 53%;
   margin:5px;
 }
