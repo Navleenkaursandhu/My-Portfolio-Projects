@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dosis:wght@600&display=swap');
+.weddingcard-container{
+  height: 726px;
+  border: 1px solid black;
+  display: flex;
+}
+
+.weddingcard-container .information-container{
+  border: 1px solid black;
+  width:45%;
+  margin:5px;
+  background-image: url('./assets/details-background.png');
+  background-repeat: no-repeat;
+  background-position:bottom;
+  background-size: contain;
+  font-family: 'Courgette', cursive;
+}
+
+.weddingcard-container .information{
+  overflow: auto;
+  border: 2px solid green;
+  height: 79%;
+}
+
+.weddingcard-container .details{
+  text-align: center;
+  font-size: 35px;
+}
+
+.weddingcard-container .family-information{
+border: 2px solid red;
+display: flex;
+gap: 20px;
+}
+
+.weddingcard-container .family-info,
+.weddingcard-container .weddingday-info{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.weddingcard-container .bride-side,
+.weddingcard-container .groom-side,
+.weddingcard-container .bride-groom-side-weddingday-info{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.weddingcard-container .bride-name,
+.weddingcard-container .bride-father-name,
+.weddingcard-container .bride-mother-name,
+.weddingcard-container .bride-grandfather-name,
+.weddingcard-container .bride-grandmother-name,
+.weddingcard-container .bride-address,
+.weddingcard-container .bride-rsvp,
+.weddingcard-container .groom-name,
+.weddingcard-container .groom-father-name,
+.weddingcard-container .groom-mother-name,
+.weddingcard-container .groom-grandfather-name,
+.weddingcard-container .groom-grandmother-name,
+.weddingcard-container .groom-address,
+.weddingcard-container .groom-rsvp,
+.weddingcard-container .date,
+.weddingcard-container .day,
+.weddingcard-container .time,
+.weddingcard-container .venue{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.weddingcard-container .card-container{
+  border: 1px solid black;
+  width: 55%;
+  margin:5px;
+}
