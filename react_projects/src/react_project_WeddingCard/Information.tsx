@@ -1,152 +1,149 @@
 import dividerImage from './assets/divider.png'
+import detailsbackground from './assets/details-background.png'
 export const Information = () => {
   return (
-    <div className="information-container">
-      <div className="details">DETAILS</div>
+    <div className="border-gray-700 border-2 w-[52rem] m-1 bg-no-repeat bg-bottom bg-[length:500px_65px] font-apply bg-info-background p-4" style={{ backgroundImage: `url('${detailsbackground}')` }}>
+      <div className="text-center text-3xl">DETAILS</div>
 
-      <div className="information">
-        <div className="familydetails-heading">FAMILY DETAILS</div>
-        <div className="family-information">
-          <div className="bride-side">
+      <div className="overflow-auto h-5/6 p-0.5">
+        <div className="text-center pt-4 px-0 pb-2.5 text-lg">FAMILY DETAILS</div>
+        <div className="flex gap-[1rem]">
+          <div className="flex flex-col gap-5">
             <div>BRIDE  SIDE</div>
-            <div className="bride-name">Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="bride-father-name">Father&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Father&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="bride-mother-name">Mother&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Mother&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="bride-grandfather-name">Grandfather&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Grandfather&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="bride-grandmother-name">Grandmother&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Grandmother&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="bride-address">Address:
-              <input></input>
+            <div className="flex gap-2 items-center">Address:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="bride-rsvp">RSVP Contact No:
-              <input></input>
+            <div className="flex gap-2 items-center">RSVP Contact No:
+              <input className='bg-slate-100'></input>
             </div>
           </div>
 
-          <div className="groom-side">
+          <div className="flex flex-col gap-5">
             <div>GROOM SIDE</div>
-            <div className="groom-name">Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="groom-father-name">Father&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Father&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="groom-mother-name">Mother&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Mother&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="groom-grandfather-name">Grandfather&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Grandfather&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="groom-grandmother-name">Grandmother&apos;s Name:
-              <input></input>
+            <div className="flex gap-2 items-center">Grandmother&apos;s Name:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="groom-address">Address:
-              <input></input>
+            <div className="flex gap-2 items-center">Address:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className="groom-rsvp">RSVP Contact No:
-              <input></input>
-            </div>
-          </div>
-        </div>
-
-        <div className='divider-container'>
-          <img className="divider" src={dividerImage} />
-        </div>
-
-        <div className="weddingdaydetails-heading">WEDDING DAY DETAILS</div>
-        <div className="weddingday-information">
-          <div className="wedding-date-day">
-            <div className="wedding-date">Date:
-              <input></input>
-            </div>
-            <div className="wedding-day">Day:
-              <input></input>
-            </div>
-          </div>
-          <div className="wedding-time-venue">
-            <div className="wedding-time">Time:
-              <input></input>
-            </div>
-            <div className="wedding-venue">Venue:
-              <input></input>
+            <div className="flex gap-2 items-center">RSVP Contact No:
+              <input className='bg-slate-100'></input>
             </div>
           </div>
         </div>
 
-        <div className='divider-container'>
-          <img className="divider" src={dividerImage} />
+        <div className='flex justify-center'>
+          <img className="text-center w-1/2 mt-2" src={dividerImage} />
         </div>
 
-        <div className='prewedding-eventdetails-heading'>PRE-WEDDING EVENT DETAILS</div>
-        <div className='preweddingevents-information'>
-
-          <div className='prewedding-eventtype'>Event Type:
-            <input></input>
-          </div>
-
-          <div className='preweddingevent-date-day'>
-            <div className='preweddingevent-date'>Date:
-              <input></input>
+        <div className="text-center pt-4 px-0 pb-2.5 text-lg">WEDDING DAY DETAILS</div>
+        <div className="flex flex-col gap-5">
+          <div className="flex gap-[8rem]">
+            <div className="flex items-center">Date:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className='preweddingevent-day'>Day:
-              <input></input>
+            <div className="flex gap-10 items-center">Day:
+              <input className='bg-slate-100'></input>
             </div>
           </div>
-
-          <div className='preweddingevent-time-venue'>
-            <div className='preweddingevent-time'>Time:
-              <input></input>
+          <div className="flex gap-[8rem]">
+            <div className="flex gap-2 items-center">Time:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className='preweddingevent-venue'>Venue:
-              <input></input>
+            <div className="flex gap-2 items-center">Venue:
+              <input className='bg-slate-100'></input>
             </div>
           </div>
         </div>
 
-        <div className='divider-container'>
-          <img className="divider" src={dividerImage} />
+        <div className='flex justify-center'>
+          <img className="text-center w-1/2 mt-2" src={dividerImage} />
         </div>
 
-        <div className='postwedding-eventdetails-heading'>POST-WEDDING EVENT DETAILS</div>
-        <div className='postweddingevents-information'>
+        <div className='text-center pt-4 px-0 pb-2.5 text-lg'>PRE-WEDDING EVENT DETAILS</div>
+        <div className='flex flex-col gap-5'>
 
-          <div className='postwedding-eventtype'>Event Type:
-            <input></input>
+          <div className='flex gap-2 items-center'>Event Type:
+            <input className='bg-slate-100'></input>
           </div>
 
-          <div className='postweddingevent-date-day'>
-            <div className='postweddingevent-date'>Date:
-              <input></input>
+          <div className='flex gap-[8rem]'>
+            <div className='flex gap-2 items-center'>Date:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className='postweddingevent-day'>Day:
-              <input></input>
+            <div className='flex gap-2 items-center'>Day:
+              <input className='bg-slate-100'></input>
             </div>
           </div>
 
-          <div className='postweddingevent-time-venue'>
-            <div className='postweddingevent-time'>Time:
-              <input></input>
+          <div className='flex gap-[8rem]'>
+            <div className='flex gap-2 items-center'>Time:
+              <input className='bg-slate-100'></input>
             </div>
-            <div className='postweddingevent-venue'>Venue:
-              <input></input>
+            <div className='flex gap-2 items-center'>Venue:
+              <input className='bg-slate-100'></input>
+            </div>
+          </div>
+        </div>
+
+        <div className='flex justify-center'>
+          <img className="text-center w-1/2 mt-2" src={dividerImage} />
+        </div>
+
+        <div className='text-center pt-4 px-0 pb-2.5 text-lg'>POST-WEDDING EVENT DETAILS</div>
+        <div className='flex flex-col gap-5'>
+
+          <div className='flex gap-2 items-center'>Event Type:
+            <input className='bg-slate-100'></input>
+          </div>
+
+          <div className='flex gap-[8rem]'>
+            <div className='flex gap-2 items-center'>Date:
+              <input className='bg-slate-100'></input>
+            </div>
+            <div className='flex gap-2 items-center'>Day:
+              <input className='bg-slate-100'></input>
+            </div>
+          </div>
+
+          <div className='flex gap-[8rem]'>
+            <div className='flex gap-2 items-center'>Time:
+              <input className='bg-slate-100'></input>
+            </div>
+            <div className='flex gap-2 items-center'>Venue:
+              <input className='bg-slate-100'></input>
             </div>
           </div>
         </div>
 
       </div>
-      {/* <div>DATE and DAY</div>
-      <div>TIME</div>
-      <div>VENUE</div>
-      <div>RSVP</div> */}
     </div>
   )
 }
