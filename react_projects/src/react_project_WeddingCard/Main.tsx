@@ -18,26 +18,34 @@ export const Main = () => {
     groomAddress: "",
     groomRSVP: "",
     weddingDate: "",
-    weddingDay: "",
+    weddingMonth:"",
+    weddingYear: "",
+    weddingWeekDay:"",
     weddingTime: "",
     weddingVenue: "",
-    preWeddingEventType: "",
+    preweddingEventType: "",
     preweddingEventDate: "",
-    preweddingEventDay: "",
-    preWeddingTime: "",
+    preweddingEventMonth:"",
+    preweddingEventYear:"",
+    preweddingEventWeekDay:"",
+    preweddingTime: "",
     preweddingEventVenue: "",
-    postWeddingEventType: "",
+    postweddingEventType: "",
     postweddingEventDate: "",
-    postweddingEventDay: "",
-    postWeddingTime: "",
+    postweddingEventMonth:"",
+    postweddingEventYear:"",
+    postweddingEventWeekDay:"",
+    postweddingTime: "",
     postweddingEventVenue: "",
   })
   console.log(info)
 
   return (
-    <div className="border-black border flex h-[48rem] mt-3 gap-4 p-4">
+    <div className="flex h-[48.8rem] mt-2 gap-4">
       <Information value={info} onChange={newInfo => setInfo(newInfo)} />
-      <Card information={info} />
+      <div className='flex items-center flex-col flex-1 overflow-auto'>
+        <Card information={info} />
+      </div>
     </div>
   )
 }

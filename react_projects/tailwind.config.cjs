@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         'apply': ['Courgette', 'cursive'],
         'applyOnCard': [ 'Great Vibes', 'cursive'],
+        'applyFont': ['Overlock', 'cursive'],
       },
     },
   },
