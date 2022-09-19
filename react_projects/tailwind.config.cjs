@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'apply': ['"Courgette"', 'cursive'],
+        'apply': ['Courgette', 'cursive'],
+        'applyOnCard': [ 'Great Vibes', 'cursive'],
       },
     },
   },
