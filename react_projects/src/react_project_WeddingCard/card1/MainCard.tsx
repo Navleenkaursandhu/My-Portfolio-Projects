@@ -1,7 +1,7 @@
 import { format } from 'date-fns'
 import cardBackground from '../assets/card1-background.png'
 
-export const Card = (props) => {
+export const MainCard = (props) => {
   return (
     <div className="m-1 relative">
       <img className='w-[600px]' src={cardBackground} />

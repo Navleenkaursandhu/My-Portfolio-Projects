@@ -1,7 +1,8 @@
 import { Information } from './Information'
-import { Card } from './card1/Card'
+import { MainCard } from './card1/MainCard'
 import { useState } from 'react'
-import { EventCard } from './card1/EventCard'
+import { PreWeddingEventCard } from './card1/PreWeddingEventCard'
+import { PostWeddingEventCard } from './card1/PostWeddingEventCard'
 export const Main = () => {
   const [info, setInfo] = useState({
     brideName: '',
@@ -27,8 +28,9 @@ export const Main = () => {
     <div className="flex h-[48.8rem] mt-2 gap-4">
       <Information value={info} onChange={newInfo => setInfo(newInfo)} />
       <div className='flex items-center flex-col flex-1 overflow-auto'>
-        <Card information={info} />
-        <EventCard information={info}/>
+        <MainCard information={info} />
+        <PreWeddingEventCard information={info}/>
+        <PostWeddingEventCard information={info}/>
       </div>
     </div>
   )
