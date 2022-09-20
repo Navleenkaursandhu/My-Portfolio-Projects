@@ -66,10 +66,10 @@ export const Information = (props) => {
         <div className="text-center pt-4 px-0 pb-2.5 text-lg">WEDDING DAY DETAILS</div>
         <div className="flex flex-col gap-5">
           <div className="flex gap-[8rem]">
-            <div className="flex items-center">Date:
+            <div className="flex gap-2 items-center">Date:
               <input value={props.value.weddingDate} onChange={e => props.onChange({ ...props.value, weddingDate: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
             </div>
-            <div className="flex gap-10 items-center">Month:
+            <div className="flex gap-2 items-center">Month:
               <input value={props.value.weddingMonth} onChange={e => props.onChange({ ...props.value, weddingMonth: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
             </div>
           </div>

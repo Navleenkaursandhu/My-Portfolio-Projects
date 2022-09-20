@@ -1,7 +1,6 @@
 import cardBackground from '../assets/card1-background.png'
 
 export const Card = (props) => {
-  console.log(props.information)
   return (
     <div className="m-1 text-[#575353] relative text-7xl bg-no-repeat bg-cover" style={{ backgroundImage: `url(${cardBackground})` }}>
       <img className='w-[600px]' src={cardBackground} />
