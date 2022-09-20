@@ -1,6 +1,7 @@
 
 import dividerImage from './assets/divider.png'
 import detailsbackground from './assets/details-background.png'
+import { DateInput } from './components/DateInput'
 export const Information = (props) => {
   return (
     <div className="mb-2 ml-4 border-gray-250 border-2 w-[48rem] m-1 bg-no-repeat bg-bottom bg-contain font-apply bg-info-background p-4" style={{ backgroundImage: `url('${detailsbackground}')` }}>
@@ -67,25 +68,7 @@ export const Information = (props) => {
         <div className="flex flex-col gap-5">
           <div className="flex gap-[8rem]">
             <div className="flex gap-2 items-center">Date:
-              <input value={props.value.weddingDate} onChange={e => props.onChange({ ...props.value, weddingDate: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Month:
-              <input value={props.value.weddingMonth} onChange={e => props.onChange({ ...props.value, weddingMonth: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-          </div>
-
-          <div className="flex gap-[8rem]">
-            <div className="flex gap-2 items-center">Year:
-              <input value={props.value.weddingYear} onChange={e => props.onChange({ ...props.value, weddingYear: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Week Day :
-              <input value={props.value.weddingWeekDay} onChange={e => props.onChange({ ...props.value, weddingWeekDay: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-          </div>
-
-          <div className="flex gap-[8rem]">
-            <div className="flex gap-2 items-center">Time:
-              <input value={props.value.weddingTime} onChange={e => props.onChange({ ...props.value, weddingTime: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
+              <DateInput date={props.value.weddingDate} onDateChange={newDate => props.onChange({ ...props.value, weddingDate: newDate })}/>
             </div>
             <div className="flex gap-2 items-center">Venue:
               <input value={props.value.weddingVenue} onChange={e => props.onChange({ ...props.value, weddingVenue: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>

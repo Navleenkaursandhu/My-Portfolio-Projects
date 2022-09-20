@@ -31,13 +31,13 @@ export const Card = (props) => {
 
         <div className='text-[20px] font-applyFont flex'>
           <div className='flex flex-col font-semibold pr-[10px] items-end border-r-2 border-slate-500'>
-            <div>{props.information.weddingWeekDay}</div>
-            <div>{props.information.weddingTime}</div>
+            <div>Saturday</div>
+            <div>10am</div>
           </div>
-          <div className='flex items-center pl-[10px] pr-[10px] font-semibold text-[36px] border-r-2 border-slate-500'>{props.information.weddingDate}</div>
+          <div className='flex items-center pl-[10px] pr-[10px] font-semibold text-[36px] border-r-2 border-slate-500'>29</div>
           <div className='flex flex-col font-semibold pl-[10px] items-start' >
-            <div>{props.information.weddingMonth}</div>
-            <div>{props.information.weddingYear}</div>
+            <div>April</div>
+            <div>2022</div>
           </div>
         </div>
 
