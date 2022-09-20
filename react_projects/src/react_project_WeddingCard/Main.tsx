@@ -25,7 +25,7 @@ export const Main = () => {
   console.log(info)
 
   return (
-    <div className="flex h-[48.8rem] mt-2 gap-4">
+    <div className="flex h-screen gap-4">
       <Information value={info} onChange={newInfo => setInfo(newInfo)} />
       <div className='flex items-center flex-col flex-1 overflow-auto'>
         <MainCard information={info} />
