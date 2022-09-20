@@ -1,42 +1,25 @@
 import { Information } from './Information'
 import { Card } from './card1/Card'
 import { useState } from 'react'
+import { EventCard } from './card1/EventCard'
 export const Main = () => {
   const [info, setInfo] = useState({
-    brideName: "",
-    brideFatherName: "",
-    brideMotherName: "",
-    brideGrandFatherName: "",
-    brideGrandMotherName: "",
-    brideAddress: "",
-    brideRSVP: "",
-    groomName: "",
-    groomFatherName: "",
-    groomMotherName: "",
-    groomGrandFatherName: "",
-    groomGrandMotherName: "",
-    groomAddress: "",
-    groomRSVP: "",
-    weddingDate: "",
-    weddingMonth:"",
-    weddingYear: "",
-    weddingWeekDay:"",
-    weddingTime: "",
-    weddingVenue: "",
-    preweddingEventType: "",
-    preweddingEventDate: "",
-    preweddingEventMonth:"",
-    preweddingEventYear:"",
-    preweddingEventWeekDay:"",
-    preweddingTime: "",
-    preweddingEventVenue: "",
-    postweddingEventType: "",
-    postweddingEventDate: "",
-    postweddingEventMonth:"",
-    postweddingEventYear:"",
-    postweddingEventWeekDay:"",
-    postweddingTime: "",
-    postweddingEventVenue: "",
+    brideName: '',
+    brideFatherName: '',
+    brideMotherName: '',
+    brideRSVP: '',
+    groomName: '',
+    groomFatherName: '',
+    groomMotherName: '',
+    groomRSVP: '',
+    weddingDate: '',
+    weddingVenue: '',
+    preweddingEventType: '',
+    preweddingEventDate: '',
+    preweddingEventVenue: '',
+    postweddingEventType: '',
+    postweddingEventDate: '',
+    postweddingEventVenue: ''
   })
   console.log(info)
 
@@ -45,6 +28,7 @@ export const Main = () => {
       <Information value={info} onChange={newInfo => setInfo(newInfo)} />
       <div className='flex items-center flex-col flex-1 overflow-auto'>
         <Card information={info} />
+        <EventCard information={info}/>
       </div>
     </div>
   )

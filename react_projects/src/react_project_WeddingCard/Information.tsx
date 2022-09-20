@@ -20,15 +20,6 @@ export const Information = (props) => {
             <div className="flex gap-2 items-center">Mother&apos;s Name:
               <input value={props.value.groomMotherName} onChange={e => props.onChange({ ...props.value, groomMotherName: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
             </div>
-            <div className="flex gap-2 items-center">Grandfather&apos;s Name:
-              <input value={props.value.groomGrandFatherName} onChange={e => props.onChange({ ...props.value, groomGrandFatherName: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Grandmother&apos;s Name:
-              <input value={props.value.groomGrandMotherName} onChange={e => props.onChange({ ...props.value, groomGrandMotherName: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Address:
-              <input value={props.value.groomAddress} onChange={e => props.onChange({ ...props.value, groomAddress: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
             <div className="flex gap-2 items-center">RSVP Contact No:
               <input value={props.value.groomRSVP} onChange={e => props.onChange({ ...props.value, groomRSVP: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
             </div>
@@ -45,15 +36,6 @@ export const Information = (props) => {
             <div className="flex gap-2 items-center">Mother&apos;s Name:
               <input value={props.value.brideMotherName} onChange={e => props.onChange({ ...props.value, brideMotherName: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
             </div>
-            <div className="flex gap-2 items-center">Grandfather&apos;s Name:
-              <input value={props.value.brideGrandFatherName} onChange={e => props.onChange({ ...props.value, brideGrandFatherName: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Grandmother&apos;s Name:
-              <input value={props.value.brideGrandMotherName} onChange={e => props.onChange({ ...props.value, brideGrandMotherName: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Address:
-              <input value={props.value.brideAddress} onChange={e => props.onChange({ ...props.value, brideAddress: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
             <div className="flex gap-2 items-center">RSVP Contact No:
               <input value={props.value.brideRSVP} onChange={e => props.onChange({ ...props.value, brideRSVP: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
             </div>
@@ -68,7 +50,7 @@ export const Information = (props) => {
         <div className="flex flex-col gap-5">
           <div className="flex gap-[8rem]">
             <div className="flex gap-2 items-center">Date:
-              <DateInput date={props.value.weddingDate} onDateChange={newDate => props.onChange({ ...props.value, weddingDate: newDate })}/>
+              <DateInput date={props.value.weddingDate} onDateChange={newDate => props.onChange({ ...props.value, weddingDate: newDate })} />
             </div>
             <div className="flex gap-2 items-center">Venue:
               <input value={props.value.weddingVenue} onChange={e => props.onChange({ ...props.value, weddingVenue: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
@@ -89,25 +71,7 @@ export const Information = (props) => {
 
           <div className='flex gap-[8rem]'>
             <div className='flex gap-2 items-center'>Date:
-              <input value={props.value.preweddingEventDate} onChange={e => props.onChange({ ...props.value, preweddingEventDate: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className='flex gap-2 items-center'>Month:
-              <input value={props.value.preweddingEventMonth} onChange={e => props.onChange({ ...props.value, preweddingEventMonth: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-          </div>
-
-          <div className="flex gap-[8rem]">
-            <div className="flex gap-2 items-center">Year:
-              <input value={props.value.preweddingEventYear} onChange={e => props.onChange({ ...props.value, preweddingEventYear: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Week Day :
-              <input value={props.value.preweddingEventWeekDay} onChange={e => props.onChange({ ...props.value, preweddingEventWeekDay: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-          </div>
-
-          <div className='flex gap-[8rem]'>
-            <div className='flex gap-2 items-center'>Time:
-              <input value={props.value.preweddingEventTime} onChange={e => props.onChange({ ...props.value, preweddingEventTime: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
+              <DateInput date={props.value.preweddingEventDate} onDateChange={newDate => props.onChange({ ...props.value, preweddingEventDate: newDate })} className='bg-slate-100 pl-1.5 py-0.5'/>
             </div>
             <div className='flex gap-2 items-center'>Venue:
               <input value={props.value.preweddingEventVenue} onChange={e => props.onChange({ ...props.value, preweddingEventVenue: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
@@ -128,25 +92,7 @@ export const Information = (props) => {
 
           <div className='flex gap-[8rem]'>
             <div className='flex gap-2 items-center'>Date:
-              <input value={props.value.postweddingEventDate} onChange={e => props.onChange({ ...props.value, postweddingEventDate: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className='flex gap-2 items-center'>Month:
-              <input value={props.value.postweddingEventMonth} onChange={e => props.onChange({ ...props.value, postweddingEventMonth: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-          </div>
-
-          <div className="flex gap-[8rem]">
-            <div className="flex gap-2 items-center">Year:
-              <input value={props.value.postweddingEventYear} onChange={e => props.onChange({ ...props.value, postweddingEventYear: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-            <div className="flex gap-2 items-center">Week Day :
-              <input value={props.value.postweddingEventWeekDay} onChange={e => props.onChange({ ...props.value, postweddingEventWeekDay: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
-            </div>
-          </div>
-
-          <div className='flex gap-[8rem]'>
-            <div className='flex gap-2 items-center'>Time:
-              <input value={props.value.postweddingEventTime} onChange={e => props.onChange({ ...props.value, postweddingEventTime: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
+              <DateInput date={props.value.postweddingEventDate} onDateChange={newDate => props.onChange({ ...props.value, postweddingEventDate: newDate })} className='bg-slate-100 pl-1.5 py-0.5'/>
             </div>
             <div className='flex gap-2 items-center'>Venue:
               <input value={props.value.postweddingEventVenue} onChange={e => props.onChange({ ...props.value, postweddingEventVenue: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input>
