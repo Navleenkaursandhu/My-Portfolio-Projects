@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Information } from './Information'
 import { MainCard as MainCard1 } from './card1/MainCard'
 import { PreWeddingEventCard as PreWeddingEventCard1 } from './card1/PreWeddingEventCard'
@@ -8,25 +8,38 @@ import { PreWeddingEventCard as PreWeddingEventCard2 } from './card2/PreWeddingE
 import { PostWeddingEventCard as PostWeddingEventCard2 } from './card2/PostWeddingEventCard'
 export const Main = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(1)
-  const [info, setInfo] = useState({
-    brideName: '',
-    brideFatherName: '',
-    brideMotherName: '',
-    brideRSVP: '',
-    groomName: '',
-    groomFatherName: '',
-    groomMotherName: '',
-    groomRSVP: '',
-    weddingDate: '',
-    weddingVenue: '',
-    preweddingEventType: '',
-    preweddingEventDate: '',
-    preweddingEventVenue: '',
-    postweddingEventType: '',
-    postweddingEventDate: '',
-    postweddingEventVenue: ''
+  const [info, setInfo] = useState(() => {
+    const saved = localStorage.getItem('data')
+    const rawInfo = JSON.parse(saved) || {
+      brideName: '',
+      brideFatherName: '',
+      brideMotherName: '',
+      brideRSVP: '',
+      groomName: '',
+      groomFatherName: '',
+      groomMotherName: '',
+      groomRSVP: '',
+      weddingDate: '',
+      weddingVenue: '',
+      preweddingEventType: '',
+      preweddingEventDate: '',
+      preweddingEventVenue: '',
+      postweddingEventType: '',
+      postweddingEventDate: '',
+      postweddingEventVenue: ''
+    }
+
+    rawInfo.weddingDate = rawInfo.weddingDate && new Date(rawInfo.weddingDate)
+    rawInfo.preweddingEventDate = rawInfo.preweddingEventDate && new Date(rawInfo.preweddingEventDate)
+    rawInfo.postweddingEventDate = rawInfo.postweddingEventDate && new Date(rawInfo.postweddingEventDate)
+
+    return rawInfo
   })
   console.log(info)
+
+  useEffect(() => {
+    localStorage.setItem('data', JSON.stringify(info))
+  }, [info])
 
   return (
     <div className="flex h-screen">
