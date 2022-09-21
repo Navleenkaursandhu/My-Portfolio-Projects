@@ -10,6 +10,8 @@ module.exports = {
         'apply': ['Courgette', 'cursive'],
         'applyOnCard': [ 'Great Vibes', 'cursive'],
         'applyFont': ['Overlock', 'cursive'],
+        'applyFontCard2': ['Sacramento', 'cursive'],
+        'applyAmiko': ['Amiko', 'sans-serif']
       },
     },
   },

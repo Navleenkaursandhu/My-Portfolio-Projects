@@ -3,7 +3,7 @@ import cardBackground from '../assets/card1-background.png'
 
 export const MainCard = (props) => {
   return (
-    <div className="m-1 relative">
+    <div className="mt-4 relative">
       <img className='w-[600px]' src={cardBackground} />
       <div className='absolute  text-[#575353] top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center pl-[140px] pr-[140px] pt-[56px] border border-groove shadow-xl gap-[6px]'>
         <div className='text-[18px] font-semibold text-center flex flex-col items-center font-applyFont'>

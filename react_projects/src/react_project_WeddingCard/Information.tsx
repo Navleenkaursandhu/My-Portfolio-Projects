@@ -1,23 +1,21 @@
-import { useState } from 'react'
-import cardBackground from './assets/card1-background.png'
+import cardTemplate1 from './assets/card1-background.png'
+import cardTemplate2 from './assets/card2-background.png'
 import dividerLeft from './assets/divider-left.png'
 import dividerRight from './assets/divider-right.png'
 import { DateInput } from './components/DateInput'
 export const Information = (props) => {
-  
-
-  
   return (
-    <div className="overflow-auto ml-4 border-gray-250 border-2 w-[48rem] m-1 bg-no-repeat bg-bottom bg-contain font-apply bg-info-background p-4">
+    <div className="overflow-auto w-[50%] font-apply p-4">
 
       <div className='flex justify-center gap-[4px]'>
         <img src={dividerLeft} className='h-[20px]' />
-        <div className="text-center text-lg">WEDDING CARD TEMPLATES</div>
+        <div className="text-center mb-[4px] text-lg">WEDDING CARD TEMPLATES</div>
         <img src={dividerRight} className='h-[20px]' />
       </div>
 
       <div className='flex justify-center gap-[10px]'>
-        <img onClick={() => props.onTemplateChange(1)} src={cardBackground} className='border-slate-300 border h-[90px]' />
+        <img onClick={() => props.onTemplateChange(1)} src={cardTemplate1} className='border-slate-300 border h-[90px]' />
+        <img onClick={() => props.onTemplateChange(2)} src={cardTemplate2} className='border-slate-300 border h-[90px]' />
       </div>
 
       <div className='flex justify-center pt-6 gap-[4px]'>
