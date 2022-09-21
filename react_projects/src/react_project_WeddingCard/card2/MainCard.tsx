@@ -7,14 +7,14 @@ export const MainCard = (props) => {
         <img className='w-[600px]' src={cardBackground} />
         <div className='absolute flex items-center pl-[100px] pr-[100px] top-0 left-0 bottom-0 right-0 border border-[#c7be4b] shadow-xl '>
           {props.information.groomName &&
-            <div className='bg-[#ffe2d8d1] border border-[#c7be4b] px-[32px] py-[25px] backdrop-blur-[2px] text-center flex flex-col items-center gap-[14px]'>
+            <div className='bg-[#ffd2c34d] border border-[#c7be4b] px-[32px] py-[25px] backdrop-blur-[2px] text-center flex flex-col items-center gap-[14px]'>
               {props.information.groomName && <div>WE GRACIOUSLY INVITE YOU TO HONOR US WITH YOUR PRESENCE &amp; BLESSINGS
                 ON THE AUSPICIOUS OCCASION OF THE WEDDING CEREMONY OF
               </div>}
 
               <div>
                 <div className='text-[36px] font-bold text-[#c7be4b] font-applyFontCard2'>{props.information.groomName}</div>
-                {props.information.groomFatherName && <div className='mt-[-10px]'>s/o {props.information.groomFatherName}&nbsp;
+                {props.information.groomFatherName && <div className='mt-[-6px]'>s/o {props.information.groomFatherName}&nbsp;
                   <span>&amp;&nbsp;{props.information.groomMotherName}</span>
                 </div>}
               </div>
@@ -23,7 +23,7 @@ export const MainCard = (props) => {
 
               <div>
                 <div className='text-[36px] font-bold text-[#c7be4b] font-applyFontCard2'>{props.information.brideName}</div>
-                {props.information.brideFatherName && <div className='mt-[-10px]'>d/o {props.information.brideFatherName}&nbsp;
+                {props.information.brideFatherName && <div className='mt-[-6px]'>d/o {props.information.brideFatherName}&nbsp;
                   <span>&amp;&nbsp;{props.information.brideMotherName}</span>
                 </div>}
               </div>
@@ -38,7 +38,7 @@ export const MainCard = (props) => {
                     </div>
                     <div className='text-[24px]'>{format(props.information.weddingDate, 'd')}</div>
                     <div className='flex-1 border-2 border-l-0 border-r-0 border-t-black border-b-black'>
-                      <div className='border-t-black border-b-black'>AT {format(props.information.weddingDate, 'h aaa')}</div>
+                      <div className='border-t-black border-b-black'>AT {format(props.information.weddingDate, 'h:mm aaa')}</div>
                     </div>
                   </div>
                 }
