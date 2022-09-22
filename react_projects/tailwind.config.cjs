@@ -11,7 +11,9 @@ module.exports = {
         'applyOnCard': [ 'Great Vibes', 'cursive'],
         'applyFont': ['Overlock', 'cursive'],
         'applyFontCard2': ['Sacramento', 'cursive'],
-        'applyAmiko': ['Amiko', 'sans-serif']
+        'applyAmiko': ['Amiko', 'sans-serif'],
+        'applyPassions' :['Passions Conflict', 'cursive'],
+        'applyMukta' :['Mukta Malar', 'sans-serif']
       },
     },
   },

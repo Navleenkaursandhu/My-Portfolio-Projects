@@ -14,8 +14,8 @@ export const PreWeddingEventCard = (props) => {
               {props.information.preweddingEventType && <div>of</div>}
               <div>
                 <div className='font-applyFontCard2 text-[#106c15] text-[34px] font-bold'>{props.information.groomName}</div>
-                <div className='font-applyFontCard2 text-[34px]'>&amp;</div>
-                <div className='font-applyFontCard2 text-[#106c15] text-[34px] font-bold'>{props.information.brideName}</div>
+                <div className='font-applyFontCard2 mt-[-14px] text-[34px]'>&amp;</div>
+                <div className='font-applyFontCard2 mt-[-14px] text-[#106c15] text-[34px] font-bold'>{props.information.brideName}</div>
               </div>
 
               <div className='w-full'>

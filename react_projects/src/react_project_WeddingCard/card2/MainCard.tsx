@@ -19,10 +19,10 @@ export const MainCard = (props) => {
                 </div>}
               </div>
 
-              {props.information.brideName && <div>WITH</div>}
+              {props.information.brideName && <div className='mt-[-14px]'>WITH</div>}
 
               <div>
-                <div className='text-[36px] font-bold text-[#c7be4b] font-applyFontCard2'>{props.information.brideName}</div>
+                <div className='text-[36px] mt-[-14px] font-bold text-[#c7be4b] font-applyFontCard2'>{props.information.brideName}</div>
                 {props.information.brideFatherName && <div className='mt-[-6px]'>d/o {props.information.brideFatherName}&nbsp;
                   <span>&amp;&nbsp;{props.information.brideMotherName}</span>
                 </div>}

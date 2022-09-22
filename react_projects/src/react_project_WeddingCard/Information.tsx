@@ -1,5 +1,6 @@
 import cardTemplate1 from './assets/card1-background.png'
 import cardTemplate2 from './assets/card2-background.png'
+import cardTemplate3 from './assets/card3-background.jpg'
 import dividerLeft from './assets/divider-left.png'
 import dividerRight from './assets/divider-right.png'
 import { DateInput } from './components/DateInput'
@@ -14,8 +15,9 @@ export const Information = (props) => {
       </div>
 
       <div className='flex justify-center gap-[10px]'>
-        <img onClick={() => props.onTemplateChange(1)} src={cardTemplate1} className='border-slate-300 border h-[90px]' />
-        <img onClick={() => props.onTemplateChange(2)} src={cardTemplate2} className='border-slate-300 border h-[90px]' />
+        <img onClick={() => props.onTemplateChange(1)} src={cardTemplate1} className='border-slate-200 border h-[90px]' />
+        <img onClick={() => props.onTemplateChange(2)} src={cardTemplate2} className='border-slate-200 border h-[90px]' />
+        <img onClick={() => props.onTemplateChange(3)} src={cardTemplate3} className='border-slate-200 border h-[90px]' />
       </div>
 
       <div className='flex justify-center pt-6 gap-[4px]'>
@@ -122,10 +124,12 @@ export const Information = (props) => {
         </table>
 
         <table className='w-1/2 border-separate border-spacing-[8px]'>
-          <tr>
-            <td>Date:</td>
-            <td><DateInput date={props.value.preweddingEventDate} onDateChange={newDate => props.onChange({ ...props.value, preweddingEventDate: newDate })} className='bg-slate-100 pl-1.5 py-0.5' /></td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Date:</td>
+              <td><DateInput date={props.value.preweddingEventDate} onDateChange={newDate => props.onChange({ ...props.value, preweddingEventDate: newDate })} className='bg-slate-100 pl-1.5 py-0.5' /></td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -150,10 +154,12 @@ export const Information = (props) => {
         </table>
 
         <table className='w-1/2 border-separate border-spacing-[8px]'>
-          <tr>
-            <td>Date:</td>
-            <td><DateInput date={props.value.postweddingEventDate} onDateChange={newDate => props.onChange({ ...props.value, postweddingEventDate: newDate })} className='bg-slate-100 pl-1.5 py-0.5' /></td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Date:</td>
+              <td><DateInput date={props.value.postweddingEventDate} onDateChange={newDate => props.onChange({ ...props.value, postweddingEventDate: newDate })} className='bg-slate-100 pl-1.5 py-0.5' /></td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
