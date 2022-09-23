@@ -41,7 +41,6 @@ export const Main = () => {
 
     return rawInfo
   })
-  console.log(info)
 
   useEffect(() => {
     localStorage.setItem('data', JSON.stringify(info))
@@ -49,7 +48,11 @@ export const Main = () => {
 
   return (
     <div className="flex h-screen">
-      <Information value={info} onChange={newInfo => setInfo(newInfo)} onTemplateChange={(templateNum) => setSelectedTemplate(templateNum)} template={selectedTemplate} />
+      <Information
+        value={info}
+        onChange={newInfo => setInfo(newInfo)}
+        onTemplateChange={(templateNum) => setSelectedTemplate(templateNum)}
+        template={selectedTemplate} />
       <div className='flex items-center flex-col flex-1 overflow-auto bg-slate-100'>
         {selectedTemplate === 1 && <>
           <MainCard1 information={info} />
