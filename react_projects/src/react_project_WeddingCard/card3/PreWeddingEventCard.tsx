@@ -35,11 +35,11 @@ export const PreWeddingEventCard = (props) => {
                 <div>{props.information.preweddingEventVenue}</div>
               </div>}
 
-            <div>
+              {(props.information.preweddingEventVenue) && <div>
               {props.information.groomRSVP && <div>RSVP</div>}
               {props.information.groomRSVP && <div>Groom Side: {props.information.groomRSVP}</div>}
               {props.information.brideRSVP && <div>Bride Side: {props.information.brideRSVP}</div>}
-            </div>
+            </div>}
           </div>
         </div>
 

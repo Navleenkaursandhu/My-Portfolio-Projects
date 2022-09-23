@@ -16,10 +16,10 @@ export const Information = (props) => {
       </div>
 
       <div className='flex justify-center gap-[10px]'>
-        <img onClick={() => props.onTemplateChange(1)} src={cardTemplate1} className='border-slate-200 border h-[90px]' />
-        <img onClick={() => props.onTemplateChange(2)} src={cardTemplate2} className='border-slate-200 border h-[90px]' />
-        <img onClick={() => props.onTemplateChange(3)} src={cardTemplate3} className='border-slate-200 border h-[90px]' />
-        <img onClick={() => props.onTemplateChange(4)} src={cardTemplate4} className='border-slate-200 border h-[90px]' />
+        <img onClick={() => props.onTemplateChange(1)} src={cardTemplate1} className={`border-slate-200 border h-[90px] ${props.template === 1 ? 'border-2 border-[#e45a83]' : ''}`} />
+        <img onClick={() => props.onTemplateChange(2)} src={cardTemplate2} className={`border-slate-200 border h-[90px] ${props.template === 2 ? 'border-2 border-[#83bd93]' : ''}`} />
+        <img onClick={() => props.onTemplateChange(3)} src={cardTemplate3} className={`border-slate-200 border h-[90px] ${props.template === 3 ? 'border-2 border-[#beab77]' : ''}`} />
+        <img onClick={() => props.onTemplateChange(4)} src={cardTemplate4} className={`border-slate-200 border h-[90px] ${props.template === 4 ? 'border-2 border-[#BD8DAE]' : ''}`} />
       </div>
 
       <div className='flex justify-center pt-6 gap-[4px]'>

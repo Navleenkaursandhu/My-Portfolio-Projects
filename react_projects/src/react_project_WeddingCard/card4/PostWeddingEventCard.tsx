@@ -12,6 +12,7 @@ export const PostWeddingEventCard = (props) => {
                 <div >Please join us to celebrate</div>
                 <div>the <span className='text-[30px] font-applyNiconne'>{props.information.postweddingEventType}</span> of</div>
               </div>}
+
             {props.information.postweddingEventType &&
               <div className='font-applyNiconne text-[36px]'>
                 <div className='leading-10'>
@@ -41,13 +42,13 @@ export const PostWeddingEventCard = (props) => {
                 <div className='text-[16px]'>{props.information.postweddingEventVenue}</div>
               </div>}
 
-            <div>
+            {(props.information.postweddingEventVenue) && <div>
               {props.information.groomRSVP && <div className='text-[28px] font-applyNiconne'>Rsvp</div>}
               <div className='text-[16px] flex gap-[20px]'>
                 {props.information.groomRSVP && <div>Groom Side: {props.information.groomRSVP}</div>}
                 {props.information.brideRSVP && <div>Bride Side: {props.information.brideRSVP}</div>}
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>

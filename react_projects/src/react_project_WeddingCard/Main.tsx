@@ -49,7 +49,7 @@ export const Main = () => {
 
   return (
     <div className="flex h-screen">
-      <Information value={info} onChange={newInfo => setInfo(newInfo)} onTemplateChange={(templateNum) => setSelectedTemplate(templateNum)} />
+      <Information value={info} onChange={newInfo => setInfo(newInfo)} onTemplateChange={(templateNum) => setSelectedTemplate(templateNum)} template={selectedTemplate} />
       <div className='flex items-center flex-col flex-1 overflow-auto bg-slate-100'>
         {selectedTemplate === 1 && <>
           <MainCard1 information={info} />
