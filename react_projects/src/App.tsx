@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css'
-
+import { Main as ProjectWeddingCard } from './react_project_WeddingCard/Main'
 import { Main as ProjectTimesheet } from './react_project_Timesheet/Main'
 import { Main as ProjectDailyDiary } from './react_project_DailyDiary/Main'
 import { Main as ProjectCurrencyConvertor } from './react_project_currencyConvertor/main'
@@ -48,15 +48,15 @@ const Links = () => {
       <a href="./Dictionary">React Project: Dictionary</a>
       <a href="./WeatherApp">React Project: Weather Forecast Application</a>
       <a href="./CurrencyConvertor">React Project: Currency Convertor</a>
-      <a href='./Timesheet'>React Project: Timesheet</a>
       <a href="./DailyDiary">React Project: Daily Diary</a>
+      <a href='./Timesheet'>React Project: Timesheet</a>
+      <a href="./WeddingCard">React Project: Wedding Card</a>
     </div>
   )
 }
 
 function App () {
   return (
-
     <BrowserRouter>
       <Routes>
         <Route path="/">
@@ -81,6 +81,7 @@ function App () {
           <Route path="CurrencyConvertor" element={<ProjectCurrencyConvertor/>}/>
           <Route path="Timesheet" element={<ProjectTimesheet/>}/>
           <Route path="DailyDiary" element={<ProjectDailyDiary/>}/>
+          <Route path="WeddingCard" element={<ProjectWeddingCard/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

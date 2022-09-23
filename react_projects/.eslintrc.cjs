@@ -15,6 +15,7 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": "off",
         "react/prop-types": "off", // consider keeping it on
         "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
       }
     }
   ],
