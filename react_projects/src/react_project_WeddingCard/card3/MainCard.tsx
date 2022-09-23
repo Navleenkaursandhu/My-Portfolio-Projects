@@ -10,15 +10,15 @@ export const MainCard = (props) => {
             {props.information.groomName && <div>TOGETHER WITH THEIR FAMILIES </div>}
 
             <div>
-              <div className='text-[50px] font-applyPassions'>{props.information.groomName}</div>
-              {props.information.groomFatherName && <div className='mt-[-6px]'>&#40;s/o {props.information.groomFatherName}&nbsp;
+              <div className='text-[50px] leading-10 font-applyPassions'>{props.information.groomName}</div>
+              {props.information.groomFatherName && <div>&#40;s/o {props.information.groomFatherName}&nbsp;
                 <span>&amp;&nbsp;{props.information.groomMotherName}&#41;</span>
               </div>}
 
-              {props.information.brideName && <div className='text-[38px] mt-[-20px] font-applyPassions'>&amp;</div>}
+              {props.information.brideName && <div className='text-[38px] font-applyPassions'>&amp;</div>}
 
-              <div className='text-[50px] mt-[-20px] font-applyPassions'>{props.information.brideName}</div>
-              {props.information.brideFatherName && <div className='mt-[-6px]'>&#40;d/o {props.information.brideFatherName}&nbsp;
+              <div className='text-[50px] leading-10 font-applyPassions'>{props.information.brideName}</div>
+              {props.information.brideFatherName && <div>&#40;d/o {props.information.brideFatherName}&nbsp;
                 <span>&amp;&nbsp;{props.information.brideMotherName}&#41;</span>
               </div>}
             </div>

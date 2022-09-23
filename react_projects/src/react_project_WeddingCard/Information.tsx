@@ -1,6 +1,7 @@
 import cardTemplate1 from './assets/card1-background.png'
 import cardTemplate2 from './assets/card2-background.png'
 import cardTemplate3 from './assets/card3-background.jpg'
+import cardTemplate4 from './assets/card4-background.jpg'
 import dividerLeft from './assets/divider-left.png'
 import dividerRight from './assets/divider-right.png'
 import { DateInput } from './components/DateInput'
@@ -18,6 +19,7 @@ export const Information = (props) => {
         <img onClick={() => props.onTemplateChange(1)} src={cardTemplate1} className='border-slate-200 border h-[90px]' />
         <img onClick={() => props.onTemplateChange(2)} src={cardTemplate2} className='border-slate-200 border h-[90px]' />
         <img onClick={() => props.onTemplateChange(3)} src={cardTemplate3} className='border-slate-200 border h-[90px]' />
+        <img onClick={() => props.onTemplateChange(4)} src={cardTemplate4} className='border-slate-200 border h-[90px]' />
       </div>
 
       <div className='flex justify-center pt-6 gap-[4px]'>

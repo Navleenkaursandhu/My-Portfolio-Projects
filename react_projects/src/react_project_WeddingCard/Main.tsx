@@ -9,6 +9,9 @@ import { PostWeddingEventCard as PostWeddingEventCard2 } from './card2/PostWeddi
 import { MainCard as MainCard3 } from './card3/MainCard'
 import { PreWeddingEventCard as PreWeddingEventCard3 } from './card3/PreWeddingEventCard'
 import { PostWeddingEventCard as PostWeddingEventCard3 } from './card3/PostWeddingEventCard'
+import { MainCard as MainCard4 } from './card4/MainCard'
+import { PreWeddingEventCard as PreWeddingEventCard4 } from './card4/PreWeddingEventCard'
+import { PostWeddingEventCard as PostWeddingEventCard4 } from './card4/PostWeddingEventCard'
 export const Main = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(1)
   const [info, setInfo] = useState(() => {
@@ -64,6 +67,12 @@ export const Main = () => {
           <MainCard3 information={info} />
           <PreWeddingEventCard3 information={info} />
           <PostWeddingEventCard3 information={info} />
+        </>}
+
+        {selectedTemplate === 4 && <>
+          <MainCard4 information={info} />
+          <PreWeddingEventCard4 information={info} />
+          <PostWeddingEventCard4 information={info} />
         </>}
       </div>
     </div>

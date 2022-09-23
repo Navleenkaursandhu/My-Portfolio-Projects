@@ -13,7 +13,8 @@ module.exports = {
         'applyFontCard2': ['Sacramento', 'cursive'],
         'applyAmiko': ['Amiko', 'sans-serif'],
         'applyPassions' :['Passions Conflict', 'cursive'],
-        'applyMukta' :['Mukta Malar', 'sans-serif']
+        'applyMukta' :['Mukta Malar', 'sans-serif'],
+        'applyNiconne': ['Niconne', 'cursive'],
       },
     },
   },
