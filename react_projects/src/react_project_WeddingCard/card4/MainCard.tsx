@@ -9,12 +9,12 @@ export const MainCard = (props) => {
 
           <div className='text-[#cba967] text-center flex flex-col h-[60%] items-center justify-center gap-[18px]'>
 
-            {props.information.groomName && <div className='text-[40px] font-applyNiconne'>Save The Date</div>}
+            {props.information.groomName && <div className='text-[30px] font-applyNiconne'>Save The Date</div>}
 
             <div className='font-applyNiconne'>
-              <div className='text-[34px]'>{props.information.groomName}</div>
+              <div className='text-[36px]'>{props.information.groomName}</div>
               {props.information.groomName && <div className='text-[24px]'>Weds</div>}
-              {<div className='text-[34px]'>{props.information.brideName}</div>}
+              {<div className='text-[36px]'>{props.information.brideName}</div>}
             </div>
 
             <div className='text-[16px] font-bold'>

@@ -42,7 +42,6 @@ export const PostWeddingEventCard = (props) => {
             </div>
           </div>
         </div>
-
       </div>
     </>
   )

@@ -5,7 +5,7 @@ export const PostWeddingEventCard = (props) => {
     <>
       {props.information.postweddingEventType &&
         <div className="m-1 relative text-center" >
-          <img className='w-[600px]' src={cardBackground} />
+          <img className='w-[600px] hue-rotate-[212deg]' src={cardBackground} />
           <div className='absolute text-[#575353] top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center pl-[140px] pr-[140px] border border-groove shadow-xl gap-[26px]'>
             <div className='font-applyFont text-[18px]'>PLEASE JOIN US TO CELEBRATE</div>
             <div className='font-applyOnCard font-semibold text-[34px] text-[#e82f63f2]'>{props.information.postweddingEventType}</div>

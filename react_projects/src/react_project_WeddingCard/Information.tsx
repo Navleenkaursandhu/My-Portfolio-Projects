@@ -7,7 +7,7 @@ import dividerRight from './assets/divider-right.png'
 import { DateInput } from './components/DateInput'
 export const Information = (props) => {
   return (
-    <div className="overflow-auto w-[50%] font-apply p-4">
+    <div className="overflow-auto w-[50%] print:hidden font-apply p-4">
 
       <div className='flex justify-center gap-[4px]'>
         <img src={dividerLeft} className='h-[20px]' />
