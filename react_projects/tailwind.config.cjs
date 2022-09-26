@@ -18,6 +18,7 @@ module.exports = {
         'applyDosis':['Dosis', 'sans-serif'],
         'applyOregano' :['Oregano', 'cursive'],
         'applyPTSans':['PT Sans', 'sans-serif'],
+        'applyBubblegum':['Bubblegum Sans', 'cursive'],
       },
     },
   },
