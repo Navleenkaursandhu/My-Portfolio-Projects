@@ -69,15 +69,15 @@ export const Header = () => {
 
   return (
     <>
-      <div className='header-container'>
-        <button onClick={() => toggleButton()} className='sign-in-out'>{userEventType}</button>
-        {!userIsSignedIn && <div className='heading'>TIMESHEET</div>}
-        {userIsSignedIn && <input value={userEnteredTask} onChange={(e) => setUserEnteredTask(e.target.value)} className="input-task" placeholder="Enter your task here"></input>}
-        {userIsSignedIn && <button onClick={() => addTaskInSheet()} className="add-task-button">ADD TASK</button>}
-        <div className='date-container'>
-          <div onClick={() => dayBefore()} className='arrow-left'></div>
-          <div className="current-date">Date: {format(date, 'do MMMM yyyy')}</div>
-          <div onClick={() => dayAfter()} className='arrow-right'></div>
+      <div className='flex px-[30px] pl-[10px] m-[10px] justify-between items-center bg-[#2f3a40] h-[70px]'>
+        <button onClick={() => toggleButton()} className='text-[28px]  text-white bg-[#febe07] px-[10px]'>{userEventType}</button>
+        {!userIsSignedIn && <div className='text-[50px] text-[#febe07]'>TIMESHEET</div>}
+        {userIsSignedIn && <input value={userEnteredTask} onChange={(e) => setUserEnteredTask(e.target.value)} className="w-[40%] text-[22px] p-[10px] outline-none" placeholder="Enter your task here"></input>}
+        {userIsSignedIn && <button onClick={() => addTaskInSheet()} className="text-[30px] bg-[#febe07] text-white px-[10px]">ADD TASK</button>}
+        <div className='flex items-center justify-between w-[30%]'>
+          <div onClick={() => dayBefore()} className='border-y-[18px]  border-r-[18px] border-r-[#febe07] border-y-transparent'></div>
+          <div className="text-[30px] bg-[#febe07] text-white px-[10px] py-[2px] flex items-center">Date: {format(date, 'do MMMM yyyy')}</div>
+          <div onClick={() => dayAfter()} className='border-y-[18px]  border-l-[18px] border-l-[#febe07] border-y-transparent'></div>
         </div>
       </div>
 
