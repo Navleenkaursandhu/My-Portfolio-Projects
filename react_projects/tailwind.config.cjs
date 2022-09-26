@@ -15,6 +15,7 @@ module.exports = {
         'applyPassions' :['Passions Conflict', 'cursive'],
         'applyMukta' :['Mukta Malar', 'sans-serif'],
         'applyNiconne': ['Niconne', 'cursive'],
+        'applyDosis':['Dosis', 'sans-serif'],
       },
     },
   },
