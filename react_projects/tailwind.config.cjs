@@ -17,6 +17,7 @@ module.exports = {
         'applyNiconne': ['Niconne', 'cursive'],
         'applyDosis':['Dosis', 'sans-serif'],
         'applyOregano' :['Oregano', 'cursive'],
+        'applyPTSans':['PT Sans', 'sans-serif'],
       },
     },
   },
