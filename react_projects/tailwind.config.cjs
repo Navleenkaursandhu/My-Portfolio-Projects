@@ -16,6 +16,7 @@ module.exports = {
         'applyMukta' :['Mukta Malar', 'sans-serif'],
         'applyNiconne': ['Niconne', 'cursive'],
         'applyDosis':['Dosis', 'sans-serif'],
+        'applyOregano' :['Oregano', 'cursive'],
       },
     },
   },
