@@ -8,9 +8,10 @@ export const Random = () => {
   }
 
   return (
-    <>
-    <button onClick={randomNo}>Generate random no</button>
-    <div>{num}</div>
-    </>
+    <div className='flex flex-col justify-center items-center gap-[30px] h-screen'>
+      <div className='text-[30px]'>Click On button to generate a random number</div>
+    <button className='text-[30px] px-[40px] py-[10px] rounded-[12px] bg-emerald-300 hover:bg-sky-400' onClick={randomNo}>Click</button>
+    <div className='text-[30px]'>{num}</div>
+    </div>
   )
 }
