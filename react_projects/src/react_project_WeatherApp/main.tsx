@@ -1,7 +1,6 @@
 import { parseISO } from 'date-fns'
 import { useEffect, useState } from 'react'
 import { Background } from './background'
-import './style.css'
 
 const getCurrentLocation = async () => {
   return await new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(
@@ -171,7 +170,7 @@ export const Main = () => {
 
   return (
     <>
-      <div className="weather-app">
+      <div className="font-applyBarlow font-bold">
         <Background data={weatherData} />
       </div>
     </>
