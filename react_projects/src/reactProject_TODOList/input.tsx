@@ -25,14 +25,14 @@ export const Input = () => {
           onChange={(e) => setTextInput(e.target.value)} />
 
         <button
-          className='add-task-button'
+          className='hover:cursor-cell text-[24px] rounded-[10px] bg-[#ddd9d9] text-black px-[4px]'
           onClick={() => displayTask()}>Add Task</button>
       </div>
 
       <div className='added-tasks'>
         {list.map((task, i) => <div className="task" key={i} id={i.toString()}>📝{task}
-          <button onClick={() => doneTask(i)} className='done-btn'>
-            <span className="material-icons">delete_forever</span>
+          <button onClick={() => doneTask(i)}>
+            <span className="material-symbols-rounded text-[36px] hover:cursor-pointer hover:bg-[#b1adad]">delete_forever</span>
           </button>
         </div>)}
       </div>

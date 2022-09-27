@@ -44,28 +44,11 @@
   font-size: 25px;
 }
 
-.todo-list .add-task-button {
-  font-size: 25px;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(72, 71, 71);
-  color: white;
-}
 
-.todo-list .add-task-button:hover {
-  cursor: cell;
-}
 
-.todo-list .done-btn {
-  border: none;
-  background-color: transparent;
-}
 
-.todo-list .material-icons {
-  font-size: 36px;
-}
 
-.todo-list .material-icons:hover {
-  cursor: pointer;
-  background-image: linear-gradient(rgb(157, 155, 155), rgb(243, 241, 241));
-}
+
+
+
+
