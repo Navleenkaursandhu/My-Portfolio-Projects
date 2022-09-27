@@ -23,6 +23,7 @@ module.exports = {
         'applyPatrick':['Patrick Hand', 'cursive'],
         'applyArchitect':['Architects Daughter', 'cursive'],
         'applyBarlow': [ 'Barlow', 'sans-serif'],
+        'applyCormorant':[ 'Cormorant Garamond', 'serif'],
       },
     },
   },
