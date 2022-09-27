@@ -27,26 +27,27 @@ export const Input = () => {
   }
 
   return (
-    <>
+    <div className='text-[30px] w-[50%] font-applyAmiko'>
       <div>Character Length: &nbsp;
         <span>
-          <input type="number" onChange={(e) => setLength(e.target.value)}></input>
+          <input className='bg-orange-100 pl-[20px]' type="number" onChange={(e) => setLength(e.target.value)}></input>
         </span>
       </div>
       <br />
 
-      <div>Count: &nbsp;
-        <span><input type="number" onChange={(e) => setCount(e.target.value)}></input></span>
+      <div className='ml-[146px]'>Count: &nbsp;
+        <span><input className='bg-orange-100 pl-[20px]' type="number" onChange={(e) => setCount(e.target.value)}></input></span>
       </div>
       <br />
 
-      <div>
-        <button onClick={() => numberOfCount()}>Generate random</button>
+      <div className='flex justify-center'>
+        <button className='bg-neutral-300 px-[30px] rounded-[14px] hover:border-2 border-black' onClick={() => numberOfCount()}>Click</button>
       </div>
       <br />
 
-      <div>{array.map((string, i) => <div key={i}>{string}</div>)}
+      <div className='flex justify-center flex-wrap gap-[20px]'>
+        {array.map((string, i) => <div className='bg-red-100 rounded-[12px] px-[20px]' key={i}>{string}</div>)}
       </div>
-    </>
+    </div>
   )
 }
