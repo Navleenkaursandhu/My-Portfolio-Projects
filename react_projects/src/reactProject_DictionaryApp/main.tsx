@@ -1,4 +1,3 @@
-import './style.css'
 import { Word } from './word'
 import { Description } from './description'
 import { useEffect, useState } from 'react'
@@ -32,8 +31,8 @@ export const Main = () => {
   }
 
   return (
-    <div className='dictionary'>
-      <div className='main-container'>
+    <div className='dictionary font-applyCormorant font-bold'>
+      <div className='flex m-[-8px] p-[16px] h-screen'>
         <Word onChange={dataFunction} />
         <Description wordData={wordObject} error={apiError} />
       </div>
