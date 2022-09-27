@@ -15,32 +15,34 @@ export const Input = () => {
   }
 
   return (
-    <>
+    <div className=' border-double border-8 border-stone-400 p-[20px] text-[30px] rounded-[20px]'>
       <div>
-        <span>Min Limit &nbsp;</span>
-        <input type="number" onChange={e => setMin(e.target.value)}></input>
+        <span>Min Limit: &nbsp;</span>
+        <input className='bg-stone-200 pl-[20px]' type="number" onChange={e => setMin(e.target.value)}></input>
       </div>
       <br />
 
       <div>
-        <span>Max Limit &nbsp;</span>
-        <input type="number" onChange={e => setMax(e.target.value)}></input>
+        <span>Max Limit: &nbsp;</span>
+        <input className='bg-stone-200 pl-[20px]' type="number" onChange={e => setMax(e.target.value)}></input>
       </div>
       <br />
 
       <div>
-        <span>Count &nbsp;</span>
-        <input type="number" onChange={e => setCount(e.target.value)}></input>
+        <span>Count: &nbsp;</span>
+        <input className='bg-stone-200 pl-[20px]' type="number" onChange={e => setCount(e.target.value)}></input>
       </div>
       <br />
 
-      <button onClick={() => generateRandomNum(Number(count))}>Generate random</button>
+      <div className='flex justify-center'>
+        <button className=' bg-stone-300 px-[40px] rounded-[14px] hover:bg-stone-400' onClick={() => generateRandomNum(Number(count))}>Click</button>
+      </div>
 
       <div>
         <br />
-        <span>Generated num: {arrayRandomNums}
+        <span>Random Numbers: {arrayRandomNums}
         </span>
       </div>
-    </>
+    </div>
   )
 }
