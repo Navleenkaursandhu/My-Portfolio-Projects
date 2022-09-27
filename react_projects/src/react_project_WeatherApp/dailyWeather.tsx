@@ -43,49 +43,49 @@ export const DailyWeather = (props) => {
     return (
       <>
         {props.dailyData &&
-          <div className="daily-weather">
-            <div className="daily-forecast-title">
-              <span className="daily material-symbols-rounded">
+          <div className="p-[10px] m-[10px]">
+            <div className="border-b-black border border-x-0 border-t-0 text-[24px] items-center gap-[10px]">
+              <span className="text-[32px] material-symbols-rounded">
                 calendar_month
               </span>7-DAY FORECAST</div>
-            <div className="select-date">
-              <div className="day-before">
-                <span onClick={() => dayBefore()} className="day-before material-symbols-rounded">
+            <div className="p-[4px] flex justify-between items-center mt-[10px]">
+              <div className="text-[28px] py-[4px] pr-[0px] pl-[4px]">
+                <span onClick={() => dayBefore()} className="hover:cursor-pointer hover:bg-[#ffffff70] material-symbols-rounded">
                   arrow_back_ios
                 </span>
               </div>
-              <div className="day-date-today">{date}</div>
-              <div className="day-after">
-                <span onClick={() => dayAfter()} className="day-after material-symbols-rounded">
+              <div className="text-[28px] py-[4px] pr-[0px] pl-[4px]">{date}</div>
+              <div className="text-[28px] py-[4px] pr-[0px] pl-[4px]">
+                <span onClick={() => dayAfter()} className="hover:cursor-pointer hover:bg-[#ffffff70] material-symbols-rounded">
                   arrow_forward_ios
                 </span>
               </div>
             </div>
 
-            <div className="display-daily-data">
+            <div className="p-[10px] text-[20px]">
 
-              <div className="show-temp-data">
+              <div className="flex justify-center gap-[20px]">
 
                 <div>
-                  <span className="show-icon material-symbols-rounded">
+                  <span className="text-[60px] material-symbols-rounded">
                     {codes[weatherCode].icon}
                   </span>
                 </div>
 
-                <div className="show-data">
-                  <div className="show-weathercode">{codes[weatherCode].value}</div>
+                <div className="flex flex-col gap-[10px] p-[10px]">
+                  <div>{codes[weatherCode].value}</div>
 
-                  <div className="min-temp">
+                  <div className="flex justify-between gap-[20px]">
                     <div>Min Temperature: {tempMin}{tempMinUnit}</div>
                     <div>Feels like {apparentTempMin}{apparentTempMinUnit}</div>
                   </div>
 
-                  <div className="max-temp">
+                  <div className="flex justify-between gap-[20px]">
                     <div>Max Temperature: {tempMax}{tempMaxUnit}</div>
                     <div>Feels like {apparentTempMax}{apparentTempMaxUnit}</div>
                   </div>
 
-                  <div className="show-windspeed">Windspeed: {windSpeed}{windSpeedUnit}</div>
+                  <div>Windspeed: {windSpeed}{windSpeedUnit}</div>
 
                   <div>Rain: {rain}{rainUnit}</div>
                   <div>Snowfall: {snowFall}{snowFallUnit}</div>
@@ -94,13 +94,13 @@ export const DailyWeather = (props) => {
               </div>
             </div>
 
-            <div className="hourly-weather">
-              <div className="hourly-forecast-title">
-                <span className="hourly material-symbols-rounded">
+            <div>
+              <div className="border-b-black border border-x-0 border-t-0 text-[24px] items-center gap-[10px]">
+                <span className="text-[32px] material-symbols-rounded">
                   schedule
                 </span>HOURLY FORECAST</div>
               {hourlyArray.map((obj, i) => {
-                return <div className="display-hourly-data" key={i}>
+                return <div className="p-[10px] text-[20px]" key={i}>
                   <HourlyWeather hour={obj} daily_sunrise={props.dailyData[index].sunrise.value} daily_sunset={props.dailyData[index].sunset.value} />
                 </div>
               })}

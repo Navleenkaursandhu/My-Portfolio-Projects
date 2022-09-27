@@ -8,7 +8,7 @@ export const Background = (props) => {
       : undefined
   }
   return (
-    <div className="background-container" style={style}>
+    <div className="h-screen m-[-8px] flex bg-no-repeat bg-center bg-cover justify-end" style={style}>
       <DisplayWeather data={props.data} />
     </div>
   )

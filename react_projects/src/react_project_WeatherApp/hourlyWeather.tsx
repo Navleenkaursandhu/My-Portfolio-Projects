@@ -20,10 +20,10 @@ export const HourlyWeather = (props) => {
 
   return (
     <>
-      <div className="show-temp-data">
-        <div className="hour">{format(hour, 'HH:mm')}</div>
+      <div className="flex justify-center gap-[20px]">
+        <div className="text-[28px] mt-[20px]">{format(hour, 'HH:mm')}</div>
         <div>
-          <span className="show-icon material-symbols-rounded">
+          <span className="text-[60px] material-symbols-rounded">
             {isNight
               ? weatherCodeData.nightIcon || weatherCodeData.icon
               : weatherCodeData.icon
@@ -31,10 +31,10 @@ export const HourlyWeather = (props) => {
           </span>
         </div>
 
-        <div className="show-data">
+        <div className="flex flex-col gap-[10px] p-[10px]">
 
           <div className="show-weathercode">{weatherCodeData.value}</div>
-          <div className="hourly-temp">
+          <div className="flex gap-[20px]">
             <div>Temperature: {temp}{tempUnit}</div>
             <div>Feels like {apparentTemp}{apparentTempUnit}</div>
           </div>
@@ -46,7 +46,10 @@ export const HourlyWeather = (props) => {
 
         </div>
       </div>
-      <hr className="hr"></hr>
+
+      <div className='flex justify-center'>
+        <hr className="w-[80%]"></hr>
+      </div>
     </>
   )
 }

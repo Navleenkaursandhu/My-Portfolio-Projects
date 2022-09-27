@@ -22,6 +22,7 @@ module.exports = {
         'applyLibre':['Libre Baskerville', 'serif'],
         'applyPatrick':['Patrick Hand', 'cursive'],
         'applyArchitect':['Architects Daughter', 'cursive'],
+        'applyBarlow': [ 'Barlow', 'sans-serif'],
       },
     },
   },
