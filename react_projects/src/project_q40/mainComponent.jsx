@@ -9,10 +9,12 @@ export const MainComponent = () => {
 
   return (
     <>
-    <InputComponent handleChange={handleChange}/>
-    <div>
-      {`oh, hello there ${input}`}
-    </div>
+      <div className='flex flex-col justify-center items-center gap-[40px] h-screen'>
+        <InputComponent handleChange={handleChange} />
+        <div className='text-[30px] rounded-[4px] px-[8px]'>
+          {input && `Oh, Hello there ${input}`}
+        </div>
+      </div>
     </>
   )
 }
