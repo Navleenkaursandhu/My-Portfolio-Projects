@@ -25,22 +25,23 @@ export const Input = () => {
   }
 
   return (
-    <>
-      <input onChange={(e) => setNum1(e.target.value)}></input>&nbsp;
+    <div className='text-[40px] font-applyBubblegum'>
+      <input className='border-4 border-teal-500 px-[10px] rounded-[12px]' onChange={(e) => setNum1(e.target.value)}></input>&nbsp;
 
-      <select onChange={(e) => setSelectOption(e.target.value)}>
+      <select className='border-4 border-blue-400 py-[6px] rounded-[12px]' onChange={(e) => setSelectOption(e.target.value)}>
         <option value="choose">Select</option>
         <option value="+">+</option>
         <option value="-">-</option>
-        <option value="*">*</option>
+        <option value="x">x</option>
         <option value="/">/</option>
       </select>&nbsp;
 
-      <input onChange={(e) => setNum2(e.target.value)}></input>&nbsp;
+      <input className='border-4 border-teal-500  px-[10px] rounded-[12px]' onChange={(e) => setNum2(e.target.value)}></input>&nbsp;
 
-      <button onClick={() => displayResult()}>=</button>&nbsp;
-
-      <span>{result}</span>
-    </>
+      <div className='text-center mt-[28%]'>
+        <button className='bg-blue-400 mb-[30px] px-[10px] rounded-[12px] hover:bg-teal-500' onClick={() => displayResult()}>Click</button>&nbsp;
+        <div>{result}</div>
+      </div>
+    </div>
   )
 }
