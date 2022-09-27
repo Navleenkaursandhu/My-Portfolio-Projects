@@ -20,6 +20,7 @@ module.exports = {
         'applyPTSans':['PT Sans', 'sans-serif'],
         'applyBubblegum':['Bubblegum Sans', 'cursive'],
         'applyLibre':['Libre Baskerville', 'serif'],
+        'applyPatrick':['Patrick Hand', 'cursive'],
       },
     },
   },

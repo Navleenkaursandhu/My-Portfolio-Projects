@@ -46,28 +46,28 @@ export const Input = () => {
 
   return (
     <>
-      <h1 className="title">HANGMAN</h1>
-      <div className="play-btn-container">
-        <button className="play" onClick={() => { void displayNewWord() }}>PLAY</button>
+      <h1 className="text-center text-[50px]">HANGMAN</h1>
+      <div className="flex justify-center h-[70px]">
+        <button className="text-[34px] rounded-[10px] p-[4px] w-[150px] outline-none bg-orange-100 hover:text-[40px] hover:cursor-pointer" onClick={() => { void displayNewWord() }}>PLAY</button>
       </div>
 
-      <div className="chances-container">
+      <div className="flex gap-[20px] justify-center p-[30px]">
         {Array(16).fill('').map((char, i) => {
-          return <div className="chance" key={i}>
+          return <div className="h-[60px] w-[60px] rounded-[60px] bg-red-100 flex justify-center items-center text-[40px]" key={i}>
             {noMatchArray[i] || ''}
           </div>
         })}
       </div>
 
-      <div className="word-container">
+      <div className="flex p-[50px] gap-[20px] justify-center text-[60px]">
         {arrayStrings.map((char, i) => {
-          return <div className="character" key={i}>{char}
+          return <div className="h-[50px] w-[50px] p-[10px] flex justify-center items-center border-b-[2px] border-black" key={i}>{char}
 
           </div>
         })}
       </div>
 
-      <div className="result">
+      <div className="flex justify-center text-[50px]">
         {noMatchArray[15] && <div>You Lost! It&apos;s {word}</div>}
         {!(arrayStrings.length === 0) && arrayStrings.every(char => char !== '') && <div>You Won:D</div>}
       </div>
