@@ -13,24 +13,28 @@ export const Input = () => {
 
   return (
     <>
-    <div>
-      <span>Min Limit &nbsp;</span>
-      <input type="number" onChange={e => setMin(e.target.value)}></input>
-    </div>
-    <br/>
+      <div className='p-[20px] bg-indigo-200 text-[36px]'>
+        <div>
+          <span >Min Limit: &nbsp;</span>
+          <input className='pl-[10px]' type="number" onChange={e => setMin(e.target.value)}></input>
+        </div>
+        <br />
 
-    <div>
-    <span>Max Limit &nbsp;</span>
-      <input type="number" onChange={e => setMax(e.target.value)}></input>
-    </div>
-    <br/>
+        <div>
+          <span>Max Limit: &nbsp;</span>
+          <input className='pl-[10px]' type="number" onChange={e => setMax(e.target.value)}></input>
+        </div>
+        <br />
 
-    <button onClick={generateRandom}>Generate Random</button>
+        <div className='flex justify-center'>
+          <button className='bg-violet-300 px-[30px] rounded-[10px] hover:shadow-[2px_2px_2px_2px_grey]' onClick={generateRandom}>Click</button>
+        </div>
 
-    <div>
-      <br/>
-      <span>Generated No: </span>
-      <span>{randomNo}</span>
+        <div>
+          <br />
+          <span>Random Number = </span>
+          <span>{randomNo}</span>
+        </div>
       </div>
     </>
   )
