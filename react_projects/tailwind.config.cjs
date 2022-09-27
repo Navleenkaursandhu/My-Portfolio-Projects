@@ -21,6 +21,7 @@ module.exports = {
         'applyBubblegum':['Bubblegum Sans', 'cursive'],
         'applyLibre':['Libre Baskerville', 'serif'],
         'applyPatrick':['Patrick Hand', 'cursive'],
+        'applyArchitect':['Architects Daughter', 'cursive'],
       },
     },
   },
