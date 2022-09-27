@@ -8,7 +8,7 @@
   width: 500px;
 }
 
-.tip-calculator .container {
+.tip-calculator .main-container {
   position: relative;
 }
 
@@ -61,9 +61,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
-  height: 40px;
+  border: 1px solid black;
   width: 40px;
+  height: 40px;
   border-radius: 5px;
   background-color: rgb(207, 241, 229);
 }
@@ -71,7 +71,6 @@
 .tip-calculator .add:hover,
 .tip-calculator .subtract:hover {
   cursor: pointer;
-  font-size: 50px;
   background-image: radial-gradient(rgb(199, 243, 227), rgb(110, 164, 153));
 }
 

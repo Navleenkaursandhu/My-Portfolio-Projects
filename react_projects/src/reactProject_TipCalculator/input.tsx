@@ -23,7 +23,7 @@ export const Input = () => {
 
   return (
     <>
-      <div className='container'>
+      <div className='main-container'>
         <img className='background' src={image} />
         <div className='ui-container'>
           <div className='title'>
