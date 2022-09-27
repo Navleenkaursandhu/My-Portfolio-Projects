@@ -19,6 +19,7 @@ module.exports = {
         'applyOregano' :['Oregano', 'cursive'],
         'applyPTSans':['PT Sans', 'sans-serif'],
         'applyBubblegum':['Bubblegum Sans', 'cursive'],
+        'applyLibre':['Libre Baskerville', 'serif'],
       },
     },
   },
