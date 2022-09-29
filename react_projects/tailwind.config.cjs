@@ -25,6 +25,7 @@ module.exports = {
         'applyBarlow': [ 'Barlow', 'sans-serif'],
         'applyCormorant':[ 'Cormorant Garamond', 'serif'],
         'applyAlfa':['Alfa Slab One', 'cursive'],
+        'applyLota':['Lato', 'sans-serif'],
       },
     },
   },

@@ -3,14 +3,11 @@ export const Intro = () => {
   return (
     <>
       <div className="flex">
-        <div className='w-[50%] flex flex-col justify-center items-center'>
-          <div className='mx-[50px] flex flex-col gap-[20px] mt-[50px]'>
-            <div>
-              <div className='font-bold font-applyLibre text-[50px] text-[#371064]'>Navleen Brar</div>
-              <div className='text-[30px] text-[#afaba8]'>FRONT-END WEB DEVELOPER + DESIGNER</div>
-            </div>
-            <div className='text-[26px] text-[#371064]'>An aspiring Front-End Web Developer and Designer passionate about designing interactive web applications
-            </div>
+        <div className='w-1/2 flex flex-col justify-center items-center'>
+          <div className='p-8'>
+            <div className='font-extrabold font-applyBarlow text-6xl text-[#371064]'>Navleen Kaur Brar</div>
+            <div className='text-2xl mt-4 text-gray-400'>FRONT-END WEB DEVELOPER + DESIGNER</div>
+            <div className='text-2xl mt-8 text-[#371064]'>An aspiring Front-End Web Developer and Designer passionate about designing interactive web applications</div>
           </div>
 
         </div>
