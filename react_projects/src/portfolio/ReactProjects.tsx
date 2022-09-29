@@ -1,18 +1,61 @@
+import gitImage from './assets/github.png'
 import * as TodoListData from '../reactProject_TODOList/main'
+import * as TipCalculatorData from '../reactProject_TipCalculator/main'
 
 const projects = [
-  { ...TodoListData }
-  // other projects
+  TodoListData, TipCalculatorData
 ]
 
 export const ReactProjects = () => {
   console.log(projects)
   return (
     <>
-      <div className="flex flex-col text-[#371064] items-center">
-        <div className="font-bold p-2.5 pl-8 pr-36 text-3xl font-applyLota">
+      <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
+        <div className="font-bold text-3xl">
           PROJECTS
         </div>
+
+        {projects.map((project, i) => {
+          return <div key={i} className='my-8 gap-2 px-8 py-2 w-1/2'>
+            <div>
+              <div className='font-bold text-xl'>{project.title}</div>
+
+              <div className='flex flex-wrap gap-2'>
+                {project.skills.map((skill) => {
+                  return <div key={i} className='border-2 bg-slate-100 border-slate-300 rounded-md px-4 my-2'>{skill}</div>
+                })}
+              </div>
+
+              <div className='flex items-start gap-2'><span className="material-symbols-rounded">
+                description
+              </span>{project.description}</div>
+
+              <div className='mt-2 flex items-center gap-2'><span className="material-symbols-rounded">
+                date_range
+              </span>{project.date}</div>
+
+              <div className='flex gap-2 mt-4'>
+                <div className='bg-indigo-500 shadow-[4px_4px_0px_0px_#4f46e5] font-bold  rounded-md px-2 py-1 text-white'>
+                  <a className='flex items-center gap-2 ' href={project.link}>Open Project<span className="text-white material-symbols-rounded">
+                    open_in_new
+                  </span></a>
+                </div>
+
+                <div className='bg-indigo-500 shadow-[4px_4px_0px_0px_#4f46e5] font-bold rounded-md px-2 py-1 text-white'>
+                  <a className='flex items-center gap-2' href={project.githubLink}>Open Project on GitHub
+                    <span>
+                      <img className='w-6 brightness-0 invert' src={gitImage} />
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <div className='w-full mt-2 border bg-slate-500'></div>
+            </div>
+
+          </div>
+        })}
+
         <div>
           <a className="block" href="./project_q40">Project: Hello &quot;First Name&quot;</a>
           <a className="block" href='./project_q41'>Project 41: Generate Random Numbers</a>
@@ -38,6 +81,5 @@ export const ReactProjects = () => {
         </div>
       </div>
     </>
-
   )
 }

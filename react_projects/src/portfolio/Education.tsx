@@ -1,7 +1,7 @@
 export const Education = () => {
   return (
-    <div className="flex flex-col text-[#371064] items-center mt-16 bg-violet-100 pt-8 pb-10 mx-8 rounded-2xl border border-violet-200">
-      <div className="font-bold text-3xl font-applyBarlow">
+    <div className="flex flex-col text-[#371064] items-center mt-16 bg-indigo-100 pt-8 pb-10 mx-8 rounded-2xl border border-violet-200">
+      <div className="font-bold text-3xl">
         QUALIFICATION
       </div>
       <div>
