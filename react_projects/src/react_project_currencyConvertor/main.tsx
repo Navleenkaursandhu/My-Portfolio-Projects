@@ -1,4 +1,12 @@
 import { useEffect, useState } from 'react'
+
+export const title = 'CURRENCY CONVERTER'
+export const description = 'Currency Converter Application'
+export const skills = ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML']
+export const date = 'Sept 24 - Sept 27, 2022'
+export const link = './CurrencyConvertor'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_currencyConvertor'
+
 export const Main = () => {
   const [symbols, setSymbols] = useState<any>({})
   const [selectedFromOption, setSelectedFromOption] = useState('')

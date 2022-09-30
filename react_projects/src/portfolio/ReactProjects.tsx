@@ -1,9 +1,34 @@
 import gitImage from './assets/github.png'
 import * as TodoListData from '../reactProject_TODOList/main'
 import * as TipCalculatorData from '../reactProject_TipCalculator/main'
+import * as WeatherAppData from '../react_project_WeatherApp/main'
+import * as WeddingCardData from '../react_project_WeddingCard/Main'
+import * as DictionaryData from '../reactProject_DictionaryApp/main'
+import * as TimesheetData from '../react_project_Timesheet/Main'
+import * as AnalogClockData from '../reactProject_AnalogSVGClock/main'
+import * as LCDClockData from '../reactProject_LCDClock/main'
+import * as DailyDiaryData from '../react_project_DailyDiary/Main'
+import * as CurrencyConverterData from '../react_project_currencyConvertor/main'
+import * as HangmanGameData from '../reactProject_Hangman/main'
+import * as RPSData from '../reactProject_RPS/main'
+import * as SimonSaysData from '../reactProject_SimonSays/main'
+import * as TicTacToeData from '../reactProject_TicTacToe/main'
 
 const projects = [
-  TodoListData, TipCalculatorData
+  WeatherAppData,
+  WeddingCardData,
+  DictionaryData,
+  AnalogClockData,
+  TimesheetData,
+  DailyDiaryData,
+  LCDClockData,
+  CurrencyConverterData,
+  TipCalculatorData,
+  HangmanGameData,
+  RPSData,
+  SimonSaysData,
+  TicTacToeData,
+  TodoListData
 ]
 
 export const ReactProjects = () => {
@@ -16,7 +41,7 @@ export const ReactProjects = () => {
         </div>
 
         {projects.map((project, i) => {
-          return <div key={i} className='my-8 gap-2 px-8 py-2 w-1/2'>
+          return <div key={i} className='gap-2 px-8 py-8 w-1/2 border-b border-slate-400'>
             <div>
               <div className='font-bold text-xl'>{project.title}</div>
 
@@ -34,23 +59,21 @@ export const ReactProjects = () => {
                 date_range
               </span>{project.date}</div>
 
-              <div className='flex gap-2 mt-4'>
+              <div className='flex gap-3 mt-4'>
                 <div className='bg-indigo-500 shadow-[4px_4px_0px_0px_#4f46e5] font-bold  rounded-md px-2 py-1 text-white'>
-                  <a className='flex items-center gap-2 ' href={project.link}>Open Project<span className="text-white material-symbols-rounded">
+                  <a className='flex items-center gap-2 ' href={project.link}>View<span className="text-white material-symbols-rounded">
                     open_in_new
                   </span></a>
                 </div>
 
                 <div className='bg-indigo-500 shadow-[4px_4px_0px_0px_#4f46e5] font-bold rounded-md px-2 py-1 text-white'>
-                  <a className='flex items-center gap-2' href={project.githubLink}>Open Project on GitHub
+                  <a className='flex items-center gap-2' href={project.githubLink}>GitHub
                     <span>
                       <img className='w-6 brightness-0 invert' src={gitImage} />
                     </span>
                   </a>
                 </div>
               </div>
-
-              <div className='w-full mt-2 border bg-slate-500'></div>
             </div>
 
           </div>
@@ -64,20 +87,6 @@ export const ReactProjects = () => {
           <a className="block" href="./project_q44">Project 44: Generate many strings with random characters</a>
           <a className="block" href='./project_q46'>Project 46: Calculator</a>
           <a className="block" href='./project_q47'>Project 47: Counter</a>
-          <a className="block" href="./reactProject_TODOList">Project: TODO List</a>
-          <a className="block" href="./RockPaperScissors" >React Project: Rock Paper Scissors</a>
-          <a className="block" href="./TipCalculator">React Project: Tip Calculator</a>
-          <a className="block" href='./TicTacToe'>React Project: Tic Tac Toe</a>
-          <a className="block" href="./LCDClock">React Project: LCD Clock</a>
-          <a className="block" href="./AnalogSVGClock">React Project: Analog SVG Clock</a>
-          <a className="block" href="./HangmanGame">React Project: Hangman Game</a>
-          <a className="block" href="./SimonSaysGame">React Project: Simon Says </a>
-          <a className="block" href="./Dictionary">React Project: Dictionary</a>
-          <a className="block" href="./WeatherApp">React Project: Weather Forecast Application</a>
-          <a className="block" href="./CurrencyConvertor">React Project: Currency Convertor</a>
-          <a className="block" href="./DailyDiary">React Project: Daily Diary</a>
-          <a className="block" href='./Timesheet'>React Project: Timesheet</a>
-          <a className="block" href="./WeddingCard">React Project: Wedding Card</a>
         </div>
       </div>
     </>

@@ -15,6 +15,7 @@ export const Skillset = () => {
           <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">VITE</div>
           <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">GIT</div>
           <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">GITHUB</div>
+          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">REST API&apos;s</div>
         </div>
       </div>
     </>

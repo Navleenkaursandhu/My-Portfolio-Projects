@@ -12,6 +12,14 @@ import { PostWeddingEventCard as PostWeddingEventCard3 } from './card3/PostWeddi
 import { MainCard as MainCard4 } from './card4/MainCard'
 import { PreWeddingEventCard as PreWeddingEventCard4 } from './card4/PreWeddingEventCard'
 import { PostWeddingEventCard as PostWeddingEventCard4 } from './card4/PostWeddingEventCard'
+
+export const title = 'WEDDING CARD APPLICATION'
+export const description = 'A Wedding Card Application'
+export const skills = ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML']
+export const date = 'Sept 24 - Sept 27, 2022'
+export const link = './WeddingCard'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_WeddingCard'
+
 export const Main = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(1)
   const [info, setInfo] = useState(() => {

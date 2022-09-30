@@ -2,6 +2,13 @@ import { parseISO } from 'date-fns'
 import { useEffect, useState } from 'react'
 import { Background } from './background'
 
+export const title = 'WEATHER FORECAST APPLICATION'
+export const description = 'A dynamic Weather Forecast Application'
+export const skills = ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML']
+export const date = 'Sept 24 - Sept 27, 2022'
+export const link = './WeatherApp'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_WeatherApp'
+
 const getCurrentLocation = async () => {
   return await new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(
     data => resolve(data),
