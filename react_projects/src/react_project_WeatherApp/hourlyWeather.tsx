@@ -1,8 +1,6 @@
 import { format } from 'date-fns'
 import { codes } from './weathercodes'
 export const HourlyWeather = (props) => {
-  console.log(props)
-  console.log(props.hour.temperature_2m)
   const hour = props.hour.time.value
   const temp = props.hour.temperature_2m.value
   const tempUnit = props.hour.temperature_2m.unit

@@ -44,10 +44,11 @@ export const DailyWeather = (props) => {
       <>
         {props.dailyData &&
           <div className="p-[10px] m-[10px]">
-            <div className="border-b-black border border-x-0 border-t-0 text-[24px] items-center gap-[10px]">
+            <div className="border-b-black border border-x-0 border-t-0 text-[24px] flex items-center gap-[10px]">
               <span className="text-[32px] material-symbols-rounded">
                 calendar_month
-              </span>7-DAY FORECAST</div>
+              </span>7-DAY FORECAST
+            </div>
             <div className="p-[4px] flex justify-between items-center mt-[10px]">
               <div className="text-[28px] py-[4px] pr-[0px] pl-[4px]">
                 <span onClick={() => dayBefore()} className="hover:cursor-pointer hover:bg-[#ffffff70] material-symbols-rounded">
@@ -95,7 +96,7 @@ export const DailyWeather = (props) => {
             </div>
 
             <div>
-              <div className="border-b-black border border-x-0 border-t-0 text-[24px] items-center gap-[10px]">
+              <div className="border-b-black border border-x-0 border-t-0 text-[24px] flex items-center gap-[10px]">
                 <span className="text-[32px] material-symbols-rounded">
                   schedule
                 </span>HOURLY FORECAST</div>
