@@ -36,7 +36,6 @@ export const ProjectDetails = (props) => {
             </div>
           </div>
         </div>
-
       </div>
     </>
   )
