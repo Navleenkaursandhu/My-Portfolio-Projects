@@ -1,3 +1,62 @@
+import reactImage from './assets/react.png'
+import viteImage from './assets/vite.png'
+import jsImage from './assets/js.png'
+import htmlImage from './assets/html.png'
+import tailwindImage from './assets/tailwind.png'
+import cssImage from './assets/css.png'
+import gitImage from './assets/git.png'
+import githubImage from './assets/github.png'
+import vscodeImage from './assets/vscode.png'
+import eslintImage from './assets/eslint.png'
+import restapiImage from './assets/restapi.png'
+import { SkillDetails } from './SkillDetails'
+
+const skillSetArray = [
+  {
+    skill: 'REACT',
+    image: `${reactImage}`
+  },
+  {
+    skill: 'VITE',
+    image: `${viteImage}`
+  },
+  {
+    skill: 'JAVASCRIPT',
+    image: `${jsImage}`
+  },
+  {
+    skill: 'HTML',
+    image: `${htmlImage}`
+  },
+  {
+    skill: 'TAILWIND CSS',
+    image: `${tailwindImage}`
+  },
+  {
+    skill: 'CSS',
+    image: `${cssImage}`
+  },
+  {
+    skill: 'GIT',
+    image: `${gitImage}`
+  },
+  {
+    skill: 'GITHUB',
+    image: `${githubImage}`
+  },
+  {
+    skill: 'REST API',
+    image: `${restapiImage}`
+  },
+  {
+    skill: 'ES LINT',
+    image: `${eslintImage}`
+  },
+  {
+    skill: 'VS CODE',
+    image: `${vscodeImage}`
+  }
+]
 export const Skillset = () => {
   return (
     <>
@@ -7,16 +66,9 @@ export const Skillset = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 mt-8 w-3/4 justify-center font-bold text-xl">
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">REACT</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">JAVASCRIPT</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">HTML</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">CSS</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">TAILWIND CSS</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">VITE</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">GIT</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">GITHUB</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">REST API&apos;s</div>
-          <div className="px-14 py-3 inline-block rounded-md bg-indigo-500 text-white shadow-md">VISUAL STUDIO CODE</div>
+          {skillSetArray.map((skillObj, i) => {
+            return <SkillDetails key={i} skillDetails={skillObj} />
+          })}
         </div>
       </div>
     </>
