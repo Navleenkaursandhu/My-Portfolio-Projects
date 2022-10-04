@@ -15,7 +15,7 @@ import { PostWeddingEventCard as PostWeddingEventCard4 } from './card4/PostWeddi
 
 export const title = 'WEDDING CARD APPLICATION'
 export const description = 'A Wedding Card Application'
-export const skills = ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'Visual Studio Code']
 export const date = 'September 2022'
 export const link = './WeddingCard'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_WeddingCard'

@@ -1,6 +1,7 @@
 import portfolioImage from './assets/portfolio-image.png'
 import githubImage from './assets/mygithub.png'
 import linkedInImage from './assets/linkedin.png'
+import { buttonShadowEffect } from './tailwind_constants'
 export const Intro = () => {
   return (
     <>
@@ -10,7 +11,8 @@ export const Intro = () => {
             <div>
               <div className='font-extrabold text-6xl text-[#371064]'>Navleen Kaur Brar</div>
               <div className='text-2xl mt-4 text-gray-400'>FRONT-END WEB DEVELOPER + DESIGNER</div>
-              <div className='text-2xl mt-8 text-[#371064]'>An aspiring Front-End Web Developer and Designer passionate about designing interactive web applications</div>
+              <div className='text-2xl mt-8 text-[#371064]'>An aspiring Front-End Web Developer and Designer passionate about designing interactive web applications
+                with strong organizational and problem solving skills</div>
             </div>
           </div>
 
@@ -35,7 +37,7 @@ export const Intro = () => {
                   <td>
                     <div className='flex items-center gap-4 '>
                       <a href='https://github.com/Navleenkaursandhu' target='_blank' rel="noreferrer">
-                        <button><img className='w-8 rounded-sm shadow-[4px_4px_0px_0px_#00000094] hover:w-9' src={githubImage} /></button>
+                        <button><img className={`w-8 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
                       </a>
                       Github
                     </div>
@@ -44,7 +46,7 @@ export const Intro = () => {
                   <td>
                     <div className='flex items-center gap-4 ml-8'>
                       <a href='https://www.linkedin.com/in/n-s-813167222/' target='_blank' rel="noreferrer">
-                        <button><img className='w-8 shadow-[4px_4px_0px_0px_#5d92b9] hover:w-9' src={linkedInImage} /></button>
+                        <button><img className={`w-8 ${buttonShadowEffect} shadow-[#5d92b9] hover:shadow-[#5d92b9]`} src={linkedInImage} /></button>
                       </a>
                       LinkedIn
                     </div>
