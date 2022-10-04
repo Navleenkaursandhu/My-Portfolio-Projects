@@ -4,7 +4,7 @@ const projects = [
     title: 'CALENDER',
     description: 'Calender',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/Calender/calender.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/Calender'
   },
@@ -12,7 +12,7 @@ const projects = [
     title: 'ANALOG CLOCK',
     description: 'Analog Clock',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/analogClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/analogClock'
   },
@@ -20,47 +20,23 @@ const projects = [
     title: 'LCD CLOCK',
     description: 'LCD Clock',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/LCDClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/LCDClock'
-  },
-  {
-    title: 'TIP CALCULATOR',
-    description: 'Tip Calculator',
-    skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
-    link: '/src/vanilla_js/tip_calculator/code.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tip_calculator'
   },
   {
     title: 'TODO LIST',
     description: 'TODO List',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/TODOList/list.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/TODOList'
-  },
-  {
-    title: 'BANK ACCOUNT',
-    description: 'Bank Account',
-    skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
-    link: '/src/vanilla_js/bank_account/bank.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/bank_account'
-  },
-  {
-    title: 'FIGHTING GAME',
-    description: 'Fighting Game',
-    skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
-    link: '/src/vanilla_js/fighting_game/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/fighting_game'
   },
   {
     title: 'CARD MATCH GAME',
     description: 'Card Match Game',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/CardMatch/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/CardMatch'
   },
@@ -68,7 +44,7 @@ const projects = [
     title: 'HANGMAN GAME',
     description: 'Hangman Game',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/HangmanGame/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/HangmanGame'
   },
@@ -76,7 +52,7 @@ const projects = [
     title: 'SIMON SAYS GAME',
     description: 'Simon Says Game',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/SimonSays/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/SimonSays'
   },
@@ -84,34 +60,57 @@ const projects = [
     title: 'TIC TAC TOE GAME',
     description: 'Tic Tac Toe Game',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'August 2022',
     link: '/src/vanilla_js/tic_tac_toe/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tic_tac_toe'
   },
-
+  {
+    title: 'FIGHTING GAME',
+    description: 'Fighting Game',
+    skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
+    date: 'July 2022 - August 2022',
+    link: '/src/vanilla_js/fighting_game/game.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/fighting_game'
+  },
   {
     title: 'ROCK PAPER SCISSORS GAME',
     description: 'Rock Paper Scissors Game',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'July 2022',
     link: '/src/vanilla_js/rock_paper_scissors/rps.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/rock_paper_scissors'
   },
   {
-    title: 'HEALTH CARE WEBPAGE',
-    description: 'Health Care Webpage',
+    title: 'TIP CALCULATOR',
+    description: 'Tip Calculator',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
-    link: '/src/vanilla_js/health_care_webpage/health_webpage.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/health_care_webpage'
+    date: 'July 2022',
+    link: '/src/vanilla_js/tip_calculator/code.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tip_calculator'
+  },
+  {
+    title: 'BANK ACCOUNT',
+    description: 'Bank Account',
+    skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
+    date: 'July 2022',
+    link: '/src/vanilla_js/bank_account/bank.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/bank_account'
   },
   {
     title: 'LOGIN WEB PAGE',
     description: 'Login Webpage',
     skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
-    date: 'Sept 24 - Sept 27, 2022',
+    date: 'July 2022',
     link: '/src/vanilla_js/login_webpage/Login.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/login_webpage'
+  },
+  {
+    title: 'HEALTH CARE WEBPAGE',
+    description: 'Health Care Webpage',
+    skills: ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML'],
+    date: 'July 2022',
+    link: '/src/vanilla_js/health_care_webpage/health_webpage.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/health_care_webpage'
   }
 ]
 

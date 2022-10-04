@@ -4,7 +4,7 @@ import background from './assets/image.png'
 export const title = 'TIMESHEET'
 export const description = 'Timesheet Application'
 export const skills = ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML']
-export const date = 'Sept 24 - Sept 27, 2022'
+export const date = 'September 2022'
 export const link = './Timesheet'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_Timesheet'
 

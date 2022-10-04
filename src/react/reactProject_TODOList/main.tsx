@@ -3,7 +3,7 @@ import { Input } from './input'
 export const title = 'TODO LIST'
 export const description = 'A dynamic TODO list to help the user keep track of their daily tasks'
 export const skills = ['React', 'JavaScript', 'CSS', 'Tailwind', 'HTML']
-export const date = 'Sept 24 - Sept 27, 2022'
+export const date = 'August 2022'
 export const link = './reactProject_TODOList'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/reactProject_TODOList'
 
