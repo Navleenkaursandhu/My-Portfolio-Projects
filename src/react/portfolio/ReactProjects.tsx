@@ -43,7 +43,7 @@ export const ReactProjects = () => {
           return <ProjectDetails key={i} details={project} />
         })}
 
-        <div>
+        {/* <div>
           <a className="block" href="./project_q40">Project: Hello &quot;First Name&quot;</a>
           <a className="block" href='./project_q41'>Project 41: Generate Random Numbers</a>
           <a className="block" href="./project_q42">Project 42: Generate random number between range</a>
@@ -51,7 +51,7 @@ export const ReactProjects = () => {
           <a className="block" href="./project_q44">Project 44: Generate many strings with random characters</a>
           <a className="block" href='./project_q46'>Project 46: Calculator</a>
           <a className="block" href='./project_q47'>Project 47: Counter</a>
-        </div>
+        </div> */}
       </div>
     </>
   )
