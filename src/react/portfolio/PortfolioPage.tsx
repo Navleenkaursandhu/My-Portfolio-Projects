@@ -3,6 +3,7 @@ import { Intro } from './Intro'
 import { ReactProjects } from './ReactProjects'
 import { Skillset } from './Skillset'
 import { VanillaJSProjects } from './VanillaJSProjects'
+import footerImage from './assets/footer.png'
 
 export const PortfolioPage = () => {
   return (
@@ -12,6 +13,7 @@ export const PortfolioPage = () => {
       <Education />
       <ReactProjects />
       <VanillaJSProjects />
+      <div className='w-full mt-16 h-60 bg-contain' style={{ backgroundImage: `url('${footerImage}')` }}/>
     </div>
   )
 }
