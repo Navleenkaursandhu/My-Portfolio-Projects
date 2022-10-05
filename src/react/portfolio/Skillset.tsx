@@ -61,11 +61,11 @@ export const Skillset = () => {
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 bg-indigo-100 pt-8 pb-10 mx-8 rounded-2xl border border-violet-200">
-        <div className="font-bold text-3xl">
+        <div className="font-bold lg:text-3xl md:text-3xl text-2xl ">
           SKILL SET
         </div>
 
-        <div className="flex flex-wrap gap-4 mt-8 w-3/4 justify-center font-bold text-xl">
+        <div className="flex flex-wrap gap-4 mt-8 w-full justify-center font-bold lg:text-xl md:text-xl text-sm">
           {skillSetArray.map((skillObj, i) => {
             return <SkillDetails key={i} skillDetails={skillObj} />
           })}
