@@ -3,7 +3,10 @@ import { useEffect, useState } from 'react'
 import { Background } from './background'
 
 export const title = 'WEATHER FORECAST APPLICATION'
-export const description = 'A dynamic Weather Forecast Application'
+export const description = 'Wanna know the weather outside, heres the perfect App that displays weather' + ' ' +
+  'conditions to the users at thier ease. This dynamic react based app displays' + ' ' +
+  'current and 7 day weather forecast information including date, weather type, temperature (max & min), wind speed,' + ' ' +
+  'rain and snowfall'
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './WeatherApp'
