@@ -7,7 +7,7 @@ export const Intro = () => {
     <>
       <div className="flex flex-col-reverse lg:flex-row">
         <div className='w-full lg:w-1/2 flex flex-col'>
-          <div className='p-8 flex-1 flex items-center'>
+          <div className='lg:p-8 md:p-8 p-2 flex-1 flex items-center'>
             <div>
               <div className='font-extrabold lg:text-6xl md:text-5xl text-4xl text-[#371064]'>Navleen Kaur Brar</div>
               <div className='lg:text-2xl md:text-xl text-lg mt-4 text-gray-400 font-bold'>FRONT-END WEB DEVELOPER + DESIGNER</div>
@@ -16,7 +16,7 @@ export const Intro = () => {
             </div>
           </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 text-[#371064] p-8 lg:text-xl md:text-lg text-md'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 text-[#371064] lg:p-8 md:p-8 p-2 lg:text-xl md:text-lg text-md'>
             <div className='flex items-center gap-4'><span className="lg:text-4xl md:text-4xl text-3xl material-symbols-rounded">remember_me</span>
               604-418-3860
             </div>

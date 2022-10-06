@@ -49,7 +49,7 @@ const skillSetArray = [
     image: `${restapiImage}`
   },
   {
-    skill: 'ES LINT',
+    skill: 'ESLINT',
     image: `${eslintImage}`
   },
   {
@@ -60,7 +60,7 @@ const skillSetArray = [
 export const Skillset = () => {
   return (
     <>
-      <div className="flex flex-col text-[#371064] items-center mt-16 bg-indigo-100 pt-8 pb-10 mx-8 rounded-2xl border border-violet-200">
+      <div className="flex flex-col text-[#371064] items-center mt-16 bg-indigo-100 pt-8 pb-10 lg:mx-8 md:mx-8 mx-2 rounded-2xl border border-violet-200">
         <div className="font-bold lg:text-3xl md:text-2xl text-xl">
           SKILL SET
         </div>

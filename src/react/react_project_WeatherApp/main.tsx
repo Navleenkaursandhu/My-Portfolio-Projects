@@ -4,7 +4,7 @@ import { Background } from './background'
 
 export const title = 'WEATHER FORECAST APPLICATION'
 export const description = 'A dynamic Weather Forecast Application'
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'Visual Studio Code']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './WeatherApp'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_WeatherApp'

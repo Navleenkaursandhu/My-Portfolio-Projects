@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export const title = 'CURRENCY CONVERTER'
 export const description = 'Currency Converter Application'
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'Visual Studio Code']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './CurrencyConvertor'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_currencyConvertor'

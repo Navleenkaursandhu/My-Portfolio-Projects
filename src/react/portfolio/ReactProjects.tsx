@@ -35,23 +35,13 @@ export const ReactProjects = () => {
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
-        <div className="font-bold text-3xl">
+        <div className="font-bold lg:text-3xl md:text-2xl text-xl">
           REACT PROJECTS
         </div>
 
         {projects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
         })}
-
-        {/* <div>
-          <a className="block" href="./project_q40">Project: Hello &quot;First Name&quot;</a>
-          <a className="block" href='./project_q41'>Project 41: Generate Random Numbers</a>
-          <a className="block" href="./project_q42">Project 42: Generate random number between range</a>
-          <a className="block" href='./project_q43'>Project 43: Generate count of random numbers within range</a>
-          <a className="block" href="./project_q44">Project 44: Generate many strings with random characters</a>
-          <a className="block" href='./project_q46'>Project 46: Calculator</a>
-          <a className="block" href='./project_q47'>Project 47: Counter</a>
-        </div> */}
       </div>
     </>
   )
