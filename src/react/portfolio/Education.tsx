@@ -10,7 +10,7 @@ export const Education = () => {
         <div>
           <div className="font-bold">Masters of Engineering in Electrical and Computers</div>
           <div>Carleton University</div>
-          <div>Ottawa, Canada</div>
+          <div>Ottawa, Canada</div>&nbsp;
         </div>
 
         <div className="flex lg:border-r lg:border-b-0 border-black lg:mr-6 lg:mt-0 mt-6 border-b">2013 - 2017</div>

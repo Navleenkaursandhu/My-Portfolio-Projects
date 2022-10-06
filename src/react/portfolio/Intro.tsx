@@ -16,7 +16,7 @@ export const Intro = () => {
             </div>
           </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 text-[#371064] lg:p-8 md:p-8 p-2 lg:text-xl md:text-lg text-md'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 text-[#371064] lg:p-8 md:p-8 p-2 lg:text-xl md:text-lg text-md'>
             <div className='flex items-center gap-4'><span className="lg:text-4xl md:text-4xl text-3xl material-symbols-rounded">remember_me</span>
               604-418-3860
             </div>
@@ -25,7 +25,7 @@ export const Intro = () => {
             </div>
 
             <a className='flex items-center gap-4' href='https://github.com/Navleenkaursandhu' target='_blank' rel="noreferrer">
-              <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
+              <button><img className={`lg:w-9 md:w-9 w-7 lg:mt-2 mt-0.5 lg:mb-0 mb-3 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
               Github
             </a>
 
