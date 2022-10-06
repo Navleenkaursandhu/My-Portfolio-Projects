@@ -24,10 +24,12 @@ export const Intro = () => {
               navleensandhu0211@gmail.com
             </div>
 
-            <a className='flex items-center gap-4' href='https://github.com/Navleenkaursandhu' target='_blank' rel="noreferrer">
-              <button><img className={`lg:w-9 md:w-9 w-7 lg:mt-2 mt-0.5 lg:mb-0 mb-3 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
-              Github
-            </a>
+            <div className='lg:mb-0 mb-2.5'>
+              <a className='flex items-center gap-4' href='https://github.com/Navleenkaursandhu' target='_blank' rel="noreferrer">
+                <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
+                Github
+              </a>
+            </div>
 
             <a className='flex items-center gap-4' href='https://www.linkedin.com/in/n-s-813167222/' target='_blank' rel="noreferrer">
               <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#5d92b9] hover:shadow-[#5d92b9]`} src={linkedInImage} /></button>
