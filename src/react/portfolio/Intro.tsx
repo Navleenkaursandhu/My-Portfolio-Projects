@@ -23,18 +23,17 @@ export const Intro = () => {
             <div className='flex items-center gap-4'><span className="lg:text-4xl md:text-4xl text-3xl material-symbols-rounded">mail</span>
               navleensandhu0211@gmail.com
             </div>
-            <div className='flex items-center gap-4 '>
-              <a href='https://github.com/Navleenkaursandhu' target='_blank' rel="noreferrer">
-                <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
-              </a>
+
+            <a className='flex items-center gap-4' href='https://github.com/Navleenkaursandhu' target='_blank' rel="noreferrer">
+              <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
               Github
-            </div>
-            <div className='flex items-center gap-4'>
-              <a href='https://www.linkedin.com/in/n-s-813167222/' target='_blank' rel="noreferrer">
-                <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#5d92b9] hover:shadow-[#5d92b9]`} src={linkedInImage} /></button>
-              </a>
+            </a>
+
+            <a className='flex items-center gap-4' href='https://www.linkedin.com/in/n-s-813167222/' target='_blank' rel="noreferrer">
+              <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#5d92b9] hover:shadow-[#5d92b9]`} src={linkedInImage} /></button>
               LinkedIn
-            </div>
+            </a>
+
           </div>
         </div>
         <div className='flex-1'>
