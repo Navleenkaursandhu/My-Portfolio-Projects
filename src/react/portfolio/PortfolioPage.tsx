@@ -13,7 +13,7 @@ export const PortfolioPage = () => {
       <Education />
       <ReactProjects />
       <VanillaJSProjects />
-      <div className='w-full mt-16 h-60 bg-contain' style={{ backgroundImage: `url('${footerImage}')` }}/>
+      <div className='w-full mt-16 h-60 bg-contain bg-repeat-x bg-bottom' style={{ backgroundImage: `url('${footerImage}')` }}/>
     </div>
   )
 }
