@@ -9,8 +9,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        //vanillaJs: resolve(__dirname, 'src/vanilla_js/**/*.html'),
-        //htmlPractice: resolve(__dirname, 'src/html_practice/**/*.html'),
+        // vanillaJs: resolve(__dirname, 'src/vanilla_js/**/*.html'),
+        // htmlPractice: resolve(__dirname, 'src/html_practice/**/*.html'),
       }
     }
   }, 
