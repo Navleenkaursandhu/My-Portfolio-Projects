@@ -5,44 +5,20 @@ export const Education = () => {
         QUALIFICATION
       </div>
 
-      <div className="mt-8 text-xl grid grid-flow-column auto-columns-[minmax(0,_2fr)] gap-2">
-        <div className="flex border-b border-black">2018 - 2020</div>
+      <div className="mt-8 text-xl grid grid-cols-[auto_minmax(0,1fr)]">
+        <div className="flex border-r border-black pr-6 mr-6">2018 - 2020</div>
         <div>
           <div className="font-bold">Masters of Engineering in Electrical and Computers</div>
           <div>Carleton University</div>
           <div>Ottawa, Canada</div>
         </div>
 
-        <div className="flex border-b border-black mt-6">2013 - 2017</div>
+        <div className="flex border-r border-black mr-6">2013 - 2017</div>
         <div>
           <div className="font-bold">Bachelors of Technology in Electronics and Communication</div>
           <div>Giani Zail Singh College Campus of Engineering and Technology</div>
           <div>Bathinda, India</div>
         </div>
-      </div>
-
-      <div>
-        <table className="text-xl mt-8">
-          <tbody>
-            <tr>
-              <td className="align-text-top border-r border-r-gray-600 pr-8">2018 - 2020</td>
-              <td className="pl-8 pb-8">
-                <div className="font-bold">Masters of Engineering in Electrical and Computers</div>
-                <div>Carleton University</div>
-                <div>Ottawa, Canada</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td className="align-text-top border-r border-r-gray-600 pr-8">2013 - 2017</td>
-              <td className="pl-8">
-                <div className="font-bold">Bachelors of Technology in Electronics and Communication</div>
-                <div>Giani Zail Singh College Campus of Engineering and Technology</div>
-                <div>Bathinda, India</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   )
