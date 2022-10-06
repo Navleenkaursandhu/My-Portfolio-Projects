@@ -8,11 +8,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/react/index.html'),
-        nested: [
-          resolve(__dirname, 'src/vanilla_js/**/*.html'),
-          resolve(__dirname, 'src/html_practice/**/*.html'),
-        ]
+        main: resolve(__dirname, 'index.html'),
+        //vanillaJs: resolve(__dirname, 'src/vanilla_js/**/*.html'),
+        //htmlPractice: resolve(__dirname, 'src/html_practice/**/*.html'),
       }
     }
   }, 
