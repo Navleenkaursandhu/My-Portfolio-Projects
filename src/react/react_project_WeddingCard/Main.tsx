@@ -14,12 +14,14 @@ import { PreWeddingEventCard as PreWeddingEventCard4 } from './card4/PreWeddingE
 import { PostWeddingEventCard as PostWeddingEventCard4 } from './card4/PostWeddingEventCard'
 
 export const title = 'WEDDING CARD APPLICATION'
-export const description = 'Whats better than choosing your own wedding card template' + ' ' +
-  'whenever and wherever you want, so with the same thought I came up with this Wedding Card App,' + ' ' +
-  'where all you need to do is select template of your choice, enter family details, wedding day details,' + ' ' +
-  'pre-wedding event details followed by post-wedding event details and finally without much hassel you' + ' ' +
-  'have created your own wedding card in no time'
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
+export const description = <div>
+  Whats better than choosing your own wedding card template
+  whenever and wherever you want! So, with the same thought I came up with this Wedding Card App,
+  where all you need to do is select template of your choice, enter family details, wedding day details,
+  pre-wedding event details followed by post-wedding event details and finally without much hassel you
+  have created your own wedding card in no time. The platform uses <span className='text-violet-800'>&quot;Local Storage&quot;</span> where the information does not get sent to any server thus,
+  offering <span className='text-violet-800'>&quot;privacy&quot;</span> to the end users and the data will not be deleted when the browser is closed, and will be available the next day, week, or year.</div>
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './WeddingCard'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_WeddingCard'

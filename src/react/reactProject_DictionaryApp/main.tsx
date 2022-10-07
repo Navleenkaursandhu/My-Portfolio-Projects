@@ -7,14 +7,8 @@ export const description = <div>
   <p>
     Why waste your time trying to locate a word and its meaning when its just a search away in this digital dictionary?
     Checkout this App, which provides information about pronounciation along with meanings, synonyms and antonyms of
-    the searched word in a matter of seconds.
+    the searched word via external <span className='text-violet-800'>&quot;API&quot;</span> in a matter of seconds.
   </p>
-  <ul className='list-disc list-inside'>
-    <li>First</li>
-    <li>2nd</li>
-    <li>3rd</li>
-  </ul>
-  <p>Separate paragraph</p>
 </div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
