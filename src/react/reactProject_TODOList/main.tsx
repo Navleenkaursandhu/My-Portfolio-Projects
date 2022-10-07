@@ -1,7 +1,12 @@
 import { Input } from './input'
 
 export const title = 'TODO LIST'
-export const description = 'A dynamic TODO list to help the user keep track of their daily tasks'
+export const description = <div>
+  Do you want to organize and prioritize your tasks? -Here&apos;s a smart task list for everyday use.
+  This is simple and convinient to use App that allows the user to add their important daily tasks in an organized manner. Once you feel like you
+  no longer want the task in the list it can be easily deleted. With this App whether you are at home, at work
+  and in your free time - you will be able to focus on really important things!
+</div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'August 2022'
 export const link = './reactProject_TODOList'
