@@ -2,7 +2,12 @@ import { ProjectDetails } from './ProjectDetails'
 const projects = [
   {
     title: 'CALENDER',
-    description: 'Calender',
+    description: <div>
+      For those who still prefer to rely on a calendar to check the date, here&apos;s a digital calender app that highlights the
+      current date and keeps you and everyone in your family updated with number of days in each and every month of the year.
+      Most importantly, no paper is discarded in this process and you no longer require to turn or toss pages to set correct
+      date on calender. The App does it for you!
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/Calender/calender.html',
@@ -34,7 +39,15 @@ const projects = [
   },
   {
     title: 'CARD MATCH GAME',
-    description: 'Card Match Game',
+    description: <div>
+      Level up your concentration with this online memory card game App. Start the game by flipping a card.
+      Then try to find another card that has the same number and color as the first. The cards with same number
+      and color make a pair (such as 2 of hearts and 2 of diamonds will make a pair). If you can&apos;t find a pair, the flipped
+      cards will be flipped back with the face down. Try to remember these images as it becomes easier to find pairs
+      the longer you play. When you find a pair the cards will face up from the board and when you find all the pairs,
+      you have completed the game. This game is a great exercise to train your memory in a playful way and most
+      of you, will love playing this card matching game.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/CardMatch/game.html',
@@ -65,8 +78,16 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tic_tac_toe'
   },
   {
-    title: 'FIGHTING GAME',
-    description: 'Fighting Game',
+    title: 'STREET FIGHTING GAME',
+    description: <div>
+      Want to play something exciting? Try this 1-on-1 fighting game with your friend on your computer using your keyboard.
+      Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight. The rules
+      are pretty simple. The game has 3 rounds in total. To start the game Player A takes the first round followed by player B and so forth. It will be the player&apos;s choice whether
+      he/she wants to hit the opponent or take a lifeline during his/her round (remember there is no point of taking
+      a lifeline in your first round as it&apos;s already 100%). On hit, opponents health will reduce by a random number (the damage will be in the form of red bar)
+      and on selecting lifeline the current player&apos;s health increases by random number (health is in the form of green bar). After
+      3rd round the player with good health wins the battle.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022 - August 2022',
     link: '/src/vanilla_js/fighting_game/game.html',
@@ -90,7 +111,13 @@ const projects = [
   },
   {
     title: 'BANK ACCOUNT',
-    description: 'Bank Account',
+    description: <div>
+      Take a glimpse of simple bank account App, where the user can add the amount to be deposited and
+      on single click, the deposited amount gets reflected in the customers account balance.
+      The App offers user to withdraw a ceratin amount less than or equal to user&apos;s account balance.
+      In case user tries to withdraw unrealistic amount, the app displays a message stating user that
+      you can not withdraw the amount.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/bank_account/bank.html',
@@ -98,16 +125,23 @@ const projects = [
   },
   {
     title: 'LOGIN WEB PAGE',
-    description: 'Login Webpage',
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    description: <div>
+      A simple demonstration of a static login page comprising of input fileds,
+      interactable buttons and a link.
+    </div>,
+    skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/login_webpage/Login.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/login_webpage'
   },
   {
     title: 'HEALTH CARE WEBPAGE',
-    description: 'Health Care Webpage',
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    description: <div>
+      It was fun experience building this static health care web App. This App was my first ever code.
+      Working on this project not only boosted my confidence to code but also served as a stepping stone towards
+      achieving my goal to become a web developer.
+    </div>,
+    skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/health_care_webpage/health_webpage.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/health_care_webpage'

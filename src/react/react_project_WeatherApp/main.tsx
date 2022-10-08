@@ -4,9 +4,9 @@ import { Background } from './background'
 
 export const title = 'WEATHER FORECAST APPLICATION'
 export const description = <div>
-  <p>Want to know the weather outside, heres the perfect App that displays weather
+  <p>Want to know the weather outside? -Here&apos;s the perfect App that displays weather
   conditions to the users at thier ease. This dynamic react based app displays
-  current and 7 day weather forecast information including date, weather type, temperature &#10098;max & min&#10099;, wind speed,
+  current and 7 day weather forecast information including date, weather type, temperature (max & min&), wind speed,
   rain and snowfall by means of an external <span className='text-violet-800'>&quot;API&quot;</span>.</p>
 </div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
