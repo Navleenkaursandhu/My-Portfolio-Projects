@@ -137,7 +137,7 @@ const projects = [
   {
     title: 'HEALTH CARE WEBPAGE',
     description: <div>
-      It was fun experience building this static health care web App. This App was my first ever code.
+      Had a fun experience building this static health care web App. This App was my first ever code.
       Working on this project not only boosted my confidence to code but also served as a stepping stone towards
       achieving my goal to become a web developer.
     </div>,
