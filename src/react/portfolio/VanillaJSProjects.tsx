@@ -126,8 +126,9 @@ const projects = [
   {
     title: 'LOGIN WEB PAGE',
     description: <div>
-      A simple demonstration of a static login page comprising of input fileds,
-      interactable buttons and a link.
+      This project is a simple demonstration of a static login page comprising of input fielFds,
+      interactable buttons and a link. By the end of this project I was pretty
+      confident with HTML and CSS concepts.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
