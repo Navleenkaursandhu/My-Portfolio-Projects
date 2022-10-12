@@ -1,7 +1,7 @@
 import { Input } from './input'
 
 export const id = 'react-hangmangame'
-export const title = 'GUESS THE WORD'
+export const title = 'GUESS THE WORD GAME'
 export const description = <div>
   Hangman is an old school favorite, a word game where the goal is simply to find the missing word or words.
   You will be presented with a number of blank spaces representing the missing letters you need to find.
@@ -14,7 +14,7 @@ export const description = <div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'August 2022 - September 2022'
 export const link = './HangmanGame'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/reactProject_Hangman'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_Hangman'
 
 export const Main = () => {
   return (

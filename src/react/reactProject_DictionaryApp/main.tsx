@@ -13,7 +13,7 @@ export const description = <div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './Dictionary'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/reactProject_DictionaryApp'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_DictionaryApp'
 
 export const Main = () => {
   const [wordEntered, setWordEntered] = useState('')

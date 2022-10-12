@@ -4,15 +4,15 @@ import { Background } from './background'
 
 export const title = 'WEATHER FORECAST APPLICATION'
 export const description = <div>
-  <p>Want to know the weather outside? -Here&apos;s the perfect App that displays weather
+  Want to know the weather outside? -Here&apos;s the perfect App that displays weather
   conditions to the users at thier ease. This dynamic react based app displays
   current and 7 day weather forecast information including date, weather type, temperature (max & min&), wind speed,
-  rain and snowfall by means of an external <span className='bg-purple-100 px-2'>API</span>.</p>
+  rain and snowfall by means of an external <span className='bg-purple-100 px-2'>API</span>.
 </div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './WeatherApp'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_WeatherApp'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_WeatherApp'
 
 const getCurrentLocation = async () => {
   return await new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(

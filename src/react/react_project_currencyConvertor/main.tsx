@@ -10,7 +10,7 @@ export const description = <div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './CurrencyConvertor'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_currencyConvertor'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_currencyConvertor'
 
 export const Main = () => {
   const [symbols, setSymbols] = useState<any>({})

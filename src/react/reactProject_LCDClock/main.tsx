@@ -11,7 +11,7 @@ export const description = <div>
 export const skills = ['React', 'Vite', 'JavaScript', 'CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'August 2022 - September 2022'
 export const link = './LCDClock'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/reactProject_LCDClock'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_LCDClock'
 
 export const Main = () => {
   return (

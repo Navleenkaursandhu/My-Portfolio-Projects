@@ -20,7 +20,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/Calender/calender.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/Calender'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/Calender'
   },
   {
     id: 'vanillajs-analogclock',
@@ -33,7 +33,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'SVG', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/analogClock/clock.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/analogClock'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/analogClock'
   },
   {
     id: 'vanillajs-lcdclock',
@@ -45,7 +45,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/LCDClock/clock.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/LCDClock'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/LCDClock'
   },
   {
     id: 'vanillajs-todolist',
@@ -57,7 +57,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/TODOList/list.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/TODOList'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/TODOList'
   },
   {
     id: 'vanillajs-cardmatchgame',
@@ -74,7 +74,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/CardMatch/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/CardMatch'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/CardMatch'
   },
   {
     id: 'vanillajs-hangmangame',
@@ -88,7 +88,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/HangmanGame/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/HangmanGame'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/HangmanGame'
   },
   {
     id: 'vanillajs-simonsaysgame',
@@ -101,7 +101,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/SimonSays/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/SimonSays'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/SimonSays'
   },
   {
     id: 'vanillajs-tictactoegame',
@@ -114,7 +114,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/tic_tac_toe/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tic_tac_toe'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tic_tac_toe'
   },
   {
     id: 'vanillajs-fightinggame',
@@ -131,7 +131,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022 - August 2022',
     link: '/src/vanilla_js/fighting_game/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/fighting_game'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/fighting_game'
   },
   {
     id: 'vanillajs-rpsgame',
@@ -144,7 +144,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/rock_paper_scissors/rps.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/rock_paper_scissors'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/rock_paper_scissors'
   },
   {
     id: 'vanillajs-tipcalculator',
@@ -156,7 +156,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/tip_calculator/code.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tip_calculator'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tip_calculator'
   },
   {
     id: 'vanillajs-bankaccount',
@@ -171,7 +171,7 @@ const projects = [
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/bank_account/bank.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/bank_account'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/bank_account'
   },
   {
     id: 'vanillajs-loginwebpage',
@@ -184,7 +184,7 @@ const projects = [
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/login_webpage/Login.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/login_webpage'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/login_webpage'
   },
   {
     id: 'vanillajs-healthcarewebpage',
@@ -197,7 +197,7 @@ const projects = [
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/health_care_webpage/health_webpage.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/health_care_webpage'
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/health_care_webpage'
   }
 ]
 
