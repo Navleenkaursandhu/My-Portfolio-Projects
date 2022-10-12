@@ -7,4 +7,4 @@ the longer you play. When you find a pair the cards will face up from the board 
 you have completed the game. This game is a great exercise to train your memory in a playful way and most
 of you, will love playing this card matching game.
 
-SKILLS: JS, CSS, HTML, Git, Github, VsCode, Responsive Web Design 
+SKILLS: JS, CSS, HTML, Git, Github, VSCode, Responsive Web Design 

@@ -5,4 +5,4 @@ The App offers user to withdraw a ceratin amount less than or equal to user's ac
 In case user tries to withdraw unrealistic amount, the app displays a message stating user that
 you can not withdraw the amount.
 
-SKILLS: JS, CSS, HTML, Git, Github, VsCode, Responsive Web Design 
+SKILLS: JS, CSS, HTML, Git, Github, VSCode, Responsive Web Design 

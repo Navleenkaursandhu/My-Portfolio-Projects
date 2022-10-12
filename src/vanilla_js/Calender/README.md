@@ -4,4 +4,4 @@ current date and keeps you and everyone in your family updated with number of da
 Most importantly, no paper is discarded in this process and you no longer require to turn or toss pages to set correct
 date on calender. The App does it for you!
 
-SKILLS: JS, CSS, HTML, Git, Github, VsCode, Responsive Web Design 
+SKILLS: JS, CSS, HTML, Git, Github, VSCode, Responsive Web Design 

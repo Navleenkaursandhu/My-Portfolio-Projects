@@ -7,4 +7,4 @@ After you've revealed several letters, you may be able to guess what the answer 
 Be warned, every time you guess a wrong letter you loose one out of 16 lifelines. If you're a fan of word puzzles,
 make sure you check this out.
 
-SKILLS: JS, CSS, HTML, Git, Github, VsCode, Responsive Web Design
+SKILLS: JS, CSS, HTML, Git, Github, VSCode, Responsive Web Design
