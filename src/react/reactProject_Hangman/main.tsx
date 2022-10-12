@@ -1,5 +1,6 @@
 import { Input } from './input'
 
+export const id = 'react-hangmangame'
 export const title = 'GUESS THE WORD'
 export const description = <div>
   Hangman is an old school favorite, a word game where the goal is simply to find the missing word or words.

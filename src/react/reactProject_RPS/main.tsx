@@ -1,5 +1,6 @@
 import { Input } from './input'
 
+export const id = 'vanillajs-rpsgame'
 export const title = 'ROCK PAPER SCISSORS GAME'
 export const description = <div>
   Here&apos;s a classic game App - Rock, Paper, Scissors! Choose one of the three choices - and see if you can beat the computer.

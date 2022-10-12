@@ -1,5 +1,6 @@
 import { Input } from './input'
 
+export const id = 'react-todolist'
 export const title = 'TODO LIST'
 export const description = <div>
   Do you want to organize and prioritize your tasks? -Here&apos;s a smart task list for everyday use.

@@ -1,6 +1,7 @@
 import { Input } from './input'
 import './style.css'
 
+export const id = 'react-tipcalculator'
 export const title = 'TIP CALCULATOR'
 export const description = <div>
   Have you ever been in a situation where you went outside for dinner with friends and now everybody is in hurry and no one cares enough to do simple

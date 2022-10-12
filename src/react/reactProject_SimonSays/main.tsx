@@ -1,5 +1,6 @@
 import { Input } from './input'
 
+export const id = 'react-simonsaysgame'
 export const title = 'SIMON SAYS GAME'
 export const description = <div>
   Want to test your memory? -try out this famous memory game by repeating the same pattern played by Simon.

@@ -1,6 +1,15 @@
 import { ProjectDetails } from './ProjectDetails'
+import { id as reactAnalogClockID } from '../reactProject_AnalogSVGClock/main'
+import { id as reactLCDClockID } from '../reactProject_LCDClock/main'
+import { id as reactTODOListID } from '../reactProject_TODOList/main'
+import { id as reactHangmanGameID } from '../reactProject_Hangman/main'
+import { id as reactSimonSaysGameID } from '../reactProject_SimonSays/main'
+import { id as reactTicTacToeGameID } from '../reactProject_TicTacToe/main'
+import { id as reactRPSGameID } from '../reactProject_RPS/main'
+import { id as reactTipCalculatorID } from '../reactProject_TipCalculator/main'
 const projects = [
   {
+    id: 'vanillajs-calender',
     title: 'CALENDER',
     description: <div>
       For those who still prefer to rely on a calendar to check the date, here&apos;s a digital calender app that highlights the
@@ -14,30 +23,44 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/Calender'
   },
   {
+    id: 'vanillajs-analogclock',
     title: 'ANALOG SVG CLOCK',
-    description: 'Analog Clock',
+    description: <div>
+      The App is designed using above tools and technologies, click &quot;View&quot; button for App and to view code
+      click on &quot;Github&quot; button below. Similar UI has been constructed for Analog SVG clock using React
+      under React Projects section above, for project description please click <a className='text-blue-600 underline underline-offset-2' href={`#${reactAnalogClockID}`}>here.</a>
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'SVG', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/analogClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/analogClock'
   },
   {
+    id: 'vanillajs-lcdclock',
     title: 'LCD CLOCK',
-    description: 'LCD Clock',
+    description: <div>
+      View the code and LCD Clock App designed using Vanilla JS, HTML and CSS by clicking the buttons below.
+      The description of this project can be seen <a className='text-blue-600 underline underline-offset-2' href={`#${reactLCDClockID}`}>here.</a>
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/LCDClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/LCDClock'
   },
   {
+    id: 'vanillajs-todolist',
     title: 'TODO LIST',
-    description: 'TODO List',
+    description: <div>
+      A simple TODO List App implemented using above mentioned tools. For react implementation please visit react projects section.
+      Please click <a className='text-blue-600 underline underline-offset-2' href={`#${reactTODOListID}`}>here</a> for description.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/TODOList/list.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/TODOList'
   },
   {
+    id: 'vanillajs-cardmatchgame',
     title: 'CARD MATCH GAME',
     description: <div>
       Level up your concentration with this online memory card game App. Start the game by flipping a card.
@@ -54,30 +77,47 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/CardMatch'
   },
   {
-    title: 'HANGMAN GAME',
-    description: 'Hangman Game',
+    id: 'vanillajs-hangmangame',
+    title: 'GUESS THE WORD',
+    description: <div>
+      In this section the game is designed using vanillaJS for logic, HTML for
+      structuring and CSS for UI styling. The description and react version of this
+      project can be viewed <a className='text-blue-600 underline underline-offset-2' href={`#${reactHangmanGameID}`}>here</a> under
+      React Projects section.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/HangmanGame/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/HangmanGame'
   },
   {
+    id: 'vanillajs-simonsaysgame',
     title: 'SIMON SAYS GAME',
-    description: 'Simon Says Game',
+    description: <div>
+      To play this game visit the link <a className='text-blue-600 underline underline-offset-2' href={`#${reactSimonSaysGameID}`}>here</a> to
+      and get the detailed information about what application does and how it works. This App is based on above technologies and you can also
+      view the react code and App under react projects segment.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/SimonSays/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/SimonSays'
   },
   {
+    id: 'vanillajs-tictactoegame',
     title: 'TIC TAC TOE GAME',
-    description: 'Tic Tac Toe Game',
+    description: <div>
+      For full description about how to play this game and for react version of this project,
+      click <a className='text-blue-600 underline underline-offset-2' href={`#${reactTicTacToeGameID}`}>here</a>. For
+      JS App and Code click the buttons below.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/tic_tac_toe/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tic_tac_toe'
   },
   {
+    id: 'vanillajs-fightinggame',
     title: 'STREET FIGHTING GAME',
     description: <div>
       Want to play something exciting? Try this 1-on-1 fighting game with your friend on your computer using your keyboard.
@@ -94,22 +134,32 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/fighting_game'
   },
   {
+    id: 'vanillajs-rpsgame',
     title: 'ROCK PAPER SCISSORS GAME',
-    description: 'Rock Paper Scissors Game',
+    description: <div>
+      The game is implemented using vanillaJS, HTML and CSS. Click on &quot;view&quot; button below to start playing and for instructions and rules you can
+      visit <a className='text-blue-600 underline underline-offset-2' href={`#${reactRPSGameID}`}>here</a>. For react App and code for this game,
+      visit react projects segment above on this page.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/rock_paper_scissors/rps.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/rock_paper_scissors'
   },
   {
+    id: 'vanillajs-tipcalculator',
     title: 'TIP CALCULATOR',
-    description: 'Tip Calculator',
+    description: <div>
+      Get the full description of this project <a className='text-blue-600 underline underline-offset-2' href={`#${reactTipCalculatorID}`}>here</a>. The JS code
+      and app can be visited using buttons below and you will be able to locate react code and app under react projects section above.
+    </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/tip_calculator/code.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/tip_calculator'
   },
   {
+    id: 'vanillajs-bankaccount',
     title: 'BANK ACCOUNT',
     description: <div>
       Take a glimpse of simple bank account App, where the user can add the amount to be deposited and
@@ -124,9 +174,10 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/bank_account'
   },
   {
+    id: 'vanillajs-loginwebpage',
     title: 'LOGIN WEB PAGE',
     description: <div>
-      This project is a simple demonstration of a static login page comprising of input fielFds,
+      This project is a simple demonstration of a static login page comprising of input fields,
       interactable buttons and a link. By the end of this project I was pretty
       confident with HTML and CSS concepts.
     </div>,
@@ -136,6 +187,7 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/projects/login_webpage'
   },
   {
+    id: 'vanillajs-healthcarewebpage',
     title: 'HEALTH CARE WEBPAGE',
     description: <div>
       Had a fun experience building this static health care web App. This App was my first ever code.
