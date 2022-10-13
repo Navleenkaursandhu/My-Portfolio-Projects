@@ -24,7 +24,7 @@
 
 .grid-container > div {
   text-align: center;
-  padding: 64px;
+  padding: 56px;
   background-color: #eee;
   width: 40px;
   height: 40px;
@@ -47,4 +47,8 @@
   margin-left: 4px;
   margin-bottom: -4px;
   box-shadow: 2px 2px black;
+}
+
+.winner {
+  padding:20px;
 }
