@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:wght@700&family=Secular+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 *{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Concert One', cursive;
   font-size: 40px;
+}
+
+.header {
+  text-align: center;
+  margin: 50px 0px -50px 0px;
 }
 
 .flex-container{
@@ -23,9 +27,19 @@
   gap: 30px;
 }
 
+.style-arrows {
+  padding: 2px 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+.arrow-before:hover, .arrow-after:hover {
+  background-color: #b6b6b6;
+}
+
 .date-today{
   border-radius: 50px;
-  background-color: aquamarine;
+  background-color: #705cff;
 }
 
 .flex-date-container > div {
@@ -40,5 +54,4 @@
  display: flex;
  justify-content: center;
  align-items: center;
-
 }
