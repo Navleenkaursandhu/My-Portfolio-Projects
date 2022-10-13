@@ -6,40 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./game.css">
   <title>Hangman Game</title>
-  </head>
-  <div class="flex-column-container">
-    <button id="play">LET'S PLAY</button>
-    <div class="flex-row-container">
-      <div class="circle" id="circle1"></div>
-      <div class="circle" id="circle2"></div>
-      <div class="circle" id="circle3"></div>
-      <div class="circle" id="circle4"></div>
-      <div class="circle" id="circle5"></div>
-      <div class="circle" id="circle6"></div>
-      <div class="circle" id="circle7"></div>
-      <div class="circle" id="circle8"></div>
-      <div class="circle" id="circle9"></div>
-      <div class="circle" id="circle10"></div>
-      <div class="circle" id="circle11"></div>
-      <div class="circle" id="circle12"></div>
-      <div class="circle" id="circle13"></div>
-      <div class="circle" id="circle14"></div>
-      <div class="circle" id="circle15"></div>
-      <div class="circle" id="circle16"></div>
-    </div>
-    
-    <div id="word" class="flex-row-container">
-    </div>
-
-    <div id="result" class="flex-row-container">
-    </div>
-
-    <div>GUESS THE WORD 😊</div>
-    <div>Hit "LET'S PLAY" button & start guessing the word. If you are able to guess 
-      the word before 16th turn, you "win", else you lose.
-    </div>
+</head>
+<div class="flex-column-container">
+  <div>GUESS THE WORD 😊</div>
+  <div class="flex-row-container">
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2"></div>
+    <div class="circle" id="circle3"></div>
+    <div class="circle" id="circle4"></div>
+    <div class="circle" id="circle5"></div>
+    <div class="circle" id="circle6"></div>
+    <div class="circle" id="circle7"></div>
+    <div class="circle" id="circle8"></div>
+    <div class="circle" id="circle9"></div>
+    <div class="circle" id="circle10"></div>
+    <div class="circle" id="circle11"></div>
+    <div class="circle" id="circle12"></div>
+    <div class="circle" id="circle13"></div>
+    <div class="circle" id="circle14"></div>
+    <div class="circle" id="circle15"></div>
+    <div class="circle" id="circle16"></div>
   </div>
-  <body>
-    <script src="./game.js"></script>
-  </body>
-  </html>
+
+  <div id="word" class="flex-row-container">
+  </div>
+
+  <div id="result" class="flex-row-container">
+  </div>
+
+  <button id="play">PLAY</button>
+  <div>Hit "PLAY" button & start guessing the word. If you are able to guess
+    the word before 16th turn, you "win", else you lose.
+  </div>
+</div>
+
+<body>
+  <script src="./game.js"></script>
+</body>
+
+</html>
