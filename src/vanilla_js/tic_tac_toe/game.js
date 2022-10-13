@@ -47,6 +47,7 @@ const handleBoxClick = (row, column) => {
       currentPlayer = "X";
     }
   }
+  
   updateUI();
 }
 
