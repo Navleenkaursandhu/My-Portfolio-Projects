@@ -27,6 +27,10 @@ document.querySelector("#play-button").onclick = async () => {
     })
 
     showingAnimation = true;
+    if (showingAnimation){
+      document.querySelector("#title").innerText = "Watch😀"
+    }
+
     for (let box = 0; box < boxArray.length; box++) {
       let currentBox = document.querySelector(`#box${boxArray[box]}`);
 
