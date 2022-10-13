@@ -24,7 +24,6 @@ const addList = (text) => {
 
 const taskDone = (doneBtn, listElem) => {
   doneBtn.onclick = () => {
-    console.log("done task");
     listElem.remove();
   }
 }
