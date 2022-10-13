@@ -1,51 +1,53 @@
-body {
-  font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
+.flexrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Courgette', cursive;
+}
+
+.main-container {
+  background-color: #8080802e;
+  display:flex;
+  flex-direction: column;
+  padding:20px;
+  gap:10px;
+  align-items:center;
+  border-radius: 10px;
 }
 
 .title {
-  text-align: center;
-  width: 400px;
-  background-color: aqua;
-  border: 5px solid darkblue;
-  padding: 5px;
-  margin-left: 65px;
+  font-size: larger;
+  margin-bottom: 50px;
 }
 
-.flexrow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: aqua;
-  padding: 100px;
-  gap: 20px;
-  border: 5px solid darkblue;
-  width: 350px;
+.grid {
+  display:grid;
+  grid-template-columns: auto auto;
+  gap:20px;
+  padding:20px;
 }
 
 .button {
-  height: 50px;
-  width: 150px;
+  padding:18px;
   border-radius: 10px;
   border: none;
   font-size: medium;
+  font-family: 'Courgette', cursive;
 }
 
 .button:hover {
   cursor: pointer;
-  box-shadow: 5px 5px rgb(65, 64, 64);
+  box-shadow: 5px 5px #c6c4c4;
 }
 
 .input {
   border-radius: 10px;
   border: none;
-  padding: 20px;
+  padding: 18px;
   font-size: medium;
-}
-
-.balance {
-  margin-top: 30px;
+  font-family: 'Courgette', cursive;
 }
 
 .balance {
@@ -53,4 +55,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  font-size:larger;
+  margin-top:50px;
 }
