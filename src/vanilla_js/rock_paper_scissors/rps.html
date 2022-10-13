@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./rps.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Lets Play Rock Paper Scissors!</title>
 </head>
 
@@ -12,31 +14,43 @@
   <div class="flex">
     <h1 class="title">ROCK PAPER SCISSORS</h1>
     <div class="btn-div">
-      <button id="rock">✊</button>
-      <button id="paper">🤚</button>
-      <button id="scissors">✌</button>
+      <button id="rock">
+        <div class="rps-size">✊</div>
+      </button>
+      <button id="paper">
+        <div class="rps-size">🤚</div>
+      </button>
+      <button id="scissors">
+        <div class="rps-size">✌</div>
+      </button>
     </div>
 
-    <div class="flex-row" id="selection">
-      <div class="title">Player's Selection 👉</div>
-      <div id="player-selection" class="output"></div>
-      <div class="divider title">vs</div>
-      <div id="bot-selection" class="output"></div>
-      <div class="title">👈 Bot's Selection</div>
-    </div>
+    <div class="text">
+      <div class="flex-row" id="selection">
+        <div>Player 👉</div>
+        <div id="player-selection" class="output"></div>
+        <div>VS</div>
+        <div id="bot-selection" class="output"></div>
+        <div>👈 Bot</div>
+      </div>
 
-    <div class="flex-row" id="score">
-    <div class="title">Your Score:</div>
-    <div id="updated-score" class="output title">0</div>
-    </div>
+      <div class="flex-row" id="score">
+        <div>Player's Score:</div>
+        <div id="updated-score" class="output">0</div>
+      </div>
 
-    <div class="flex-row" id="game-result">
-    <div class="title">Result:</div>
-    <div id="result" class="output title"></div>
+      <div class="flex-row" id="game-result">
+        <div></div>
+        <div id="result" class="output"></div>
+      </div>
     </div>
 
     <div class="btn-div">
-      <button id="reset">🔴</button>
+      <button id="reset">
+        <span class="restart material-symbols-rounded">
+          replay_circle_filled
+        </span>
+      </button>
     </div>
   </div>
   <script src="./rps.js"></script>

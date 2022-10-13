@@ -37,6 +37,7 @@ resetButtonElement.onclick = () => {
   playerScore.innerText = 0;
   playerSelection.innerText = "";
   botSelection.innerText = "";
+  displayResult.innerText= "";
 }
 
 const computerSelection = () => {
