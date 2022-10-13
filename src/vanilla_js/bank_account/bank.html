@@ -8,16 +8,20 @@
 </head>
 
 <body>
-  <div class="title">YOUR BANK ACCOUNT</div>
   <div class="flexrow">
-    <button class="button" id="deposit-btn">CLICK HERE TO DEPOSIT</button>
-    <input class="input" id="deposit-amt" type="number" placeholder="Deposit amount">
-    <button class="button" id="withdrawal-btn">CLICK HERE TO WITHDRAW</button>
-    <input class="input" id="withdraw-amt" type="number" placeholder="Withdraw amount">
+    <div class="main-container">
+      <div class="title">YOUR BANK ACCOUNT</div>
 
-    <div class="balance">
-      <p>Balance in dollars: </p>
-      <div id="balance-amt"></div>
+      <div class="grid">
+        <input class="input" id="deposit-amt" type="number" placeholder="Deposit amount">
+        <button class="button" id="deposit-btn">DEPOSIT</button>
+        <input class="input" id="withdraw-amt" type="number" placeholder="Withdraw amount">
+        <button class="button" id="withdrawal-btn">WITHDRAW</button>
+      </div>
+      <div class="balance">
+        <p>BALANCE IN DOLLARS: </p>
+        <div id="balance-amt"></div>
+      </div>
     </div>
   </div>
 
