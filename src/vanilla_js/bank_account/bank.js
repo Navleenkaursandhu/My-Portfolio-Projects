@@ -35,5 +35,6 @@ document.querySelector("#deposit-btn").onclick = () => {
 
 document.querySelector("#withdrawal-btn").onclick = () => {
   const amountWithdrawn = document.querySelector("#withdraw-amt").value;
+  document.querySelector("#balance-amt").innerText = `Oops!, You cannot withdraw`;
   document.querySelector("#balance-amt").innerText = `${myAccount.withdraw(amountWithdrawn)}`;
 }
