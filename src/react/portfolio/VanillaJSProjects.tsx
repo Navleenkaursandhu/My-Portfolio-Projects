@@ -1,3 +1,4 @@
+import { ReactReimplementationRedirect } from './ReactReimplementationRedirect'
 import { ProjectDetails } from './ProjectDetails'
 import { id as reactAnalogClockID } from '../reactProject_AnalogSVGClock/main'
 import { id as reactLCDClockID } from '../reactProject_LCDClock/main'
@@ -25,11 +26,7 @@ const projects = [
   {
     id: 'vanillajs-analogclock',
     title: 'ANALOG SVG CLOCK',
-    description: <div>
-      The App is designed using above tools and technologies, click &quot;View&quot; button for App and to view code
-      click on &quot;Github&quot; button below. Similar UI has been constructed for Analog SVG clock using React
-      under React Projects section above, for project description please click <a className='text-blue-600 underline underline-offset-2' href={`#${reactAnalogClockID}`}>here.</a>
-    </div>,
+    description: <ReactReimplementationRedirect link={reactAnalogClockID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'SVG', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/analogClock/clock.html',
@@ -38,10 +35,7 @@ const projects = [
   {
     id: 'vanillajs-lcdclock',
     title: 'LCD CLOCK',
-    description: <div>
-      View the code and LCD Clock App designed using Vanilla JS, HTML and CSS by clicking the buttons below.
-      The description of this project can be seen <a className='text-blue-600 underline underline-offset-2' href={`#${reactLCDClockID}`}>here.</a>
-    </div>,
+    description: <ReactReimplementationRedirect link={reactLCDClockID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/LCDClock/clock.html',
@@ -50,10 +44,7 @@ const projects = [
   {
     id: 'vanillajs-todolist',
     title: 'TODO LIST',
-    description: <div>
-      A simple TODO List App implemented using above mentioned tools. For react implementation please visit react projects section.
-      Please click <a className='text-blue-600 underline underline-offset-2' href={`#${reactTODOListID}`}>here</a> for description.
-    </div>,
+    description: <ReactReimplementationRedirect link={reactTODOListID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/TODOList/list.html',
@@ -79,12 +70,7 @@ const projects = [
   {
     id: 'vanillajs-hangmangame',
     title: 'GUESS THE WORD',
-    description: <div>
-      In this section the game is designed using vanillaJS for logic, HTML for
-      structuring and CSS for UI styling. The description and react version of this
-      project can be viewed <a className='text-blue-600 underline underline-offset-2' href={`#${reactHangmanGameID}`}>here</a> under
-      React Projects section.
-    </div>,
+    description: <ReactReimplementationRedirect link={reactHangmanGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/HangmanGame/game.html',
@@ -93,11 +79,7 @@ const projects = [
   {
     id: 'vanillajs-simonsaysgame',
     title: 'SIMON SAYS GAME',
-    description: <div>
-      To play this game visit the link <a className='text-blue-600 underline underline-offset-2' href={`#${reactSimonSaysGameID}`}>here</a> to
-      and get the detailed information about what application does and how it works. This App is based on above technologies and you can also
-      view the react code and App under react projects segment.
-    </div>,
+    description: <ReactReimplementationRedirect link={reactSimonSaysGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/SimonSays/game.html',
@@ -106,11 +88,7 @@ const projects = [
   {
     id: 'vanillajs-tictactoegame',
     title: 'TIC TAC TOE GAME',
-    description: <div>
-      For full description about how to play this game and for react version of this project,
-      click <a className='text-blue-600 underline underline-offset-2' href={`#${reactTicTacToeGameID}`}>here</a>. For
-      JS App and Code click the buttons below.
-    </div>,
+    description: <ReactReimplementationRedirect link={reactTicTacToeGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
     link: '/src/vanilla_js/tic_tac_toe/game.html',
@@ -136,10 +114,8 @@ const projects = [
   {
     id: 'vanillajs-rpsgame',
     title: 'ROCK PAPER SCISSORS GAME',
-    description: <div>
-      The game is implemented using vanillaJS, HTML and CSS. Click on &quot;view&quot; button below to start playing and for instructions and rules you can
-      visit <a className='text-blue-600 underline underline-offset-2' href={`#${reactRPSGameID}`}>here</a>. For react App and code for this game,
-      visit react projects segment above on this page.
+    description: <div><ReactReimplementationRedirect link={reactRPSGameID} />
+    Instead of 5, the game has 1 round in its JS implementation.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
@@ -149,10 +125,7 @@ const projects = [
   {
     id: 'vanillajs-tipcalculator',
     title: 'TIP CALCULATOR',
-    description: <div>
-      Get the full description of this project <a className='text-blue-600 underline underline-offset-2' href={`#${reactTipCalculatorID}`}>here</a>. The JS code
-      and app can be visited using buttons below and you will be able to locate react code and app under react projects section above.
-    </div>,
+    description: <ReactReimplementationRedirect link={reactTipCalculatorID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
     link: '/src/vanilla_js/tip_calculator/code.html',
