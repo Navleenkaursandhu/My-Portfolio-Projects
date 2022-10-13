@@ -39,3 +39,7 @@ button {
   border-style: hidden;
   font-size: larger;
 }
+
+button:hover {
+  background-color: #80808091
+}
