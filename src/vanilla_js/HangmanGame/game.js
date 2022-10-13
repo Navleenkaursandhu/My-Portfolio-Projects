@@ -52,7 +52,7 @@ playDiv.onclick = async () => {
             }
           }
           if (playerHasWon) {
-            resultDiv.innerText = "You Won:)";
+            resultDiv.innerText = "You Won!";
             isPlayerPlaying = false;
           }
         }
@@ -63,7 +63,7 @@ playDiv.onclick = async () => {
             document.querySelector(`#circle${circleCount}`).classList.add("background-red");
 
             if (!charArray.includes(capitalChar) && circleCount === 16) {
-              resultDiv.innerText = "You Lost:(";
+              resultDiv.innerText = "You Lost!";
               isPlayerPlaying = false;
             }
             circleCount++;
