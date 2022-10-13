@@ -33,6 +33,11 @@
   box-shadow: 2px 2px #8080808c;
 }
 
+.game-name {
+  font-size: 40px;
+  margin-top:20px;
+}
+
 .color-blue {
   background: linear-gradient(rgb(88, 88, 246), rgb(103, 224, 243));
 }
