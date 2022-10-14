@@ -15,13 +15,13 @@ import { PostWeddingEventCard as PostWeddingEventCard4 } from './card4/PostWeddi
 
 export const title = 'WEDDING CARD APPLICATION'
 export const description = <div>
-  Whats better than choosing your own wedding card template
-  whenever and wherever you want! So, with the same thought I came up with this Wedding Card App,
-  where all you need to do is select template of your choice, enter family details, wedding day details,
-  pre-wedding event details followed by post-wedding event details and finally without much hassel you
-  have created your own wedding card in no time. The platform uses <span className='bg-indigo-100 px-2'>Local Storage</span> where
-  the information does not get sent to any server thus, offering <span className='bg-cyan-100 px-2'>privacy</span> to the
-  end users and the data will not be deleted when the browser is closed, and will be available the next day, week, or year.</div>
+  Wouldn&apos;t it be great if we could create our own wedding cards
+  whenever and wherever you want? So, with the same thought I came up with this Wedding Card App,
+  where all you need to do is select one of the many available templates, enter family details, wedding day details,
+  pre-wedding event details, and post-wedding event details. The data in the template updates live as you enter the data allowing you to create your own wedding card in no time.
+  The app stores the information you entered locally so that you do not have to enter it again when you come back to this web page.
+  This app respects the user&apos;s <span className='bg-cyan-100 px-2'>privacy</span> and does no information is sent to or stored on an external server
+</div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './WeddingCard'

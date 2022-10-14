@@ -4,11 +4,9 @@ import { useEffect, useState } from 'react'
 
 export const title = 'DICTIONARY'
 export const description = <div>
-  <p>
-    Why waste your time trying to locate a word and its meaning when its just a search away in this digital dictionary?
-    Checkout this App, which provides information about pronounciation along with meanings, synonyms and antonyms of
-    the searched word via external <span className='bg-purple-100 px-2'>API</span> in a matter of seconds.
-  </p>
+  Why waste your time trying to locate a word and its meaning when its just a search away in this digital dictionary?
+  Checkout this App, which provides information about pronounciation along with meanings, synonyms and antonyms of
+  the searched word via external <span className='bg-purple-100 px-2'>API</span> in a matter of seconds.
 </div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'

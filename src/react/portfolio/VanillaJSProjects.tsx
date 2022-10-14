@@ -15,7 +15,7 @@ const projects = [
     description: <div>
       For those who still prefer to rely on a calendar to check the date, here&apos;s a digital calender app that highlights the
       current date and keeps you and everyone in your family updated with number of days in each and every month of the year.
-      Most importantly, no paper is discarded in this process and you no longer require to turn or toss pages to set correct
+      Most importantly, no paper is used in this process and you no longer require to toss and turn the pages to find the correct
       date on calender. The App does it for you!
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
@@ -55,12 +55,12 @@ const projects = [
     title: 'CARD MATCH GAME',
     description: <div>
       Level up your concentration with this online memory card game App. Start the game by flipping a card.
-      Then try to find another card that has the same number and color as the first. The cards with same number
+      Try to find another card that has the same number and color as the first. The cards with same number
       and color make a pair (such as 2 of hearts and 2 of diamonds will make a pair). If you can&apos;t find a pair, the flipped
       cards will be flipped back with the face down. Try to remember these images as it becomes easier to find pairs
-      the longer you play. When you find a pair the cards will face up from the board and when you find all the pairs,
-      you have completed the game. This game is a great exercise to train your memory in a playful way and most
-      of you, will love playing this card matching game.
+      the longer you play. When you find a pair the cards will remain facing up on the board. The game is complete
+      once you find all the pairs. This game is a great exercise to train your memory in a playful way and most
+      of you will love playing this card matching game.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
@@ -99,12 +99,15 @@ const projects = [
     title: 'STREET FIGHTING GAME',
     description: <div>
       Want to play something exciting? Try this 1-on-1 fighting game with your friend on your computer using your keyboard.
-      Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight. The rules
+      The rules
       are pretty simple. The game has 3 rounds in total. To start the game Player A takes the first round followed by player B and so forth. It will be the player&apos;s choice whether
       he/she wants to hit the opponent or take a lifeline during his/her round (remember there is no point of taking
       a lifeline in your first round as it&apos;s already 100%). On hit, opponents health will reduce by a random number (the damage will be reflected by red bar)
       and on selecting lifeline the current player&apos;s health increases by random number (health is reflected by green bar). After
       3rd round the player with good health wins the battle.
+      <p className='bg-yellow-100 italic'>
+        Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight.
+      </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022 - August 2022',
@@ -115,7 +118,7 @@ const projects = [
     id: 'vanillajs-rpsgame',
     title: 'ROCK PAPER SCISSORS GAME',
     description: <div><ReactReimplementationRedirect link={reactRPSGameID} />
-    Instead of 5, the game has 1 round in its JS implementation.
+      Instead of 5, the game has 1 round in its JS implementation.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
@@ -135,11 +138,10 @@ const projects = [
     id: 'vanillajs-bankaccount',
     title: 'BANK ACCOUNT',
     description: <div>
-      Take a glimpse of simple bank account App, where the user can add the amount to be deposited and
-      on single click, the deposited amount gets reflected in the customers account balance.
-      The App offers user to withdraw a ceratin amount less than or equal to user&apos;s account balance.
-      In case user tries to withdraw unrealistic amount, the app displays a message stating user that
-      you can not withdraw the amount.
+      Take a glimpse of this simple bank account App. The user can define the amount to be deposited or
+      withdrawn and, with a single click, the customers account balance is adjusted automatically.
+      If the user tries to withdraw unrealistic amount higher than their account balance then the app displays
+      an error message stating that the user can not withdraw the desired amount.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
@@ -150,9 +152,10 @@ const projects = [
     id: 'vanillajs-loginwebpage',
     title: 'LOGIN WEB PAGE',
     description: <div>
-      This project is a simple demonstration of a static login page comprising of input fields,
-      interactable buttons and a link. By the end of this project I was pretty
-      confident with HTML and CSS concepts.
+      This project is a simple demonstration of a static login page comprising of various intractable elements
+      like input fields, buttons and links. None of the elements do anything because no javascript was used in
+      this project. However, this project was invaluable in giving greater confidence while learning foundational
+      HTML and CSS skills.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
@@ -163,9 +166,9 @@ const projects = [
     id: 'vanillajs-healthcarewebpage',
     title: 'HEALTH CARE WEBPAGE',
     description: <div>
-      Had a fun experience building this static health care web App. This App was my first ever code.
+      Had a fun experience building this static health care web App. This App was my first ever proper project.
       Working on this project not only boosted my confidence to code but also served as a stepping stone towards
-      achieving my goal to become a web developer.
+      achieving my goal of becoming a web developer.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',

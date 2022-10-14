@@ -4,8 +4,8 @@ import { Background } from './background'
 
 export const title = 'WEATHER FORECAST APPLICATION'
 export const description = <div>
-  Want to know the weather outside? -Here&apos;s the perfect App that displays weather
-  conditions to the users at thier ease. This dynamic react based app displays
+  Want to know the weather outside? Here&apos;s the perfect App that displays weather
+  conditions to the users using their current location. This dynamic react based app displays
   current and 7 day weather forecast information including date, weather type, temperature (max & min&), wind speed,
   rain and snowfall by means of an external <span className='bg-purple-100 px-2'>API</span>.
 </div>
