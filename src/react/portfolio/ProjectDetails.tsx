@@ -1,5 +1,5 @@
 import gitImage from './assets/github.png'
-import { buttonShadowEffect } from './tailwind_constants'
+import { buttonShadowEffect } from '../common/tailwind_constants'
 
 const buttonStyle = `flex items-center gap-2 bg-indigo-500 font-bold rounded-md px-2 py-1 text-white hover:bg-gradient-to-r from-purple-400 to-indigo-500 ${buttonShadowEffect}`
 export const ProjectDetails = (props) => {
