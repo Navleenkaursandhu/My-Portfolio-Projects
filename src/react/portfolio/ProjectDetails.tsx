@@ -15,7 +15,7 @@ export const ProjectDetails = (props) => {
             })}
           </div>
 
-          <div className='flex items-start gap-2 mt-2'><span className="material-symbols-rounded">
+          <div className='flex items-start gap-2 mt-4'><span className="material-symbols-rounded">
             description
           </span>{props.details.description}</div>
 

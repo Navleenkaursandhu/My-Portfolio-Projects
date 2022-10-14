@@ -105,9 +105,9 @@ const projects = [
       a lifeline in your first round as it&apos;s already 100%). On hit, opponents health will reduce by a random number (the damage will be reflected by red bar)
       and on selecting lifeline the current player&apos;s health increases by random number (health is reflected by green bar). After
       3rd round the player with good health wins the battle.
-      <p className='bg-yellow-100 italic px-2 py-1 flex align-center gap-2'>
+      <p className='bg-yellow-100 italic p-4 flex align-center gap-2 mt-4 mb-4 rounded-md'>
         <span className="material-symbols-rounded">
-          info
+          warning
         </span>
         Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight.
       </p>
@@ -121,11 +121,11 @@ const projects = [
     id: 'vanillajs-rpsgame',
     title: 'ROCK PAPER SCISSORS GAME',
     description: <div><ReactReimplementationRedirect link={reactRPSGameID} />
-      <p className='bg-yellow-100 italic px-2 py-1 flex align-center gap-2'>
+      <p className='bg-yellow-100 italic p-4 flex align-center gap-2 mt-4 mb-4 rounded-md'>
         <span className="material-symbols-rounded">
-          info
+          warning
         </span>
-        Please note that instead of 5, the game has 1 round in its JS implementation.
+        Please note that instead of 5, the game has 1 round in its JS implementation below.
       </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
