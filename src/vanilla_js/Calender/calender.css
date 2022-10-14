@@ -40,6 +40,7 @@
 .date-today{
   border-radius: 50px;
   background-color: #705cff;
+  color: white;
 }
 
 .flex-date-container > div {
