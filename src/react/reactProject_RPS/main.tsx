@@ -16,7 +16,7 @@ export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/ma
 
 export const Main = () => {
   return (
-    <div className='font-applyArchitect'>
+    <div className='font-applyConcert'>
       <Input />
     </div>
   )

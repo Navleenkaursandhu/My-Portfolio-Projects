@@ -26,6 +26,7 @@ module.exports = {
         'applyCormorant':[ 'Cormorant Garamond', 'serif'],
         'applyAlfa':['Alfa Slab One', 'cursive'],
         'applyLota':['Lato', 'sans-serif'],
+        'applyConcert': ['Concert One', 'cursive'],
       },
     },
   },

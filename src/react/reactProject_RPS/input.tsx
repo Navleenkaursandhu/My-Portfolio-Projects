@@ -1,5 +1,5 @@
 import React from 'react'
-import image from './assets/background.png'
+import { buttonShadowEffect } from '../common/tailwind_constants'
 
 const maxRounds = 5
 export const Input = () => {
@@ -37,9 +37,9 @@ export const Input = () => {
   React.useEffect(() => {
     if (round > maxRounds) {
       if (botScore > userScore) {
-        setResult('You Lost:(')
+        setResult('You Lost!')
       } else if (botScore < userScore) {
-        setResult('You Won:)')
+        setResult('You Won!')
       } else {
         setResult('Draw!')
       }
@@ -58,29 +58,32 @@ export const Input = () => {
   return (
     <>
       <div className='text-center text-[40px] flex justify-center gap-[20px] items-center p-[10px]'>
-        <img className='h-[100px] w-[100px] rounded-[50px]' src={image} />
-        <div className='game'>Rock Paper Scissors</div>
+        <div className='flex gap-6 text-gray-500 font-bold text-5xl'>ROCK PAPER SCISSORS</div>
       </div>
 
       <div className='flex justify-center gap-[100px] p-[10px]'>
-        <div className='h-[150px] w-[150px] bg-[#f6bbbb] rounded-[30px] flex justify-center items-center text-[64px] border-[3px] border-black hover: cursor-pointer hover:shadow-[3px_3px_3px_3px_#f6a4a4] hover:text-[78px]' onClick={() => onUserChoice('✊')}>✊</div>
-        <div className='h-[150px] w-[150px] bg-[#f4f4bb] rounded-[30px] flex justify-center items-center text-[64px] border-[3px] border-black hover: cursor-pointer hover:shadow-[3px_3px_3px_3px_#f5f5b0] hover:text-[78px]' onClick={() => onUserChoice('✋')}>✋</div>
-        <div className='h-[150px] w-[150px] bg-[#b4b4f5] rounded-[30px] flex justify-center items-center text-[64px] border-[3px] border-black hover: cursor-pointer hover:shadow-[3px_3px_3px_3px_#a4a4f3] hover:text-[78px]' onClick={() => onUserChoice('✌️')}>✌️</div>
+        <div className={`${buttonShadowEffect} hover:shadow-teal-600 hover:cursor-pointer shadow-teal-600 h-[150px] w-[150px] bg-teal-400 rounded-[30px] flex justify-center items-center text-[64px] hover:text-[78px]`} onClick={() => onUserChoice('✊')}>✊</div>
+        <div className={`${buttonShadowEffect} hover:shadow-indigo-600 hover:cursor-pointer shadow-indigo-600 h-[150px] w-[150px] bg-indigo-400 rounded-[30px] flex justify-center items-center text-[64px] hover:text-[78px]`} onClick={() => onUserChoice('✋')}>✋</div>
+        <div className={`${buttonShadowEffect} hover:shadow-fuchsia-600 hover:cursor-pointer shadow-fuchsia-600 h-[150px] w-[150px] bg-fuchsia-400 rounded-[30px] flex justify-center items-center text-[64px] hover:text-[78px]`} onClick={() => onUserChoice('✌️')}>✌️</div>
       </div>
-      <div className='p-[24px] text-center text-[30px]'>
 
-        <div>User: {userChoice}</div>
-        <div className='mb-[40px]'>User Score: {userScore}</div>
-        <div>Bot: {botChoice}</div>
-        <div>Bot Score: {botScore}</div>
+      <div className='text-gray-500'>
+        <div className='p-[24px] text-center text-[30px]'>
+          <div>User: {userChoice}</div>
+          <div className='mb-[40px]'>User Score: {userScore}</div>
+          <div>Bot: {botChoice}</div>
+          <div>Bot Score: {botScore}</div>
+        </div>
       </div>
 
       <div className='flex justify-center '>
-        <button className='rounded-[10px] bg-slate-200 px-[10px] border-2 border-black border-double text-[24px] font-applyArchitect' onClick={() => resetGame()}>RESET</button>
+        <button className={`${buttonShadowEffect} hover:shadow-indigo-600 hover:cursor-pointer shadow-indigo-600 rounded-[10px] bg-indigo-400 border-none px-8 py-2 text-4xl text-stone-200`} onClick={() => resetGame()}>RESET</button>
       </div>
 
-      <div className='text-center text-[34px] mt-[14px]'>{result}</div>
-      <div className='text-center text-[34px] mt-[14px]'>Round <span>{round > maxRounds ? maxRounds : round}</span> of {maxRounds}</div>
+      <div className='flex flex-col gap-6 text-center text-[34px] mt-[20px]'>
+        <div className='text-gray-500 text-5xl'>Round <span>{round > maxRounds ? maxRounds : round}</span> of {maxRounds}</div>
+        <div className='text-teal-400 text-4xl'>{result}</div>
+      </div>
     </>
   )
 }
