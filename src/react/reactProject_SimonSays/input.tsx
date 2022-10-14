@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { buttonShadowEffect } from '../common/tailwind_constants'
 
 const sleep = async (timeToSleep) => await new Promise(resolve => setTimeout(resolve, timeToSleep))
 
@@ -59,26 +60,26 @@ export const Input = () => {
       <div className="flex flex-col justify-center items-center gap-[14px] p-[14px]">
         {Array(5).fill(0).map((value, i) => {
           if (gameState === 'lose' && i === userInput[userInput.length - 1]) {
-            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-[red]" key={i}></div>
+            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-rose-500" key={i}></div>
           }
 
           if (boxToColor === i) {
-            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-[blue]" key={i}></div>
+            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-cyan-500" key={i}></div>
           }
 
           if (userInput.includes(i)) {
-            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-[green]" key={i}></div>
+            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-emerald-500" key={i}></div>
           }
 
           return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] shadow-[3px_3px_grey] bg-[#f9f8f4]" key={i}></div>
         })}
       </div>
 
-      <div className="text-center">
-        <button className="text-[20px] rounded-[10px] p-[6px] bg-[#e5e7eb] hover:cursor-pointer hover:shadow-[3px_3px_grey]" onClick={() => { void startGame() }}>PLAY</button>
+      <div className="text-center mt-8">
+        <button className={`text-2xl rounded-md px-6 py-2 bg-[#e5e7eb] shadow-gray-500 hover:shadow-gray-500 ${buttonShadowEffect}`} onClick={() => { void startGame() }}>PLAY</button>
       </div>
 
-      <div className="text-[24px] text-center p-[10px]">{message}</div>
+      <div className="text-3xl text-center mt-4 p-[10px]">{message}</div>
     </>
   )
 }
