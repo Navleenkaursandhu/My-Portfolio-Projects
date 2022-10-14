@@ -1,4 +1,5 @@
 import React from 'react'
+import { buttonShadowEffect } from '../common/tailwind_constants'
 
 export const Input = () => {
   const [textInput, setTextInput] = React.useState('')
@@ -16,23 +17,23 @@ export const Input = () => {
 
   return (
     <>
-      <div className='text-center p-[10px] text-[24px] font-bold'>TODO LIST</div>
-      <div className='flex justify-between'>
+      <div className='text-center p-[10px] text-3xl font-bold text-slate-500'>TODO LIST</div>
+      <div className='flex gap-8 justify-center'>
         <input
-          className="w-[350px] p-[10px] text-[24px] rounded-[10px]"
+          className="p-[14px] text-2xl rounded-[10px] bg-slate-100 w-3/4"
           placeholder='Add your task here'
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)} />
 
         <button
-          className='hover:cursor-cell text-[24px] rounded-[10px] bg-[#ddd9d9] text-black px-[4px]'
+          className={`px-6 rounded-lg bg-slate-200 shadow-slate-500 text-slate-500 font-bold hover:shadow-slate-500 text-2xl ${buttonShadowEffect}`}
           onClick={() => displayTask()}>Add Task</button>
       </div>
 
       <div className='flex flex-col gap-[20px] mt-[20px] rounded-[10px]'>
-        {list.map((task, i) => <div className="flex items-center justify-between bg-[#ddd9d9] rounded-[10px] p-[10px] text-[25px]" key={i} id={i.toString()}>📝{task}
+        {list.map((task, i) => <div className="flex items-center justify-between bg-slate-100 rounded-[10px] p-[10px] text-[25px]" key={i} id={i.toString()}>📝{task}
           <button onClick={() => doneTask(i)}>
-            <span className="material-symbols-rounded text-[36px] hover:cursor-pointer hover:bg-[#b1adad]">delete_forever</span>
+            <span className="material-symbols-rounded text-[36px] hover:cursor-pointer hover:bg-slate-300 hover:rounded-md">delete_forever</span>
           </button>
         </div>)}
       </div>

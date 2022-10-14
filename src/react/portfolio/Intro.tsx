@@ -1,7 +1,7 @@
 import portfolioImage from './assets/portfolio-image.png'
 import githubImage from './assets/mygithub.png'
 import linkedInImage from './assets/linkedin.png'
-import { buttonShadowEffect } from './tailwind_constants'
+import { buttonShadowEffect } from '../common/tailwind_constants'
 export const Intro = () => {
   return (
     <>

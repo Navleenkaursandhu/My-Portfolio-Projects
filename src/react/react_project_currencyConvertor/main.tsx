@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react'
 
 export const title = 'CURRENCY CONVERTER'
-export const description = 'Currency Converter Application'
+export const description = <div>
+  Get a fast and easy calculator for converting 100+ currencies using the latest live exchange rates by just selecting correct pair of
+  ISO currency codes. Exchange rates keep on fluctuating, and this live Currency Converter fetches the latest exchange rate from an external <span className='bg-purple-100 px-2'>API</span> making
+  it the ideal tool to keep your eye on the market rate for any given currency. You don&apos;t even need an account to use this App, just select the
+  currency pair you want to see and the built-in market Exchange Rate Calculator will provide you the latest market values.
+</div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'September 2022'
 export const link = './CurrencyConvertor'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/react_projects/src/react_project_currencyConvertor'
+export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_currencyConvertor'
 
 export const Main = () => {
   const [symbols, setSymbols] = useState<any>({})
