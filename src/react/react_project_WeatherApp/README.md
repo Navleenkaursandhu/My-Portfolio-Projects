@@ -5,15 +5,15 @@ Here's the perfect App that displays weather conditions to the users using their
 
 This dynamic react based app displays current and 7 day weather forecast information including date, weather type, temperature (max & min&), wind speed, rain and snowfall by means of an external API.
 
-**SKILLS**: 
-- REACT
-- VITE
-- JAVASCRIPT 
-- TAILWIND CSS
+## SKILLS: 
+- React
+- Vite 
+- JavaScript 
+- Tailwind CSS
 - HTML
-- REST API
-- ESLINT
-- GIT
-- GITHUB
-- VSCODE
-- RESPONSIVE WEB DESIGN
+- Local Storage API
+- ESLint
+- Git
+- Github
+- VS Code
+- Responsive Web Design

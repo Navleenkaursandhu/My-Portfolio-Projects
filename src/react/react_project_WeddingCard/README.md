@@ -5,18 +5,15 @@ So, with the same thought I came up with this Wedding Card App, where all you ne
 
 The app stores the information you entered locally so that you do not have to enter it again when you come back to this web page. This app respects the user's privacy and no information is sent to or stored on an external server.
 
-**SKILLS**: 
-- REACT
-- VITE
-- JAVASCRIPT 
-- TAILWIND CSS
+## SKILLS: 
+- React
+- Vite 
+- JavaScript 
+- Tailwind CSS
 - HTML
-- LOCAL STORAGE API
-- ESLINT
-- GIT
-- GITHUB
-- VSCODE
-- RESPONSIVE WEB DESIGN
-
-
-
+- Local Storage API
+- ESLint
+- Git
+- Github
+- VS Code
+- Responsive Web Design

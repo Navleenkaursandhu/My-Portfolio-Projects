@@ -3,15 +3,15 @@ Why waste your time trying to locate a word and its meaning when its just a sear
 
 Checkout this App, which provides information about pronounciation along with meanings, synonyms and antonyms of the searched word via external API in a matter of seconds.
 
-**SKILLS**:
-- REACT
-- VITE 
-- JAVASCRIPT
-- TAILWIND CSS
+## SKILLS: 
+- React
+- Vite 
+- JavaScript 
+- Tailwind CSS
 - HTML
 - REST API
-- ESLINT
-- GIT
-- GITHUB
-- VSCODE
-- RESPONSIVE WEB DESIGN
+- ESLint
+- Git
+- Github
+- VS Code
+- Responsive Web Design

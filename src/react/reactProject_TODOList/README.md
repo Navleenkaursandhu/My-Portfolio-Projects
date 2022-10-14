@@ -1,6 +1,16 @@
-TODO LIST 
-Do you want to organize and prioritize your tasks? -Here's a smart task list for everyday use.
-This is simple and convinient to use App that allows the user to add their important daily tasks in an organized manner. Once you feel like you no longer want the task in the list it can be easily deleted. With this App whether you are at home, at work
-and in your free time - you will be able to focus on really important things!
+# TODO LIST 
+Do you want to organize and prioritize your tasks? Here is a smart task list for everyday use.
 
-SKILLS: React, Vite, JS, TailwindCSS, HTML, ESLint, Git, Github, VSCode, Responsive Web Design
+This is a simple and convenient to use App that allows the user to add their important daily tasks in an organized manner. You can easily delete a task in the list once you are done with it. With this App whether you are at home, at work or anywhere in between - you will be able to stay focused on the things most important to you!
+
+## SKILLS: 
+- React
+- Vite 
+- JavaScript 
+- Tailwind CSS
+- HTML
+- ESLint
+- Git
+- Github
+- VS Code
+- Responsive Web Design
