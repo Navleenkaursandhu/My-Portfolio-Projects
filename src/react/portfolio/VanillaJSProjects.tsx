@@ -105,7 +105,10 @@ const projects = [
       a lifeline in your first round as it&apos;s already 100%). On hit, opponents health will reduce by a random number (the damage will be reflected by red bar)
       and on selecting lifeline the current player&apos;s health increases by random number (health is reflected by green bar). After
       3rd round the player with good health wins the battle.
-      <p className='bg-yellow-100 italic'>
+      <p className='bg-yellow-100 italic px-2 py-1 flex align-center gap-2'>
+        <span className="material-symbols-rounded">
+          info
+        </span>
         Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight.
       </p>
     </div>,
@@ -118,7 +121,12 @@ const projects = [
     id: 'vanillajs-rpsgame',
     title: 'ROCK PAPER SCISSORS GAME',
     description: <div><ReactReimplementationRedirect link={reactRPSGameID} />
-      Instead of 5, the game has 1 round in its JS implementation.
+      <p className='bg-yellow-100 italic px-2 py-1 flex align-center gap-2'>
+        <span className="material-symbols-rounded">
+          info
+        </span>
+        Please note that instead of 5, the game has 1 round in its JS implementation.
+      </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
@@ -152,7 +160,7 @@ const projects = [
     id: 'vanillajs-loginwebpage',
     title: 'LOGIN WEB PAGE',
     description: <div>
-      This project is a simple demonstration of a static login page comprising of various intractable elements
+      This project is a simple demonstration of a static login page comprising of various interactable elements
       like input fields, buttons and links. None of the elements do anything because no javascript was used in
       this project. However, this project was invaluable in giving greater confidence while learning foundational
       HTML and CSS skills.
@@ -166,9 +174,9 @@ const projects = [
     id: 'vanillajs-healthcarewebpage',
     title: 'HEALTH CARE WEBPAGE',
     description: <div>
-      Had a fun experience building this static health care web App. This App was my first ever proper project.
+      Had a great experience building this static health care web App. This App was my first ever proper project.
       Working on this project not only boosted my confidence to code but also served as a stepping stone towards
-      achieving my goal of becoming a web developer.
+      achieving my goal of becoming a web developer. None of the elements do anything because no javascript was used in this project.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',

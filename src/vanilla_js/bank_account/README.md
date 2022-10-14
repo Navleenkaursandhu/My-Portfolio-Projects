@@ -1,8 +1,11 @@
-BANK ACCOUNT
-Take a glimpse of simple bank account App, where the user can add the amount to be deposited and
-on single click, the deposited amount gets reflected in the customers account balance.
-The App offers user to withdraw a ceratin amount less than or equal to user's account balance.
-In case user tries to withdraw unrealistic amount, the app displays a message stating user that
-you can not withdraw the amount.
+# BANK ACCOUNT
+Take a glimpse of this simple bank account App. The user can define the amount to be deposited or withdrawn and, with a single click, the customers account balance is adjusted automatically. If the user tries to withdraw unrealistic amount higher than their account balance then the app displays an error message stating that the user can not withdraw the desired amount.
 
-SKILLS: JS, CSS, HTML, Git, Github, VSCode, Responsive Web Design 
+## SKILLS: 
+- JavaScript 
+- CSS
+- HTML
+- Git
+- Github
+- VS Code
+- Responsive Web Design
