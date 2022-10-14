@@ -50,7 +50,7 @@ export const Main = () => {
   }
 
   return (
-    <div className="relative mt-[64px] mr-[auto] mb-[0px] ml-[auto] w-[560px] font-applyPTSans">
+    <div className="relative mt-[64px] mr-[auto] mb-[0px] ml-[auto] w-2/6 font-applyPTSans">
       <div className='h-[100px] w-[100px] rounded-[50px] top-[-10%] left-[70%] text-[64px] bg-[#86f6d1] flex justify-center items-center absolute shadow-[2px_2px_3px_3px_#999899] '>¥</div>
       <div className='h-[130px] w-[130px] rounded-[70px] top-[50%] left-[-18%] text-[80px] bg-[#fc6da9] flex justify-center items-center absolute shadow-[2px_2px_3px_3px_#999899]'>€</div>
       <div className='h-[96px] w-[96px] rounded-[50px] top-[70%] left-[95%] text-[54px] bg-[#f78cd1] flex justify-center items-center absolute shadow-[2px_2px_3px_3px_#999899]'>$</div>
