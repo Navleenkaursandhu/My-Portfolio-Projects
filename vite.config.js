@@ -1,21 +1,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import {checker} from 'vite-plugin-checker'
-import {resolve} from 'path'
+import {viteStaticCopy} from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        // vanillaJs: resolve(__dirname, 'src/vanilla_js/**/*.html'),
-        // htmlPractice: resolve(__dirname, 'src/html_practice/**/*.html'),
-      }
-    }
-  }, 
   plugins: [
     react(),
+    viteStaticCopy({
+      targets: [{
+        src: 'src/vanilla_js/*',
+        dest: 'vanilla_js',
+      }],
+      watch: {
+        reloadPageOnChange: true,
+      }
+    }),
     checker({
       typescript: true,
       eslint: {
