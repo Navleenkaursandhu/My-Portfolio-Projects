@@ -20,7 +20,7 @@ const projects = [
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/Calender/calender.html',
+    link: '/vanilla_js/Calender/calender.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/Calender'
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     description: <ReactReimplementationRedirect link={reactAnalogClockID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'SVG', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/analogClock/clock.html',
+    link: '/vanilla_js/analogClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/analogClock'
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     description: <ReactReimplementationRedirect link={reactLCDClockID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/LCDClock/clock.html',
+    link: '/vanilla_js/LCDClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/LCDClock'
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     description: <ReactReimplementationRedirect link={reactTODOListID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/TODOList/list.html',
+    link: '/vanilla_js/TODOList/list.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/TODOList'
   },
   {
@@ -64,7 +64,7 @@ const projects = [
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/CardMatch/game.html',
+    link: '/vanilla_js/CardMatch/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/CardMatch'
   },
   {
@@ -73,7 +73,7 @@ const projects = [
     description: <ReactReimplementationRedirect link={reactHangmanGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/HangmanGame/game.html',
+    link: '/vanilla_js/HangmanGame/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/HangmanGame'
   },
   {
@@ -82,7 +82,7 @@ const projects = [
     description: <ReactReimplementationRedirect link={reactSimonSaysGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/SimonSays/game.html',
+    link: '/vanilla_js/SimonSays/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/SimonSays'
   },
   {
@@ -91,7 +91,7 @@ const projects = [
     description: <ReactReimplementationRedirect link={reactTicTacToeGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'August 2022',
-    link: '/src/vanilla_js/tic_tac_toe/game.html',
+    link: '/vanilla_js/tic_tac_toe/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tic_tac_toe'
   },
   {
@@ -114,7 +114,7 @@ const projects = [
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022 - August 2022',
-    link: '/src/vanilla_js/fighting_game/game.html',
+    link: '/vanilla_js/fighting_game/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/fighting_game'
   },
   {
@@ -130,7 +130,7 @@ const projects = [
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
-    link: '/src/vanilla_js/rock_paper_scissors/rps.html',
+    link: '/vanilla_js/rock_paper_scissors/rps.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/rock_paper_scissors'
   },
   {
@@ -139,7 +139,7 @@ const projects = [
     description: <ReactReimplementationRedirect link={reactTipCalculatorID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
-    link: '/src/vanilla_js/tip_calculator/code.html',
+    link: '/vanilla_js/tip_calculator/code.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tip_calculator'
   },
   {
@@ -153,7 +153,7 @@ const projects = [
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
-    link: '/src/vanilla_js/bank_account/bank.html',
+    link: '/vanilla_js/bank_account/bank.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/bank_account'
   },
   {
@@ -167,7 +167,7 @@ const projects = [
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
-    link: '/src/vanilla_js/login_webpage/Login.html',
+    link: '/vanilla_js/login_webpage/Login.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/login_webpage'
   },
   {
@@ -180,7 +180,7 @@ const projects = [
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: 'July 2022',
-    link: '/src/vanilla_js/health_care_webpage/health_webpage.html',
+    link: '/vanilla_js/health_care_webpage/health_webpage.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/health_care_webpage'
   }
 ]
