@@ -56,7 +56,7 @@ export const Input = () => {
   }
 
   return (
-    <div className='flex flex-col h-screen justify-center items-center'>
+    <div className='flex flex-col items-center'>
       <div className="text-black text-center lg:text-6xl md:text-5xl text-4xl">Tic Tac Toe</div>
 
       <div className="flex justify-center lg:text-4xl text-3xl p-6">Current Player:&nbsp;

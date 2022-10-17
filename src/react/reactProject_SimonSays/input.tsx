@@ -53,7 +53,7 @@ export const Input = () => {
 
   return (
     <div className='font-applyBubblegum flex flex-col items-center'>
-      <div className="lg:text-4xl text-3xl text-center pb-4">
+      <div className="lg:text-4xl text-3xl text-center p-4">
         Simon Says 😀
       </div>
 
