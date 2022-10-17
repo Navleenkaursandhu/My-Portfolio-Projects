@@ -53,31 +53,31 @@ export const Input = () => {
 
   return (
     <div className='font-applyBubblegum flex flex-col items-center'>
-      <div className="lg:text-4xl text-3xl text-center pb-4 pt-1">
+      <div className="lg:text-4xl text-3xl text-yellow-500 text-center pb-3 pt-1">
         Simon Says 😀
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-4 mb-6">
+      <div className="flex flex-col justify-center items-center gap-4 mb-4">
         {Array(5).fill(0).map((value, i) => {
           if (gameState === 'lose' && i === userInput[userInput.length - 1]) {
-            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-rose-500" key={i}></div>
+            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-rose-300" key={i}></div>
           }
 
           if (boxToColor === i) {
-            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-cyan-500" key={i}></div>
+            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-cyan-300" key={i}></div>
           }
 
           if (userInput.includes(i)) {
-            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-emerald-500" key={i}></div>
+            return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-emerald-300" key={i}></div>
           }
 
-          return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] shadow-[3px_3px_grey] bg-[#f9f8f4]" key={i}></div>
+          return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-lime-200" key={i}></div>
         })}
       </div>
 
-        <button className={`lg:text-2xl text-xl rounded-md text-center px-6 py-1 bg-[#e5e7eb] shadow-gray-500 hover:shadow-gray-500 ${buttonShadowEffect}`} onClick={() => { void startGame() }}>PLAY</button>
+        <button className={`lg:text-2xl text-xl rounded-md text-center px-6 py-1 text-white bg-orange-200 shadow-orange-300 hover:shadow-orange-300 ${buttonShadowEffect}`} onClick={() => { void startGame() }}>PLAY</button>
 
-      <div className="lg:text-2xl text-xl text-center pt-4">{message}</div>
+      <div className="lg:text-2xl text-xl text-center text-yellow-500 pt-4">{message}</div>
     </div>
   )
 }
