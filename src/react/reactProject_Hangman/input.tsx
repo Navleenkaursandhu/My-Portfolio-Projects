@@ -47,29 +47,30 @@ export const Input = () => {
 
   return (
     <>
-      <div className='flex flex-col items-center gap-14'>
-        <h1 className="text-center text-[50px]">HANGMAN</h1>
-        <button className={`${buttonShadowEffect} text-[34px] rounded-[10px] px-10 py-1 outline-none bg-rose-200 hover:shadow-rose-300 shadow-rose-300 hover:cursor-pointer`} onClick={() => { void displayNewWord() }}>PLAY</button>
-        <div className="flex gap-[20px] justify-center p-[30px]">
-          {Array(16).fill('').map((char, i) => {
-            return <div className="h-[70px] w-[70px] rounded-[60px] bg-red-100 flex justify-center items-center text-[40px]" key={i}>
-              {noMatchArray[i] || ''}
-            </div>
-          })}
-        </div>
+      <div className='text-center'>
+        <h1 className="lg:text-5xl text-4xl m-14">HANGMAN</h1>
+        <button className={`${buttonShadowEffect} lg:text-4xl text-3xl text-right rounded-[10px] px-10 py-1 outline-none bg-rose-200 hover:shadow-rose-300 shadow-rose-300 hover:cursor-pointer`} onClick={() => { void displayNewWord() }}>PLAY</button>
+      </div>
 
-        <div className="flex p-[50px] gap-[20px] justify-center text-[60px]">
-          {arrayStrings.map((char, i) => {
-            return <div className="h-[50px] w-[50px] p-[10px] flex justify-center items-center border-b-[2px] border-black" key={i}>{char}
+      <div className="flex flex-wrap gap-6 justify-center p-10">
+        {Array(16).fill('').map((char, i) => {
+          return <div className="lg:h-[70px] lg:w-[70px] md:h-[50px] md:w-[50px] h-[40px] w-[40px] rounded-[60px] bg-red-100 border-2 border-rose-400 flex justify-center items-center lg:text-4xl md:text-4xl text-2xl" key={i}>
+            {noMatchArray[i] || ''}
+          </div>
+        })}
+      </div>
 
-            </div>
-          })}
-        </div>
+      <div className="flex mx-4 lg:gap-6 md:gap-4 gap-2 justify-center lg:text-4xl md:text-4xl text-2xl mt-32">
+        {arrayStrings.map((char, i) => {
+          return <div className="lg:w-26 md:w-14 w-8 flex justify-center items-end border-b-[2px] border-black" key={i}>
+            {char}
+          </div>
+        })}
+      </div>
 
-        <div className="flex justify-center text-[50px]">
-          {noMatchArray[15] && <div>You Lost! It&apos;s {word}</div>}
-          {!(arrayStrings.length === 0) && arrayStrings.every(char => char !== '') && <div>You Won!</div>}
-        </div>
+      <div className="lg:text-5xl md:text-4xl text-2xl text-center mt-16">
+        {noMatchArray[15] && <div>You Lost! It&apos;s {word}</div>}
+        {!(arrayStrings.length === 0) && arrayStrings.every(char => char !== '') && <div>You Won!</div>}
       </div>
     </>)
 }
