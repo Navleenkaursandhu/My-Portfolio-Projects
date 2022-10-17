@@ -21,7 +21,7 @@ export const Input = () => {
       <div className='flex lg:flex-row flex-col gap-8 justify-center items-center lg:text-2xl md:text-xl text-md'>
         <input
           className="p-[14px] rounded-[10px] bg-slate-100 w-2/3"
-          placeholder='Add your task here'
+          placeholder='Enter your task here'
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)} />
 
