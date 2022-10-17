@@ -13,4 +13,3 @@ Please note that in order to play this game you need to press your keyboard alph
 - Git
 - Github
 - VS Code
-- Responsive Web Design 

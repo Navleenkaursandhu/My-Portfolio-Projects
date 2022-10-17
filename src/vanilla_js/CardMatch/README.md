@@ -13,4 +13,3 @@ This game is a great exercise to train your memory in a playful way and most of 
 - Git
 - Github
 - VS Code
-- Responsive Web Design

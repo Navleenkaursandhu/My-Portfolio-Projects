@@ -7,4 +7,3 @@ This project is a simple demonstration of a static login page comprising of vari
 - Git
 - Github
 - VS Code
-- Responsive Web Design

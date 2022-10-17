@@ -10,4 +10,3 @@ Most importantly, no paper is used in this process and you no longer require to 
 - Git
 - Github
 - VS Code
-- Responsive Web Design

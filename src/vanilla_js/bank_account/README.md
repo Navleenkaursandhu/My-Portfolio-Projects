@@ -8,4 +8,3 @@ Take a glimpse of this simple bank account App. The user can define the amount t
 - Git
 - Github
 - VS Code
-- Responsive Web Design

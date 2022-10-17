@@ -7,4 +7,3 @@ Had a great experience building this static health care web App. This App was my
 - Git
 - Github
 - VS Code
-- Responsive Web Design
