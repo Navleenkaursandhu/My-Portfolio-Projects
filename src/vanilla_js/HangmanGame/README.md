@@ -14,4 +14,3 @@ Be warned, every time you guess a wrong letter you loose one out of 16 lifelines
 - Git
 - Github
 - VS Code
-- Responsive Web Design

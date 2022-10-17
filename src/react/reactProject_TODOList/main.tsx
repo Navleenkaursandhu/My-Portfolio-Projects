@@ -8,7 +8,7 @@ export const description = <div>
   a task in the list once you are done with it. With this App whether you are at home, at work
   or anywhere in between - you will be able to stay focused on the things most important to you!
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'August 2022'
 export const link = './reactProject_TODOList'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_TODOList'

@@ -10,4 +10,3 @@ This Analog clock App comes in handy when you want to know the accurate date and
 - Git
 - Github
 - VS Code
-- Responsive Web Design

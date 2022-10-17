@@ -13,4 +13,3 @@ you correctly match the pattern (indicated by green color), you win the round. I
 - Git
 - Github
 - VS Code
-- Responsive Web Design

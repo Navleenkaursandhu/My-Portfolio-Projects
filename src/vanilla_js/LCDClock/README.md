@@ -10,4 +10,3 @@ A novel way to know and get the time is by using this 24 hour digital desktop cl
 - Git
 - Github
 - VS Code
-- Responsive Web Design

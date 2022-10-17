@@ -10,4 +10,3 @@ The App has a simple interface where each symbol is superior to another. As per 
 - Git
 - Github
 - VS Code
-- Responsive Web Design

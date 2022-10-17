@@ -11,4 +11,3 @@ Don't worry, you'll no longer be in this awkward situation any more, as this fre
 - Git
 - Github
 - VS Code
-- Responsive Web Design

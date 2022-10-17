@@ -10,4 +10,3 @@ This is a simple and convenient to use App that allows the user to add their imp
 - Git
 - Github
 - VS Code
-- Responsive Web Design

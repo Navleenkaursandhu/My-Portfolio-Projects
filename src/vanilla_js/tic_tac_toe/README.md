@@ -11,4 +11,3 @@ Each player's goal is to make 3 in a row. You are X, your friend is O. You and y
 - Git
 - Github
 - VS Code
-- Responsive Web Design
