@@ -15,10 +15,8 @@ export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/ma
 
 export const Main = () => {
   return (
-    <div className='flex justify-center'>
-      <div className='my-[50px] flex-col w-[50%] h-100vh font-applyLibre'>
+      <div className='lg:px-20 md:px-20 px-8 h-screen font-applyLibre'>
         <Input />
       </div>
-    </div>
   )
 }
