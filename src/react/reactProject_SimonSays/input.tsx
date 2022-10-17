@@ -57,7 +57,7 @@ export const Input = () => {
         Simon Says 😀
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-4">
+      <div className="flex flex-col justify-center items-center gap-4 mb-6">
         {Array(5).fill(0).map((value, i) => {
           if (gameState === 'lose' && i === userInput[userInput.length - 1]) {
             return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-rose-500" key={i}></div>
@@ -75,9 +75,9 @@ export const Input = () => {
         })}
       </div>
 
-        <button className={`lg:text-2xl text-xl rounded-md text-center mt-4 px-6 py-1 bg-[#e5e7eb] shadow-gray-500 hover:shadow-gray-500 ${buttonShadowEffect}`} onClick={() => { void startGame() }}>PLAY</button>
+        <button className={`lg:text-2xl text-xl rounded-md text-center px-6 py-1 bg-[#e5e7eb] shadow-gray-500 hover:shadow-gray-500 ${buttonShadowEffect}`} onClick={() => { void startGame() }}>PLAY</button>
 
-      <div className="text-xl text-center pt-4">{message}</div>
+      <div className="lg:text-2xl text-xl text-center pt-4">{message}</div>
     </div>
   )
 }
