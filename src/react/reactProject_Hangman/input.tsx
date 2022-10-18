@@ -49,7 +49,7 @@ export const Input = () => {
     <>
       <div className='text-center'>
         <h1 className="lg:text-5xl text-4xl m-14">HANGMAN</h1>
-        <button className={`${buttonShadowEffect} lg:text-4xl text-3xl text-right rounded-[10px] px-10 py-1 outline-none bg-rose-200 hover:shadow-rose-300 shadow-rose-300 hover:cursor-pointer`} onClick={() => { void displayNewWord() }}>PLAY</button>
+        <button className={`${buttonShadowEffect} lg:text-4xl text-3xl text-right rounded-[10px] px-10 py-2 outline-none bg-rose-200 hover:shadow-rose-300 shadow-rose-300 hover:cursor-pointer`} onClick={() => { void displayNewWord() }}>PLAY</button>
       </div>
 
       <div className="flex flex-wrap gap-6 justify-center p-10">
