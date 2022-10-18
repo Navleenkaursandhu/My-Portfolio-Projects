@@ -19,9 +19,9 @@ export const HourlyWeather = (props) => {
   return (
     <>
       <div className="flex lg:flex-row md:flex-row flex-col lg:justify-center md:justify-center items-center lg:gap-[20px] md:gap-[20px]">
-        <div className="lg:text-[34px] md:text-[34px] text-[26px]">{format(hour, 'HH:mm')}</div>
+        <div className="lg:text-4xl md:text-4xl text-3xl">{format(hour, 'HH:mm')}</div>
         <div>
-          <span className="lg:text-[60px] md:text-[60px] sm:text-[40px] text-[28px] material-symbols-rounded">
+          <span className="lg:text-[60px] md:text-[60px] text-[50px] material-symbols-rounded lg:mt-0 md:mt-0 mt-4">
             {isNight
               ? weatherCodeData.nightIcon || weatherCodeData.icon
               : weatherCodeData.icon
