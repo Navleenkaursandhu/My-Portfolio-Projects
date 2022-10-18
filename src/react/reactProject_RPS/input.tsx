@@ -57,16 +57,16 @@ export const Input = () => {
 
   return (
     <>
-      <div className='gap-6 text-gray-500 text-center font-bold lg:text-5xl md:text-5xl text-4xl p-10'>ROCK PAPER SCISSORS</div>
+      <div className='gap-6 text-gray-500 text-center font-bold lg:text-5xl md:text-5xl text-3xl p-10'>ROCK PAPER SCISSORS</div>
 
-      <div className='flex justify-center lg:gap-20 md:gap-10 gap-4'>
-        <div className={`${buttonShadowEffect} hover:shadow-teal-600 hover:cursor-pointer shadow-teal-600 lg:h-[150px] lg:w-[150px] md:h-[150px] md:w-[150px] h-[80px] w-[80px] bg-teal-400 rounded-[30px] flex justify-center items-center lg:text-6xl md:text-6xl text-4xl hover:lg:text-7xl hover:md:text-7xl hover:text-5xl`} onClick={() => onUserChoice('✊')}>✊</div>
-        <div className={`${buttonShadowEffect} hover:shadow-indigo-600 hover:cursor-pointer shadow-indigo-600 lg:h-[150px] lg:w-[150px] md:h-[150px] md:w-[150px] h-[80px] w-[80px] bg-indigo-400 rounded-[30px] flex justify-center items-center lg:text-6xl md:text-6xl text-4xl hover:lg:text-7xl hover:md:text-7xl hover:text-5xl`} onClick={() => onUserChoice('✋')}>✋</div>
-        <div className={`${buttonShadowEffect} hover:shadow-fuchsia-600 hover:cursor-pointer shadow-fuchsia-600 lg:h-[150px] lg:w-[150px] md:h-[150px] md:w-[150px] h-[80px] w-[80px] bg-fuchsia-400 rounded-[30px] flex justify-center items-center lg:text-6xl md:text-6xl text-4xl hover:lg:text-7xl hover:md:text-7xl hover:text-5xl`} onClick={() => onUserChoice('✌️')}>✌️</div>
+      <div className='flex lg:justify-center md:justify-center justify-around lg:gap-24 md:gap-14'>
+        <div className={`${buttonShadowEffect} hover:shadow-teal-600 hover:cursor-pointer shadow-teal-600 lg:h-[150px] lg:w-[150px] md:h-[150px] md:w-[150px] h-[90px] w-[90px] bg-teal-400 rounded-[30px] flex justify-center items-center lg:text-6xl md:text-6xl text-4xl hover:lg:text-7xl hover:md:text-7xl hover:text-5xl`} onClick={() => onUserChoice('✊')}>✊</div>
+        <div className={`${buttonShadowEffect} hover:shadow-indigo-600 hover:cursor-pointer shadow-indigo-600 lg:h-[150px] lg:w-[150px] md:h-[150px] md:w-[150px] h-[90px] w-[90px] bg-indigo-400 rounded-[30px] flex justify-center items-center lg:text-6xl md:text-6xl text-4xl hover:lg:text-7xl hover:md:text-7xl hover:text-5xl`} onClick={() => onUserChoice('✋')}>✋</div>
+        <div className={`${buttonShadowEffect} hover:shadow-fuchsia-600 hover:cursor-pointer shadow-fuchsia-600 lg:h-[150px] lg:w-[150px] md:h-[150px] md:w-[150px] h-[90px] w-[90px] bg-fuchsia-400 rounded-[30px] flex justify-center items-center lg:text-6xl md:text-6xl text-4xl hover:lg:text-7xl hover:md:text-7xl hover:text-5xl`} onClick={() => onUserChoice('✌️')}>✌️</div>
       </div>
 
       <div className='text-gray-500'>
-        <div className='p-[24px] text-center text-[30px]'>
+        <div className='p-[24px] text-center lg:text-3xl md:text-3xl text-2xl'>
           <div>User: {userChoice}</div>
           <div className='mb-[40px]'>User Score: {userScore}</div>
           <div>Bot: {botChoice}</div>
@@ -78,9 +78,9 @@ export const Input = () => {
         <button className={`${buttonShadowEffect} hover:shadow-indigo-600 hover:cursor-pointer shadow-indigo-600 rounded-[10px] bg-indigo-400 border-none px-8 py-2 lg:text-4xl md:text-3xl text-xl text-stone-200`} onClick={() => resetGame()}>RESET</button>
       </div>
 
-      <div className='flex flex-col gap-6 text-center text-[34px] mt-[20px]'>
-        <div className='text-gray-500 lg:text-5xl md:text-5xl text-4xl'>Round <span>{round > maxRounds ? maxRounds : round}</span> of {maxRounds}</div>
-        <div className='text-teal-400 lg:text-4xl md:text-4xl text-3xl'>{result}</div>
+      <div className='flex flex-col gap-6 text-center mt-[20px]'>
+        <div className='text-gray-500 lg:text-4xl text-3xl'>Round <span>{round > maxRounds ? maxRounds : round}</span> of {maxRounds}</div>
+        <div className='text-teal-400 lg:text-4xl md:text-3xl text-2xl'>{result}</div>
       </div>
     </>
   )

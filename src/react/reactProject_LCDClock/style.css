@@ -1,9 +1,7 @@
-.lcd .flex-column-container {
+.lcd {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .lcd .flex-row-container {

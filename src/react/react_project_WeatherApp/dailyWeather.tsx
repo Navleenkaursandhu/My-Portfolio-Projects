@@ -44,18 +44,18 @@ export const DailyWeather = (props) => {
       <>
         {props.dailyData &&
           <div className="p-[10px] m-[10px]">
-            <div className="border-b-black border border-x-0 border-t-0 text-[24px] flex items-center gap-[10px]">
-              <span className="text-[32px] material-symbols-rounded">
+            <div className="border-b-black border border-x-0 border-t-0 lg:text-[24px] md:text-[24px] text-[18px] flex items-center gap-[10px]">
+              <span className="lg:text-[32px] md:text-[32px] text-3xl material-symbols-rounded">
                 calendar_month
               </span>7-DAY FORECAST
             </div>
-            <div className="p-[4px] flex justify-between items-center mt-[10px]">
+            <div className="p-[4px] flex justify-around items-center mt-[10px]">
               <div className="text-[28px] py-[4px] pr-[0px] pl-[4px]">
                 <span onClick={() => dayBefore()} className="hover:cursor-pointer hover:bg-[#ffffff70] material-symbols-rounded">
                   arrow_back_ios
                 </span>
               </div>
-              <div className="text-[28px] py-[4px] pr-[0px] pl-[4px]">{date}</div>
+              <div className="lg:text-[28px] md:text-[28px] sm:text-[24px] text-[20px] py-[4px] pr-[0px] pl-[4px]">{date}</div>
               <div className="text-[28px] py-[4px] pr-[0px] pl-[4px]">
                 <span onClick={() => dayAfter()} className="hover:cursor-pointer hover:bg-[#ffffff70] material-symbols-rounded">
                   arrow_forward_ios
@@ -63,26 +63,24 @@ export const DailyWeather = (props) => {
               </div>
             </div>
 
-            <div className="p-[10px] text-[20px]">
-
-              <div className="flex justify-center gap-[20px]">
-
+            <div className="p-[8px] lg:text-[20px] md:text-[20px] sm:text-[16px] text-[14px]">
+              <div className="flex lg:flex-row md:flex-row flex-col lg:justify-center md:justify-center items-center lg:gap-[20px] md:gap-[20px]">
                 <div>
-                  <span className="text-[60px] material-symbols-rounded">
+                  <span className="lg:text-[60px] md:text-[60px] sm:text-[40px] text-[28px] material-symbols-rounded">
                     {codes[weatherCode].icon}
                   </span>
                 </div>
 
-                <div className="flex flex-col gap-[10px] p-[10px]">
+                <div className="flex flex-col gap-[10px] p-[8px]">
                   <div>{codes[weatherCode].value}</div>
 
-                  <div className="flex justify-between gap-[20px]">
-                    <div>Min Temperature: {tempMin}{tempMinUnit}</div>
+                  <div className="flex lg:flex-row md:flex-row flex-col justify-between lg:gap-[20px] md:gap-[20px]">
+                    <div>Min Temp: {tempMin}{tempMinUnit}</div>
                     <div>Feels like {apparentTempMin}{apparentTempMinUnit}</div>
                   </div>
 
-                  <div className="flex justify-between gap-[20px]">
-                    <div>Max Temperature: {tempMax}{tempMaxUnit}</div>
+                  <div className="flex lg:flex-row md:flex-row flex-col justify-between lg:gap-[20px] md:gap-[20px]">
+                    <div>Max Temp: {tempMax}{tempMaxUnit}</div>
                     <div>Feels like {apparentTempMax}{apparentTempMaxUnit}</div>
                   </div>
 
@@ -96,12 +94,12 @@ export const DailyWeather = (props) => {
             </div>
 
             <div>
-              <div className="border-b-black border border-x-0 border-t-0 text-[24px] flex items-center gap-[10px]">
-                <span className="text-[32px] material-symbols-rounded">
+              <div className="border-b-black border border-x-0 border-t-0 lg:text-[24px] md:text-[24px] text-[18px] flex items-center gap-[10px]">
+                <span className="lg:text-[32px] md:text-[32px] text-[26px] material-symbols-rounded">
                   schedule
                 </span>HOURLY FORECAST</div>
               {hourlyArray.map((obj, i) => {
-                return <div className="p-[10px] text-[20px]" key={i}>
+                return <div className="p-[8px] lg:text-[20px] md:text-[20px] sm:text-[16px] text-[14px]" key={i}>
                   <HourlyWeather hour={obj} daily_sunrise={props.dailyData[index].sunrise.value} daily_sunset={props.dailyData[index].sunset.value} />
                 </div>
               })}

@@ -71,7 +71,7 @@ export const Input = () => {
             return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-emerald-300" key={i}></div>
           }
 
-          return <div onClick={() => inputUser(i)} className="h-[90px] w-[90px] rounded-[10px] bg-lime-200" key={i}></div>
+          return <div onClick={() => inputUser(i)} className="h-[90px] border-2 border-gray-200 w-[90px] rounded-[10px] bg-gray-100" key={i}></div>
         })}
       </div>
 

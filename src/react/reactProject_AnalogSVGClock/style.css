@@ -1,10 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
-.analog-clock * {
-  overflow: hidden;
+.analog-clock {
   font-family: 'Secular One', sans-serif;
-  font-size: 58px;
 }
+
+@media only screen and (min-width: 768px) {
+  .analog-clock {
+    font-size: 50px;
+  }
+} 
+
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+  .analog-clock {
+    font-size: 30px;
+  }
+}  
+
+@media only screen and (max-width: 350px) {
+  .analog-clock {
+    font-size: 20px;
+  }
+} 
 
 .analog-clock .center {
   display: flex;
@@ -12,7 +28,7 @@
 }
 
 .analog-clock .clock {
-  width: 650px;
+  width: 524px;
 }
 
 .analog-clock .circle {
