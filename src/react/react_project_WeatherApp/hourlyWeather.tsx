@@ -18,10 +18,10 @@ export const HourlyWeather = (props) => {
 
   return (
     <>
-      <div className="flex justify-center gap-[20px]">
-        <div className="text-[28px] mt-[20px]">{format(hour, 'HH:mm')}</div>
+      <div className="flex lg:flex-row md:flex-row flex-col lg:justify-center md:justify-center items-center lg:gap-[20px] md:gap-[20px]">
+        <div className="lg:text-[34px] md:text-[34px] text-[26px]">{format(hour, 'HH:mm')}</div>
         <div>
-          <span className="text-[60px] material-symbols-rounded">
+          <span className="lg:text-[60px] md:text-[60px] sm:text-[40px] text-[28px] material-symbols-rounded">
             {isNight
               ? weatherCodeData.nightIcon || weatherCodeData.icon
               : weatherCodeData.icon
@@ -30,10 +30,9 @@ export const HourlyWeather = (props) => {
         </div>
 
         <div className="flex flex-col gap-[10px] p-[10px]">
-
           <div className="show-weathercode">{weatherCodeData.value}</div>
-          <div className="flex gap-[20px]">
-            <div>Temperature: {temp}{tempUnit}</div>
+          <div className="flex lg:flex-row md:flex-row flex-col lg:gap-[20px] md:gap-[20px]">
+            <div>Temp: {temp}{tempUnit}</div>
             <div>Feels like {apparentTemp}{apparentTempUnit}</div>
           </div>
 
