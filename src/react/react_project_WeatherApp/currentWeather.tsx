@@ -13,7 +13,7 @@ export const CurrentWeather = (props) => {
 
       {!!props.rawData && props.currentData.weathercode.value !== undefined &&
         <div className='lg:text-[30px] md:text-[30px] text-[22px] flex items-center justify-center gap-[14px]'>
-          <span className='lg:text-[54px] md:text-[54px] text-[38px] material-symbols-rounded'>{codes[props.currentData.weathercode.value].icon}</span>
+          <span className='lg:text-[54px] md:text-[54px] text-[44px] material-symbols-rounded'>{codes[props.currentData.weathercode.value].icon}</span>
           {codes[props.currentData.weathercode.value].value}
         </div>}
 
