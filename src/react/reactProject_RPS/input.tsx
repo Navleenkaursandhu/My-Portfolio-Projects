@@ -75,7 +75,7 @@ export const Input = () => {
       </div>
 
       <div className='flex justify-center '>
-        <button className={`${buttonShadowEffect} hover:shadow-indigo-600 hover:cursor-pointer shadow-indigo-600 rounded-[10px] bg-indigo-400 border-none px-8 py-2 lg:text-4xl text-3xl text-stone-200`} onClick={() => resetGame()}>RESET</button>
+        <button className={`${buttonShadowEffect} hover:shadow-indigo-600 hover:cursor-pointer shadow-indigo-600 rounded-[10px] bg-indigo-400 border-none px-8 py-2 lg:text-4xl md:text-3xl text-xl text-stone-200`} onClick={() => resetGame()}>RESET</button>
       </div>
 
       <div className='flex flex-col gap-6 text-center text-[34px] mt-[20px]'>

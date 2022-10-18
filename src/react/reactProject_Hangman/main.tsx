@@ -10,6 +10,12 @@ export const description = <div>
   After you&apos;ve revealed several letters, you may be able to guess what the answer is and fill in the remaining letters.
   Be warned, every time you guess a wrong letter you loose one out of 16 lifelines. If you&apos;re a fan of word puzzles,
   make sure you check this out.
+  <p className='bg-yellow-100 italic p-4 flex align-center gap-2 mt-4 mb-4 rounded-md'>
+    <span className="material-symbols-rounded">
+      warning
+    </span>
+    Please note that in order to play this game you need to press your keyboard alphabet keys to guess the hidden word.
+  </p>
 </div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
 export const date = 'August 2022 - September 2022'
