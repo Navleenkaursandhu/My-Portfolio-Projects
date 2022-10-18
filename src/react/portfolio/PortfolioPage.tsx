@@ -7,7 +7,7 @@ import footerImage from './assets/footer.png'
 
 export const PortfolioPage = () => {
   return (
-    <div className='m-5 border-[12px] border-[#6d28d9] rounded-3xl overflow-hidden'>
+    <div className='m-2 border-[12px] border-[#6d28d9] rounded-3xl overflow-hidden'>
       <Intro />
       <Skillset />
       <Education />
