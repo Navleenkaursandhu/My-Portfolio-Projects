@@ -44,7 +44,7 @@ export const Main = () => {
 
   return (
     <div className='dictionary font-applyCormorant font-bold'>
-      <div className='flex m-[-8px] p-[16px] h-screen'>
+      <div className='flex lg:flex-row flex-col p-[10px] h-screen'>
         <Word onChange={dataFunction} />
         <Description wordData={wordObject} error={apiError} />
       </div>
