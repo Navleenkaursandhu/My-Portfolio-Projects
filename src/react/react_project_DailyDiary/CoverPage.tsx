@@ -15,7 +15,7 @@ export const CoverPage = () => {
   }
   return (
     <>
-      <div className="lg:shadow-[-25px_0px_25px_0px_#d5d5df] lg:h-[658px] h-[440px] w-full md:w-[550px] bg-[aliceblue] flex flex-col">
+      <div className="lg:shadow-[-25px_0px_25px_0px_#d5d5df] lg:h-[658px] w-full md:w-[550px] bg-[aliceblue] flex flex-col">
         <img className="w-full border-b border-[#0000001a]" src={image} />
         <div className='flex flex-col justify-center items-center lg:mt-[150px] mt-[60px]'>
           <div className='flex items-center md:text-[75px] text-[50px] text-[#49664d]'>
