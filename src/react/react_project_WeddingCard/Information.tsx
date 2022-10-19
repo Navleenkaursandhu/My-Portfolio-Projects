@@ -7,7 +7,7 @@ import dividerRight from './assets/divider-right.png'
 import { DateInput } from './components/DateInput'
 export const Information = (props) => {
   return (
-    <div className="overflow-auto w-[50%] print:hidden font-apply p-4">
+    <div className="overflow-auto xl:w-[50%] print:hidden font-apply p-4">
 
       <div className='flex justify-center gap-[4px]'>
         <img src={dividerLeft} className='h-[20px]' />
@@ -15,7 +15,7 @@ export const Information = (props) => {
         <img src={dividerRight} className='h-[20px]' />
       </div>
 
-      <div className='flex justify-center gap-[10px]'>
+      <div className='flex flex-wrap justify-center gap-[10px]'>
         <img onClick={() => props.onTemplateChange(1)} src={cardTemplate1} className={`border-slate-200 border h-[90px] ${props.template === 1 ? 'border-4 border-[#b61853b8]' : ''}`} />
         <img onClick={() => props.onTemplateChange(2)} src={cardTemplate2} className={`border-slate-200 border h-[90px] ${props.template === 2 ? 'border-4 border-[#83bd93]' : ''}`} />
         <img onClick={() => props.onTemplateChange(3)} src={cardTemplate3} className={`border-slate-200 border h-[90px] ${props.template === 3 ? 'border-4 border-[#beab77]' : ''}`} />
@@ -28,7 +28,7 @@ export const Information = (props) => {
         <img src={dividerRight} className='h-[20px]' />
       </div>
 
-      <div className='flex w-full'>
+      <div className='flex md:flex-row flex-col w-full'>
         <table className='w-1/2 border-separate border-spacing-[8px]'>
           <tbody>
             <tr><td>GROOM SIDE</td></tr>
@@ -86,7 +86,7 @@ export const Information = (props) => {
         <img src={dividerRight} className='h-[20px]' />
       </div>
 
-      <div className='flex'>
+      <div className='flex md:flex-row flex-col'>
         <table className='w-1/2 border-separate border-spacing-[8px]'>
           <tbody>
             <tr>
@@ -111,7 +111,7 @@ export const Information = (props) => {
         <img src={dividerRight} className='h-[20px]' />
       </div>
 
-      <div className='flex'>
+      <div className='flex md:flex-row flex-col'>
         <table className='w-1/2 border-separate border-spacing-[8px]'>
           <tbody>
             <tr>
@@ -141,7 +141,7 @@ export const Information = (props) => {
         <img src={dividerRight} className='h-[20px]' />
       </div>
 
-      <div className='flex'>
+      <div className='flex md:flex-row flex-col'>
         <table className='w-1/2 border-separate border-spacing-[8px] '>
           <tbody>
             <tr>
