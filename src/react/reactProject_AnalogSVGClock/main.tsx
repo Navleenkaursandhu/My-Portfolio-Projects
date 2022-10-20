@@ -4,7 +4,7 @@ import { Input } from './input'
 export const id = 'react-analogclock'
 export const title = 'ANALOG SVG CLOCK'
 export const description = <div>
-  Time is crucial but sometimes we forget to track the time, That is what this SVG based analog clock application offers its users.
+  Time is crucial but sometimes we forget to track the time, that is what this SVG based analog clock application offers its users.
   This Analog clock App comes in handy when you want to know the accurate date and time just in case you forgot.
   So now you won&apos;t be late and you&apos;ll make sure to use your time wisely.
 </div>

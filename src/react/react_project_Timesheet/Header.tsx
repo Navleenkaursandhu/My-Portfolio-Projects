@@ -7,6 +7,7 @@ import { buttonShadowEffect } from '../common/tailwind_constants'
 export const Header = () => {
   const [userIsSignedIn, setUserIsSignedIn] = useState(false)
   const [userEnteredTask, setUserEnteredTask] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
   const [timesheetEvents, setTimesheetEvents] = useState(
     () => {
       const saved = localStorage.getItem('eventEntered')
@@ -38,6 +39,18 @@ export const Header = () => {
         eventType: userEventType
       })
     }
+
+    if (userEnteredTask === '' && userIsSignedIn) {
+      setErrorMsg('To sign out, please add description!')
+    }
+
+    if (userIsSignedIn && userEnteredTask !== '') {
+      setErrorMsg('')
+    }
+  }
+
+  const dismissError = () => {
+    setErrorMsg('')
   }
 
   const addTaskInSheet = () => {
@@ -82,6 +95,15 @@ export const Header = () => {
           <div onClick={() => dayAfter()} className='hover:cursor-pointer hover:grayscale lg:border-y-[16px] lg:border-l-[16px] border-y-[10px] border-l-[10px] border-l-amber-300 border-y-transparent'></div>
         </div>
       </div>
+
+      {errorMsg && <div className='flex px-10 py-2 bg-red-400 justify-between items-center text-white xl:text-3xl lg:text-2xl md:text-xl text-md'>
+        <div className='flex items-center gap-2'>
+          <span className="material-symbols-rounded xl:text-4xl lg:text-3xl md:text-2xl text-xl">
+            error
+          </span>{errorMsg}
+        </div>
+        <div onClick={() => dismissError()}>X</div>
+      </div>}
 
       <div className='flex gap-4 md:p-4'>
         <img className='w-[16%] md:block hidden self-start' src={background} />
