@@ -62,7 +62,7 @@ export const Main = () => {
   }, [info])
 
   return (
-    <div className="flex h-screen">
+    <div className="xl:flex h-screen">
       <Information
         value={info}
         onChange={newInfo => setInfo(newInfo)}
