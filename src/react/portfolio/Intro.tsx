@@ -12,7 +12,7 @@ export const Intro = () => {
               <div className='font-extrabold lg:text-6xl md:text-5xl text-4xl text-[#371064]'>Navleen Kaur Brar</div>
               <div className='lg:text-2xl md:text-xl text-lg mt-4 text-gray-400 font-bold'>FRONT-END WEB DEVELOPER + DESIGNER</div>
               <div className='lg:text-2xl md:text-xl text-lg mt-8 text-[#371064]'>An aspiring Front-End Web Developer and Designer passionate about designing interactive web applications
-                with strong organizational and problem solving skills</div>
+                with strong organizational and problem solving skills.</div>
             </div>
           </div>
 

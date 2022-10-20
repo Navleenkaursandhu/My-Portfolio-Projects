@@ -192,6 +192,9 @@ export const VanillaJSProjects = () => {
         <div className="font-bold lg:text-3xl md:text-2xl text-xl">
           VANILLA JS PROJECTS
         </div>
+        <div className='flex lg:w-2/3 md:w-11/12 w-full rounded-md gap-2 lg:text-xl md:text-lg text-md bg-yellow-100 p-4 mt-6'><span className="material-symbols-rounded">
+          warning
+        </span>Please note that these projects are not optimised for tablet and mobile screens.</div>
 
         {projects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
