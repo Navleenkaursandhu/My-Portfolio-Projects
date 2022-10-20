@@ -6,7 +6,7 @@ export const Sheet = (props) => {
   const arrayToDisplay = object[dateCurrent]
   return (
     <>
-      <div className="border-2 border-[#c5c4c4] flex-1 h-[600px] overflow-auto md:p-2">
+      <div className="border-2 border-[#c5c4c4] rounded-md flex-1 h-[600px] overflow-auto md:p-2">
         <table className='w-full'>
           <tbody>
             {<tr>
