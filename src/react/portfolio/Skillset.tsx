@@ -9,6 +9,7 @@ import githubImage from './assets/github.png'
 import vscodeImage from './assets/vscode.png'
 import eslintImage from './assets/eslint.png'
 import restapiImage from './assets/restapi.png'
+import vercelImage from './assets/vercel.png'
 import { SkillDetails } from './SkillDetails'
 
 const skillSetArray = [
@@ -55,6 +56,10 @@ const skillSetArray = [
   {
     skill: 'VS CODE',
     image: `${vscodeImage}`
+  },
+  {
+    skill: 'Vercel',
+    image: `${vercelImage}`
   }
 ]
 export const Skillset = () => {

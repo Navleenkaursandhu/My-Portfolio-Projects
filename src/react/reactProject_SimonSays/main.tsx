@@ -11,7 +11,7 @@ export const description = <div>
   On your turn just repeat Simon&apos;s moves in the exact order. The game will keep track of your button presses. Each time
   you correctly match the pattern (indicated by green color), you win the round. If you click out of order (indicated by red), you loose.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'August 2022'
 export const link = './SimonSaysGame'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_SimonSays'

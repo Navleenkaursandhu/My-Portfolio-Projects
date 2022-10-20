@@ -22,7 +22,7 @@ export const description = <div>
   The app stores the information you entered locally so that you do not have to enter it again when you come back to this web page.
   This app respects the user&apos;s <span className='bg-cyan-100 px-2'>privacy</span> and no information is sent to or stored on an external server
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'September 2022'
 export const link = './WeddingCard'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_WeddingCard'
