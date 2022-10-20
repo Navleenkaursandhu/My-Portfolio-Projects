@@ -3,8 +3,8 @@ import cardBackground from '../assets/card4-background.jpg'
 export const PostWeddingEventCard = (props) => {
   return (
     <>
-      <div className=" mt-1 relative font-applyMukta">
-        <img className='w-[630px] hue-rotate-[244deg]' src={cardBackground} />
+      <div className="relative font-applyMukta">
+        <img className='w-full hue-rotate-[244deg]' src={cardBackground} />
         <div className='absolute flex-col items-center justify-center pl-[110px] pr-[110px] top-0 left-0 bottom-0 right-0 border-4 border-[#cba967] shadow-xl '>
           <div className='text-[#cdba86] h-[60%] text-center flex flex-col justify-center items-center gap-[14px]'>
             {props.information.postweddingEventType &&

@@ -68,30 +68,32 @@ export const Main = () => {
         onChange={newInfo => setInfo(newInfo)}
         onTemplateChange={(templateNum) => setSelectedTemplate(templateNum)}
         template={selectedTemplate} />
-      <div className='flex items-center flex-col flex-1 overflow-auto bg-slate-100'>
-        {selectedTemplate === 1 && <>
-          <MainCard1 information={info} />
-          <PreWeddingEventCard1 information={info} />
-          <PostWeddingEventCard1 information={info} />
-        </>}
+      <div className='flex sm:justify-center justify-start flex-1 overflow-auto bg-slate-100'>
+        <div className='flex flex-col gap-4 w-[632px] min-w-[632px] p-4'>
+          {selectedTemplate === 1 && <>
+            <MainCard1 information={info} />
+            <PreWeddingEventCard1 information={info} />
+            <PostWeddingEventCard1 information={info} />
+          </>}
 
-        {selectedTemplate === 2 && <>
-          <MainCard2 information={info} />
-          <PreWeddingEventCard2 information={info} />
-          <PostWeddingEventCard2 information={info} />
-        </>}
+          {selectedTemplate === 2 && <>
+            <MainCard2 information={info} />
+            <PreWeddingEventCard2 information={info} />
+            <PostWeddingEventCard2 information={info} />
+          </>}
 
-        {selectedTemplate === 3 && <>
-          <MainCard3 information={info} />
-          <PreWeddingEventCard3 information={info} />
-          <PostWeddingEventCard3 information={info} />
-        </>}
+          {selectedTemplate === 3 && <>
+            <MainCard3 information={info} />
+            <PreWeddingEventCard3 information={info} />
+            <PostWeddingEventCard3 information={info} />
+          </>}
 
-        {selectedTemplate === 4 && <>
-          <MainCard4 information={info} />
-          <PreWeddingEventCard4 information={info} />
-          <PostWeddingEventCard4 information={info} />
-        </>}
+          {selectedTemplate === 4 && <>
+            <MainCard4 information={info} />
+            <PreWeddingEventCard4 information={info} />
+            <PostWeddingEventCard4 information={info} />
+          </>}
+        </div>
       </div>
     </div>
   )

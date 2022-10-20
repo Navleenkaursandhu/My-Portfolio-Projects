@@ -3,10 +3,9 @@ import cardBackground from '../assets/card2-background.png'
 export const PreWeddingEventCard = (props) => {
   return (
     <>
-      <div className="mt-2 relative font-applyAmiko">
-        <img className='w-[600px]' src={cardBackground} />
+      <div className="relative font-applyAmiko">
+        <img className='w-full' src={cardBackground} />
         <div className='absolute flex items-center justify-center pl-[100px] pr-[100px] top-0 left-0 bottom-0 right-0 border border-[#c7be4b] shadow-xl '>
-
           {props.information.preweddingEventType &&
             <div className='bg-[#fff7c94d] border border-[#c7be4b] px-[32px] py-[25px] w-full backdrop-blur-[2px] text-center flex flex-col items-center gap-[10px]'>
 
