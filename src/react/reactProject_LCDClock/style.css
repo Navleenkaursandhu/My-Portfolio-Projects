@@ -1,16 +1,11 @@
-/* .lcd {
-  display: flex;
-  justify-content: center;
-} */
-
  .lcd .flex-row-container {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   padding: 60px;
-  border : 16px solid rgb(142, 140, 140);
-  border-style: ridge;
   border-radius: 10px;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .lcd .flex-column-digit {
@@ -144,12 +139,8 @@
   border-left: 18px solid black;
   border-right: 18px solid black;
  } 
-}
 
-
-
-@media only screen and (min-width: 1024px) {
-  .lcd .top-colon-segment,
+ .lcd .top-colon-segment,
   .lcd .bottom-colon-segment {
     padding: 10px;
     background-color: black;
