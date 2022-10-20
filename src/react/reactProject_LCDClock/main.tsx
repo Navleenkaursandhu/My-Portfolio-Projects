@@ -15,8 +15,8 @@ export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/ma
 
 export const Main = () => {
   return (
-    <div className='lcd'>
-      <Input />
-    </div>
+      <div className='lcd'>
+        <Input />
+      </div>
   )
 }

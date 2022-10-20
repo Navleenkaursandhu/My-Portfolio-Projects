@@ -1,16 +1,16 @@
-.lcd {
+/* .lcd {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  justify-content: center;
+} */
 
-.lcd .flex-row-container {
+ .lcd .flex-row-container {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   padding: 60px;
   border : 16px solid rgb(142, 140, 140);
   border-style: ridge;
   border-radius: 10px;
+  justify-content: center;
 }
 
 .lcd .flex-column-digit {
@@ -18,13 +18,101 @@
   flex-direction: column;
 }
 
-.lcd .flex-colon-container {
+.lcd .top-segment {
+  padding: 8px;
+  border-top: 2px solid black;
+  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.lcd .bottom-segment {
+  padding: 8px;
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.lcd .top-small-segment {
+  padding: 4px;
+  border-top: 2px solid black;
+  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.lcd .bottom-small-segment {
+  padding: 4px;
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+ } 
+
+ .lcd .flex-colon-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 90px;
+  gap: 20px;
+} 
+
+.lcd .top-colon-segment,
+.lcd .bottom-colon-segment {
+  padding: 2px;
+  background-color: black;
+  animation: blink 1.5s linear infinite;
 }
 
+@media only screen and (min-width: 640px) {
+.lcd .top-segment {
+  padding: 20px;
+  border-top: 12px solid black;
+  border-bottom: 6px solid black;
+  border-left: 12px solid black;
+  border-right: 12px solid black;
+}
+
+.lcd .bottom-segment {
+  padding:20px;
+  border-top: 6px solid black;
+  border-bottom: 12px solid black;
+  border-left: 12px solid black;
+  border-right: 12px solid black;
+}
+
+.lcd .top-small-segment {
+  padding: 8px;
+  border-top: 9px solid black;
+  border-bottom: 4px solid black;
+  border-left: 9px solid black;
+  border-right: 9px solid black;
+}
+
+.lcd .bottom-small-segment {
+  padding: 8px;
+  border-top: 4px solid black;
+  border-bottom: 9px solid black;
+  border-left: 9px solid black;
+  border-right: 9px solid black;
+ } 
+
+ .lcd .flex-colon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+} 
+
+.lcd .top-colon-segment,
+.lcd .bottom-colon-segment {
+  padding: 6px;
+  background-color: black;
+  animation: blink 1.5s linear infinite;
+}
+}
+
+@media only screen and (min-width: 1024px) {
 .lcd .top-segment {
   padding: 50px;
   border-top: 18px solid black;
@@ -55,13 +143,25 @@
   border-bottom: 18px solid black;
   border-left: 18px solid black;
   border-right: 18px solid black;
+ } 
 }
 
-.lcd .top-colon-segment,
-.lcd .bottom-colon-segment {
-  padding: 10px;
-  background-color: black;
-  animation: blink 1.5s linear infinite;
+
+
+@media only screen and (min-width: 1024px) {
+  .lcd .top-colon-segment,
+  .lcd .bottom-colon-segment {
+    padding: 10px;
+    background-color: black;
+    animation: blink 1.5s linear infinite;
+  }
+
+  .lcd .flex-colon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 90px;
+  }
 }
 
 @keyframes blink {
@@ -156,4 +256,4 @@
 
 .lcd .num9.bottom-segment {
   border-color: black black black #eee;
-}
+}  
