@@ -30,7 +30,7 @@ export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/ma
 export const Main = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(1)
   const [info, setInfo] = useState(() => {
-    const saved = localStorage.getItem('data')
+    const saved = localStorage.getItem('weddingCardData')
     const rawInfo = JSON.parse(saved) || {
       brideName: '',
       brideFatherName: '',
@@ -58,7 +58,7 @@ export const Main = () => {
   })
 
   useEffect(() => {
-    localStorage.setItem('data', JSON.stringify(info))
+    localStorage.setItem('weddingCardData', JSON.stringify(info))
   }, [info])
 
   return (

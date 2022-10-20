@@ -10,7 +10,7 @@ export const Header = () => {
   const [errorMsg, setErrorMsg] = useState('')
   const [timesheetEvents, setTimesheetEvents] = useState(
     () => {
-      const saved = localStorage.getItem('eventEntered')
+      const saved = localStorage.getItem('taskEntered')
       return JSON.parse(saved) || {}
     }
   )
@@ -79,7 +79,7 @@ export const Header = () => {
   }
 
   useEffect(() => {
-    localStorage.setItem('eventEntered', JSON.stringify(timesheetEvents))
+    localStorage.setItem('taskEntered', JSON.stringify(timesheetEvents))
   }, [timesheetEvents])
 
   return (

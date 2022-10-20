@@ -12,9 +12,11 @@ import * as HangmanGameData from '../reactProject_Hangman/main'
 import * as RPSData from '../reactProject_RPS/main'
 import * as SimonSaysData from '../reactProject_SimonSays/main'
 import * as TicTacToeData from '../reactProject_TicTacToe/main'
+import * as PortfolioData from '../portfolio/PortfolioPage'
 import { ProjectDetails } from './ProjectDetails'
 
 const projects = [
+  PortfolioData,
   WeatherAppData,
   WeddingCardData,
   DictionaryData,
