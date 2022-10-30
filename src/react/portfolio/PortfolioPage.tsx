@@ -7,11 +7,11 @@ import footerImage from './assets/footer.png'
 
 export const title = 'MY PORTFOLIO'
 export const description = <div>
-  This portfolio showcases my potential as a Front-End Web Developer.
-  The website provides an easy access to my projects along
-  with link to source code. The entire UI is self coded and the images were
-  self sketched using Krita application. Through my personal projects I was
-  able to learn best coding practices when it comes to web designing and development.
+  This portfolio is a showcase of my project and my journey as a Front-End Web Developer.
+  This website provides easy access to my projects along
+  with a link to the source code for each project. The entire UI was designed and coded by myself and the images were
+  all created using an open source digital art application named Krita. Through my personal projects I was
+  able to gradually learn the best coding practices and gain invaluable experience in web development and creating delightful UI/UX desgins.
 </div>
 export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design', 'Vercel']
 export const date = 'September 2022 - October 2022'
