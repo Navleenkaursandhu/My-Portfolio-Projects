@@ -7,7 +7,7 @@ export const description = <div>
   it the ideal tool to keep your eye on the market rate for any given currency. You don&apos;t even need an account to use this App, just select the
   currency pair you want to see and the built-in market Exchange Rate Calculator will provide you the latest market values.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
+export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'September 2022'
 export const link = './CurrencyConvertor'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_currencyConvertor'

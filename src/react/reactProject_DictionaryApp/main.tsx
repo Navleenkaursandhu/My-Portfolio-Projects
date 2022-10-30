@@ -8,7 +8,7 @@ export const description = <div>
   Checkout this App, which provides information about pronounciation along with meanings, synonyms and antonyms of
   the searched word via external <span className='bg-purple-100 px-2'>API</span> in a matter of seconds.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
+export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'September 2022'
 export const link = './Dictionary'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_DictionaryApp'

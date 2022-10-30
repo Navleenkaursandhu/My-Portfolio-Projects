@@ -17,7 +17,7 @@ export const description = <div>
     Please note that in order to play this game you need to press your keyboard alphabet keys to guess the hidden word.
   </p>
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
+export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'August 2022 - September 2022'
 export const link = './HangmanGame'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_Hangman'

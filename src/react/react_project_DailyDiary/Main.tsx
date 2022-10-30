@@ -8,7 +8,7 @@ export const description = <div>
   Designed with a focus on <span className='bg-cyan-100 px-2'>privacy</span>, your information is never sent to
   any external servers and is stored locally so that it can be retrieved any time you visit the App using the same computer.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'CSS', 'Local Storage API', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
+export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'CSS', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'September 2022'
 export const link = './DailyDiary'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_DailyDiary'

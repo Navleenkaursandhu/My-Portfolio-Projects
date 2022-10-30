@@ -13,7 +13,7 @@ export const description = <div>
   all created using an open source digital art application named Krita. Through my personal projects I was
   able to gradually learn the best coding practices and gain invaluable experience in web development and creating delightful UI/UX desgins.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design', 'Vercel']
+export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design', 'Vercel']
 export const date = 'September 2022 - October 2022'
 export const link = 'https://notebook-henna.vercel.app/'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/portfolio'

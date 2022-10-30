@@ -8,7 +8,7 @@ export const description = <div>
   This Analog clock App comes in handy when you want to know the accurate date and time just in case you forgot.
   So now you won&apos;t be late and you&apos;ll make sure to use your time wisely.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'CSS', 'HTML', 'SVG', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
+export const skills = ['ReactJS', 'Vite', 'CSS', 'SVG', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'August 2022 - September 2022'
 export const link = './AnalogSVGClock'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_AnalogSVGClock'
