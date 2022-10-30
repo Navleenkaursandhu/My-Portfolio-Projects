@@ -9,7 +9,7 @@ export const description = <div>
   current and 7 day weather forecast information including date, weather type, temperature (max & min), wind speed,
   rain and snowfall by means of an external <span className='bg-purple-100 px-2'>API</span>.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
+export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'September 2022'
 export const link = './WeatherApp'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_WeatherApp'
