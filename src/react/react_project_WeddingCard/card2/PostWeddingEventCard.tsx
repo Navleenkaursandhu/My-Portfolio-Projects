@@ -3,8 +3,8 @@ import cardBackground from '../assets/card2-background.png'
 export const PostWeddingEventCard = (props) => {
   return (
     <>
-      <div className="mt-2 relative font-applyAmiko">
-        <img className='w-[600px]' src={cardBackground} />
+      <div className="relative font-applyAmiko">
+        <img className='w-full' src={cardBackground} />
         <div className='absolute flex items-center justify-center pl-[100px] pr-[100px] top-0 left-0 bottom-0 right-0 border border-[#c7be4b] shadow-xl '>
 
           {props.information.postweddingEventType &&

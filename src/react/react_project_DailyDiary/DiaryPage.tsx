@@ -4,7 +4,7 @@ import image from './assets/image.png'
 import './style.css'
 export const DiaryPage = (props) => {
   const [object, setObject] = useState(() => {
-    const saved = localStorage.getItem('data')
+    const saved = localStorage.getItem('dailyDiaryData')
     console.log('SAVED', saved)
     return JSON.parse(saved) || {}
   })
@@ -21,7 +21,7 @@ export const DiaryPage = (props) => {
   }
 
   useEffect(() => {
-    localStorage.setItem('data', JSON.stringify(object))
+    localStorage.setItem('dailyDiaryData', JSON.stringify(object))
   }, [object])
 
   return (

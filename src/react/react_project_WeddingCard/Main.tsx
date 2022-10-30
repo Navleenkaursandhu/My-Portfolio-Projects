@@ -22,7 +22,7 @@ export const description = <div>
   The app stores the information you entered locally so that you do not have to enter it again when you come back to this web page.
   This app respects the user&apos;s <span className='bg-cyan-100 px-2'>privacy</span> and no information is sent to or stored on an external server
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'September 2022'
 export const link = './WeddingCard'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_WeddingCard'
@@ -30,7 +30,7 @@ export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/ma
 export const Main = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(1)
   const [info, setInfo] = useState(() => {
-    const saved = localStorage.getItem('data')
+    const saved = localStorage.getItem('weddingCardData')
     const rawInfo = JSON.parse(saved) || {
       brideName: '',
       brideFatherName: '',
@@ -58,7 +58,7 @@ export const Main = () => {
   })
 
   useEffect(() => {
-    localStorage.setItem('data', JSON.stringify(info))
+    localStorage.setItem('weddingCardData', JSON.stringify(info))
   }, [info])
 
   return (
@@ -68,30 +68,32 @@ export const Main = () => {
         onChange={newInfo => setInfo(newInfo)}
         onTemplateChange={(templateNum) => setSelectedTemplate(templateNum)}
         template={selectedTemplate} />
-      <div className='flex items-center flex-col flex-1 overflow-auto bg-slate-100'>
-        {selectedTemplate === 1 && <>
-          <MainCard1 information={info} />
-          <PreWeddingEventCard1 information={info} />
-          <PostWeddingEventCard1 information={info} />
-        </>}
+      <div className='flex sm:justify-center justify-start flex-1 overflow-auto bg-slate-100'>
+        <div className='flex flex-col gap-4 w-[632px] min-w-[632px] p-4'>
+          {selectedTemplate === 1 && <>
+            <MainCard1 information={info} />
+            <PreWeddingEventCard1 information={info} />
+            <PostWeddingEventCard1 information={info} />
+          </>}
 
-        {selectedTemplate === 2 && <>
-          <MainCard2 information={info} />
-          <PreWeddingEventCard2 information={info} />
-          <PostWeddingEventCard2 information={info} />
-        </>}
+          {selectedTemplate === 2 && <>
+            <MainCard2 information={info} />
+            <PreWeddingEventCard2 information={info} />
+            <PostWeddingEventCard2 information={info} />
+          </>}
 
-        {selectedTemplate === 3 && <>
-          <MainCard3 information={info} />
-          <PreWeddingEventCard3 information={info} />
-          <PostWeddingEventCard3 information={info} />
-        </>}
+          {selectedTemplate === 3 && <>
+            <MainCard3 information={info} />
+            <PreWeddingEventCard3 information={info} />
+            <PostWeddingEventCard3 information={info} />
+          </>}
 
-        {selectedTemplate === 4 && <>
-          <MainCard4 information={info} />
-          <PreWeddingEventCard4 information={info} />
-          <PostWeddingEventCard4 information={info} />
-        </>}
+          {selectedTemplate === 4 && <>
+            <MainCard4 information={info} />
+            <PreWeddingEventCard4 information={info} />
+            <PostWeddingEventCard4 information={info} />
+          </>}
+        </div>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ export const description = <div>
   it, and paper beats rock by wrapping it up. You will need luck on your side if you wish to beat your opponent. There are 5 rounds in
   total and the one with highest score at the end, wins the game.
 </div>
-export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code']
+export const skills = ['React', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = 'August 2022'
 export const link = './RockPaperScissors'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_RPS'

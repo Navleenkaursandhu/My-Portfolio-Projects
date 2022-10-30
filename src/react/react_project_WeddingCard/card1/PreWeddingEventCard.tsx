@@ -3,8 +3,8 @@ import cardBackground from '../assets/card1-background.png'
 export const PreWeddingEventCard = (props) => {
   return (
     <>
-      <div className="m-1 relative text-center" >
-        <img className='w-[600px] hue-rotate-[212deg]' src={cardBackground} />
+      <div className="relative text-center" >
+        <img className='w-full hue-rotate-[212deg]' src={cardBackground} />
         <div className='absolute  text-[#575353] top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center pl-[140px] pr-[140px] border border-groove shadow-xl gap-[26px]'>
           {props.information.preweddingEventType && <div className='font-applyFont text-[18px]'>PLEASE JOIN US TO CELEBRATE</div>}
           <div className='font-applyOnCard font-semibold text-[34px] text-[#2e7bd5f2]'>{props.information.preweddingEventType}</div>

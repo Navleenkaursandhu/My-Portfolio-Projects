@@ -116,7 +116,7 @@ export const Information = (props) => {
           <tbody>
             <tr>
               <td>Event Type:</td>
-              <td><input value={props.value.preWeddingEventType} onChange={e => props.onChange({ ...props.value, preweddingEventType: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input></td>
+              <td><input value={props.value.preweddingEventType} onChange={e => props.onChange({ ...props.value, preweddingEventType: e.target.value })} className='bg-slate-100 pl-1.5 py-0.5'></input></td>
             </tr>
             <tr>
               <td>Venue:</td>

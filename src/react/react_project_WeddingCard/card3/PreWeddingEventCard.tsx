@@ -3,8 +3,8 @@ import cardBackground from '../assets/card3-background.jpg'
 export const PreWeddingEventCard = (props) => {
   return (
     <>
-      <div className=" mt-1 relative font-applyMukta">
-        <img src={cardBackground} />
+      <div className="relative font-applyMukta">
+        <img className='w-full' src={cardBackground} />
         <div className='absolute flex items-center justify-center pl-[110px] pr-[110px] top-0 left-0 bottom-0 right-0 border border-[#cdba86] shadow-xl '>
           <div className='text-[#cdba86] backdrop-blur-[2px] text-center flex flex-col items-center gap-[14px]'>
             {props.information.preweddingEventType && <div>WITH THE BLESSINGS OF ALMIGHTY</div>}

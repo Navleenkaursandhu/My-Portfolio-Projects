@@ -3,8 +3,8 @@ import cardBackground from '../assets/card4-background.jpg'
 export const MainCard = (props) => {
   return (
     <>
-      <div className=" mt-2 relative font-applyMukta">
-        <img className='w-[630px]' src={cardBackground} />
+      <div className="relative font-applyMukta">
+        <img className='w-full' src={cardBackground} />
         <div className='absolute flex-col items-center justify-center top-0 left-0 bottom-0 right-0 border-4 border-[#cba967]'>
 
           <div className='text-[#cba967] text-center flex flex-col h-[60%] items-center justify-center gap-[18px]'>
