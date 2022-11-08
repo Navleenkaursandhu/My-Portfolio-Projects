@@ -8,6 +8,8 @@ import { id as reactSimonSaysGameID } from '../reactProject_SimonSays/main'
 import { id as reactTicTacToeGameID } from '../reactProject_TicTacToe/main'
 import { id as reactRPSGameID } from '../reactProject_RPS/main'
 import { id as reactTipCalculatorID } from '../reactProject_TipCalculator/main'
+import { SortProjects } from './SortProjects'
+import { useEffect, useState } from 'react'
 const projects = [
   {
     id: 'vanillajs-calender',
@@ -185,13 +187,23 @@ const projects = [
   }
 ]
 
-export const VanillaJSProjects = () => {
+export const VanillaJSProjects = (props) => {
+
+  const [selectedOption, setSelectedOption] = useState('')
+  const callback = (selectedElement) => {
+    setSelectedOption(selectedElement)
+  }
+  console.log(selectedOption)
+
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
         <div className="font-bold lg:text-3xl md:text-2xl text-xl">
           VANILLA JS PROJECTS
         </div>
+
+        <SortProjects callback={callback} />
+
         <div className='flex lg:w-2/3 md:w-11/12 w-full rounded-md gap-2 lg:text-xl md:text-lg text-md bg-yellow-100 p-4 mt-6'><span className="material-symbols-rounded">
           warning
         </span>Please note that these projects are not optimised for tablet and mobile screens.</div>

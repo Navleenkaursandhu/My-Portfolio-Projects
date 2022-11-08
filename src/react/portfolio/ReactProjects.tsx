@@ -14,6 +14,8 @@ import * as SimonSaysData from '../reactProject_SimonSays/main'
 import * as TicTacToeData from '../reactProject_TicTacToe/main'
 import * as PortfolioData from '../portfolio/PortfolioPage'
 import { ProjectDetails } from './ProjectDetails'
+import { SortProjects } from './SortProjects'
+import { useState } from 'react'
 
 const projects = [
   PortfolioData,
@@ -34,12 +36,19 @@ const projects = [
 ]
 
 export const ReactProjects = () => {
+  const [selectedOption, setSelectedOption] = useState('')
+  const callback = (selectedElement) => {
+    setSelectedOption(selectedElement)
+  }
+  console.log(selectedOption)
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
         <div className="font-bold lg:text-3xl md:text-2xl text-xl">
           REACT PROJECTS
         </div>
+
+        <SortProjects value={selectedOption} onChange={callback} />
 
         {projects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
