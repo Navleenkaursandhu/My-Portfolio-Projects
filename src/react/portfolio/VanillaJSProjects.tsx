@@ -10,9 +10,49 @@ import { id as reactRPSGameID } from '../reactProject_RPS/main'
 import { id as reactTipCalculatorID } from '../reactProject_TipCalculator/main'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
-import { parseISO } from 'date-fns'
+import { compareDesc, parseISO } from 'date-fns'
 
 const projects = [
+  {
+    id: 'vanillajs-cardmatchgame',
+    title: 'CARD MATCH GAME',
+    description: <div>
+      Level up your concentration with this online memory card game App. Start the game by flipping a card.
+      Try to find another card that has the same number and color as the first. The cards with same number
+      and color make a pair (such as 2 of hearts and 2 of diamonds will make a pair). If you can&apos;t find a pair, the flipped
+      cards will be flipped back with the face down. Try to remember these images as it becomes easier to find pairs
+      the longer you play. When you find a pair the cards will remain facing up on the board. The game is complete
+      once you find all the pairs. This game is a great exercise to train your memory in a playful way and most
+      of you will love playing this card matching game.
+    </div>,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/CardMatch/game.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/CardMatch'
+  },
+  {
+    id: 'vanillajs-fightinggame',
+    title: 'STREET FIGHTING GAME',
+    description: <div>
+      Want to play something exciting? Try this 1-on-1 fighting game with your friend on your computer using your keyboard.
+      The rules
+      are pretty simple. The game has 3 rounds in total. To start the game Player A takes the first round followed by player B and so forth. It will be the player&apos;s choice whether
+      he/she wants to hit the opponent or take a lifeline during his/her round (remember there is no point of taking
+      a lifeline in your first round as it&apos;s already 100%). On hit, opponents health will reduce by a random number (the damage will be reflected by red bar)
+      and on selecting lifeline the current player&apos;s health increases by random number (health is reflected by green bar). After
+      3rd round the player with good health wins the battle.
+      <p className='bg-yellow-100 italic p-4 flex align-center gap-2 mt-4 mb-4 rounded-md'>
+        <span className="material-symbols-rounded">
+          warning
+        </span>
+        Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight.
+      </p>
+    </div>,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-07'),
+    link: '/vanilla_js/fighting_game/game.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/fighting_game'
+  },
   {
     id: 'vanillajs-calender',
     title: 'CALENDER',
@@ -46,32 +86,6 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/LCDClock'
   },
   {
-    id: 'vanillajs-todolist',
-    title: 'TODO LIST',
-    description: <ReactReimplementationRedirect link={reactTODOListID} />,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: parseISO('2022-08'),
-    link: '/vanilla_js/TODOList/list.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/TODOList'
-  },
-  {
-    id: 'vanillajs-cardmatchgame',
-    title: 'CARD MATCH GAME',
-    description: <div>
-      Level up your concentration with this online memory card game App. Start the game by flipping a card.
-      Try to find another card that has the same number and color as the first. The cards with same number
-      and color make a pair (such as 2 of hearts and 2 of diamonds will make a pair). If you can&apos;t find a pair, the flipped
-      cards will be flipped back with the face down. Try to remember these images as it becomes easier to find pairs
-      the longer you play. When you find a pair the cards will remain facing up on the board. The game is complete
-      once you find all the pairs. This game is a great exercise to train your memory in a playful way and most
-      of you will love playing this card matching game.
-    </div>,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: parseISO('2022-08'),
-    link: '/vanilla_js/CardMatch/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/CardMatch'
-  },
-  {
     id: 'vanillajs-hangmangame',
     title: 'GUESS THE WORD',
     description: <ReactReimplementationRedirect link={reactHangmanGameID} />,
@@ -99,29 +113,6 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tic_tac_toe'
   },
   {
-    id: 'vanillajs-fightinggame',
-    title: 'STREET FIGHTING GAME',
-    description: <div>
-      Want to play something exciting? Try this 1-on-1 fighting game with your friend on your computer using your keyboard.
-      The rules
-      are pretty simple. The game has 3 rounds in total. To start the game Player A takes the first round followed by player B and so forth. It will be the player&apos;s choice whether
-      he/she wants to hit the opponent or take a lifeline during his/her round (remember there is no point of taking
-      a lifeline in your first round as it&apos;s already 100%). On hit, opponents health will reduce by a random number (the damage will be reflected by red bar)
-      and on selecting lifeline the current player&apos;s health increases by random number (health is reflected by green bar). After
-      3rd round the player with good health wins the battle.
-      <p className='bg-yellow-100 italic p-4 flex align-center gap-2 mt-4 mb-4 rounded-md'>
-        <span className="material-symbols-rounded">
-          warning
-        </span>
-        Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight.
-      </p>
-    </div>,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: parseISO('2022-07'),
-    link: '/vanilla_js/fighting_game/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/fighting_game'
-  },
-  {
     id: 'vanillajs-rpsgame',
     title: 'ROCK PAPER SCISSORS GAME',
     description: <div><ReactReimplementationRedirect link={reactRPSGameID} />
@@ -136,6 +127,15 @@ const projects = [
     date: parseISO('2022-07'),
     link: '/vanilla_js/rock_paper_scissors/rps.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/rock_paper_scissors'
+  },
+  {
+    id: 'vanillajs-todolist',
+    title: 'TODO LIST',
+    description: <ReactReimplementationRedirect link={reactTODOListID} />,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/TODOList/list.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/TODOList'
   },
   {
     id: 'vanillajs-tipcalculator',
@@ -161,6 +161,19 @@ const projects = [
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/bank_account'
   },
   {
+    id: 'vanillajs-healthcarewebpage',
+    title: 'HEALTH CARE WEBPAGE',
+    description: <div>
+      Had a great experience building this static health care web App. This App was my first ever proper project.
+      Working on this project not only boosted my confidence to code but also served as a stepping stone towards
+      achieving my goal of becoming a web developer. None of the elements do anything because no javascript was used in this project.
+    </div>,
+    skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-07'),
+    link: '/vanilla_js/health_care_webpage/health_webpage.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/health_care_webpage'
+  },
+  {
     id: 'vanillajs-loginwebpage',
     title: 'LOGIN WEB PAGE',
     description: <div>
@@ -173,26 +186,18 @@ const projects = [
     date: parseISO('2022-07'),
     link: '/vanilla_js/login_webpage/Login.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/login_webpage'
-  },
-  {
-    id: 'vanillajs-healthcarewebpage',
-    title: 'HEALTH CARE WEBPAGE',
-    description: <div>
-      Had a great experience building this static health care web App. This App was my first ever proper project.
-      Working on this project not only boosted my confidence to code but also served as a stepping stone towards
-      achieving my goal of becoming a web developer. None of the elements do anything because no javascript was used in this project.
-    </div>,
-    skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: parseISO('2022-07'),
-    link: '/vanilla_js/health_care_webpage/health_webpage.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/health_care_webpage'
   }
 ]
 
 export const VanillaJSProjects = () => {
-  const [selectedOption, setSelectedOption] = useState('')
+  const [selectedOption, setSelectedOption] = useState('precedence')
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
+  }
+
+  const sortedProjects = [...projects]
+  if (selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareDesc(a.date, b.date)) as any)
   }
 
   return (
@@ -202,13 +207,13 @@ export const VanillaJSProjects = () => {
           VANILLA JS PROJECTS
         </div>
 
-        <SortProjects value={selectedOption} callback={callback} />
+        <SortProjects value={selectedOption} onChange={callback} />
 
         <div className='flex lg:w-2/3 md:w-11/12 w-full rounded-md gap-2 lg:text-xl md:text-lg text-md bg-yellow-100 p-4 mt-6'><span className="material-symbols-rounded">
           warning
         </span>Please note that these projects are not optimised for tablet and mobile screens.</div>
 
-        {projects.map((project, i) => {
+        {sortedProjects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
         })}
       </div>

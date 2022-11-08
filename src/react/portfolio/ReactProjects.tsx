@@ -16,7 +16,7 @@ import * as PortfolioData from '../portfolio/PortfolioPage'
 import { ProjectDetails } from './ProjectDetails'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
-import { compareAsc } from 'date-fns'
+import { compareDesc } from 'date-fns'
 
 const projects = [
   PortfolioData,
@@ -37,16 +37,16 @@ const projects = [
 ]
 console.log(PortfolioData)
 export const ReactProjects = () => {
-  const [selectedOption, setSelectedOption] = useState('')
+  const [selectedOption, setSelectedOption] = useState('precedence')
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
   }
 
-  console.log(PortfolioData.date)
-  const sortedProjects = projects
+  const sortedProjects = [...projects]
+  if (selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareDesc(a.date, b.date)) as any)
+  }
 
-  selectedOption === 'month' ? console.log('hello') : sortedProjects
-  // sortedProjects.sort((a,b,i) => compareAsc(a.date,b.date))
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
