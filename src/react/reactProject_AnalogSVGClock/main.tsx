@@ -1,5 +1,6 @@
 import './style.css'
 import { Input } from './input'
+import { parseISO } from 'date-fns'
 
 export const id = 'react-analogclock'
 export const title = 'ANALOG SVG CLOCK'
@@ -9,7 +10,7 @@ export const description = <div>
   So now you won&apos;t be late and you&apos;ll make sure to use your time wisely.
 </div>
 export const skills = ['ReactJS', 'Vite', 'CSS', 'SVG', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'August 2022 - September 2022'
+export const date = parseISO('2022-08')
 export const link = './AnalogSVGClock'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_AnalogSVGClock'
 

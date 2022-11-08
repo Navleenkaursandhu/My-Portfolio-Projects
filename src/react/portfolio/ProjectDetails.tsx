@@ -1,8 +1,10 @@
 import gitImage from './assets/github.png'
 import { buttonShadowEffect } from '../common/tailwind_constants'
+import { format } from 'date-fns'
 
 const buttonStyle = `flex items-center gap-2 bg-indigo-500 font-bold rounded-md px-2 py-1 text-white hover:bg-gradient-to-r from-purple-400 to-indigo-500 ${buttonShadowEffect}`
 export const ProjectDetails = (props) => {
+ 
   return (
     <>
       <div id={props.details.id} className='gap-2 py-8 lg:w-2/3 md:w-11/12 w-full border-b border-slate-400 lg:text-xl md:text-lg text-md'>
@@ -21,8 +23,10 @@ export const ProjectDetails = (props) => {
 
           <div className='mt-2 flex items-center gap-2'><span className="material-symbols-rounded">
             calendar_month
-          </span>{props.details.date}</div>
-
+          </span>
+          {format(props.details.date, 'LLLL, yyyy')}
+          </div>
+         
           <div className='flex gap-3 mt-4'>
             <a className={buttonStyle} href={props.details.link} target='_blank' rel="noreferrer">View<span className="text-white material-symbols-rounded">
               open_in_new

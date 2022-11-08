@@ -1,14 +1,7 @@
-import { useEffect, useState } from 'react'
 export const SortProjects = (props) => {
-  
-  // const [selectedElement, setSelectedElement] = useState('')
-
   const handleChange = (e) => {
     props.onChange(e.target.value)
-    
   }
-  
-  // useEffect(() => props.onChange(selectedElement),[selectedElement])
 
   return (
     <div className='flex sm:gap-4 gap-1 mt-6 items-center'>

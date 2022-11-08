@@ -1,6 +1,7 @@
 import { Word } from './word'
 import { Description } from './description'
 import { useEffect, useState } from 'react'
+import { parseISO } from 'date-fns'
 
 export const title = 'DICTIONARY'
 export const description = <div>
@@ -9,7 +10,7 @@ export const description = <div>
   the searched word via external <span className='bg-purple-100 px-2'>API</span> in a matter of seconds.
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'September 2022'
+export const date = parseISO('2022-09')
 export const link = './Dictionary'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_DictionaryApp'
 

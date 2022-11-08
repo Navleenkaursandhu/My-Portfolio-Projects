@@ -16,31 +16,37 @@ import * as PortfolioData from '../portfolio/PortfolioPage'
 import { ProjectDetails } from './ProjectDetails'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
+import { compareAsc } from 'date-fns'
 
 const projects = [
   PortfolioData,
   WeatherAppData,
-  WeddingCardData,
   DictionaryData,
+  LCDClockData,
+  AnalogClockData,
+  HangmanGameData,
+  WeddingCardData,
   TimesheetData,
   DailyDiaryData,
   CurrencyConverterData,
-  LCDClockData,
-  AnalogClockData,
-  TipCalculatorData,
-  HangmanGameData,
-  RPSData,
   SimonSaysData,
+  RPSData,
   TicTacToeData,
+  TipCalculatorData,
   TodoListData
 ]
-
+console.log(PortfolioData)
 export const ReactProjects = () => {
   const [selectedOption, setSelectedOption] = useState('')
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
   }
-  console.log(selectedOption)
+
+  console.log(PortfolioData.date)
+  const sortedProjects = projects
+
+  selectedOption === 'month' ? console.log('hello') : sortedProjects
+  // sortedProjects.sort((a,b,i) => compareAsc(a.date,b.date))
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
@@ -50,7 +56,7 @@ export const ReactProjects = () => {
 
         <SortProjects value={selectedOption} onChange={callback} />
 
-        {projects.map((project, i) => {
+        {sortedProjects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
         })}
       </div>

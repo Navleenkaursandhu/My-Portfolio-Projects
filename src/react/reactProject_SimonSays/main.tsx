@@ -1,3 +1,4 @@
+import { parseISO } from 'date-fns'
 import { Input } from './input'
 
 export const id = 'react-simonsaysgame'
@@ -12,7 +13,7 @@ export const description = <div>
   you correctly match the pattern (indicated by green color), you win the round. If you click out of order (indicated by red), you loose.
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'August 2022'
+export const date = parseISO('2022-08')
 export const link = './SimonSaysGame'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_SimonSays'
 

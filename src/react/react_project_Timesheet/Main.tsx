@@ -1,3 +1,4 @@
+import { parseISO } from 'date-fns'
 import { Header } from './Header'
 
 export const title = 'TIMESHEET'
@@ -8,7 +9,7 @@ export const description = <div>
   an external server to respect the <span className='bg-cyan-100 px-2'>privacy</span> of the end users.
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'September 2022'
+export const date = parseISO('2022-09')
 export const link = './Timesheet'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_Timesheet'
 

@@ -9,7 +9,9 @@ import { id as reactTicTacToeGameID } from '../reactProject_TicTacToe/main'
 import { id as reactRPSGameID } from '../reactProject_RPS/main'
 import { id as reactTipCalculatorID } from '../reactProject_TipCalculator/main'
 import { SortProjects } from './SortProjects'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { parseISO } from 'date-fns'
+
 const projects = [
   {
     id: 'vanillajs-calender',
@@ -21,7 +23,7 @@ const projects = [
       date on calender. The App does it for you!
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/Calender/calender.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/Calender'
   },
@@ -30,7 +32,7 @@ const projects = [
     title: 'ANALOG SVG CLOCK',
     description: <ReactReimplementationRedirect link={reactAnalogClockID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'SVG', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/analogClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/analogClock'
   },
@@ -39,7 +41,7 @@ const projects = [
     title: 'LCD CLOCK',
     description: <ReactReimplementationRedirect link={reactLCDClockID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/LCDClock/clock.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/LCDClock'
   },
@@ -48,7 +50,7 @@ const projects = [
     title: 'TODO LIST',
     description: <ReactReimplementationRedirect link={reactTODOListID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/TODOList/list.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/TODOList'
   },
@@ -65,7 +67,7 @@ const projects = [
       of you will love playing this card matching game.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/CardMatch/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/CardMatch'
   },
@@ -74,7 +76,7 @@ const projects = [
     title: 'GUESS THE WORD',
     description: <ReactReimplementationRedirect link={reactHangmanGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/HangmanGame/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/HangmanGame'
   },
@@ -83,7 +85,7 @@ const projects = [
     title: 'SIMON SAYS GAME',
     description: <ReactReimplementationRedirect link={reactSimonSaysGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/SimonSays/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/SimonSays'
   },
@@ -92,7 +94,7 @@ const projects = [
     title: 'TIC TAC TOE GAME',
     description: <ReactReimplementationRedirect link={reactTicTacToeGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/tic_tac_toe/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tic_tac_toe'
   },
@@ -115,7 +117,7 @@ const projects = [
       </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022 - August 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/fighting_game/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/fighting_game'
   },
@@ -131,7 +133,7 @@ const projects = [
       </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/rock_paper_scissors/rps.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/rock_paper_scissors'
   },
@@ -140,7 +142,7 @@ const projects = [
     title: 'TIP CALCULATOR',
     description: <ReactReimplementationRedirect link={reactTipCalculatorID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/tip_calculator/code.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tip_calculator'
   },
@@ -154,7 +156,7 @@ const projects = [
       an error message stating that the user can not withdraw the desired amount.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/bank_account/bank.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/bank_account'
   },
@@ -168,7 +170,7 @@ const projects = [
       HTML and CSS skills.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/login_webpage/Login.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/login_webpage'
   },
@@ -181,19 +183,17 @@ const projects = [
       achieving my goal of becoming a web developer. None of the elements do anything because no javascript was used in this project.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/health_care_webpage/health_webpage.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/health_care_webpage'
   }
 ]
 
-export const VanillaJSProjects = (props) => {
-
+export const VanillaJSProjects = () => {
   const [selectedOption, setSelectedOption] = useState('')
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
   }
-  console.log(selectedOption)
 
   return (
     <>
@@ -202,7 +202,7 @@ export const VanillaJSProjects = (props) => {
           VANILLA JS PROJECTS
         </div>
 
-        <SortProjects callback={callback} />
+        <SortProjects value={selectedOption} callback={callback} />
 
         <div className='flex lg:w-2/3 md:w-11/12 w-full rounded-md gap-2 lg:text-xl md:text-lg text-md bg-yellow-100 p-4 mt-6'><span className="material-symbols-rounded">
           warning

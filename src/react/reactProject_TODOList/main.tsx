@@ -1,3 +1,4 @@
+import { parseISO } from 'date-fns'
 import { Input } from './input'
 
 export const id = 'react-todolist'
@@ -9,7 +10,7 @@ export const description = <div>
   or anywhere in between - you will be able to stay focused on the things most important to you!
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'August 2022'
+export const date = parseISO('2022-08')
 export const link = './reactProject_TODOList'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_TODOList'
 
