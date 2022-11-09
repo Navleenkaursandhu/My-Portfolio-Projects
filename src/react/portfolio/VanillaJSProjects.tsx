@@ -190,6 +190,7 @@ const projects = [
 ]
 
 export const VanillaJSProjects = () => {
+  const [isAscending, setIsAscending] = useState(false)
   const [selectedOption, setSelectedOption] = useState('precedence')
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
@@ -207,7 +208,7 @@ export const VanillaJSProjects = () => {
           VANILLA JS PROJECTS
         </div>
 
-        <SortProjects value={selectedOption} onChange={callback} />
+        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)}/>
 
         <div className='flex lg:w-2/3 md:w-11/12 w-full rounded-md gap-2 lg:text-xl md:text-lg text-md bg-yellow-100 p-4 mt-6'><span className="material-symbols-rounded">
           warning

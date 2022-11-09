@@ -35,9 +35,14 @@ const projects = [
   TipCalculatorData,
   TodoListData
 ]
-console.log(PortfolioData)
+
 export const ReactProjects = () => {
+  const [isAscending, setIsAscending] = useState(false)
+ 
   const [selectedOption, setSelectedOption] = useState('precedence')
+ 
+  console.log(isAscending)
+ 
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
   }
@@ -54,7 +59,7 @@ export const ReactProjects = () => {
           REACT PROJECTS
         </div>
 
-        <SortProjects value={selectedOption} onChange={callback} />
+        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)}/>
 
         {sortedProjects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
