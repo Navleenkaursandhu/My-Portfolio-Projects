@@ -10,7 +10,7 @@ import { id as reactRPSGameID } from '../reactProject_RPS/main'
 import { id as reactTipCalculatorID } from '../reactProject_TipCalculator/main'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
-import { compareDesc, parseISO } from 'date-fns'
+import { compareAsc, compareDesc, parseISO } from 'date-fns'
 
 const projects = [
   {
@@ -199,6 +199,14 @@ export const VanillaJSProjects = () => {
   const sortedProjects = [...projects]
   if (selectedOption === 'month') {
     sortedProjects.sort(((a, b) => compareDesc(a.date, b.date)) as any)
+  }
+
+  if (isAscending && selectedOption === 'precedence') {
+    sortedProjects.reverse()
+  }
+
+  if (isAscending && selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareAsc(a.date, b.date)) as any)
   }
 
   return (

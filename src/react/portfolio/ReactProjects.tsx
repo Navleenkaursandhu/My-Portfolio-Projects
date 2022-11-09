@@ -16,7 +16,7 @@ import * as PortfolioData from '../portfolio/PortfolioPage'
 import { ProjectDetails } from './ProjectDetails'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
-import { compareDesc } from 'date-fns'
+import { compareAsc, compareDesc } from 'date-fns'
 
 const projects = [
   PortfolioData,
@@ -38,11 +38,11 @@ const projects = [
 
 export const ReactProjects = () => {
   const [isAscending, setIsAscending] = useState(false)
- 
+
   const [selectedOption, setSelectedOption] = useState('precedence')
- 
+
   console.log(isAscending)
- 
+
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
   }
@@ -52,6 +52,14 @@ export const ReactProjects = () => {
     sortedProjects.sort(((a, b) => compareDesc(a.date, b.date)) as any)
   }
 
+  if (isAscending && selectedOption === 'precedence') {
+    sortedProjects.reverse()
+  }
+
+  if (isAscending && selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareAsc(a.date, b.date)) as any)
+  }
+
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
@@ -59,7 +67,7 @@ export const ReactProjects = () => {
           REACT PROJECTS
         </div>
 
-        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)}/>
+        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)} />
 
         {sortedProjects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
