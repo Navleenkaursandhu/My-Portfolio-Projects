@@ -11,7 +11,7 @@ export const SortProjects = (props) => {
         <option value='month'>by month</option>
       </select>
 
-      <span onClick={props.onAscendingChange} title={`${props.ascending ? 'click to sort in descending order' : 'click to sort in ascending order'}`} className={`${props.ascending ? '-scale-y-100' : ''} material-symbols-rounded hover: cursor-pointer font-bold hover:contrast-200`}>
+      <span onClick={props.onAscendingChange} title={`${props.ascending ? 'click to sort in descending order' : 'click to sort in ascending order'}`} className={`${props.ascending ? '-scale-y-100' : ''} material-symbols-rounded hover: cursor-pointer font-bold hover:shadow-lg`}>
         sort
       </span>
     </div>)
