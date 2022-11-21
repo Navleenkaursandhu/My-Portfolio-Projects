@@ -1,3 +1,4 @@
+import { parseISO } from 'date-fns'
 import { Input } from './input'
 import './style.css'
 
@@ -10,7 +11,7 @@ export const description = <div>
   allows the user to quickly enter the total bill value in dollars, tip percentage, and the number of people to split the bill with.
 </div>
 export const skills = ['ReactJS', 'Vite', 'CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'August 2022 - September 2022'
+export const date = parseISO('2022-08')
 export const link = './TipCalculator'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_TipCalculator'
 

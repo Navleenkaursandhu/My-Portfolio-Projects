@@ -8,48 +8,11 @@ import { id as reactSimonSaysGameID } from '../reactProject_SimonSays/main'
 import { id as reactTicTacToeGameID } from '../reactProject_TicTacToe/main'
 import { id as reactRPSGameID } from '../reactProject_RPS/main'
 import { id as reactTipCalculatorID } from '../reactProject_TipCalculator/main'
+import { SortProjects } from './SortProjects'
+import { useState } from 'react'
+import { compareAsc, compareDesc, parseISO } from 'date-fns'
+
 const projects = [
-  {
-    id: 'vanillajs-calender',
-    title: 'CALENDER',
-    description: <div>
-      For those who still prefer to rely on a calendar to check the date, here&apos;s a digital calender app that highlights the
-      current date and keeps you and everyone in your family updated with number of days in each and every month of the year.
-      Most importantly, no paper is used in this process and you no longer require to toss and turn the pages to find the correct
-      date on calender. The App does it for you!
-    </div>,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
-    link: '/vanilla_js/Calender/calender.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/Calender'
-  },
-  {
-    id: 'vanillajs-analogclock',
-    title: 'ANALOG SVG CLOCK',
-    description: <ReactReimplementationRedirect link={reactAnalogClockID} />,
-    skills: ['JavaScript', 'CSS', 'HTML', 'SVG', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
-    link: '/vanilla_js/analogClock/clock.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/analogClock'
-  },
-  {
-    id: 'vanillajs-lcdclock',
-    title: 'LCD CLOCK',
-    description: <ReactReimplementationRedirect link={reactLCDClockID} />,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
-    link: '/vanilla_js/LCDClock/clock.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/LCDClock'
-  },
-  {
-    id: 'vanillajs-todolist',
-    title: 'TODO LIST',
-    description: <ReactReimplementationRedirect link={reactTODOListID} />,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
-    link: '/vanilla_js/TODOList/list.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/TODOList'
-  },
   {
     id: 'vanillajs-cardmatchgame',
     title: 'CARD MATCH GAME',
@@ -63,36 +26,9 @@ const projects = [
       of you will love playing this card matching game.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
+    date: parseISO('2022-08'),
     link: '/vanilla_js/CardMatch/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/CardMatch'
-  },
-  {
-    id: 'vanillajs-hangmangame',
-    title: 'GUESS THE WORD',
-    description: <ReactReimplementationRedirect link={reactHangmanGameID} />,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
-    link: '/vanilla_js/HangmanGame/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/HangmanGame'
-  },
-  {
-    id: 'vanillajs-simonsaysgame',
-    title: 'SIMON SAYS GAME',
-    description: <ReactReimplementationRedirect link={reactSimonSaysGameID} />,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
-    link: '/vanilla_js/SimonSays/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/SimonSays'
-  },
-  {
-    id: 'vanillajs-tictactoegame',
-    title: 'TIC TAC TOE GAME',
-    description: <ReactReimplementationRedirect link={reactTicTacToeGameID} />,
-    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'August 2022',
-    link: '/vanilla_js/tic_tac_toe/game.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tic_tac_toe'
   },
   {
     id: 'vanillajs-fightinggame',
@@ -113,9 +49,68 @@ const projects = [
       </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022 - August 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/fighting_game/game.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/fighting_game'
+  },
+  {
+    id: 'vanillajs-calender',
+    title: 'CALENDER',
+    description: <div>
+      For those who still prefer to rely on a calendar to check the date, here&apos;s a digital calender app that highlights the
+      current date and keeps you and everyone in your family updated with number of days in each and every month of the year.
+      Most importantly, no paper is used in this process and you no longer require to toss and turn the pages to find the correct
+      date on calender. The App does it for you!
+    </div>,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/Calender/calender.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/Calender'
+  },
+  {
+    id: 'vanillajs-analogclock',
+    title: 'ANALOG SVG CLOCK',
+    description: <ReactReimplementationRedirect link={reactAnalogClockID} />,
+    skills: ['JavaScript', 'CSS', 'HTML', 'SVG', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/analogClock/clock.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/analogClock'
+  },
+  {
+    id: 'vanillajs-lcdclock',
+    title: 'LCD CLOCK',
+    description: <ReactReimplementationRedirect link={reactLCDClockID} />,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/LCDClock/clock.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/LCDClock'
+  },
+  {
+    id: 'vanillajs-hangmangame',
+    title: 'GUESS THE WORD',
+    description: <ReactReimplementationRedirect link={reactHangmanGameID} />,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/HangmanGame/game.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/HangmanGame'
+  },
+  {
+    id: 'vanillajs-simonsaysgame',
+    title: 'SIMON SAYS GAME',
+    description: <ReactReimplementationRedirect link={reactSimonSaysGameID} />,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/SimonSays/game.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/SimonSays'
+  },
+  {
+    id: 'vanillajs-tictactoegame',
+    title: 'TIC TAC TOE GAME',
+    description: <ReactReimplementationRedirect link={reactTicTacToeGameID} />,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/tic_tac_toe/game.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tic_tac_toe'
   },
   {
     id: 'vanillajs-rpsgame',
@@ -129,16 +124,25 @@ const projects = [
       </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/rock_paper_scissors/rps.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/rock_paper_scissors'
+  },
+  {
+    id: 'vanillajs-todolist',
+    title: 'TODO LIST',
+    description: <ReactReimplementationRedirect link={reactTODOListID} />,
+    skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-08'),
+    link: '/vanilla_js/TODOList/list.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/TODOList'
   },
   {
     id: 'vanillajs-tipcalculator',
     title: 'TIP CALCULATOR',
     description: <ReactReimplementationRedirect link={reactTipCalculatorID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/tip_calculator/code.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/tip_calculator'
   },
@@ -152,9 +156,22 @@ const projects = [
       an error message stating that the user can not withdraw the desired amount.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/bank_account/bank.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/bank_account'
+  },
+  {
+    id: 'vanillajs-healthcarewebpage',
+    title: 'HEALTH CARE WEBPAGE',
+    description: <div>
+      Had a great experience building this static health care web App. This App was my first ever proper project.
+      Working on this project not only boosted my confidence to code but also served as a stepping stone towards
+      achieving my goal of becoming a web developer. None of the elements do anything because no javascript was used in this project.
+    </div>,
+    skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
+    date: parseISO('2022-07'),
+    link: '/vanilla_js/health_care_webpage/health_webpage.html',
+    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/health_care_webpage'
   },
   {
     id: 'vanillajs-loginwebpage',
@@ -166,37 +183,46 @@ const projects = [
       HTML and CSS skills.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
+    date: parseISO('2022-07'),
     link: '/vanilla_js/login_webpage/Login.html',
     githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/login_webpage'
-  },
-  {
-    id: 'vanillajs-healthcarewebpage',
-    title: 'HEALTH CARE WEBPAGE',
-    description: <div>
-      Had a great experience building this static health care web App. This App was my first ever proper project.
-      Working on this project not only boosted my confidence to code but also served as a stepping stone towards
-      achieving my goal of becoming a web developer. None of the elements do anything because no javascript was used in this project.
-    </div>,
-    skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
-    date: 'July 2022',
-    link: '/vanilla_js/health_care_webpage/health_webpage.html',
-    githubLink: 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/vanilla_js/health_care_webpage'
   }
 ]
 
 export const VanillaJSProjects = () => {
+  const [isAscending, setIsAscending] = useState(false)
+  const [selectedOption, setSelectedOption] = useState('precedence')
+  const callback = (selectedElement) => {
+    setSelectedOption(selectedElement)
+  }
+
+  const sortedProjects = [...projects]
+  if (selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareDesc(a.date, b.date)) as any)
+  }
+
+  if (isAscending && selectedOption === 'precedence') {
+    sortedProjects.reverse()
+  }
+
+  if (isAscending && selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareAsc(a.date, b.date)) as any)
+  }
+
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
         <div className="font-bold lg:text-3xl md:text-2xl text-xl">
           VANILLA JS PROJECTS
         </div>
+
+        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)}/>
+
         <div className='flex lg:w-2/3 md:w-11/12 w-full rounded-md gap-2 lg:text-xl md:text-lg text-md bg-yellow-100 p-4 mt-6'><span className="material-symbols-rounded">
           warning
         </span>Please note that these projects are not optimised for tablet and mobile screens.</div>
 
-        {projects.map((project, i) => {
+        {sortedProjects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
         })}
       </div>

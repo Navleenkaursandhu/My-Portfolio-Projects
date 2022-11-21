@@ -1,3 +1,4 @@
+import { parseISO } from 'date-fns'
 import { useEffect, useState } from 'react'
 
 export const title = 'CURRENCY CONVERTER'
@@ -8,7 +9,7 @@ export const description = <div>
   currency pair you want to see and the built-in market Exchange Rate Calculator will provide you the latest market values.
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'September 2022'
+export const date = parseISO('2022-09')
 export const link = './CurrencyConvertor'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_currencyConvertor'
 

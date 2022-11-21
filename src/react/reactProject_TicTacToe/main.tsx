@@ -1,3 +1,4 @@
+import { parseISO } from 'date-fns'
 import { Input } from './input'
 
 export const id = 'vanillajs-tictactoegame'
@@ -10,7 +11,7 @@ export const description = <div>
   player has 3 in a row, the game is considered a tie.
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
-export const date = 'August 2022'
+export const date = parseISO('2022-08')
 export const link = './TicTacToe'
 export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_TicTacToe'
 

@@ -14,26 +14,52 @@ import * as SimonSaysData from '../reactProject_SimonSays/main'
 import * as TicTacToeData from '../reactProject_TicTacToe/main'
 import * as PortfolioData from '../portfolio/PortfolioPage'
 import { ProjectDetails } from './ProjectDetails'
+import { SortProjects } from './SortProjects'
+import { useState } from 'react'
+import { compareAsc, compareDesc } from 'date-fns'
 
 const projects = [
   PortfolioData,
   WeatherAppData,
-  WeddingCardData,
   DictionaryData,
+  LCDClockData,
+  AnalogClockData,
+  HangmanGameData,
+  WeddingCardData,
   TimesheetData,
   DailyDiaryData,
   CurrencyConverterData,
-  LCDClockData,
-  AnalogClockData,
-  TipCalculatorData,
-  HangmanGameData,
-  RPSData,
   SimonSaysData,
+  RPSData,
   TicTacToeData,
+  TipCalculatorData,
   TodoListData
 ]
 
 export const ReactProjects = () => {
+  const [isAscending, setIsAscending] = useState(false)
+
+  const [selectedOption, setSelectedOption] = useState('precedence')
+
+  console.log(isAscending)
+
+  const callback = (selectedElement) => {
+    setSelectedOption(selectedElement)
+  }
+
+  const sortedProjects = [...projects]
+  if (selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareDesc(a.date, b.date)) as any)
+  }
+
+  if (isAscending && selectedOption === 'precedence') {
+    sortedProjects.reverse()
+  }
+
+  if (isAscending && selectedOption === 'month') {
+    sortedProjects.sort(((a, b) => compareAsc(a.date, b.date)) as any)
+  }
+
   return (
     <>
       <div className="flex flex-col text-[#371064] items-center mt-16 pt-8 pb-10 mx-8 rounded-2xl">
@@ -41,7 +67,9 @@ export const ReactProjects = () => {
           REACT PROJECTS
         </div>
 
-        {projects.map((project, i) => {
+        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)} />
+
+        {sortedProjects.map((project, i) => {
           return <ProjectDetails key={i} details={project} />
         })}
       </div>
