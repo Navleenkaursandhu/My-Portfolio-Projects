@@ -1,6 +1,8 @@
 import portfolioImage from './assets/portfolio-image.png'
 import githubImage from './assets/mygithub.png'
 import linkedInImage from './assets/linkedin.png'
+import resumeImage from './assets/resume.png'
+import myResume from './assets/resume.pdf'
 import { buttonShadowEffect } from '../common/tailwind_constants'
 export const Intro = () => {
   return (
@@ -34,6 +36,11 @@ export const Intro = () => {
             <a className='flex items-center gap-4' href='https://www.linkedin.com/in/n-s-813167222/' target='_blank' rel="noreferrer">
               <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#5d92b9] hover:shadow-[#5d92b9]`} src={linkedInImage} /></button>
               LinkedIn
+            </a>
+
+            <a className='flex items-center gap-4 mt-2.5' href={myResume} target='_blank' rel="noreferrer">
+              <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#5d92b9] hover:shadow-[#5d92b9]`} src={resumeImage} /></button>
+              Resume
             </a>
 
           </div>
