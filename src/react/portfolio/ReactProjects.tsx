@@ -27,9 +27,7 @@ const projects = [
         The front-end of the website was built using React, a popular JavaScript library for building user interfaces,
         along with React Router for managing routing and navigation within the app. I also used Tailwind CSS, a utility-first CSS
         framework, to style the website and make it look more professional. For the database, I used Dexie.js, a powerful in-browser database.
-        Also, the graphic design for the entire website was initially done in Figma.</p>
-
-      <p className='mt-2'>In order to view my website design, please visit:</p>
+        Also, the graphic design for the entire website was initially done in Figma (<a className='text-blue-600 underline underline-offset-2' href='https://www.figma.com/file/mXpZrdScuIiCUqgPkkuEbk/E-Commerce-Website-Design?node-id=0%3A1&t=QfpR8YUuQRm3nNzh-3'>see the design here</a>)</p>
 
       <p className='mt-2'>One of the most complex aspects of this project was implementing the user authentication and authorization system.
         This involved creating routes and components for signing up, logging in, and managing user accounts. I also had to

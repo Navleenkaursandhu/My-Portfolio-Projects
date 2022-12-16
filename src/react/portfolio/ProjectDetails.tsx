@@ -16,14 +16,18 @@ export const ProjectDetails = (props) => {
             })}
           </div>
 
-          <div className='flex items-start gap-2 mt-4'><span className="material-symbols-rounded">
-            description
-          </span>{props.details.description}</div>
+          <div className='flex items-start gap-2 mt-4'>
+            <span className="material-symbols-rounded">
+              description
+            </span>
+            <div className='text-justify'>{props.details.description}</div>
+          </div>
 
-          <div className='mt-2 flex items-center gap-2'><span className="material-symbols-rounded">
-            calendar_month
-          </span>
-          {format(props.details.date, 'LLLL, yyyy')}
+          <div className='mt-2 flex items-center gap-2'>
+            <span className="material-symbols-rounded">
+              calendar_month
+            </span>
+            {format(props.details.date, 'LLLL, yyyy')}
           </div>
 
           <div className='flex gap-3 mt-4'>
