@@ -6,8 +6,8 @@ export const id = 'react-analogclock'
 export const title = 'ANALOG SVG CLOCK'
 export const description = <div>
   Time is crucial but sometimes we forget to track the time, that is what this SVG based analog clock application offers its users.
-  This Analog clock App comes in handy when you want to know the accurate date and time just in case you forgot.
-  So now you won&apos;t be late and you&apos;ll make sure to use your time wisely.
+  This traditional Analog clock App comes in handy when you want to know the accurate date and time. So, make time management a
+  breeze with our functional analog clock app.
 </div>
 export const skills = ['ReactJS', 'Vite', 'CSS', 'SVG', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-08')

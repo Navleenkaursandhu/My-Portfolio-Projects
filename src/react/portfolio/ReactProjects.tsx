@@ -22,9 +22,9 @@ const projects = [
   {
     title: 'E-COMMERCE WEBSITE',
     description: <div>
-      <p>E-commerce has changed the way people shop products and services. Inspired from the e-commerce websites which we use in
-        our daily lives, I have created my own fully-functional e-commerce shopping website using combination of technologies that I have learnt.
-        The front-end of the website was built using React, a popular JavaScript library for building user interfaces,
+      <p>E-commerce has revolutionized the way we shop for products and services. Inspired by the various e-commerce websites
+        we use in our daily lives, I have created my own fully-functional e-commerce shopping website using a combination of
+        technologies that I have learnt. The front-end of the website was built using React, a popular JavaScript library for building user interfaces,
         along with React Router for managing routing and navigation within the app. I also used Tailwind CSS, a utility-first CSS
         framework, to style the website and make it look more professional. For the database, I used Dexie.js, a powerful in-browser database.
         Also, the graphic design for the entire website was initially done in Figma (<a className='text-blue-600 underline underline-offset-2' href='https://www.figma.com/file/mXpZrdScuIiCUqgPkkuEbk/E-Commerce-Website-Design?node-id=0%3A1&t=QfpR8YUuQRm3nNzh-3'>see the design here</a>)</p>
