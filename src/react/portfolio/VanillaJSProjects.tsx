@@ -18,12 +18,11 @@ const projects = [
     title: 'CARD MATCH GAME',
     description: <div>
       Level up your concentration with this online memory card game App. Start the game by flipping a card.
-      Try to find another card that has the same number and color as the first. The cards with same number
-      and color make a pair (such as 2 of hearts and 2 of diamonds will make a pair). If you can&apos;t find a pair, the flipped
-      cards will be flipped back with the face down. Try to remember these images as it becomes easier to find pairs
-      the longer you play. When you find a pair the cards will remain facing up on the board. The game is complete
-      once you find all the pairs. This game is a great exercise to train your memory in a playful way and most
-      of you will love playing this card matching game.
+      Try to find pairs with matching numbers and colors. The cards with same number
+      and color make a pair (such as 2 of hearts and 2 of diamonds will make a pair). If you can&apos;t find a pair,
+      the cards are flipped back face down. Remember the images and use your memory to find pairs as you progress
+      through the game. When you find a pair the cards will remain facing up on the board. The game is complete once all
+      pairs are found. Try out this game as this fun and interactive app is a great way to exercise your memory skills.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: parseISO('2022-08'),
@@ -34,18 +33,18 @@ const projects = [
     id: 'vanillajs-fightinggame',
     title: 'STREET FIGHTING GAME',
     description: <div>
-      Want to play something exciting? Try this 1-on-1 fighting game with your friend on your computer using your keyboard.
-      The rules
-      are pretty simple. The game has 3 rounds in total. To start the game Player A takes the first round followed by player B and so forth. It will be the player&apos;s choice whether
-      he/she wants to hit the opponent or take a lifeline during his/her round (remember there is no point of taking
-      a lifeline in your first round as it&apos;s already 100%). On hit, opponents health will reduce by a random number (the damage will be reflected by red bar)
-      and on selecting lifeline the current player&apos;s health increases by random number (health is reflected by green bar). After
-      3rd round the player with good health wins the battle.
+      Want to play something exciting? Try this keyboard controlled 1-on-1 fighting game with your friend on a computer.
+      The rules are pretty simple. The game has 3 rounds in total. To start the game Player A takes the first round followed
+      by player B and so forth. It will be the player&apos;s choice whether he/she wants to hit the opponent or take a lifeline
+      during his/her round (remember there is no point of taking a lifeline in your first round as it&apos;s already 100%). On
+      hit, opponents health will reduce by a random number (the damage will be reflected by red bar) and on selecting lifeline
+      the current player&apos;s health increases by random number (health is reflected by green bar). In the final round the player
+      with good health wins the battle.
       <p className='bg-yellow-100 italic p-4 flex align-center gap-2 mt-4 mb-4 rounded-md'>
         <span className="material-symbols-rounded">
           warning
         </span>
-        Please note that in order to play this game you need to press your keyboard alphabets to take actions during fight.
+        Please note that in order to play this game you need to press your keyboard alphabet keys to take actions during fight.
       </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
@@ -57,10 +56,9 @@ const projects = [
     id: 'vanillajs-calender',
     title: 'CALENDER',
     description: <div>
-      For those who still prefer to rely on a calendar to check the date, here&apos;s a digital calender app that highlights the
-      current date and keeps you and everyone in your family updated with number of days in each and every month of the year.
-      Most importantly, no paper is used in this process and you no longer require to toss and turn the pages to find the correct
-      date on calender. The App does it for you!
+      Keep track of the current date and stay organized with our digital calendar app. This environmentally-friendly
+      solution allows you to view the number of days in each month without the need for paper. Simply check the app
+      to stay updated and never flip through pages again.
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: parseISO('2022-08'),
@@ -164,9 +162,9 @@ const projects = [
     id: 'vanillajs-healthcarewebpage',
     title: 'HEALTH CARE WEBPAGE',
     description: <div>
-      Had a great experience building this static health care web App. This App was my first ever proper project.
-      Working on this project not only boosted my confidence to code but also served as a stepping stone towards
-      achieving my goal of becoming a web developer. None of the elements do anything because no javascript was used in this project.
+      I thoroughly enjoyed building this static healthcare web app, which served as my first proper project.
+      Working on this project not only boosted my confidence as a developer, but also served as a stepping
+      stone towards my goal of becoming a web developer. Please note that no JS was used in the creation of this static app.
     </div>,
     skills: ['CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: parseISO('2022-07'),
@@ -216,7 +214,7 @@ export const VanillaJSProjects = () => {
           VANILLA JS PROJECTS
         </div>
 
-        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)}/>
+        <SortProjects value={selectedOption} onChange={callback} ascending={isAscending} onAscendingChange={() => setIsAscending(!isAscending)} />
 
         <div className='flex lg:w-2/3 md:w-11/12 w-full rounded-md gap-2 lg:text-xl md:text-lg text-md bg-yellow-100 p-4 mt-6'><span className="material-symbols-rounded">
           warning

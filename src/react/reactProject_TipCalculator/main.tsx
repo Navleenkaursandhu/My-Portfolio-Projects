@@ -5,10 +5,10 @@ import './style.css'
 export const id = 'react-tipcalculator'
 export const title = 'TIP CALCULATOR'
 export const description = <div>
-  Have you ever been in a situation where you went outside for dinner with your friends and just as you are about to leave you have to figure out how to split the bill. But, everybody is in hurry and no one cares enough to do simple
-  maths for splitting bill. Don&apos;t worry, you&apos;ll no longer be in this awkward situation any more, as this free tip Calculator is
-  perfect for calculating accurate amounts while dining out and great for quick calculations while in a hurry. The App is simple, user-friendly and
-  allows the user to quickly enter the total bill value in dollars, tip percentage, and the number of people to split the bill with.
+  Are you tired of awkward bill-splitting situations when dining out with friends?
+  Our free tip calculator can help! Simply enter the total bill amount, desired tip
+  percentage, and number of people splitting the bill to quickly and accurately calculate
+  each person&apos;s share. This user-friendly app is perfect for quick calculations on the go.
 </div>
 export const skills = ['ReactJS', 'Vite', 'CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-08')

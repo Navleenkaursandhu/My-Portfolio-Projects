@@ -4,10 +4,11 @@ import { Background } from './background'
 
 export const title = 'WEATHER FORECAST APPLICATION'
 export const description = <div>
-  Want to know the weather outside? Here&apos;s the perfect App that displays weather
-  conditions to the users using their current location. This dynamic react based app displays
-  current and 7 day weather forecast information including date, weather type, temperature (max & min), wind speed,
-  rain and snowfall by means of an external <span className='bg-purple-100 px-2'>API</span>.
+  <p>Looking for a reliable source of weather information? Look no further! Our dynamic React-based app is here to provide
+    you with accurate and up-to-date weather conditions using your current location.</p>
+  <p className='mt-2'>With this app, you&apos;ll have access to current and 7-day weather forecast information, including the date, weather type,
+    temperature (maximum and minimum), wind speed, rain, and snowfall. All of this information is obtained through an external
+    <span className='bg-purple-100 px-2'>API</span>, ensuring the most accurate and reliable data.</p>
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-09')

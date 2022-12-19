@@ -5,9 +5,11 @@ import { parseISO } from 'date-fns'
 
 export const title = 'DICTIONARY'
 export const description = <div>
-  Why waste your time trying to locate a word and its meaning when its just a search away in this digital dictionary?
-  Checkout this App, which provides information about pronounciation along with meanings, synonyms and antonyms of
-  the searched word via external <span className='bg-purple-100 px-2'>API</span> in a matter of seconds.
+  <p>Are you looking for a quick and easy way to access the definition of a word? This digital dictionary app
+    provides fast and accurate information about the pronunciation, meaning, synonyms, and antonyms of any word you search for.</p>
+
+  <p className='mt-2'>With this app, you&apos;ll no longer have to waste time trying to locate the definition of a word. Simply enter the word you&apos;re looking
+    for and, within seconds, you&apos;ll have access to all of the information you need through an external <span className='bg-purple-100 px-2'>API</span></p>
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-09')

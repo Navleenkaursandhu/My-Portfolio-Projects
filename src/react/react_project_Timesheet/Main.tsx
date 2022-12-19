@@ -3,10 +3,9 @@ import { Header } from './Header'
 
 export const title = 'TIMESHEET'
 export const description = <div>
-  Record your day to day working hours with a simple push of a button. By signing in and out you can easily record the tasks you worked on,
-  breaks and notes by clicking on the &quot;Add task&quot; button. The app stores the data locally and securely therefore, previously
-  entered user information can be retrieved any time the user visits the web page using the same computer. No user data is sent or stored on
-  an external server to respect the <span className='bg-cyan-100 px-2'>privacy</span> of the end users.
+  Track and record your daily work activities with just a few clicks using this simple App. Simply sign in and out to log the tasks you complete,
+  breaks you take, and any notes you want to add. The app stores your data locally and securely, so you can access it anytime
+  you use the same computer. To respect your <span className='bg-cyan-100 px-2'>privacy</span>, no user data is sent or stored on external servers
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-09')

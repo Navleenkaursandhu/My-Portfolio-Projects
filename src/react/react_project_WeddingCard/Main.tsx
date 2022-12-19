@@ -16,12 +16,12 @@ import { parseISO } from 'date-fns'
 
 export const title = 'WEDDING CARD APPLICATION'
 export const description = <div>
-  Wouldn&apos;t it be great if we could create our own wedding cards
-  whenever and wherever you want? So, with the same thought I came up with this Wedding Card App,
-  where all you need to do is select one of the many available templates, enter family details, wedding day details,
-  pre-wedding event details, and post-wedding event details. The data in the template updates live as you enter the data allowing you to create your own wedding card in no time.
-  The app stores the information you entered locally so that you do not have to enter it again when you come back to this web page.
-  This app respects the user&apos;s <span className='bg-cyan-100 px-2'>privacy</span> and no information is sent to or stored on an external server
+  Introducing the Wedding Card App, a tool that allows you to create custom wedding invitations on-demand.
+  With a variety of templates to choose from, you can easily input your family and wedding day details, as
+  well as information about any pre- and post-wedding events. The app updates the template in real-time as
+  you enter data, making it quick and easy to create a unique invitation. The app also stores your information
+  using local storage for future use, ensuring your <span className='bg-cyan-100 px-2'>privacy</span> is respected
+  and no data is sent to external servers.
 </div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-09')
