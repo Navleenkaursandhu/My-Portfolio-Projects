@@ -32,12 +32,12 @@ export const CardMatchGame = () => {
 
   return (
     <>
-      <div className='h-screen flex flex-col gap-4 justify-center items-center font-applyConcert text-2xl'>
-        <h1 className='text-3xl'>CARD MATCH GAME</h1>
+      <div className=' flex flex-col gap-4 justify-center items-center font-applyConcert sm:text-2xl text-xl'>
+        <h1 className='sm:text-3xl text-2xl text-center'>CARD MATCH GAME</h1>
         <button onClick={() => randomlySortedCardsDataArray()}
           className={`${buttonShadowEffect} bg-indigo-500 text-white rounded-md px-3 py-1.5`}>RESTART</button>
-        <div>{matchingCards.length}/52 CARDS MATCHED</div>
-        <div className='w-1/2 flex flex-wrap gap-2 justify-center'>
+        <div className='text-center'>{matchingCards.length}/52 CARDS MATCHED</div>
+        <div className='xl:w-1/2 lg:w-3/5 md:w-3/4 w-full flex flex-wrap gap-2 justify-center'>
           {!!currentCardsData && currentCardsData.map((cardDetail, i) => {
             const color = cardDetail.color === 'red' ? 'text-red-600' : 'text-black'
 
@@ -46,10 +46,10 @@ export const CardMatchGame = () => {
             const matchedCardsColor = matchingCards.includes(cardDetail) ? 'bg-indigo-200' : 'bg-white'
 
             if (isCardClicked || matchingCards.includes(cardDetail)) {
-              return <div key={i} className={`flex items-center justify-center w-20 h-24 py-4 px-2 rounded-lg border-4 border-indigo-400 ${matchedCardsColor} ${color}`}>
-                <div className='flex flex-col'>
-                  <div>{cardDetail.num}</div>
-                  <div>{cardDetail.type}</div>
+              return <div key={i} className={`flex items-center justify-center sm:w-20 sm:h-24 w-10 h-12 py-4 px-2 rounded-lg border-4 border-indigo-400 ${matchedCardsColor} ${color}`}>
+                <div className='flex flex-col justify-center items-center'>
+                  <div className='sm:text-2xl text-sm'>{cardDetail.num}</div>
+                  <div className='sm:text-2xl text-sm'>{cardDetail.type}</div>
                 </div>
               </div>
             } else {
@@ -67,7 +67,7 @@ export const CardMatchGame = () => {
                   })
                 }
               }}
-                key={i} className="flex items-center justify-center w-20 h-24 py-4 px-2 rounded-md border border-1 bg-indigo-400">
+                key={i} className="flex items-center justify-center sm:w-20 sm:h-24 w-10 h-12 py-4 px-2 rounded-md border border-1 bg-indigo-400">
               </div>
             }
           })}
