@@ -1,12 +1,12 @@
 import { cards } from './cardsData'
 import { buttonShadowEffect } from '../common/tailwind_constants'
 import { useEffect, useState } from 'react'
-
-import backgroundMusic from './assets/mixkit-kids-786.mp3'
+import gameOverMusic from './assets/gameOver.mp3'
+import successMusic from './assets/success.mp3'
 
 export const CardMatchGame = () => {
-  // const [music] = useState(new Audio(backgroundMusic))
-
+  const [successAudio] = useState(new Audio(successMusic))
+  const [gameOverAudio] = useState(new Audio(gameOverMusic))
   const [currentCardsData, setCurrentCardsData] = useState(cards)
   const [currentCardClicked, setCurrentCardClicked] = useState([])
   const [matchingCards, setMatchingCards] = useState([])
@@ -18,13 +18,17 @@ export const CardMatchGame = () => {
   }
 
   useEffect(() => {
+    if (matchingCards.length === 52) {
+      void gameOverAudio.play()
+    }
+    if (matchingCards.length >= 2 && matchingCards.length !== 52) {
+      void successAudio.play()
+    }
+  }, [matchingCards])
 
+  useEffect(() => {
     setCurrentCardsData(prev => [...prev].sort(() => 0.5 - Math.random()))
   }, [])
-
-  // useEffect(() => void music.play(), [currentCardClicked])
-
-  console.log(currentCardClicked)
 
   return (
     <>
@@ -39,23 +43,22 @@ export const CardMatchGame = () => {
 
             const isCardClicked = currentCardClicked.includes(cardDetail)
 
+            const matchedCardsColor = matchingCards.includes(cardDetail) ? 'bg-indigo-200' : 'bg-white'
+
             if (isCardClicked || matchingCards.includes(cardDetail)) {
-              return <div key={i} className={`flex items-center justify-center w-20 h-24 py-4 px-2 rounded-md border-4 border-indigo-400 ${color}`}>
+              return <div key={i} className={`flex items-center justify-center w-20 h-24 py-4 px-2 rounded-lg border-4 border-indigo-400 ${matchedCardsColor} ${color}`}>
                 <div className='flex flex-col'>
                   <div>{cardDetail.num}</div>
                   <div>{cardDetail.type}</div>
                 </div>
               </div>
-            }
-
-            else {
+            } else {
               return <div onClick={() => {
                 const prevClickedCard = currentCardClicked[currentCardClicked.length - 1]
                 if (prevClickedCard && cardDetail.num === prevClickedCard.num && cardDetail.color === prevClickedCard.color) {
                   setMatchingCards(prev => prev.concat(cardDetail, prevClickedCard))
                   setCurrentCardClicked([])
-                }
-                else {
+                } else {
                   setCurrentCardClicked(prev => {
                     if (prev.length >= 2) {
                       prev.shift()
