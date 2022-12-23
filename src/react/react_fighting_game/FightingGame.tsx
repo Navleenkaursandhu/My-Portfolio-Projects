@@ -1,13 +1,14 @@
 import playerA from './assets/playerA.gif'
 import playerB from './assets/playerB.gif'
+import attackImage from './assets/punch.png'
+import lifelineImage from './assets/first-aid-kit.png'
 import { buttonShadowEffect } from '../common/tailwind_constants'
 
 export const FightingGame = () => {
-  const fightingButtonsStyle = 'sm:w-14 sm:h-14 h-6 w-6 flex items-center justify-center bg-slate-200 rounded-md border border-slate-500'
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-6 lg:text-2xl sm:text-xl text-sm sm:p-4 p-1.5">
-        <h1 className='font-semibold mb-3'>STREET FIGHTING GAME</h1>
+      <div className="flex flex-col justify-center items-center gap-6 lg:text-2xl sm:text-xl text-sm sm:p-4 p-1.5 font-semibold">
+        <h1>FIGHTING GAME</h1>
         <div className='flex flex-row sm:gap-4 gap-1 sm:w-4/5 w-full'>
           <div className='flex-1'>
             <div className='sm:hidden visible flex w-full justify-end'>
@@ -24,7 +25,7 @@ export const FightingGame = () => {
             </div>
             <div className='w-full bg-gradient-to-r from-lime-400 via-amber-100 to-lime-100 sm:h-1/2 h-2/6'></div>
           </div>
-          <div className='border border-indigo-500 flex justify-center items-center rounded-md w-14 py-2 px-5 bg-indigo-400 text-white font-semibold'>0</div>
+          <div className='flex justify-center items-center rounded-md w-14 py-2 px-5 bg-indigo-400 text-white'>0</div>
           <div className='flex-1'>
             <div className='sm:hidden inline'>PLAYER B</div>
             <div className='flex flex-row justify-between items-center'>
@@ -48,36 +49,38 @@ export const FightingGame = () => {
           <div className='-mt-3.5 rounded-[50%] h-8 bg-gradient-to-b from-lime-400 via-amber-100'></div>
         </div>
 
-        <div className='flex lg:w-1/2 w-full sm:p-0 px-4 sm:justify-between justify-center sm:gap-0 gap-16'>
-          <table className='border-separate sm:border-spacing-x-10 sm:border-spacing-y-6 border-spacing-y-4 border-spacing-x-2'>
-            <tbody>
-              <tr>
-                <td>ATTACK</td>
-                <td className={fightingButtonsStyle}>A</td>
-              </tr>
-              <tr>
-                <td>LIFELINE</td>
-                <td className={fightingButtonsStyle}>Z</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className='grid grid-cols-2 sm:gap-x-24 gap-x-12 lg:w-1/2 w-full'>
+          <div className='h-[96px] flex gap-4 items-center justify-center'>
+            <div>ATTACK</div>
+            <button className={`${buttonShadowEffect} px-2 flex justify-center items-center bg-gradient-to-r from-rose-100  to-red-300 rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+              <img className='sm:w-12 w-8' src={attackImage} />
+            </button>
+          </div>
 
-          <table className='border-separate sm:border-spacing-x-10 sm:border-spacing-y-6 border-spacing-y-4 border-spacing-x-2'>
-            <tbody>
-              <tr>
-                <td className={fightingButtonsStyle}>L</td>
-                <td>ATTACK</td>
-              </tr>
-              <tr>
-                <td className={fightingButtonsStyle}>M</td>
-                <td>LIFELINE</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className='h-[96px] gap-4 flex items-center justify-center'>
+            <button className={`${buttonShadowEffect} px-2 bg-gradient-to-r from-red-300  to-rose-100 flex justify-center items-center rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+              <img className='sm:w-12 w-8 rotate-180' src={attackImage} />
+            </button>
+            <div>ATTACK</div>
+          </div>
+
+          <div className='h-[96px] flex gap-4 items-center justify-center'>
+            <div>LIFELINE</div>
+            <button className={`${buttonShadowEffect} px-2.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+              <img className='sm:w-12 w-8' src={lifelineImage} />
+            </button>
+          </div>
+
+          <div className='h-[96px] flex gap-4 items-center justify-center'>
+            <button className={`${buttonShadowEffect} px-2.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+              <img className='sm:w-12 w-8' src={lifelineImage} />
+            </button>
+            <div>LIFELINE</div>
+          </div>
         </div>
 
-        <div className='flex flex-col gap-6 items-center'>
-          <button className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white font-semibold border border-indigo-500`}>RESTART</button>
+        <div className='flex flex-col gap-4 items-center'>
+          <button className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white`}>RESTART</button>
           <div>LET&apos;S PLAY!</div>
         </div>
       </div>
