@@ -50,25 +50,29 @@ export const FightingGame = () => {
 
         <div className='flex lg:w-1/2 w-full sm:p-0 px-4 sm:justify-between justify-center sm:gap-0 gap-16'>
           <table className='border-separate sm:border-spacing-x-10 sm:border-spacing-y-6 border-spacing-y-4 border-spacing-x-2'>
-            <tr>
-              <td>ATTACK</td>
-              <td className={fightingButtonsStyle}>A</td>
-            </tr>
-            <tr>
-              <td>LIFELINE</td>
-              <td className={fightingButtonsStyle}>Z</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>ATTACK</td>
+                <td className={fightingButtonsStyle}>A</td>
+              </tr>
+              <tr>
+                <td>LIFELINE</td>
+                <td className={fightingButtonsStyle}>Z</td>
+              </tr>
+            </tbody>
           </table>
 
           <table className='border-separate sm:border-spacing-x-10 sm:border-spacing-y-6 border-spacing-y-4 border-spacing-x-2'>
-            <tr>
-              <td className={fightingButtonsStyle}>L</td>
-              <td>ATTACK</td>
-            </tr>
-            <tr>
-              <td className={fightingButtonsStyle}>M</td>
-              <td>LIFELINE</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td className={fightingButtonsStyle}>L</td>
+                <td>ATTACK</td>
+              </tr>
+              <tr>
+                <td className={fightingButtonsStyle}>M</td>
+                <td>LIFELINE</td>
+              </tr>
+            </tbody>
           </table>
         </div>
 
