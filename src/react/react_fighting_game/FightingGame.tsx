@@ -16,6 +16,15 @@ export const FightingGame = () => {
   const reducePlayerBHealth = () => {
     setIsPlayerATurn(prev => !prev)
     setPlayerBHealth(prev => prev - randomNum)
+
+    if (playerBHealth > 0) {
+      const randomPlayerBHealth = playerBHealth - randomNum
+      if (randomPlayerBHealth >= 0) {
+        setPlayerBHealth(randomPlayerBHealth)
+      } else {
+        setPlayerBHealth(0)
+      }
+    }
   }
 
   const reducePlayerAHealth = () => {
@@ -23,17 +32,24 @@ export const FightingGame = () => {
     if (round > 0) {
       setRound(prev => prev - 1)
     }
-    setPlayerAHealth(prev => prev - randomNum)
+
+    if (playerAHealth > 0) {
+      const randomPlayerAHealth = playerAHealth - randomNum
+      if (randomPlayerAHealth >= 0) {
+        setPlayerAHealth(randomPlayerAHealth)
+      } else {
+        setPlayerAHealth(0)
+      }
+    }
   }
 
   const addHealthToPlayerA = () => {
     setIsPlayerATurn(prev => !prev)
     if (playerAHealth < 100) {
-      let randomPlayerAHealth = playerAHealth + randomNum
+      const randomPlayerAHealth = playerAHealth + randomNum
       if (randomPlayerAHealth < 100) {
         setPlayerAHealth(prev => randomPlayerAHealth)
-      }
-      else {
+      } else {
         setPlayerAHealth(100)
       }
     }
@@ -45,11 +61,10 @@ export const FightingGame = () => {
       setRound(prev => prev - 1)
     }
     if (playerBHealth < 100) {
-      let randomPlayerBHealth = playerBHealth + randomNum
+      const randomPlayerBHealth = playerBHealth + randomNum
       if (randomPlayerBHealth < 100) {
         setPlayerBHealth(prev => randomPlayerBHealth)
-      }
-      else {
+      } else {
         setPlayerBHealth(100)
       }
     }
