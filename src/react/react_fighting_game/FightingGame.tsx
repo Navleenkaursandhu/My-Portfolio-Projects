@@ -3,12 +3,10 @@ import playerB from './assets/playerB.gif'
 import attackImage from './assets/punch.png'
 import lifelineImage from './assets/first-aid-kit.png'
 import { buttonShadowEffect } from '../common/tailwind_constants'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export const FightingGame = () => {
-  const [round, setRound] = useState(3)
-
-
+  const [round, setRound] = useState(5)
   const [isPlayerATurn, setIsPlayerATurn] = useState(true)
   const [playerAHealth, setPlayerAHealth] = useState(100)
   const [playerBHealth, setPlayerBHealth] = useState(100)
@@ -30,8 +28,14 @@ export const FightingGame = () => {
 
   const addHealthToPlayerA = () => {
     setIsPlayerATurn(prev => !prev)
-    if (playerAHealth !== 100) {
-      setPlayerAHealth(prev => prev + randomNum)
+    if (playerAHealth < 100) {
+      let randomPlayerAHealth = playerAHealth + randomNum
+      if (randomPlayerAHealth < 100) {
+        setPlayerAHealth(prev => randomPlayerAHealth)
+      }
+      else {
+        setPlayerAHealth(100)
+      }
     }
   }
 
@@ -40,14 +44,20 @@ export const FightingGame = () => {
     if (round > 0) {
       setRound(prev => prev - 1)
     }
-    if (playerBHealth !== 100) {
-      setPlayerBHealth(prev => prev + randomNum)
+    if (playerBHealth < 100) {
+      let randomPlayerBHealth = playerBHealth + randomNum
+      if (randomPlayerBHealth < 100) {
+        setPlayerBHealth(prev => randomPlayerBHealth)
+      }
+      else {
+        setPlayerBHealth(100)
+      }
     }
   }
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-5 lg:text-2xl sm:text-xl text-sm sm:p-4 p-1.5 font-semibold">
+      <div className="flex flex-col justify-center items-center gap-4 lg:text-2xl sm:text-xl text-sm sm:p-4 p-1.5 font-semibold">
         <h1>FIGHTING GAME</h1>
         <div className='flex flex-row sm:gap-4 gap-1 sm:w-4/5 w-full'>
           <div className='flex-1'>
@@ -72,7 +82,11 @@ export const FightingGame = () => {
             </div>
             <div className='w-full bg-gradient-to-r from-lime-400 via-amber-100 to-lime-100 sm:h-1/2 h-2/6'></div>
           </div>
-          <div className='flex justify-center items-center rounded-md w-14 py-2 px-5 bg-indigo-400 text-white'>{round}</div>
+          <div>
+            <div className='text-sm text-center'>ROUND</div>
+            <div className='flex justify-center items-center rounded-md w-14 py-2 px-5 bg-indigo-400 text-white'>{round}</div>
+          </div>
+
           <div className='flex-1'>
             <div className='flex flex-row justify-between items-center'>
               {!isPlayerATurn &&
@@ -108,13 +122,13 @@ export const FightingGame = () => {
         <div className='grid grid-cols-2 sm:gap-x-24 gap-x-12 lg:w-1/2 w-full'>
           <div className='h-[80px] flex gap-4 items-center justify-center'>
             <div>ATTACK</div>
-            <button onClick={() => isPlayerATurn && reducePlayerBHealth()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2 flex justify-center items-center bg-gradient-to-r from-rose-100  to-red-300 rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+            <button onClick={() => !!round && isPlayerATurn && reducePlayerBHealth()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2 flex justify-center items-center bg-gradient-to-r from-rose-100  to-red-300 rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
               <img src={attackImage} />
             </button>
           </div>
 
           <div className='h-[80px] gap-4 flex items-center justify-center'>
-            <button onClick={() => !isPlayerATurn && reducePlayerAHealth()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2 bg-gradient-to-r from-red-300  to-rose-100 flex justify-center items-center rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+            <button onClick={() => !!round && !isPlayerATurn && reducePlayerAHealth()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2 bg-gradient-to-r from-red-300  to-rose-100 flex justify-center items-center rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
               <img className='-scale-x-100' src={attackImage} />
             </button>
             <div>ATTACK</div>
@@ -122,13 +136,13 @@ export const FightingGame = () => {
 
           <div className='h-[80px] flex gap-4 items-center justify-center'>
             <div>LIFELINE</div>
-            <button onClick={() => isPlayerATurn && addHealthToPlayerA()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+            <button onClick={() => !!round && isPlayerATurn && addHealthToPlayerA()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
               <img src={lifelineImage} />
             </button>
           </div>
 
           <div className='h-[80px] flex gap-4 items-center justify-center'>
-            <button onClick={() => !isPlayerATurn && addHealthToPlayerB()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+            <button onClick={() => !!round && !isPlayerATurn && addHealthToPlayerB()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
               <img src={lifelineImage} />
             </button>
             <div>LIFELINE</div>
@@ -139,11 +153,10 @@ export const FightingGame = () => {
 
         <div className='flex flex-col gap-2 items-center'>
           <button className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white`}>RESTART</button>
-          {!!round && <div>LET&apos;S PLAY!</div>}
-          {!round && <div>GAME OVER</div>}
+          {!!round && <div className='mt-2'>LET&apos;S PLAY!</div>}
+          {!round && <div className='mt-2'>GAME OVER</div>}
         </div>
       </div>
-
     </>
   )
 }
