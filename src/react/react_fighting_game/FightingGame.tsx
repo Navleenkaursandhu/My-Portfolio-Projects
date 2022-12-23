@@ -14,7 +14,7 @@ export const FightingGame = () => {
   const reducePlayerBHealth = () => {
     setIsPlayerATurn(prev => !prev)
     setPlayerBHealth(prev => prev - (Math.floor(Math.random() * (10)) + 20))
-    
+
   }
 
   const reducePlayerAHealth = () => {
@@ -38,30 +38,46 @@ export const FightingGame = () => {
         <h1>FIGHTING GAME</h1>
         <div className='flex flex-row sm:gap-4 gap-1 sm:w-4/5 w-full'>
           <div className='flex-1'>
-            <div className='sm:hidden visible flex w-full justify-end'>
-              PLAYER A
-            </div>
             <div className='flex flex-row justify-between items-center'>
               <div>{playerAHealth}</div>
-              <div className='flex flex-row items-center sm:gap-2'>
-                <div className='sm:inline hidden'>PLAYER A</div>
-                <span className="material-symbols-rounded sm:text-6xl text-4xl">
-                  arrow_right
-                </span>
-              </div>
+              {isPlayerATurn &&
+                <div className='flex flex-row items-center sm:gap-2 text-indigo-600'>
+                  <div className='sm:inline hidden'>PLAYER A</div>
+                  <span className="material-symbols-rounded sm:text-6xl text-4xl ">
+                    arrow_left
+                  </span>
+                </div>
+              }
+              {!isPlayerATurn &&
+                <div className='flex flex-row items-center sm:gap-2'>
+                  <div className='sm:inline hidden'>PLAYER A</div>
+                  <span className="material-symbols-rounded sm:text-6xl text-4xl">
+                    arrow_left
+                  </span>
+                </div>
+              }
             </div>
             <div className='w-full bg-gradient-to-r from-lime-400 via-amber-100 to-lime-100 sm:h-1/2 h-2/6'></div>
           </div>
           <div className='flex justify-center items-center rounded-md w-14 py-2 px-5 bg-indigo-400 text-white'>{round}</div>
           <div className='flex-1'>
-            <div className='sm:hidden inline'>PLAYER B</div>
             <div className='flex flex-row justify-between items-center'>
-              <div className='flex flex-row items-center gap-2'>
-                <span className="material-symbols-rounded sm:text-6xl text-4xl">
-                  arrow_left
-                </span>
-                <div className='sm:inline hidden'>PLAYER B</div>
-              </div>
+              {!isPlayerATurn &&
+                <div className='flex flex-row items-center gap-2 text-indigo-600'>
+                  <span className="material-symbols-rounded sm:text-6xl text-4xl">
+                    arrow_right
+                  </span>
+                  <div className='sm:inline hidden '>PLAYER B</div>
+                </div>
+              }
+              {isPlayerATurn &&
+                <div className='flex flex-row items-center gap-2'>
+                  <span className="material-symbols-rounded sm:text-6xl text-4xl">
+                    arrow_right
+                  </span>
+                  <div className='sm:inline hidden'>PLAYER B</div>
+                </div>
+              }
               <div>{playerBHealth}</div>
             </div>
             <div className='w-full bg-gradient-to-r from-lime-100 via-amber-100 to-lime-400 sm:h-1/2 h-2/6'></div>
