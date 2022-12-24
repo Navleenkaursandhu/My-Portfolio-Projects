@@ -2,10 +2,22 @@ import playerA from './assets/playerA.gif'
 import playerB from './assets/playerB.gif'
 import attackImage from './assets/punch.png'
 import lifelineImage from './assets/first-aid-kit.png'
+import playerAPunch from './assets/playerA-punch.mp3'
+import playerBPunch from './assets/playerB-punch.mp3'
+import playerALifeline from './assets/lifelinePlayerA.mp3'
+import playerBLifeline from './assets/lifelinePlayerB.mp3'
+import victory from './assets/victory.mp3'
+import draw from './assets/draw.mp3'
 import { buttonShadowEffect } from '../common/tailwind_constants'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const FightingGame = () => {
+  const [playerAPunchSound] = useState(new Audio(playerAPunch))
+  const [playerBPunchSound] = useState(new Audio(playerBPunch))
+  const [playerALifelineSound] = useState(new Audio(playerALifeline))
+  const [playerBLifelineSound] = useState(new Audio(playerBLifeline))
+  const [victorySound] = useState(new Audio(victory))
+  const [drawSound] = useState(new Audio(draw))
   const [round, setRound] = useState(5)
   const [isPlayerATurn, setIsPlayerATurn] = useState(true)
   const [playerAHealth, setPlayerAHealth] = useState(100)
@@ -69,12 +81,28 @@ export const FightingGame = () => {
     }
   }
 
+  const restartGame = () => {
+    setRound(5)
+    setIsPlayerATurn(true)
+    setPlayerAHealth(100)
+    setPlayerBHealth(100)
+  }
+
   const isPlayerBWinner = (!!round && playerAHealth === 0 && playerBHealth !== 0) || (!round && playerBHealth > playerAHealth)
   const isDraw = (!round && playerAHealth === playerBHealth)
   const isPlayerAWinner = (!!round && playerBHealth === 0 && playerAHealth !== 0) || (!round && playerAHealth > playerBHealth)
   const isGameNotOver = !!round && !isPlayerAWinner && !isPlayerBWinner && !isDraw
+  // const isGameOver =  (!!round && isPlayerAWinner) || (!!round && isPlayerBWinner) && isDraw
 
-  console.log({isPlayerAWinner, isDraw, isPlayerBWinner, isGameNotOver})
+  useEffect(() => {
+    if (isPlayerAWinner || isPlayerBWinner) {
+      void victorySound.play()
+    }
+
+    if (isDraw) {
+      void drawSound.play()
+    }
+  })
 
   return (
     <>
@@ -143,13 +171,25 @@ export const FightingGame = () => {
         <div className='grid grid-cols-2 sm:gap-x-24 gap-x-12 lg:w-1/2 w-full'>
           <div className='h-[80px] flex gap-4 items-center justify-center'>
             <div>ATTACK</div>
-            <button onClick={() => isGameNotOver && isPlayerATurn && reducePlayerBHealth()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2 sm:py-0 py-1 flex justify-center items-center bg-gradient-to-r from-rose-100  to-red-300 rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+            <button onClick={() => {
+              if (isGameNotOver && isPlayerATurn) {
+                reducePlayerBHealth()
+                void playerAPunchSound.play()
+              }
+            }
+            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2 sm:py-0 py-1 flex justify-center items-center bg-gradient-to-r from-rose-100  to-red-300 rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
               <img src={attackImage} />
             </button>
           </div>
 
           <div className='h-[80px] gap-4 flex items-center justify-center'>
-            <button onClick={() => isGameNotOver && !isPlayerATurn && reducePlayerAHealth()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2 sm:py-0 py-1 bg-gradient-to-r from-red-300  to-rose-100 flex justify-center items-center rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+            <button onClick={() => {
+              if (isGameNotOver && !isPlayerATurn) {
+                reducePlayerAHealth()
+                void playerBPunchSound.play()
+              }
+            }
+            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2 sm:py-0 py-1 bg-gradient-to-r from-red-300  to-rose-100 flex justify-center items-center rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
               <img className='-scale-x-100' src={attackImage} />
             </button>
             <div>ATTACK</div>
@@ -157,13 +197,25 @@ export const FightingGame = () => {
 
           <div className='h-[80px] flex gap-4 items-center justify-center'>
             <div>LIFELINE</div>
-            <button onClick={() => isGameNotOver && isPlayerATurn && addHealthToPlayerA()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 sm:py-0 py-1.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+            <button onClick={() => {
+              if (isGameNotOver && isPlayerATurn) {
+                addHealthToPlayerA()
+                void playerALifelineSound.play()
+              }
+            }
+            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 sm:py-0 py-1.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
               <img src={lifelineImage} />
             </button>
           </div>
 
           <div className='h-[80px] flex gap-4 items-center justify-center'>
-            <button onClick={() => isGameNotOver && !isPlayerATurn && addHealthToPlayerB()} className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 sm:py-0 py-1.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+            <button onClick={() => {
+              if (isGameNotOver && !isPlayerATurn) {
+                addHealthToPlayerB()
+                void playerBLifelineSound.play()
+              }
+            }
+            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 sm:py-0 py-1.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
               <img src={lifelineImage} />
             </button>
             <div>LIFELINE</div>
@@ -175,9 +227,9 @@ export const FightingGame = () => {
         {isDraw && <div>IT&apos;S A DRAW!</div>}
 
         <div className='flex flex-col gap-2 items-center'>
-          <button className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white`}>RESTART</button>
-          {!!round && <div className='mt-2'>LET&apos;S PLAY!</div>}
-          {!round && <div className='mt-2'>GAME OVER</div>}
+          <button onClick={() => restartGame()} className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white`}>RESTART</button>
+          {!!round && isGameNotOver && <div className='mt-2'>LET&apos;S PLAY!</div>}
+          {!isGameNotOver && <div className='mt-2'>GAME OVER</div>}
         </div>
       </div>
     </>
