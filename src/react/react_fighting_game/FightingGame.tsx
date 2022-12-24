@@ -106,7 +106,7 @@ export const FightingGame = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-4 lg:text-2xl sm:text-xl text-sm sm:p-4 p-1.5 font-semibold">
+      <div className="flex flex-col justify-center items-center gap-4 lg:text-2xl sm:text-xl text-sm sm:p-4 p-1.5">
         <h1>FIGHTING GAME</h1>
         <div className='flex flex-row sm:gap-4 gap-1 sm:w-4/5 w-full'>
           <div className='flex-1'>
@@ -229,7 +229,7 @@ export const FightingGame = () => {
         <div className='flex flex-col gap-2 items-center'>
           <button onClick={() => restartGame()} className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white`}>RESTART</button>
           {!!round && isGameNotOver && <div className='mt-2'>LET&apos;S PLAY!</div>}
-          {!isGameNotOver && <div className='mt-2'>GAME OVER</div>}
+          {!isGameNotOver && <div className='mt-2'>GAME OVER, you may restart to play again!</div>}
         </div>
       </div>
     </>
