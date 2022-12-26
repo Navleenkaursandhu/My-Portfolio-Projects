@@ -10,6 +10,7 @@ import victory from './assets/victory.mp3'
 import draw from './assets/draw.mp3'
 import { buttonShadowEffect } from '../common/tailwind_constants'
 import { useEffect, useState } from 'react'
+import { Button } from './Button'
 
 export const FightingGame = () => {
   const [playerAPunchSound] = useState(new Audio(playerAPunch))
@@ -154,76 +155,72 @@ export const FightingGame = () => {
         <div className='grid grid-cols-2 sm:gap-x-24 gap-x-12 lg:w-1/2 w-full'>
           <div className='h-[80px] flex gap-4 items-center justify-center'>
             <div>ATTACK</div>
-            <button
+            <Button
+              className='bg-gradient-to-r from-rose-100  to-red-300 shadow-[#df8889] hover:shadow-[#df8889]'
+              disabled={!isGameNotOver || !isPlayerATurn}
               onClick={() => {
                 if (isGameNotOver && isPlayerATurn) {
                   reducePlayerBHealth()
                   void playerAPunchSound.play()
                 }
               }}
-              className={`${(isGameNotOver && isPlayerATurn)
-                  ? `${buttonShadowEffect} bg-gradient-to-r from-rose-100  to-red-300 shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`
-                  : ((isGameNotOver && !isPlayerATurn) || !isGameNotOver)
-                    ? 'bg-gradient-to-r from-slate-100  to-slate-300 shadow-[4px_4px_0px_0px_gray] '
-                    : ''
-                } sm:w-16 w-12 px-2 sm:py-0 py-0.5 flex justify-center items-center rounded-md`
-              }
             >
               <img src={attackImage} />
-            </button>
+            </Button>
           </div>
 
           <div className='h-[80px] gap-4 flex items-center justify-center'>
-            <button
+            <Button
+              className='bg-gradient-to-r from-rose-100  to-red-300 shadow-[#df8889] hover:shadow-[#df8889]'
+              disabled={!isGameNotOver || isPlayerATurn}
               onClick={() => {
                 if (isGameNotOver && !isPlayerATurn) {
                   reducePlayerAHealth()
                   void playerBPunchSound.play()
                 }
               }}
-              className={`${(isGameNotOver && !isPlayerATurn)
-                  ? `${buttonShadowEffect} bg-gradient-to-r from-rose-100  to-red-300 shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`
-                  : ((isGameNotOver && isPlayerATurn) || !isGameNotOver)
-                    ? 'bg-gradient-to-r from-slate-100  to-slate-300 shadow-[4px_4px_0px_0px_gray] '
-                    : ''
-                } sm:w-16 w-12 px-2 sm:py-0 py-0.5 flex justify-center items-center rounded-md `
-              }
             >
               <img className='-scale-x-100' src={attackImage} />
-            </button>
+            </Button>
             <div>ATTACK</div>
           </div>
 
           <div className='h-[80px] flex gap-4 items-center justify-center'>
             <div>LIFELINE</div>
-            <button onClick={() => {
-              if (isGameNotOver && isPlayerATurn) {
-                addHealthToPlayerA()
-                void playerALifelineSound.play()
-              }
-            }
-            } className={`${(isGameNotOver && isPlayerATurn) ? buttonShadowEffect.concat('shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]') : ''} sm:w-16 w-12 px-2.5 sm:py-0 py-1 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5]`}>
+            <Button
+              className='bg-gradient-to-b from-blue-100  to-blue-300 shadow-[#7eb6f5] hover:shadow-[#7eb6f5]'
+              disabled={!isGameNotOver || !isPlayerATurn}
+              onClick={() => {
+                if (isGameNotOver && isPlayerATurn) {
+                  addHealthToPlayerA()
+                  void playerALifelineSound.play()
+                }
+              }}
+            >
               <img src={lifelineImage} />
-            </button>
+            </Button>
           </div>
 
           <div className='h-[80px] flex gap-4 items-center justify-center'>
-            <button onClick={() => {
-              if (isGameNotOver && !isPlayerATurn) {
-                addHealthToPlayerB()
-                void playerBLifelineSound.play()
-              }
-            }
-            } className={`${(isGameNotOver && !isPlayerATurn) ? buttonShadowEffect.concat('shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]') : ' '} sm:w-16 w-12 px-2.5 sm:py-0 py-1 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] `}>
+            <Button
+              className='bg-gradient-to-b from-blue-100  to-blue-300 shadow-[#7eb6f5] hover:shadow-[#7eb6f5]'
+              disabled={!isGameNotOver || isPlayerATurn}
+              onClick={() => {
+                if (isGameNotOver && !isPlayerATurn) {
+                  addHealthToPlayerB()
+                  void playerBLifelineSound.play()
+                }
+              }}
+            >
               <img src={lifelineImage} />
-            </button>
+            </Button>
             <div>LIFELINE</div>
           </div>
         </div>
 
-        {isPlayerBWinner && <div>PLAYER B WINS!</div>}
-        {isPlayerAWinner && <div>PLAYER A WINS!</div>}
-        {isDraw && <div>IT&apos;S A DRAW!</div>}
+        {isPlayerBWinner && <div className='animate-bounce text-3xl'>PLAYER B WINS!</div>}
+        {isPlayerAWinner && <div className='animate-bounce text-3xl'>PLAYER A WINS!</div>}
+        {isDraw && <div className='animate-bounce text-3xl'>IT&apos;S A DRAW!</div>}
 
         <div className='flex flex-col gap-2 items-center'>
           <button onClick={() => restartGame()} className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white`}>RESTART</button>
