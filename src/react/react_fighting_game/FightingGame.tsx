@@ -92,7 +92,6 @@ export const FightingGame = () => {
   const isDraw = (!round && playerAHealth === playerBHealth)
   const isPlayerAWinner = (!!round && playerBHealth === 0 && playerAHealth !== 0) || (!round && playerAHealth > playerBHealth)
   const isGameNotOver = !!round && !isPlayerAWinner && !isPlayerBWinner && !isDraw
-  // const isGameOver =  (!!round && isPlayerAWinner) || (!!round && isPlayerBWinner) && isDraw
 
   useEffect(() => {
     if (isPlayerAWinner || isPlayerBWinner) {
@@ -112,24 +111,16 @@ export const FightingGame = () => {
           <div className='flex-1'>
             <div className='flex flex-row justify-between items-center'>
               <div>{playerAHealth}</div>
-              {isPlayerATurn &&
-                <div className='flex flex-row items-center sm:gap-2 text-indigo-600'>
-                  <div className='sm:inline hidden'>PLAYER A</div>
-                  <span className="material-symbols-rounded sm:text-6xl text-4xl ">
-                    arrow_left
-                  </span>
-                </div>
-              }
-              {!isPlayerATurn &&
-                <div className='flex flex-row items-center sm:gap-2'>
-                  <div className='sm:inline hidden'>PLAYER A</div>
-                  <span className="material-symbols-rounded sm:text-6xl text-4xl">
-                    arrow_left
-                  </span>
-                </div>
-              }
+              <div className={`flex flex-row items-center sm:gap-2 ${(isPlayerATurn && isGameNotOver) ? 'text-indigo-600' : 'text-black'} text-indigo-600`}>
+                <div className='sm:inline hidden'>PLAYER A</div>
+                <span className="material-symbols-rounded sm:text-6xl text-4xl ">
+                  arrow_left
+                </span>
+              </div>
             </div>
-            <div className='w-full bg-gradient-to-r from-lime-400 via-amber-100 to-lime-100 sm:h-1/2 h-2/6'></div>
+            <div className='w-full flex justify-end sm:h-1/2 h-2/6  bg-gradient-to-r from-red-500 to-rose-200'>
+              <div className='h-full bg-gradient-to-r from-lime-400 via-amber-100 to-lime-100' style={{ width: `${playerAHealth}%` }}></div>
+            </div>
           </div>
           <div>
             <div className='text-sm text-center'>ROUND</div>
@@ -138,25 +129,17 @@ export const FightingGame = () => {
 
           <div className='flex-1'>
             <div className='flex flex-row justify-between items-center'>
-              {!isPlayerATurn &&
-                <div className='flex flex-row items-center gap-2 text-indigo-600'>
-                  <span className="material-symbols-rounded sm:text-6xl text-4xl">
-                    arrow_right
-                  </span>
-                  <div className='sm:inline hidden '>PLAYER B</div>
-                </div>
-              }
-              {isPlayerATurn &&
-                <div className='flex flex-row items-center gap-2'>
-                  <span className="material-symbols-rounded sm:text-6xl text-4xl">
-                    arrow_right
-                  </span>
-                  <div className='sm:inline hidden'>PLAYER B</div>
-                </div>
-              }
+              <div className={`flex flex-row items-center gap-2 ${(!isPlayerATurn && isGameNotOver) ? 'text-indigo-600' : 'text-black'} `}>
+                <span className="material-symbols-rounded sm:text-6xl text-4xl">
+                  arrow_right
+                </span>
+                <div className='sm:inline hidden '>PLAYER B</div>
+              </div>
               <div>{playerBHealth}</div>
             </div>
-            <div className='w-full bg-gradient-to-r from-lime-100 via-amber-100 to-lime-400 sm:h-1/2 h-2/6'></div>
+            <div className='w-full sm:h-1/2 h-2/6 bg-gradient-to-l from-red-500 to-rose-200'>
+              <div className='h-full bg-gradient-to-l from-lime-400 via-amber-100 to-lime-100' style={{ width: `${playerBHealth}%` }}></div>
+            </div>
           </div>
         </div>
 
@@ -171,25 +154,41 @@ export const FightingGame = () => {
         <div className='grid grid-cols-2 sm:gap-x-24 gap-x-12 lg:w-1/2 w-full'>
           <div className='h-[80px] flex gap-4 items-center justify-center'>
             <div>ATTACK</div>
-            <button onClick={() => {
-              if (isGameNotOver && isPlayerATurn) {
-                reducePlayerBHealth()
-                void playerAPunchSound.play()
+            <button
+              onClick={() => {
+                if (isGameNotOver && isPlayerATurn) {
+                  reducePlayerBHealth()
+                  void playerAPunchSound.play()
+                }
+              }}
+              className={`${(isGameNotOver && isPlayerATurn)
+                  ? `${buttonShadowEffect} bg-gradient-to-r from-rose-100  to-red-300 shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`
+                  : ((isGameNotOver && !isPlayerATurn) || !isGameNotOver)
+                    ? 'bg-gradient-to-r from-slate-100  to-slate-300 shadow-[4px_4px_0px_0px_gray] '
+                    : ''
+                } sm:w-16 w-12 px-2 sm:py-0 py-0.5 flex justify-center items-center rounded-md`
               }
-            }
-            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2 sm:py-0 py-1 flex justify-center items-center bg-gradient-to-r from-rose-100  to-red-300 rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+            >
               <img src={attackImage} />
             </button>
           </div>
 
           <div className='h-[80px] gap-4 flex items-center justify-center'>
-            <button onClick={() => {
-              if (isGameNotOver && !isPlayerATurn) {
-                reducePlayerAHealth()
-                void playerBPunchSound.play()
+            <button
+              onClick={() => {
+                if (isGameNotOver && !isPlayerATurn) {
+                  reducePlayerAHealth()
+                  void playerBPunchSound.play()
+                }
+              }}
+              className={`${(isGameNotOver && !isPlayerATurn)
+                  ? `${buttonShadowEffect} bg-gradient-to-r from-rose-100  to-red-300 shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`
+                  : ((isGameNotOver && isPlayerATurn) || !isGameNotOver)
+                    ? 'bg-gradient-to-r from-slate-100  to-slate-300 shadow-[4px_4px_0px_0px_gray] '
+                    : ''
+                } sm:w-16 w-12 px-2 sm:py-0 py-0.5 flex justify-center items-center rounded-md `
               }
-            }
-            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2 sm:py-0 py-1 bg-gradient-to-r from-red-300  to-rose-100 flex justify-center items-center rounded-md shadow-[4px_4px_0px_0px_#df8889] hover:shadow-[2px_2px_0px_0px_#df8889]`}>
+            >
               <img className='-scale-x-100' src={attackImage} />
             </button>
             <div>ATTACK</div>
@@ -203,7 +202,7 @@ export const FightingGame = () => {
                 void playerALifelineSound.play()
               }
             }
-            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 sm:py-0 py-1.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+            } className={`${(isGameNotOver && isPlayerATurn) ? buttonShadowEffect.concat('shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]') : ''} sm:w-16 w-12 px-2.5 sm:py-0 py-1 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5]`}>
               <img src={lifelineImage} />
             </button>
           </div>
@@ -215,7 +214,7 @@ export const FightingGame = () => {
                 void playerBLifelineSound.play()
               }
             }
-            } className={`${buttonShadowEffect} sm:w-16 w-8 px-2.5 sm:py-0 py-1.5 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]`}>
+            } className={`${(isGameNotOver && !isPlayerATurn) ? buttonShadowEffect.concat('shadow-[4px_4px_0px_0px_#7eb6f5] hover:shadow-[2px_2px_0px_0px_#7eb6f5]') : ' '} sm:w-16 w-12 px-2.5 sm:py-0 py-1 bg-gradient-to-b from-blue-100  to-blue-300 rounded-md shadow-[4px_4px_0px_0px_#7eb6f5] `}>
               <img src={lifelineImage} />
             </button>
             <div>LIFELINE</div>
