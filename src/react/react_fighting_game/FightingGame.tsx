@@ -218,9 +218,9 @@ export const FightingGame = () => {
           </div>
         </div>
 
-        {isPlayerBWinner && <div className='animate-bounce text-3xl'>PLAYER B WINS!</div>}
-        {isPlayerAWinner && <div className='animate-bounce text-3xl'>PLAYER A WINS!</div>}
-        {isDraw && <div className='animate-bounce text-3xl'>IT&apos;S A DRAW!</div>}
+        {isPlayerBWinner && <div className='animate-bounce text-3xl font-extrabold text-lime-500'>PLAYER B WINS!</div>}
+        {isPlayerAWinner && <div className='animate-bounce text-3xl font-extrabold text-lime-500'>PLAYER A WINS!</div>}
+        {isDraw && <div className='animate-bounce text-3xl font-extrabold text-lime-500'>IT&apos;S A DRAW!</div>}
 
         <div className='flex flex-col gap-2 items-center'>
           <button onClick={() => restartGame()} className={`${buttonShadowEffect} bg-indigo-400 px-5 py-1.5 rounded-md text-white`}>RESTART</button>
