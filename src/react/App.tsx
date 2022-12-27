@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import './App.css'
 import { FightingGame } from './react_fighting_game/FightingGame'
-import { CardMatchGame } from './react_project_CardMatchGame/CardMatchGame
+import { CardMatchGame } from './react_project_CardMatchGame/CardMatchGame'
 import { Main as ProjectWeddingCard } from './react_project_WeddingCard/Main'
 import { Main as ProjectTimesheet } from './react_project_Timesheet/Main'
 import { Main as ProjectDailyDiary } from './react_project_DailyDiary/Main'
