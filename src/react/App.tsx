@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css'
+import { FightingGame } from './react_fighting_game/FightingGame'
 import { CardMatchGame } from './react_project_CardMatchGame/CardMatchGame'
 import { Main as ProjectWeddingCard } from './react_project_WeddingCard/Main'
 import { Main as ProjectTimesheet } from './react_project_Timesheet/Main'
@@ -55,6 +56,7 @@ export const App = () => {
           <Route path="Timesheet" element={<ProjectTimesheet />} />
           <Route path="DailyDiary" element={<ProjectDailyDiary />} />
           <Route path="WeddingCard" element={<ProjectWeddingCard />} />
+          <Route path="FightingGame" element={<FightingGame/>}/>
           <Route path="CardMatchGame" element={<CardMatchGame/>}/>
         </Route>
       </Routes>
