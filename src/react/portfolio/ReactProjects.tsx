@@ -14,11 +14,11 @@ import * as SimonSaysData from '../reactProject_SimonSays/main'
 import * as TicTacToeData from '../reactProject_TicTacToe/main'
 import * as PortfolioData from '../portfolio/PortfolioPage'
 import * as FightingGameData from '../react_fighting_game/FightingGame'
+import * as CardMatchGameData from '../react_project_CardMatchGame/CardMatchGame'
 import { ProjectDetails } from './ProjectDetails'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
 import { compareAsc, compareDesc, parseISO } from 'date-fns'
-
 
 const projects = [
   {
@@ -39,12 +39,13 @@ const projects = [
         technologies to create a functional e-commerce shopping website.</p>
     </div>,
     skills: ['Figma', 'Graphic Design', 'ReactJS', 'Vite', 'Tailwind CSS', 'Dexie.js', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design'],
-    date: parseISO('2022-12'),
+    date: parseISO('2022-11'),
     link: 'https://ecommerce.navleenbrar.com/',
     githubLink: 'https://github.com/Navleenkaursandhu/E-Commerce-Website'
   },
   PortfolioData,
   WeatherAppData,
+  CardMatchGameData,
   FightingGameData,
   DictionaryData,
   LCDClockData,
