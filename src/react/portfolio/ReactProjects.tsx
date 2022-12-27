@@ -13,10 +13,12 @@ import * as RPSData from '../reactProject_RPS/main'
 import * as SimonSaysData from '../reactProject_SimonSays/main'
 import * as TicTacToeData from '../reactProject_TicTacToe/main'
 import * as PortfolioData from '../portfolio/PortfolioPage'
+import * as FightingGameData from '../react_fighting_game/FightingGame'
 import { ProjectDetails } from './ProjectDetails'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
 import { compareAsc, compareDesc, parseISO } from 'date-fns'
+
 
 const projects = [
   {
@@ -43,6 +45,7 @@ const projects = [
   },
   PortfolioData,
   WeatherAppData,
+  FightingGameData,
   DictionaryData,
   LCDClockData,
   AnalogClockData,
