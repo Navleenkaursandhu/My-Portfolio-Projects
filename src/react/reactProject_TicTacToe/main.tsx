@@ -1,7 +1,7 @@
 import { parseISO } from 'date-fns'
 import { Input } from './input'
 
-export const id = 'vanillajs-tictactoegame'
+export const id = 'react-tictactoegame'
 export const title = 'TIC TAC TOE GAME'
 export const description = <div>
   Put away your pen and paper - now you can play Tic Tac Toe on your computer using this App. This game is played on a 3x3 grid.
