@@ -20,10 +20,10 @@ export const Intro = () => {
 
           <div className='grid grid-cols-1 lg:grid-cols-2 text-[#371064] lg:p-8 md:p-8 p-2 lg:text-xl md:text-lg text-md'>
             <div className='flex items-center gap-4'><span className="lg:text-4xl md:text-4xl text-3xl material-symbols-rounded">remember_me</span>
-              604-418-3860
+              236-632-8100
             </div>
             <div className='flex items-center gap-4'><span className="lg:text-4xl md:text-4xl text-3xl material-symbols-rounded">mail</span>
-              navleensandhu0211@gmail.com
+              navleenbrar0211@gmail.com
             </div>
 
             <div className='lg:mb-0 mb-2.5'>
@@ -33,7 +33,7 @@ export const Intro = () => {
               </a>
             </div>
 
-            <a className='flex items-center gap-4' href='https://www.linkedin.com/in/n-s-813167222/' target='_blank' rel="noreferrer">
+            <a className='flex items-center gap-4' href='https://www.linkedin.com/in/navleen-brar-5153b725b/' target='_blank' rel="noreferrer">
               <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#5d92b9] hover:shadow-[#5d92b9]`} src={linkedInImage} /></button>
               LinkedIn
             </a>
