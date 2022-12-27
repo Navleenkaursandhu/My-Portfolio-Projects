@@ -5,6 +5,7 @@ import gameOverMusic from './assets/gameOver.mp3'
 import successMusic from './assets/success.mp3'
 import { parseISO } from 'date-fns'
 
+export const id = 'react-cardmatchgame'
 export const title = 'CARD MATCH GAME'
 export const description = <div>
   Level up your concentration with this online memory card game App. Start the game by flipping a card.

@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react'
 import { Button } from './Button'
 import { parseISO } from 'date-fns'
 
+export const id = 'react-fightinggame'
 export const title = 'FIGHTING GAME'
 export const description = <div>
   Want to play something exciting? Try out this 1-on-1 fighting game with your friend on a computer.

@@ -8,6 +8,8 @@ import { id as reactSimonSaysGameID } from '../reactProject_SimonSays/main'
 import { id as reactTicTacToeGameID } from '../reactProject_TicTacToe/main'
 import { id as reactRPSGameID } from '../reactProject_RPS/main'
 import { id as reactTipCalculatorID } from '../reactProject_TipCalculator/main'
+import { id as reactFightingGameID } from '../react_fighting_game/FightingGame'
+import { id as reactCardMatchGameID } from '../react_project_CardMatchGame/CardMatchGame'
 import { SortProjects } from './SortProjects'
 import { useState } from 'react'
 import { compareAsc, compareDesc, parseISO } from 'date-fns'
@@ -16,14 +18,7 @@ const projects = [
   {
     id: 'vanillajs-cardmatchgame',
     title: 'CARD MATCH GAME',
-    description: <div>
-      Level up your concentration with this online memory card game App. Start the game by flipping a card.
-      Try to find pairs with matching numbers and colors. The cards with same number
-      and color make a pair (such as 2 of hearts and 2 of diamonds will make a pair). If you can&apos;t find a pair,
-      the cards are flipped back face down. Remember the images and use your memory to find pairs as you progress
-      through the game. When you find a pair the cards will remain facing up on the board. The game is complete once all
-      pairs are found. Try out this game as this fun and interactive app is a great way to exercise your memory skills.
-    </div>,
+    description: <ReactReimplementationRedirect link={reactCardMatchGameID} />,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
     date: parseISO('2022-08'),
     link: '/vanilla_js/CardMatch/game.html',
@@ -33,18 +28,13 @@ const projects = [
     id: 'vanillajs-fightinggame',
     title: 'STREET FIGHTING GAME',
     description: <div>
-      Want to play something exciting? Try this keyboard controlled 1-on-1 fighting game with your friend on a computer.
-      The rules are pretty simple. The game has 3 rounds in total. To start the game Player A takes the first round followed
-      by player B and so forth. It will be the player&apos;s choice whether he/she wants to hit the opponent or take a lifeline
-      during his/her round (remember there is no point of taking a lifeline in your first round as it&apos;s already 100%). On
-      hit, opponents health will reduce by a random number (the damage will be reflected by red bar) and on selecting lifeline
-      the current player&apos;s health increases by random number (health is reflected by green bar). In the final round the player
-      with good health wins the battle.
+      <ReactReimplementationRedirect link={reactFightingGameID} />
       <p className='bg-yellow-100 italic p-4 flex align-center gap-2 mt-4 mb-4 rounded-md'>
         <span className="material-symbols-rounded">
           warning
         </span>
-        Please note that in order to play this game you need to press your keyboard alphabet keys to take actions during fight.
+        Please note that the JS implementation of this game has 3 rounds in total and in order to play this game the user needs to press keyboard
+        alphabet keys to take actions during fight.
       </p>
     </div>,
     skills: ['JavaScript', 'CSS', 'HTML', 'Git', 'Github', 'VS Code'],
