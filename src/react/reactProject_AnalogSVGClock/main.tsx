@@ -12,7 +12,7 @@ export const description = <div>
 export const skills = ['ReactJS', 'Vite', 'CSS', 'SVG', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-08')
 export const link = './AnalogSVGClock'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/reactProject_AnalogSVGClock'
+export const githubLink = 'https://github.com/brar-navleen/My-Portfolio-Projects/tree/main/src/react/reactProject_AnalogSVGClock'
 
 export const Main = () => {
   return (
