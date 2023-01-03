@@ -27,7 +27,7 @@ export const Intro = () => {
             </div>
 
             <div className='lg:mb-0 mb-2.5'>
-              <a className='flex items-center gap-4' href='https://github.com/Navleenkaursandhu' target='_blank' rel="noreferrer">
+              <a className='flex items-center gap-4' href='https://github.com/brar-navleen' target='_blank' rel="noreferrer">
                 <button><img className={`lg:w-9 md:w-9 w-7 rounded-sm ${buttonShadowEffect} shadow-[#00000094] hover:shadow-[#00000094]`} src={githubImage} /></button>
                 Github
               </a>

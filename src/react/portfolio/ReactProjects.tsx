@@ -41,7 +41,7 @@ const projects = [
     skills: ['Figma', 'Graphic Design', 'ReactJS', 'Vite', 'Tailwind CSS', 'Dexie.js', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design'],
     date: parseISO('2022-11'),
     link: 'https://ecommerce.navleenbrar.com/',
-    githubLink: 'https://github.com/Navleenkaursandhu/E-Commerce-Website'
+    githubLink: 'https://github.com/brar-navleen/E-Commerce-Website'
   },
   PortfolioData,
   WeatherAppData,
