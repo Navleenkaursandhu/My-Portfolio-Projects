@@ -12,7 +12,7 @@ export const description = <div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'CSS', 'Local Storage API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-09')
 export const link = './DailyDiary'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_DailyDiary'
+export const githubLink = 'https://github.com/brar-navleen/My-Portfolio-Projects/tree/main/src/react/react_project_DailyDiary'
 
 export const Main = () => {
   return (

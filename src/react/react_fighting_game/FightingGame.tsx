@@ -27,7 +27,7 @@ export const description = <div>
 export const skills = ['React', 'Vite', 'TailwindCSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-12')
 export const link = '/FightingGame'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_fighting_game'
+export const githubLink = 'https://github.com/brar-navleen/My-Portfolio-Projects/tree/main/src/react/react_fighting_game'
 
 export const FightingGame = () => {
   const [playerAPunchSound] = useState(new Audio(playerAPunch))

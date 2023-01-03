@@ -13,7 +13,7 @@ export const description = <div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'REST API', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design']
 export const date = parseISO('2022-09')
 export const link = './WeatherApp'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/react_project_WeatherApp'
+export const githubLink = 'https://github.com/brar-navleen/My-Portfolio-Projects/tree/main/src/react/react_project_WeatherApp'
 
 const getCurrentLocation = async () => {
   return await new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(

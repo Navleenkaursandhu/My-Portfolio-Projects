@@ -18,7 +18,7 @@ export const description = <div>
 export const skills = ['ReactJS', 'Vite', 'Tailwind CSS', 'ESLint', 'Git', 'Github', 'VS Code', 'Responsive Web Design', 'Vercel']
 export const date = parseISO('2022-10')
 export const link = 'https://notebook-henna.vercel.app/'
-export const githubLink = 'https://github.com/Navleenkaursandhu/notebook/tree/main/src/react/portfolio'
+export const githubLink = 'https://github.com/brar-navleen/My-Portfolio-Projects/tree/main/src/react/portfolio'
 
 export const PortfolioPage = () => {
   return (
