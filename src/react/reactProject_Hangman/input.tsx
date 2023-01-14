@@ -26,15 +26,15 @@ export const Input = () => {
       const userAttempt = e.key.toUpperCase()
 
       if (wordArray.includes(userAttempt)) {
-        setArrayStrings(wordArray.map((char, index) => {
+        setArrayStrings(prev => prev.map((char, index) => {
           if (userAttempt === char) {
             return char
           } else {
-            return arrayStrings[index]
+            return prev[index]
           }
         }))
       } else {
-        setNoMatchArray(noMatchArray.concat(userAttempt))
+        setNoMatchArray(prev => prev.concat(userAttempt))
       }
     }
 
@@ -43,7 +43,7 @@ export const Input = () => {
     return () => {
       document.removeEventListener('keydown', listener)
     }
-  })
+  }, [word])
 
   return (
     <>
