@@ -15,51 +15,51 @@ import { SkillDetails } from './SkillDetails'
 const skillSetArray = [
   {
     skill: 'REACT',
-    image: `${reactImage}`
+    image: reactImage
   },
   {
     skill: 'VITE',
-    image: `${viteImage}`
+    image: viteImage
   },
   {
     skill: 'JAVASCRIPT',
-    image: `${jsImage}`
+    image: jsImage
   },
   {
     skill: 'HTML',
-    image: `${htmlImage}`
+    image: htmlImage
   },
   {
     skill: 'TAILWIND CSS',
-    image: `${tailwindImage}`
+    image: tailwindImage
   },
   {
     skill: 'CSS',
-    image: `${cssImage}`
+    image: cssImage
   },
   {
     skill: 'GIT',
-    image: `${gitImage}`
+    image: gitImage
   },
   {
     skill: 'GITHUB',
-    image: `${githubImage}`
+    image: githubImage
   },
   {
     skill: 'REST API',
-    image: `${restapiImage}`
+    image: restapiImage
   },
   {
     skill: 'ESLINT',
-    image: `${eslintImage}`
+    image: eslintImage
   },
   {
     skill: 'VS CODE',
-    image: `${vscodeImage}`
+    image: vscodeImage
   },
   {
     skill: 'Vercel',
-    image: `${vercelImage}`
+    image: vercelImage
   }
 ]
 export const Skillset = () => {

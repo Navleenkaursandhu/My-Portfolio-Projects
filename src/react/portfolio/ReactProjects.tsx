@@ -67,8 +67,6 @@ export const ReactProjects = () => {
 
   const [selectedOption, setSelectedOption] = useState('precedence')
 
-  console.log(isAscending)
-
   const callback = (selectedElement) => {
     setSelectedOption(selectedElement)
   }
