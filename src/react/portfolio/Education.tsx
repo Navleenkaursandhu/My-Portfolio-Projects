@@ -13,7 +13,7 @@ export const Education = () => {
           <div>Vancouver, BC, Canada</div>
         </div>
 
-        <div className="flex lg:border-r lg:border-b-0 border-black lg:pr-6 lg:mr-6 justify-end border-b">2018 - 2020</div>
+        <div className="flex lg:border-r lg:border-b-0 border-black lg:pr-6 lg:mr-6 justify-end border-b">Mar 2023 - Dec 2023</div>
         <div className="mb-4">
           <div className="font-bold">Education Assistant Diploma</div>
           <div>Coastal College of BC</div>
